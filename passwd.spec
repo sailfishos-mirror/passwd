@@ -3,14 +3,19 @@
 %endif
 Summary: The passwd utility for setting/changing passwords using PAM.
 Name: passwd
-Version: 0.68
-Release: 8 
+Version: 0.69
+Release: 1
 License: BSD
 Group: System Environment/Base
-Source: passwd-%{version}-%{release}.tar.gz
+Source: %{name}-%{version}.tar.bz2
 Buildroot: %{_tmppath}/passwd-root
-Requires: pam >= 0.59, /etc/pam.d/system-auth
-BuildPrereq: glib2-devel, libuser-devel, pam-devel
+Requires: pam >= 0.59, /etc/pam.d/system-auth, 
+%if %{WITH_SELINUX}
+BuildPrereq: glib2-devel, libuser-devel, pam-devel, libselinux-devel
+BuildPrereq: libuser >= 0.53-1
+%else
+BuildPrereq: glib2-devel, libuser-devel, pam-devel, libuser >= 0.53-1
+%endif
 
 %description
 The passwd package contains a system utility (passwd) which sets
@@ -20,9 +25,10 @@ Modules).
 To use passwd, you should have PAM installed on your system.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}
 
 %build
+%configure
 make DEBUG= RPM_OPT_FLAGS="$RPM_OPT_FLAGS" \
 %if %{WITH_SELINUX}
 	WITH_SELINUX=yes
@@ -34,9 +40,6 @@ strip $RPM_BUILD_ROOT%{_bindir}/passwd
 install -m 755 -d $RPM_BUILD_ROOT/etc/pam.d/
 install -m 644 passwd.pamd $RPM_BUILD_ROOT/etc/pam.d/passwd
 
-rm -f $RPM_BUILD_ROOT/%{_bindir}/{chfn,chsh}
-rm -f $RPM_BUILD_ROOT/%{_mandir}/man1/{chfn,chsh}.*
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -47,6 +50,22 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* Fri Jan 28 2005 Jindrich Novy <jnovy@redhat.com> 0.69-1
+- spec file fixes
+- add libuser >= 0.53-1 BuildPrereq (#139331)
+
+* Tue Jan 25 2005 Dan Walsh <dwalsh@redhat.com>
+- improve SELinux priv checking
+
+* Mon Aug 23 2004 Jindrich Novy <jnovy@redhat.com>
+- applied cleanup patch from Steve Grubb #120060
+- fixed man page #115380
+- added libselinux-devel to BuildPrereq #123750, #119416
+
+* Wed Aug 19 2004 Jindrich Novy <jnovy@redhat.com> 0.68-10
+- moved to 0.68-10 to fix problem with RHEL4-Alpha4 #129548
+- updated GNU build scripts and file structure to recent style
+
 * Wed Feb 4 2004 Dan Walsh <dwalsh@redhat.com> 0.68-8
 - add check for enforcing mode
 

@@ -1,6 +1,6 @@
 AC_INIT
 AC_CONFIG_SRCDIR([configure.ac])
-AM_INIT_AUTOMAKE([passwd],[0.68])
+AM_INIT_AUTOMAKE([passwd],[0.69])
 
 AC_PROG_CC
 AC_PROG_RANLIB
