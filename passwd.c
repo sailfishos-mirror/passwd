@@ -308,8 +308,7 @@ int main(int argc, char * const argv[])
 	if (retval != PAM_SUCCESS)
 	    break;
 	/* quit gracefully */
-	fprintf(stderr,
-		"passwd: %s authentication tokens updated successfully\n",
+	printf( "passwd: %s authentication tokens updated successfully\n",
 		(passwd_flags & PASSWD_KEEP) ? "expired":"all" );
 	exit(0);
     }
