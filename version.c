@@ -57,19 +57,25 @@ version(void)
 char *
 read_string(void)
 {
-	char *buffer = NULL;
-	char *check = NULL;
-	int slen = 0;
+	char *buffer;
+	char *check;
+	int slen;
 
 	buffer = (char *) malloc(BUFSIZ);
-	if (buffer == NULL)
+	if (buffer == NULL) {
 		return NULL;
+	}
 
 	check = fgets(buffer, BUFSIZ, stdin);
-	if (check != buffer)
+	if (check != buffer) {
+		free(buffer);
 		return NULL;
+	}
+
 	slen = strlen(buffer);
-	if (buffer[slen - 1] == '\n')
+	if ((slen > 0) && (buffer[slen - 1] == '\n')) {
 		buffer[slen - 1] = '\0';
+	}
+
 	return buffer;
 }

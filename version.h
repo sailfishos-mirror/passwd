@@ -41,6 +41,7 @@
 #ifndef __RH_VERSION_H
 #define __RH_VERSION_H
 
+char *read_string(void);
 void version(void);
 
 #endif				/* __RH_VERSION_H */
