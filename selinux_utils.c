@@ -61,8 +61,8 @@ int checkAccess(char *chuser, int access) {
 				       access,
 				       &avd);
 	  
-      if ((retval == 0) && 
-	  ((access & avd.allowed) == access)) {
+      if (((retval == 0) && 
+	  ((access & avd.allowed) == access)) || (security_getenforce()==0)) {
 	status=0;
       }
     }
