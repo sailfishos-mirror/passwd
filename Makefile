@@ -36,6 +36,7 @@ install: all
 
 clean:
 	rm -f *.o *~ $(PROGS) date.h
+	rm -f $(PROJECT)-*.tar.gz
 
 version.o: date.h
 
