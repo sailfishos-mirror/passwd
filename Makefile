@@ -12,7 +12,7 @@ endif
 
 ifeq (pwdb,$(BACKLIB))
 CFLAGS =
-LDFLAGS = -lpwdb
+LDFLAGS += -lpwdb
 DEFS = -DPWDB
 endif
 
@@ -39,16 +39,16 @@ all: date.h $(PROGS) pwdstat
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 passwd: passwd.o libuser.o pwdb.o
-	$(CC) $(LDFLAGS) -o $@ $^ $(POPT)
+	$(CC) -o $@ $^ $(LDFLAGS) $(POPT)
 
 chfn: chfn.o libuser.o pwdb.o version.o
-	$(CC) $(LDFLAGS) -o $@ $^
+	$(CC) -o $@ $^ $(LDFLAGS)
 
 chsh: chsh.o libuser.o pwdb.o version.o
-	$(CC) $(LDFLAGS) -o $@ $^
+	$(CC) -o $@ $^ $(LDFLAGS)
 
 pwdstat: pwdstat.o
-	$(CC) $(LDFLAGS) -o $@ $^
+	$(CC) -o $@ $^ $(LDFLAGS)
 
 install: all
 	if [ ! -d $(DESTDIR)$(bindir) ] ; then mkdir -p $(DESTDIR)$(bindir) ; fi

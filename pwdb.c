@@ -406,6 +406,7 @@ pwdb_update_aging(const char *username,
 	if (min != -2) {
 		retval = pwdb_get_entry(_pwdb, "min_change", &_entry);
 		CHECK_ERROR(retval);
+		pwdb_entry_delete(&_entry);
 		sptime = min;
 		retval = pwdb_set_entry(_pwdb, "min_change",
 					&sptime, sizeof(sptime),
@@ -413,9 +414,10 @@ pwdb_update_aging(const char *username,
 		CHECK_ERROR(retval);
 	}
 
-	if (max != 2) {
+	if (max != -2) {
 		retval = pwdb_get_entry(_pwdb, "max_change", &_entry);
 		CHECK_ERROR(retval);
+		pwdb_entry_delete(&_entry);
 		sptime = max;
 		retval = pwdb_set_entry(_pwdb, "max_change",
 					&sptime, sizeof(sptime),
@@ -423,9 +425,10 @@ pwdb_update_aging(const char *username,
 		CHECK_ERROR(retval);
 	}
 
-	if (warn != 2) {
+	if (warn != -2) {
 		retval = pwdb_get_entry(_pwdb, "warn_change", &_entry);
 		CHECK_ERROR(retval);
+		pwdb_entry_delete(&_entry);
 		sptime = warn;
 		retval = pwdb_set_entry(_pwdb, "warn_change",
 					&sptime, sizeof(sptime),
@@ -433,9 +436,10 @@ pwdb_update_aging(const char *username,
 		CHECK_ERROR(retval);
 	}
 
-	if (inact != 2) {
+	if (inact != -2) {
 		retval = pwdb_get_entry(_pwdb, "defer_change", &_entry);
 		CHECK_ERROR(retval);
+		pwdb_entry_delete(&_entry);
 		sptime = inact;
 		retval = pwdb_set_entry(_pwdb, "defer_change",
 					&sptime, sizeof(sptime),
