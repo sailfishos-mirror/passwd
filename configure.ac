@@ -56,7 +56,7 @@ use_laus=auto)
 if test x$use_laus != xno ; then
 	AC_CHECK_FUNC(laus_init,,
 		      [AC_CHECK_LIB(laus,laus_init)])
-	if test $ac_cv_lib_laus_laus_init = xno ; then
+	if test $ac_cv_lib_laus_laus_init != xno ; then
 		if test x$use_laus != xauto ; then
 			AC_MSG_ERROR([requested LAuS, but liblaus was not found])
 		fi
