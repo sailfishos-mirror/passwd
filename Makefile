@@ -2,12 +2,24 @@
 # $Id$
 #
 
-GLIB_CFLAGS  = $(shell pkg-config --cflags libuser)
-GLIB_LDFLAGS = $(shell pkg-config --libs   libuser)
+BACKLIB=libuser
+
+ifeq (libuser,$(BACKLIB))
+CFLAGS  = $(shell pkg-config --cflags libuser)
+LDFLAGS = $(shell pkg-config --libs   libuser)
+DEFS = -DLIBUSER
+endif
+
+ifeq (pwdb,$(BACKLIB))
+CFLAGS =
+LDFLAGS = -lpwdb
+DEFS = -DPWDB
+endif
+
 CC	= gcc
 DEBUG	= -g
-CFLAGS	= $(RPM_OPT_FLAGS) -Wall -D_GNU_SOURCE $(DEBUG) $(GLIB_CFLAGS)
-LDFLAGS	= -ldl -lpam -lpam_misc -luser $(GLIB_LDFLAGS)
+CFLAGS	+= $(RPM_OPT_FLAGS) -Wall -D_GNU_SOURCE $(DEBUG) $(DEFS)
+LDFLAGS	+= -ldl -lpam -lpam_misc
 PROGS	= passwd chfn chsh
 POPT	= -lpopt
 
@@ -26,13 +38,13 @@ all: date.h $(PROGS) pwdstat
 %.o : %.c Makefile
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-passwd: passwd.o libuser.o
+passwd: passwd.o libuser.o pwdb.o
 	$(CC) $(LDFLAGS) -o $@ $^ $(POPT)
 
-chfn: chfn.o libuser.o version.o
+chfn: chfn.o libuser.o pwdb.o version.o
 	$(CC) $(LDFLAGS) -o $@ $^
 
-chsh: chsh.o libuser.o version.o
+chsh: chsh.o libuser.o pwdb.o version.o
 	$(CC) $(LDFLAGS) -o $@ $^
 
 pwdstat: pwdstat.o

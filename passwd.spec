@@ -1,7 +1,7 @@
 Summary: The passwd utility for setting/changing passwords using PAM.
 Name: passwd
-Version: 0.65
-Release: 5
+Version: 0.67
+Release: 1
 License: BSD
 Group: System Environment/Base
 Source: passwd-%{version}-%{release}.tar.gz
@@ -38,6 +38,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* Wed Mar 13 2002 Nalin Dahyabhai <nalin@redhat.com> 0.67-1
+- add the -i, -n, -w, and -x options to passwd
+
 * Mon Mar 11 2002 Nalin Dahyabhai <nalin@redhat.com> 0.65-5
 - rebuild
 

@@ -39,9 +39,12 @@
  * to that of the previous versions as possible.
  */
 
+#ifdef LIBUSER
+
 #include <string.h>
 #include <unistd.h>
 #include <libuser/user.h>
+#include "pwdb.h"
 
 extern const char *progname;
 
@@ -78,7 +81,8 @@ startup_libuser(const char *user)
 	libuser = lu_start(user, lu_user, NULL, NULL,
 			   lu_prompt_console, NULL, &error);
 	if (libuser == NULL) {
-		fprintf(stderr, _("passwd: libuser initialization error.\n"));
+		fprintf(stderr,
+			_("passwd: libuser initialization error.\n"));
 		_exit(1);
 	}
 	CHECK_ERROR(error);
@@ -115,7 +119,8 @@ int
 pwdb_unlock_password(const char *username, int force)
 {
 #if 0
-	fprintf(stderr, "Warning: unlocked password for %s is the empty string.\n"
+	fprintf(stderr,
+		"Warning: unlocked password for %s is the empty string.\n"
 		"Use the -f flag to force the creation of a passwordless account.\n",
 		username);
 #endif
@@ -144,9 +149,11 @@ pwdb_unlock_password(const char *username, int force)
 		if (value) {
 			if (G_VALUE_HOLDS_STRING(value)) {
 				current = g_value_dup_string(value);
-			} else
-			if (G_VALUE_HOLDS_LONG(value)) {
-				current = g_strdup_printf("%ld", g_value_get_long(value));
+			} else if (G_VALUE_HOLDS_LONG(value)) {
+				current =
+				    g_strdup_printf("%ld",
+						    g_value_get_long
+						    (value));
 			} else {
 				g_assert_not_reached();
 			}
@@ -154,7 +161,7 @@ pwdb_unlock_password(const char *username, int force)
 		if (current && (force == 0)) {
 			/* Search for a non-locking character. */
 			for (i = 0; (current[i] == '!'); i++) {
-				/*nothing*/
+				/*nothing */
 			};
 			/* If the first non-locking character is the end of the
 			 * string, */
@@ -232,9 +239,11 @@ pwdb_display_status(const char *username)
 		if (value) {
 			if (G_VALUE_HOLDS_STRING(value)) {
 				current = g_value_dup_string(value);
-			} else
-			if (G_VALUE_HOLDS_LONG(value)) {
-				current = g_strdup_printf("%ld", g_value_get_long(value));
+			} else if (G_VALUE_HOLDS_LONG(value)) {
+				current =
+				    g_strdup_printf("%ld",
+						    g_value_get_long
+						    (value));
 			} else {
 				g_assert_not_reached();
 			}
@@ -242,22 +251,23 @@ pwdb_display_status(const char *username)
 		if (current) {
 			if (strlen(current) == 0) {
 				printf(_("Empty password.\n"));
-			} else
-			if (current[0] == '!') {
+			} else if (current[0] == '!') {
 				printf(_("Password locked.\n"));
-			} else
-			if (current[0] == '$') {
+			} else if (current[0] == '$') {
 				if (strncmp(current, "$1$", 3) == 0) {
-					printf(_("Password set, MD5 crypt.\n"));
-				} else
-				if (strncmp(current, "$2a$", 4) == 0) {
-					printf(_("Password set, blowfish crypt.\n"));
+					printf(_
+					       ("Password set, MD5 crypt.\n"));
+				} else if (strncmp(current, "$2a$", 4) ==
+					   0) {
+					printf(_
+					       ("Password set, blowfish crypt.\n"));
 				} else {
-					printf(_("Password set, unknown crypt variant.\n"));
+					printf(_
+					       ("Password set, unknown crypt variant.\n"));
 				}
-			} else
-			if (strlen(current) < 11) {
-				printf(_("Alternate authentication scheme in use.\n"));
+			} else if (strlen(current) < 11) {
+				printf(_
+				       ("Alternate authentication scheme in use.\n"));
 			} else {
 				printf(_("Password set, DES crypt.\n"));
 			}
@@ -338,3 +348,63 @@ pwdb_update_shell(const char *username, const char *shell)
 	shutdown_libuser();
 	return retval;
 }
+
+
+int
+pwdb_update_aging(const char *username,
+		  long min, long max, long warn, long inact)
+{
+	int retval = 1;
+	struct lu_ent *ent;
+	struct lu_error *error = NULL;
+	GValue value;
+
+	startup_libuser(username);
+
+	ent = lu_ent_new();
+	if (lu_user_lookup_name(libuser, username, ent, &error)) {
+		memset(&value, 0, sizeof(value));
+		g_value_init(&value, G_TYPE_LONG);
+
+		if (!lu_ent_get(ent, LU_SHADOWMIN) &&
+		    !lu_ent_get(ent, LU_SHADOWMAX) &&
+		    !lu_ent_get(ent, LU_SHADOWWARNING) &&
+		    !lu_ent_get(ent, LU_SHADOWINACTIVE)) {
+			fprintf(stderr, _("passwd: user account has no support "
+					  "for password aging\n"));
+		}
+
+		if (min != -2) {
+			g_value_set_long(&value, min);
+			lu_ent_clear(ent, LU_SHADOWMIN);
+			lu_ent_add(ent, LU_SHADOWMIN, &value);
+		}
+		if (max != -2) {
+			g_value_set_long(&value, max);
+			lu_ent_clear(ent, LU_SHADOWMAX);
+			lu_ent_add(ent, LU_SHADOWMAX, &value);
+		}
+		if (warn != -2) {
+			g_value_set_long(&value, warn);
+			lu_ent_clear(ent, LU_SHADOWWARNING);
+			lu_ent_add(ent, LU_SHADOWWARNING, &value);
+		}
+		if (inact != -2) {
+			g_value_set_long(&value, inact);
+			lu_ent_clear(ent, LU_SHADOWINACTIVE);
+			lu_ent_add(ent, LU_SHADOWINACTIVE, &value);
+		}
+		g_value_unset(&value);
+
+		if (lu_user_modify(libuser, ent, &error)) {
+			retval = 0;
+		}
+	}
+
+	CHECK_ERROR(error);
+
+	shutdown_libuser();
+	return retval;
+}
+
+#endif

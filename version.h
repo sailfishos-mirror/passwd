@@ -44,5 +44,4 @@
 
 void version(void);
 
-#endif /* __RH_VERSION_H */
-	  
+#endif				/* __RH_VERSION_H */

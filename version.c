@@ -1,4 +1,3 @@
-
 /*
  * Copyright Red Hat Software, Inc., 1998, 1999.
  *
@@ -41,15 +40,36 @@
  */
 
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <string.h>
 #include "version.h"
-
 #include "date.h"
 
 extern char *progname;
 
-void version(void)
+void
+version(void)
 {
-    printf("%s: PWBD Applications, %s, Cristian Gafton <gafton@redhat.com>\n",
-	   progname, version_date);
+	printf("%s: PWDB Applications, %s, Cristian Gafton <gafton@redhat.com>\n",
+	     progname, version_date);
+}
+
+char *
+read_string(void)
+{
+	char *buffer = NULL;
+	char *check = NULL;
+	int slen = 0;
+
+	buffer = (char *) malloc(BUFSIZ);
+	if (buffer == NULL)
+		return NULL;
+
+	check = fgets(buffer, BUFSIZ, stdin);
+	if (check != buffer)
+		return NULL;
+	slen = strlen(buffer);
+	if (buffer[slen - 1] == '\n')
+		buffer[slen - 1] = '\0';
+	return buffer;
 }
