@@ -1,12 +1,12 @@
 Summary: The passwd utility for setting/changing passwords using PAM.
 Name: passwd
 Version: 0.64.1
-Release: 1
+Release: 2
 Copyright: BSD
 Group: System Environment/Base
 Source: passwd-%{version}.tar.gz
 Buildroot: %{_tmppath}/passwd-root
-Requires: pam >= 0.59
+Requires: pam >= 0.59, /etc/pam.d/system-auth
 Requires: pwdb >= 0.58
 
 %description
@@ -39,6 +39,9 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man1/passwd.1*
 
 %changelog
+* Thu Jun  1 2000 Nalin Dahyabhai <nalin@redhat.com>
+- modify PAM setup to use system-auth
+
 * Mon Feb  7 2000 Bill Nottingham <notting@redhat.com>
 - fix manpage links
 
