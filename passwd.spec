@@ -1,13 +1,13 @@
 Summary: The passwd utility for setting/changing passwords using PAM.
 Name: passwd
-Version: 0.57
+Version: 0.58
 Release: 1
 Copyright: BSD
 Group: System Environment/Base
 Source: passwd-%{version}.tar.gz
 Buildroot: /var/tmp/passwd-root
 Requires: pam >= 0.59
-Requires: pwdb >= 0.57
+Requires: pwdb >= 0.58
 
 %description
 The passwd package contains a system utility (passwd) which
