@@ -7,7 +7,7 @@ Group: System Environment/Base
 Source: passwd-%{version}-%{release}.tar.gz
 Buildroot: %{_tmppath}/passwd-root
 Requires: pam >= 0.59, /etc/pam.d/system-auth
-BuildPrereq: glib2-devel, libuser-devel, pam-devel
+BuildPrereq: glib2-devel, pam-devel, pwdb
 
 %description
 The passwd package contains a system utility (passwd) which sets
@@ -43,6 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Mon Dec  9 2002 Nalin Dahyabhai <nalin@redhat.com> 0.68-0.2.1
 - build using BACKLIB=pwdb for use with RHL AS 2.1
+- change BuildPrereq from libuser-devel to pwdb
 
 * Mon Dec  9 2002 Nalin Dahyabhai <nalin@redhat.com> 0.68-1
 - implement aging adjustments for pwdb
