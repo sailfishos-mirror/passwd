@@ -41,6 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Thu Jun  1 2000 Nalin Dahyabhai <nalin@redhat.com>
 - modify PAM setup to use system-auth
+- modify for building as non-root users
 
 * Mon Feb  7 2000 Bill Nottingham <notting@redhat.com>
 - fix manpage links

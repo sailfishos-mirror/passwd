@@ -37,7 +37,7 @@ pwdstat: pwdstat.o
 
 install: all
 	if [ ! -d $(DESTDIR) ] ; then mkdir -p $(DESTDIR) ; fi
-	install -m 4555 -o root -g root $(PROGS) $(DESTDIR)
+	install -m 4555 $(PROGS) $(DESTDIR)
 	if [ ! -d $(MANDIR) ] ; then mkdir -p $(MANDIR) ; fi
 	if [ ! -d $(MANDIR)/man1 ] ; then mkdir -p $(MANDIR)/man1 ; fi
 	install -m 644 $(wildcard *.1) $(MANDIR)/man1
