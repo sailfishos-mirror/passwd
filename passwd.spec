@@ -28,6 +28,9 @@ strip $RPM_BUILD_ROOT%{_bindir}/passwd
 install -m 755 -d $RPM_BUILD_ROOT/etc/pam.d/
 install -m 644 passwd.pamd $RPM_BUILD_ROOT/etc/pam.d/passwd
 
+rm $RPM_BUILD_ROOT/%{_bindir}/{chfn,chsh}
+rm $RPM_BUILD_ROOT/%{_mandir}/man1/{chfn,chsh}.*
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -42,6 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 - modify default PAM configuration file to not specify directories, so that
   the same configuration can be used for all arches on multilib systems
 - fix BuildPrereq on glib-devel to specify glib2-devel instead
+- remove unpackaged files in %%install phase
 
 * Tue May 28 2002 Nalin Dahyabhai <nalin@redhat.com> 0.67-3
 - rebuild
