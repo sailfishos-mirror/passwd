@@ -136,7 +136,6 @@ parse_args(int argc, const char **argv,
 		 "unlock the named account (root only)"},
 		{"force", 'f', POPT_ARG_NONE, &force, 0,
 		 "force operation\n"},
-#ifdef LIBUSER
 		{"maximum", 'x', POPT_ARG_LONG, max, 0,
 		 "maximum password lifetime (root only)", "DAYS"},
 		{"minimum", 'n', POPT_ARG_LONG, min, 0,
@@ -147,7 +146,6 @@ parse_args(int argc, const char **argv,
 		{"inactive", 'i', POPT_ARG_LONG, inact, 0,
 		 "number of days after password expiration when an account "
 		 "becomes disabled (root only)", "DAYS"},
-#endif
 		{"status", 'S', POPT_ARG_NONE, &status, 0,
 		 "report password status on the named account (root only)"},
 		{"stdin", '\0', POPT_ARG_NONE, &use_stdin, 0,
@@ -348,7 +346,6 @@ main(int argc, const char **argv)
 		retval = pwdb_display_status(username);
 		return retval;
 	}
-#ifdef LIBUSER
 	/* Adjust aging parameters. */
 	if (passwd_flags & PASSWD_AGING) {
 		printf(_("Adjusting aging data for user %s.\n"), username);
@@ -357,7 +354,6 @@ main(int argc, const char **argv)
 		       retval == 0 ? _("Success") : _("Error"));
 		return retval;
 	}
-#endif
 
 	/* The standard behavior follows.  At this point we know for whom
 	 * we are going to change a password, so let the invoking user
