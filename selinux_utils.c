@@ -46,7 +46,7 @@
 #include "selinux_utils.h"
 
 int
-check_selinux_access(const char *chuser, unsigned int access)
+check_selinux_access(const char *change_user, int change_uid, unsigned int access)
 {
 	int status = -1;
 	security_context_t user_context;
@@ -59,7 +59,7 @@ check_selinux_access(const char *chuser, unsigned int access)
 			context_t c;
 			c = context_new(user_context);
 			user = context_user_get(c);
-			if (strcmp(chuser, user) == 0) {
+			if (change_uid != 0 && strcmp(change_user, user) == 0) {
 				status = 0;
 			} else {
 				struct av_decision avd;

@@ -305,7 +305,12 @@ parse_args(int argc, const char **argv,
 	}
 
 	/* The only flag which unprivileged users get to use is -k. */
-	if ((passwd_flags & ~PASSWD_KEEP) && (getuid() != 0)) {
+	if ((passwd_flags & ~PASSWD_KEEP) && 
+#ifdef WITH_SELINUX
+	    ((getuid() != 0) || checkPasswdAccess(PASSWD__PASSWD))) {
+#else
+	    (getuid() != 0)) {
+#endif
 		if (passwd_flags & PASSWD_STATUS) {
 			laus_help_log(NO_TAG, "passwd: password status display for all users denied - by=%u",
 				      getuid());
@@ -405,7 +410,7 @@ main(int argc, const char **argv)
 #ifdef WITH_SELINUX
 	if ((is_selinux_enabled() > 0) &&
 	    (getuid() == 0) &&
-	    (check_selinux_access(username, PASSWD__PASSWD) != 0)) {
+	    (check_selinux_access(username, pwd->pw_uid, PASSWD__PASSWD) != 0)) {
 		security_context_t user_context;
 		if (getprevcon(&user_context) < 0) {
 			user_context = strdup(_("Unknown user context"));
