@@ -39,6 +39,7 @@
 
 #ident "$Id$"
 
+#include "config.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -51,7 +52,7 @@ void
 version(void)
 {
 	printf("%s: PWDB Applications, %s, Cristian Gafton <gafton@redhat.com>\n",
-	     progname, version_date);
+	       progname, version_date);
 }
 
 char *

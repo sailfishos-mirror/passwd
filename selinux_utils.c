@@ -35,6 +35,7 @@
 
 /* Written by Daniel Walsh <dwalsh@redhat.com> */
 
+#include "config.h"
 #include <sys/types.h>
 #include <stdio.h>
 #include <string.h>
@@ -45,7 +46,7 @@
 #include "selinux_utils.h"
 
 int
-check_selinux_access(const char *chuser, int access)
+check_selinux_access(const char *chuser, unsigned int access)
 {
 	int status = -1;
 	security_context_t user_context;
