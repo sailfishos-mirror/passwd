@@ -402,25 +402,37 @@ pwdb_update_aging(const char *username,
 		return -1;
 	}
 
-	sptime = min;
-	retval = pwdb_set_entry(_pwdb, "min_change", &sptime, sizeof(sptime),
-				NULL, NULL, 0);
-	CHECK_ERROR(retval);
+	if (min != -2) {
+		sptime = min;
+		retval = pwdb_set_entry(_pwdb, "min_change",
+					&sptime, sizeof(sptime),
+					NULL, NULL, 0);
+		CHECK_ERROR(retval);
+	}
 
-	sptime = max;
-	retval = pwdb_set_entry(_pwdb, "max_change", &sptime, sizeof(sptime),
-				NULL, NULL, 0);
-	CHECK_ERROR(retval);
+	if (max != 2) {
+		sptime = max;
+		retval = pwdb_set_entry(_pwdb, "max_change",
+					&sptime, sizeof(sptime),
+					NULL, NULL, 0);
+		CHECK_ERROR(retval);
+	}
 
-	sptime = warn;
-	retval = pwdb_set_entry(_pwdb, "warn_change", &sptime, sizeof(sptime),
-				NULL, NULL, 0);
-	CHECK_ERROR(retval);
+	if (warn != 2) {
+		sptime = warn;
+		retval = pwdb_set_entry(_pwdb, "warn_change",
+					&sptime, sizeof(sptime),
+					NULL, NULL, 0);
+		CHECK_ERROR(retval);
+	}
 
-	sptime = inact;
-	retval = pwdb_set_entry(_pwdb, "defer_change", &sptime, sizeof(sptime),
-				NULL, NULL, 0);
-	CHECK_ERROR(retval);
+	if (inact != 2) {
+		sptime = inact;
+		retval = pwdb_set_entry(_pwdb, "defer_change",
+					&sptime, sizeof(sptime),
+					NULL, NULL, 0);
+		CHECK_ERROR(retval);
+	}
 
 	retval = pwdb_replace("user", _pwdb->source, username,
 			      PWDB_ID_UNKNOWN, &_pwdb);
