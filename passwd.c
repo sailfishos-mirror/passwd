@@ -101,6 +101,12 @@ static void parse_args(int argc, char * const argv[])
 	    exit(-3);
 	} else {
 	    username = argv[optind];
+	    /* test the username for length */
+	    if (strlen(username) > MAX_USERNAMESIZE) {
+		fprintf(stderr, "%s: The username supplied is too long\n",
+			progname);
+		exit(-3);
+	    }
 	}
     }
 

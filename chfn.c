@@ -228,6 +228,25 @@ static void interactive(void)
     other = ask_user("Other", o_other);    
 }
 
+/* returns -1 if a given field is invalid */
+static int verify_field(const char *field, const char *msg)
+{
+    if (msg == NULL)
+	msg="";
+    if (invalid_field(field, FORBIDDEN_CHARS)) {
+	/* invalid input */
+	fprintf(stderr, "%s: Input field %s contains forbidden chars (%s)\n",
+		progname, msg, FORBIDDEN_CHARS);
+	return -1;
+    }
+    if (strlen(field) > GECOS_LENGTH) {
+	fprintf(stderr, "%s: Your %s entry is too long (%d chars limit)\n",
+		progname, msg, GECOS_LENGTH);
+	return  -1;
+    }
+    return 0;
+}
+
 int main(int argc, char *argv[])
 {
     int			arg;
@@ -244,6 +263,7 @@ int main(int argc, char *argv[])
 	{ "home-phone",	required_argument, NULL, 'h' },
 	{ "other",	required_argument, NULL, 'O' },
 	{ "help",	no_argument, NULL, 'u' },
+	{ "usage", 	no_argument, NULL, 'u' },
 	{ "version",	no_argument, NULL, 'v' },
 	{0, 0, 0, 0 },
     };
@@ -256,18 +276,38 @@ int main(int argc, char *argv[])
 	switch (arg) {
 	    case 'f':
 		f_flg++; full_name = optarg;
+		if (verify_field(optarg, "full name") != 0) {
+		    fprintf(stderr, "%s: Aborting.\n", progname);
+		    exit(-9);
+		}
 		break;
 	    case 'o':
 		o_flg++; office = optarg;
+		if (verify_field(optarg, "office") != 0) {
+		    fprintf(stderr, "%s: Aborting.\n", progname);
+		    exit(-9);
+		}
 		break;
 	    case 'h':
 		h_flg++; home_ph = optarg;
+		if (verify_field(optarg, "home phone") != 0) {
+		    fprintf(stderr, "%s: Aborting.\n", progname);
+		    exit(-9);
+		}
 		break;
 	    case 'p':
 		p_flg++; office_ph = optarg;
+		if (verify_field(optarg, "office phone") != 0) {
+		    fprintf(stderr, "%s: Aborting.\n", progname);
+		    exit(-9);
+		}
 		break;
 	    case 'O':
 		O_flg++; other = optarg;
+		if (verify_field(optarg, "other") != 0) {
+		    fprintf(stderr, "%s: Aborting.\n", progname);
+		    exit(-9);
+		}
 		break;
 	    case 'u':
 		usage();

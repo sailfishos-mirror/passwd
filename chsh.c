@@ -107,7 +107,14 @@ static int invalid_shell(const char *t_shell)
     } while (s != NULL);
     fclose(fp);
     /* most likely the shell is not valid */
-    return -1;
+    if (getuid())
+	return -1;
+    else { /* root is allowed to set any shell he wants */
+	fprintf(stderr, "%s: Warning, this shell is not listed in %s.\n",
+		progname, _PATH_SHELLS);
+	return 0;
+    }
+    return -1; /* not reached */
 }
 
 static void list_shells(void)
@@ -217,6 +224,11 @@ int main(int argc, char *argv[])
 	switch (arg) {
 	    case 's':
 		s_flg++; shell = optarg;
+		if (invalid_shell(optarg)) {
+		    fprintf(stderr, "%s: The shell entered is invalid.\n",
+			    progname);
+		    exit(-9);
+		}
 		break;
 	    case 'l':
 		l_flg++;
@@ -244,6 +256,12 @@ int main(int argc, char *argv[])
 	    /* username specified... */
 	    struct passwd *pw;
 	    user_name = argv[optind];
+	    /* test the username for length */
+	    if (strlen(user_name) > MAX_USERNAMESIZE) {
+		fprintf(stderr, "%s: The username supplied is too long\n",
+			progname);
+		exit(-3);
+	    }
 	    pw = getpwnam(user_name);
 	    if (pw == (struct passwd *)NULL) {
 		fprintf(stderr, "%s: Unknown user name '%s'\n",

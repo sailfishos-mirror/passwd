@@ -8,6 +8,9 @@
 #ifndef _RH_PWDB_H_
 #define _RH_PWDB_H_
 
+/* general defines */
+#define MAX_USERNAMESIZE	32	/* max username size */
+
 int pwdb_lock_password(const char *username);
 int pwdb_unlock_password(const char *username);
 int pwdb_clear_password(const char *username);
