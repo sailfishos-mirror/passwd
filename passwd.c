@@ -37,8 +37,6 @@
 
 #ident "$Id$"
 
-#include "config.h"
-
 #include <sys/types.h>
 
 #include <ctype.h>
@@ -47,20 +45,22 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+
 #include <popt.h>
 #include <security/pam_appl.h>
 #include <security/pam_misc.h>
 #include "pwdb.h"
 
-#ifdef WITH_SELINUX
-#include <selinux/selinux.h>
-#include <selinux/context.h>
-#include <selinux/av_permissions.h>
-#include "selinux_utils.h"
-#endif
-
 #define _(String) String
 #define N_(String) String
+
+#ifdef HAVE_LIBLAUS
+
+#include <stdarg.h>
+#include <laus.h>
+static int __laus_active;
+
+#endif
 
 /* conversation function & corresponding structure */
 static struct pam_conv conv = {
@@ -91,6 +91,60 @@ int passwd_flags = 0;		/* flags specified by root */
 #ifdef HAVE_PAM_FAIL_DELAY
 #define PASSWD_FAIL_DELAY	2000000	/* usec delay on failure */
 #endif
+
+
+/*
+ *  laus helper functions
+ *  contents conditionally compiled
+ */
+static void
+laus_help_errmsg(const char *f, int x)
+{
+#ifdef HAVE_LIBLAUS
+	if (!__laus_active) {
+		return;
+	}
+	syslog(LOG_WARNING,
+	       "LAuS error - %s:%i - %s: (%i) %s\n",
+	       __FILE__, __LINE__,
+	       f, x, laus_strerror(x));
+#endif
+}
+
+static void
+laus_help_log(const char *tag, const char *fmt, ...)
+{
+#ifdef HAVE_LIBLAUS
+	char buffer[8*1024];
+	va_list arg_list;
+
+	if (!__laus_active) {
+		return;
+	}
+
+	va_start(arg_list, fmt);
+	vsnprintf(buffer, sizeof(buffer), fmt, arg_list);
+	va_end(arg_list);
+
+	if (laus_log(tag, "%s", buffer) < 0) {
+		laus_help_errmsg("laus_log", errno);
+	}
+#endif
+}
+
+static void
+laus_help_open(void)
+{
+#ifdef HAVE_LIBLAUS
+	if (laus_open(NULL) < 0) {
+		laus_help_errmsg("laus_open", errno);
+		__laus_active = 0;
+	} else {
+		__laus_active = 1;
+	}
+#endif
+}
+
 
 /* A conversation function which uses an internally-stored value for
  * the responses. */
@@ -244,6 +298,13 @@ parse_args(int argc, const char **argv,
 
 	/* The only flag which unprivileged users get to use is -k. */
 	if ((passwd_flags & ~PASSWD_KEEP) && (getuid() != 0)) {
+		if (passwd_flags & PASSWD_STATUS) {
+			laus_help_log(NO_TAG, "passwd: password status display for all users denied - by=%u",
+				      getuid());
+		} else {
+			laus_help_log(NO_TAG, "passwd: password attribute change denied - by=%u",
+				      getuid());
+		}
 		fprintf(stderr, _("Only root can do that.\n"));
 		exit(-2);
 	}
@@ -253,6 +314,8 @@ parse_args(int argc, const char **argv,
 	if ((extraArgs != NULL) && (extraArgs[0] != NULL)) {
 		if (getuid() != 0) {
 			/* The invoking user was not root. */
+			laus_help_log(NO_TAG, "passwd: password change denied - user=%s, by=%u",
+				      extraArgs[0], getuid());
 			fprintf(stderr,
 				_("%s: Only root can specify a user name.\n"),
 				progname);
@@ -317,27 +380,19 @@ main(int argc, const char **argv)
 	long min, max, warn, inact;
 	pam_handle_t *pamh = NULL;
 
+	laus_help_open();
+
 	/* Parse command-line arguments. */
 	progname = basename(argv[0]);
 	parse_args(argc, argv, &min, &max, &warn, &inact);
 
-#ifdef WITH_SELINUX
-	if ((is_selinux_enabled() > 0) &&
-	    (getuid() == 0) && 
-	    (check_selinux_access(username, PASSWD__PASSWD) != 0)) {
-		security_context_t user_context;
-		if (getprevcon(&user_context) < 0) {
-			user_context = strdup(_("Unknown user context"));
-		}
-		syslog(LOG_ALERT,
-		       _("%s is not authorized to change the password of %s\n"),
-		       user_context, username);
-		fprintf(stderr,
-			_("%s: %s is not authorized to change the "
-			  "password of %s\n"),
-			progname, user_context, username);
-		freecon(user_context);
-		exit(1);
+#ifdef HAVE_LIBLAUS
+	struct passwd *pw;
+	pw = getpwnam(username);
+	if (pw == NULL) {
+		fprintf(stderr, _("%s: Unknown user name '%s'.\n"),
+			progname, username);
+		exit(-4);
 	}
 #endif
 
@@ -348,6 +403,10 @@ main(int argc, const char **argv)
 		printf("%s: %s\n", progname,
 		       retval ==
 		       0 ? "Success" : "Error (password not set?)");
+		if (retval == 0) {
+			laus_help_log(NO_TAG, "passwd: password locked - user=%s, uid=%u, id=%u",
+				      username, pw->pw_uid, getuid());
+		}
 		return retval;
 	}
 	/* Handle account unlocking request. */
@@ -360,6 +419,10 @@ main(int argc, const char **argv)
 		       retval ==
 		       -2 ? _("Unsafe operation (use -f to force).") :
 		       _("Error (password not set?)"));
+		if (retval == 0) {
+			laus_help_log(NO_TAG, "passwd: password unlocked -user=%s, uid=%u, id=%u",
+				      username, pw->pw_uid, getuid());
+		}
 		return retval;
 	}
 	/* Handle password clearing request. */
@@ -367,12 +430,20 @@ main(int argc, const char **argv)
 		printf(_("Removing password for user %s.\n"), username);
 		retval = pwdb_clear_password(username);
 		printf("%s: %s\n", progname,
-		       (retval == 0) ? _("Success") : _("Error"));
+		       retval == 0 ? _("Success") : _("Error"));
+		if (retval == 0) {
+			laus_help_log(NO_TAG, "passwd: password deleted -user=%s, uid=%u, id=%u",
+				      username, pw->pw_uid, getuid());
+		}
 		return retval;
 	}
 	/* Display account status. */
 	if (passwd_flags & PASSWD_STATUS) {
 		retval = pwdb_display_status(username);
+		if (retval == 0) {
+			laus_help_log(NO_TAG, "passwd: password status displayed for all users - by=%u",
+				      getuid());
+		}
 		return retval;
 	}
 	/* Adjust aging parameters. */
@@ -380,7 +451,11 @@ main(int argc, const char **argv)
 		printf(_("Adjusting aging data for user %s.\n"), username);
 		retval = pwdb_update_aging(username, min, max, warn, inact);
 		printf("%s: %s\n", progname,
-		       (retval == 0) ? _("Success") : _("Error"));
+		       retval == 0 ? _("Success") : _("Error"));
+		if (retval == 0) {
+			laus_help_log(NO_TAG, "passwd: password aging data updated - user=%s, uid=%u, min=%li, max=%li, warn=%li, inact=%li, by=%u",
+				      username, pw->pw_uid, min, max, warn, inact, getuid());
+		}
 		return retval;
 	}
 
@@ -410,7 +485,8 @@ main(int argc, const char **argv)
 	 * of time it should wait after a failure. */
 	retval = pam_fail_delay(pamh, PASSWD_FAIL_DELAY);
 	if (retval != PAM_SUCCESS) {
-		fprintf(stderr, _("passwd: unable to set failure delay\n"));
+		fprintf(stderr,
+			_("passwd: unable to set failure delay\n"));
 		exit(1);
 	}
 #endif
@@ -422,17 +498,25 @@ main(int argc, const char **argv)
 	if (retval == PAM_SUCCESS) {
 		/* We're done.  Tell the invoking user that it worked. */
 		retval = pam_end(pamh, PAM_SUCCESS);
+		pamh = NULL;
 		if (passwd_flags & PASSWD_KEEP) {
+			laus_help_log(NO_TAG, "passwd: password changed - user=%s, uid=%u, by=%u",
+				      username, pw->pw_uid, getuid());
 			printf(_("passwd: expired authentication tokens updated successfully.\n"));
 		} else {
+			laus_help_log(NO_TAG, "passwd: password changed - user=%s, uid=%u, by=%u",
+				      username, pw->pw_uid, getuid());
 			printf(_("passwd: all authentication tokens updated successfully.\n"));
 		}
 		retval = 0;
 	} else {
 		/* Horrors!  It failed.  Relay the bad news. */
+		laus_help_log(NO_TAG, "passwd: password change failed - user=%s, uid=%u, by=%u",
+			      username, pw->pw_uid, getuid());
 		fprintf(stderr, _("passwd: %s\n"),
 			pam_strerror(pamh, retval));
-		pam_end(pamh, retval);
+		retval = pam_end(pamh, PAM_SUCCESS);
+		pamh = NULL;
 		retval = 1;
 	}
 	return retval;

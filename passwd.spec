@@ -1,16 +1,13 @@
-%if %{?WITH_SELINUX:0}%{!?WITH_SELINUX:1}
-%define WITH_SELINUX 1
-%endif
 Summary: The passwd utility for setting/changing passwords using PAM.
 Name: passwd
 Version: 0.68
-Release: 8 
+Release: 3.1
 License: BSD
 Group: System Environment/Base
 Source: passwd-%{version}-%{release}.tar.gz
 Buildroot: %{_tmppath}/passwd-root
 Requires: pam >= 0.59, /etc/pam.d/system-auth
-BuildPrereq: glib2-devel, libuser-devel, pam-devel
+BuildPrereq: glib2-devel, laus-devel, libuser-devel, pam-devel
 
 %description
 The passwd package contains a system utility (passwd) which sets
@@ -23,10 +20,7 @@ To use passwd, you should have PAM installed on your system.
 %setup -q
 
 %build
-make DEBUG= RPM_OPT_FLAGS="$RPM_OPT_FLAGS" \
-%if %{WITH_SELINUX}
-	WITH_SELINUX=yes
-%endif
+make DEBUG= RPM_OPT_FLAGS="$RPM_OPT_FLAGS" WITH_LAUS=yes
 
 %install
 make install DESTDIR=$RPM_BUILD_ROOT bindir=%{_bindir} mandir=%{_mandir}
@@ -47,20 +41,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
-* Wed Feb 4 2004 Dan Walsh <dwalsh@redhat.com> 0.68-8
-- add check for enforcing mode
-
-* Mon Jan 26 2004 Dan Walsh <dwalsh@redhat.com> 0.68-7
-- fix is_selinux_enabled
-
-* Fri Sep 5 2003 Dan Walsh <dwalsh@redhat.com> 0.68-6
-- turn off selinux
-
-* Fri Sep 5 2003 Dan Walsh <dwalsh@redhat.com> 0.68-5.sel
-- Add SELinux support
-
-* Mon Jul 28 2003 Dan Walsh <dwalsh@redhat.com> 0.68-4
-- Add SELinux support
+* Fri Jun 25 2004 Nalin Dahyabhai <nalin@redhat.com> 0.68-3.1
+- integrate patch to add audit logging (Charlie Bennett)
 
 * Thu Feb 13 2003 Nalin Dahyabhai <nalin@redhat.com> 0.68-3
 - add aging adjustment flags to passwd(1)'s synopsis, were just in the
