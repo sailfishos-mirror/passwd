@@ -8,7 +8,7 @@ CFLAGS	= $(RPM_OPT_FLAGS) -Wall -pedantic -D_GNU_SOURCE $(DEBUG)
 LDFLAGS	= -ldl -lpam -lpam_misc -lpwdb
 PROGS	= passwd chfn chsh
 
-PROJECT	= passwd
+PROJECT	= password
 
 VERSION = $(shell awk '/^Version:/ { print $$2 }' passwd.spec)
 CVSTAG = r$(subst .,-,$(VERSION))
