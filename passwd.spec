@@ -39,6 +39,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* The next time we build passwd.
+- fix unguarded printf() (note from Chris Evans)
+
 * Mon Jun  5 2000 Nalin Dahyabhai <nalin@redhat.com>
 - move man pages to %{_mandir}
 

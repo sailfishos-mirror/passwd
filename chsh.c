@@ -177,7 +177,7 @@ static void list_shells(void)
 	    break;
 	if (*buf != '/')
 	    continue;
-	printf(buf);
+	printf("%s", buf);
     } while (s != NULL);
     fclose(fp);
 }
