@@ -321,7 +321,7 @@ main(int argc, const char **argv)
 	parse_args(argc, argv, &min, &max, &warn, &inact);
 
 #ifdef WITH_SELINUX
-	if (is_selinux_enabled()) {
+	if (is_selinux_enabled()>0) {
 	  if ((getuid() == 0) && 
 	      (checkAccess((char *) username,PASSWD__PASSWD)!=0)) {
 	    security_context_t user_context;
