@@ -1,7 +1,10 @@
+%if %{?WITH_SELINUX:0}%{!?WITH_SELINUX:1}
+%define WITH_SELINUX 0
+%endif
 Summary: The passwd utility for setting/changing passwords using PAM.
 Name: passwd
 Version: 0.68
-Release: 3
+Release: 4
 License: BSD
 Group: System Environment/Base
 Source: passwd-%{version}-%{release}.tar.gz
@@ -20,7 +23,10 @@ To use passwd, you should have PAM installed on your system.
 %setup -q
 
 %build
-make DEBUG= RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+make DEBUG= RPM_OPT_FLAGS="$RPM_OPT_FLAGS" \
+%if %{WITH_SELINUX}
+	WITH_SELINUX=yes
+%endif
 
 %install
 make install DESTDIR=$RPM_BUILD_ROOT bindir=%{_bindir} mandir=%{_mandir}
@@ -41,6 +47,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* Mon Jul 28 2003 Dan Walsh <dwalsh@redhat.com> 0.68-4
+- Add SELinux support
+
 * Thu Feb 13 2003 Nalin Dahyabhai <nalin@redhat.com> 0.68-3
 - add aging adjustment flags to passwd(1)'s synopsis, were just in the
   reference section before

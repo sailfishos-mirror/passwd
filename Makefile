@@ -22,6 +22,11 @@ CFLAGS	+= $(RPM_OPT_FLAGS) -Wall -D_GNU_SOURCE $(DEBUG) $(DEFS)
 LDFLAGS	+= -ldl -lpam -lpam_misc
 PROGS	= passwd chfn chsh
 POPT	= -lpopt
+ifeq ($(WITH_SELINUX),yes)
+CFLAGS += -DWITH_SELINUX
+LDFLAGS += -lselinux -lattr
+SELINUX_UTILS=selinux_utils.o
+endif
 
 PROJECT	= passwd
 
@@ -38,7 +43,7 @@ all: date.h $(PROGS) pwdstat
 %.o : %.c Makefile
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-passwd: passwd.o libuser.o pwdb.o
+passwd: passwd.o libuser.o pwdb.o ${SELINUX_UTILS}
 	$(CC) -o $@ $^ $(LDFLAGS) $(POPT)
 
 chfn: chfn.o libuser.o pwdb.o version.o
