@@ -4,9 +4,14 @@
 
 CC	= gcc
 DEBUG	= -g
-CFLAGS	= -Wall -pedantic -D_GNU_SOURCE $(DEBUG)
+CFLAGS	= $(RPM_OPT_FLAGS) -Wall -pedantic -D_GNU_SOURCE $(DEBUG)
 LDFLAGS	= -ldl -lpam -lpam_misc -lpwdb
 PROGS	= passwd chfn chsh
+
+PROJECT	= passwd
+
+VERSION = $(shell awk '/^Version:/ { print $$2 }' passwd.spec)
+CVSTAG = r$(subst .,-,$(VERSION))
 
 DESTDIR	= $(TOP_DIR)/usr/bin
 
@@ -37,3 +42,11 @@ version.o: date.h
 date.h: 
 	echo "static char version_date[] = \"" `date +%D` "\";" > date.h
 
+archive:
+	cvs tag -F $(CVSTAG) .
+	@rm -rf /tmp/$(PROJECT)-$(VERSION) /tmp/$(PROJECT)
+	@cd /tmp; cvs export -r$(CVSTAG) $(PROJECT)
+	@mv /tmp/$(PROJECT) /tmp/$(PROJECT)-$(VERSION)
+	@dir=$$PWD; cd /tmp; tar cvzf $$dir/$(PROJECT)-$(VERSION).tar.gz $(PROJECT)-$(VERSION)
+	@rm -rf /tmp/$(PROJECT)-$(VERSION)
+	@echo "The archive is in $(PROJECT)-$(VERSION).tar.gz"
