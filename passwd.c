@@ -3,6 +3,7 @@
  *		making use of PAM and PWDB
  *
  * Cristian Gafton <gafton@redhat.com>
+ * $Id$
  */
 
 #include <ctype.h>
@@ -35,16 +36,18 @@ int passwd_flags 	= 0;	/* flags specified by root */
 #define PASSWD_DELETE 	0x04 /* delete the user's password */
 #define PASSWD_KEEP 	0x08 /* keep un-expired tokens */
 #define PASSWD_STATUS 	0x10 /* report the password status */
+#define PASSWD_FORCE 	0x20 /* report the password status */
 
 #ifdef HAVE_PAM_FAIL_DELAY
 #define PASSWD_FAIL_DELAY 	2000000 /* usec delay on failure */
 #endif
 
 static void usage(void) {	
-    fprintf(stderr, "usage: passwd [-k] [-l] [-u] [-d] [-S] [ username ]\n"
-	    "\t-k        - keep non-expired authentication tokens\n"
+    fprintf(stderr, "usage: passwd [-k] [-l] [-u [-f]] [-d] [-S] [ username ]\n"
+	    "     \t-k        - keep non-expired authentication tokens\n"
 	    "  (*)\t-l        - lock the named account\n"
 	    "  (*)\t-u        - unlock the named account\n"
+	    "     \t-f	      - force operation\n"
 	    "  (*)\t-d        - delete the password for the named account\n"
 	    "  (*)\t-S        - report password status on the named account\n"
 	    "  (*)\tusername  - update tokens for named user\n"
@@ -55,21 +58,22 @@ static void usage(void) {
 static void parse_args(int argc, char * const argv[])
 {
     while (1) {
-	    int c;
+	int c;
 
-	    c = getopt(argc, argv, "kludS");
-	    if (c == -1)
-		break;
-	    switch (c) {
-		case 'k': passwd_flags |= PASSWD_KEEP; break;
-		case 'l': passwd_flags |= PASSWD_LOCK; break;
-		case 'u': passwd_flags |= PASSWD_UNLOCK; break;
-		case 'S': passwd_flags |= PASSWD_STATUS; break;
-		case 'd': passwd_flags |= PASSWD_DELETE; break;
-		default:
-		    usage();
-		    exit(-1);
-	    }
+	c = getopt(argc, argv, "kludS");
+	if (c == -1)
+	    break;
+	switch (c) {
+	    case 'k': passwd_flags |= PASSWD_KEEP; break;
+	    case 'l': passwd_flags |= PASSWD_LOCK; break;
+	    case 'u': passwd_flags |= PASSWD_UNLOCK; break;
+	    case 'S': passwd_flags |= PASSWD_STATUS; break;
+	    case 'd': passwd_flags |= PASSWD_DELETE; break;
+	    case 'f': passwd_flags |= PASSWD_FORCE; break;
+	    default:
+		usage();
+		exit(-1);
+	}
     }
 
     /* the only flag available to an user id -k */
@@ -79,7 +83,7 @@ static void parse_args(int argc, char * const argv[])
     }
     /* now, only one flag can be active */
     if (passwd_flags) {
-	int tmp = passwd_flags;
+	int tmp = passwd_flags & ~PASSWD_FORCE;
 	int count;
 	for(count = 0; tmp ; tmp = tmp >> 1)
 	    if (tmp & 0x01)
@@ -158,9 +162,10 @@ int main(int argc, char * const argv[])
     }
     if (passwd_flags & PASSWD_UNLOCK) {
 	printf("Unlocking password for user %s\n", username);
-	retval = pwdb_unlock_password(username);
+	retval = pwdb_unlock_password(username, passwd_flags & PASSWD_FORCE);
 	printf("%s: %s\n", progname,
-	       retval==0 ? "Success" : "Error (passwd not set ?)");
+	       retval==0 ? "Success" :
+	       retval==-2 ?"Unsafe operation" : "Error (passwd not set ?)");
 	return retval;
     }
     if (passwd_flags & PASSWD_DELETE) {

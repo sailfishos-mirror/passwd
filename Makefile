@@ -4,16 +4,16 @@
 
 CC	= gcc
 DEBUG	= -g
-CFLAGS	= -Wall -pedantic -O2 $(DEBUG)
+CFLAGS	= -Wall -pedantic -D_GNU_SOURCE $(DEBUG)
 LDFLAGS	= -ldl -lpam -lpam_misc -lpwdb
 PROGS	= passwd chfn chsh
 
 DESTDIR	= $(TOP_DIR)/usr/bin
 
 all: date.h $(PROGS)
-	chmod 4555 $(PROGS)
+#	chmod 4555 $(PROGS)
 
-%.o : %.c
+%.o : %.c Makefile
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 passwd: passwd.o pwdb.o

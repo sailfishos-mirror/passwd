@@ -77,7 +77,7 @@ int pwdb_lock_password(const char *username)
     return retval;
 }
 
-int pwdb_unlock_password(const char *username)
+int pwdb_unlock_password(const char *username, int force)
 {
     const struct pwdb *_pwdb = NULL;
     const struct pwdb_entry *_pwe = NULL;
@@ -100,9 +100,16 @@ int pwdb_unlock_password(const char *username)
 	return 0;
     } else if (_pwe->length <= 2) {
 	/* avoid leaving empty passwords */
-	pwdb_delete(&_pwdb);
-	pwdb_end();
-	return 0;
+	if (force) { 
+	    t++; /* The user really knows what is going on... */
+	} else {
+	    fprintf(stderr, "Warning: unlocked password for %s is the empty string.\n"
+		    "Use the -f flag to force the creation of a passwordless account.\n",
+		    username);
+	    pwdb_delete(&_pwdb);
+	    pwdb_end();
+	    return -2;
+	}
     } else {
 	/* okay, we need to "unlock" it */
 	t++;

@@ -9,7 +9,7 @@
 passwd \- update a user's authentication tokens(s)
 
 .SH SYNOPSIS
-.B passwd [-k] [-l] [-u] [-d] [-S] [username]
+.B passwd [-k] [-l] [-u [-f]] [-d] [-S] [username]
 .sp 2
 .SH DESCRIPTION
 Passwd is used to update a user's authentication token(s).
@@ -69,7 +69,9 @@ with an !).
 .IP \fB-u\fR
 This is the reverse of the previous - it will unlock the account
 password by removing the ! prefix. This option is available to root
-only.
+only. By default passwd will refuse to create a passwordless account 
+(it will not unlock an account that has only "!" as a password). The 
+force option \fB-f\fR will override this protection.
 
 .IP \fB-d\fR
 This is a quick way to disable a password for an account. It will set
