@@ -372,6 +372,8 @@ pwdb_update_aging(const char *username,
 		    !lu_ent_get(ent, LU_SHADOWINACTIVE)) {
 			fprintf(stderr, _("passwd: user account has no support "
 					  "for password aging\n"));
+			shutdown_libuser();
+			return retval;
 		}
 
 		if (min != -2) {
