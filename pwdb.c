@@ -1,11 +1,11 @@
 /*
  * PWDB.C
  *
- * Some wrapper functions for libpwdb interface
+ * Some wrapper functions for libpwdb interfaces.
  */
 
 /*
- * Copyright Red Hat Software, Inc., 1998, 1999.
+ * Copyright Red Hat, Inc., 1998, 1999, 2002.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -40,7 +40,6 @@
  */
 
 /*
- *
  * Written by Cristian Gafton <gafton@redhat.com>
  * $Id$
  */
@@ -75,11 +74,11 @@ pwdb_lock_password(const char *username)
 	int retval, flags, new_len;
 
 	retval = pwdb_start();
-	if (retval != PWDB_SUCCESS)
+	if (retval != PWDB_SUCCESS) {
 		return -1;
-	retval =
-	    pwdb_locate("user", PWDB_DEFAULT, username, PWDB_ID_UNKNOWN,
-			&_pwdb);
+	}
+	retval = pwdb_locate("user", PWDB_DEFAULT, username, PWDB_ID_UNKNOWN,
+			     &_pwdb);
 	CHECK_ERROR(retval);
 	retval = pwdb_get_entry(_pwdb, "passwd", &_pwe);
 	if (_pwe == (struct pwdb_entry *) NULL) {
@@ -97,7 +96,7 @@ pwdb_lock_password(const char *username)
 	}
 	/*
 	 * Avoid creating single char '!' crypted passwords that could
-	 * be interpreted  as shadow or some other crap
+	 * be interpreted as shadow or some other crap
 	 */
 	new_len = _pwe->length + 2;
 	if (_pwe->length < 3) {
@@ -140,11 +139,11 @@ pwdb_unlock_password(const char *username, int force)
 	int retval, flags;
 
 	retval = pwdb_start();
-	if (retval != PWDB_SUCCESS)
+	if (retval != PWDB_SUCCESS) {
 		return -1;
-	retval =
-	    pwdb_locate("user", PWDB_DEFAULT, username, PWDB_ID_UNKNOWN,
-			&_pwdb);
+	}
+	retval = pwdb_locate("user", PWDB_DEFAULT, username, PWDB_ID_UNKNOWN,
+			     &_pwdb);
 	CHECK_ERROR(retval);
 	retval = pwdb_get_entry(_pwdb, "passwd", &_pwe);
 	CHECK_ERROR(retval);
@@ -217,11 +216,11 @@ pwdb_clear_password(const char *username)
 	int retval, flags;
 
 	retval = pwdb_start();
-	if (retval != PWDB_SUCCESS)
+	if (retval != PWDB_SUCCESS) {
 		return -1;
-	retval =
-	    pwdb_locate("user", PWDB_DEFAULT, username, PWDB_ID_UNKNOWN,
-			&_pwdb);
+	}
+	retval = pwdb_locate("user", PWDB_DEFAULT, username, PWDB_ID_UNKNOWN,
+			     &_pwdb);
 	CHECK_ERROR(retval);
 
 	retval = pwdb_flags("user", _pwdb->source, &flags);
@@ -254,11 +253,11 @@ pwdb_display_status(const char *username)
 	int retval;
 
 	retval = pwdb_start();
-	if (retval != PWDB_SUCCESS)
+	if (retval != PWDB_SUCCESS) {
 		return -1;
-	retval =
-	    pwdb_locate("user", PWDB_DEFAULT, username, PWDB_ID_UNKNOWN,
-			&_pwdb);
+	}
+	retval = pwdb_locate("user", PWDB_DEFAULT, username, PWDB_ID_UNKNOWN,
+			     &_pwdb);
 	CHECK_ERROR(retval);
 	retval = pwdb_get_entry(_pwdb, "passwd", &_pwe);
 	if (_pwe == (struct pwdb_entry *) NULL) {
@@ -289,7 +288,7 @@ pwdb_display_status(const char *username)
 		}
 		break;
 	default:
-		printf("Password set, DES encription\n");
+		printf("Password set, DES encryption\n");
 	}
 	retval = pwdb_entry_delete(&_pwe);
 	CHECK_ERROR(retval);
@@ -306,10 +305,12 @@ pwdb_update_gecos(const char *username, const char *gecos)
 	int retval, flags;
 
 	/* Now update the user entry */
-	pwdb_start();
-	retval =
-	    pwdb_locate("user", PWDB_DEFAULT, username, PWDB_ID_UNKNOWN,
-			&_pwdb);
+	retval = pwdb_start();
+	if (retval != PWDB_SUCCESS) {
+		return -1;
+	}
+	retval = pwdb_locate("user", PWDB_DEFAULT, username, PWDB_ID_UNKNOWN,
+			     &_pwdb);
 	CHECK_ERROR(retval);
 
 	retval = pwdb_flags("user", _pwdb->source, &flags);
@@ -329,9 +330,9 @@ pwdb_update_gecos(const char *username, const char *gecos)
 			      PWDB_ID_UNKNOWN, &_pwdb);
 	CHECK_ERROR(retval);
 	retval = pwdb_delete(&_pwdb);
-	CHECK_ERROR(retval)
-	    pwdb_end();
-	return 0;
+	CHECK_ERROR(retval);
+	pwdb_end();
+	return retval;
 }
 
 int
@@ -341,10 +342,12 @@ pwdb_update_shell(const char *username, const char *shell)
 	int retval, flags;
 
 	/* Now update the user entry */
-	pwdb_start();
-	retval =
-	    pwdb_locate("user", PWDB_DEFAULT, username, PWDB_ID_UNKNOWN,
-			&_pwdb);
+	retval = pwdb_start();
+	if (retval != PWDB_SUCCESS) {
+		return -1;
+	}
+	retval = pwdb_locate("user", PWDB_DEFAULT, username, PWDB_ID_UNKNOWN,
+			     &_pwdb);
 	CHECK_ERROR(retval);
 
 	retval = pwdb_flags("user", _pwdb->source, &flags);
@@ -364,9 +367,18 @@ pwdb_update_shell(const char *username, const char *shell)
 			      PWDB_ID_UNKNOWN, &_pwdb);
 	CHECK_ERROR(retval);
 	retval = pwdb_delete(&_pwdb);
-	CHECK_ERROR(retval)
-	    pwdb_end();
+	CHECK_ERROR(retval);
+	pwdb_end();
 	return 0;
+}
+
+int
+pwdb_update_aging(const char *username,
+		  long min, long max, long warn, long inact)
+{
+	/* FIXME */
+	fprintf(stderr, "Function not implemented.\n");
+	return -1;
 }
 
 #endif
