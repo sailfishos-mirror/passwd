@@ -14,6 +14,7 @@ VERSION = $(shell awk '/^Version:/ { print $$2 }' $(PROJECT).spec)
 CVSTAG = r$(subst .,-,$(VERSION))
 
 DESTDIR	= $(TOP_DIR)/usr/bin
+MANDIR	= $(TOP_DIR)/usr/man
 
 all: date.h $(PROGS)
 #	chmod 4555 $(PROGS)
@@ -33,6 +34,9 @@ chsh: chsh.o pwdb.o version.o
 install: all
 	if [ ! -d $(DESTDIR) ] ; then mkdir -p $(DESTDIR) ; fi
 	install -m 4555 -o root -g root $(PROGS) $(DESTDIR)
+	if [ ! -d $(MANDIR) ] ; then mkdir -p $(MANDIR) ; fi
+	if [ ! -d $(MANDIR)/man1 ] ; then mkdir -p $(MANDIR)/man1 ; fi
+	install -m 644 $(wildcard *.1) $(MANDIR)/man1
 
 clean:
 	rm -f *.o *~ $(PROGS) date.h
@@ -45,9 +49,9 @@ date.h:
 
 archive:
 	cvs tag -F $(CVSTAG) .
-	@rm -rf /tmp/$(PROJECT)-$(VERSION) /tmp/$(PROJECT)
+	@rm -rf /tmp/$(PROJECT)-$(VERSION) /tmp/password
 	@cd /tmp; cvs export -r$(CVSTAG) password
-	@mv /tmp/$(PROJECT) /tmp/$(PROJECT)-$(VERSION)
+	@mv /tmp/password /tmp/$(PROJECT)-$(VERSION)
 	@dir=$$PWD; cd /tmp; tar cvzf $$dir/$(PROJECT)-$(VERSION).tar.gz $(PROJECT)-$(VERSION)
 	@rm -rf /tmp/$(PROJECT)-$(VERSION)
 	@echo "The archive is in $(PROJECT)-$(VERSION).tar.gz"
