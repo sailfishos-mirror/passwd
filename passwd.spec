@@ -36,11 +36,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %config /etc/pam.d/passwd
 %attr(4511,root,root) /usr/bin/passwd
-/usr/man/man1/passwd.1
+/usr/man/man1/passwd.1*
 
 %changelog
 * Fri Feb 04 2000 Nalin Dahyabhai <nalin@redhat.com>
 - document --stdin in man page
+- fix for gzipped man pages
 
 * Sat Apr 10 1999 Cristian Gafton <gafton@redhat.com>
 - first build from the new source code base.
