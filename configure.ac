@@ -40,7 +40,7 @@ use_selinux=auto)
 if test x$use_selinux != xno ; then
 	AC_CHECK_FUNC(security_compute_av,,
 		      [AC_CHECK_LIB(selinux,security_compute_av)])
-	if test $ac_cv_lib_selinux_security_compute_av = xno ; then
+	if test x$ac_cv_lib_selinux_security_compute_av != xyes ; then
 		if test x$use_selinux != xauto ; then
 			AC_MSG_ERROR([requested SELinux, but libselinux was not found])
 		fi
@@ -54,9 +54,9 @@ AS_HELP_STRING([--with-laus],[log using LAuS in addition to syslog]),
 use_laus=$withval,
 use_laus=auto)
 if test x$use_laus != xno ; then
-	AC_CHECK_FUNC(laus_init,,
-		      [AC_CHECK_LIB(laus,laus_init)])
-	if test $ac_cv_lib_laus_laus_init != xno ; then
+	AC_CHECK_FUNC(laus_open,,
+		      [AC_CHECK_LIB(laus,laus_open)])
+	if test x$ac_cv_lib_laus_laus_open != xyes ; then
 		if test x$use_laus != xauto ; then
 			AC_MSG_ERROR([requested LAuS, but liblaus was not found])
 		fi

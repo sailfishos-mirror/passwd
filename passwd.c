@@ -59,16 +59,16 @@
 #include "selinux_utils.h"
 #endif
 
-#define _(String) String
-#define N_(String) String
-
 #ifdef HAVE_LIBLAUS
-
 #include <stdarg.h>
 #include <laus.h>
 static int __laus_active;
-
+#else
+#define NO_TAG NULL
 #endif
+
+#define _(String) String
+#define N_(String) String
 
 /* conversation function & corresponding structure */
 static struct pam_conv conv = {
