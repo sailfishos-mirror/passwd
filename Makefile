@@ -18,8 +18,9 @@ endif
 
 CC	= gcc
 DEBUG	= -g
-CFLAGS	+= $(RPM_OPT_FLAGS) -Wall -D_GNU_SOURCE $(DEBUG) $(DEFS)
-LDFLAGS	+= -ldl -lpam -lpam_misc
+WARNINGS= -Waggregate-return -Wcast-align -Wimplicit -Wmissing-declarations -Wmissing-prototypes -Wpointer-arith -Wstrict-prototypes -Wuninitialized -Wsign-compare -Wunused-value
+CFLAGS	+= $(RPM_OPT_FLAGS) -Wall $(WARNINGS) -D_GNU_SOURCE $(DEBUG) $(DEFS)
+LDFLAGS	+= -lpam -lpam_misc -ldl
 PROGS	= passwd chfn chsh
 POPT	= -lpopt
 ifeq ($(WITH_SELINUX),yes)
