@@ -1,3 +1,10 @@
+2004-08-23 Jindrich Novy <jnovy@redhat.com>
+	* passwd.1: updated man page
+
+2004-08-23  Steve Grubb <linux_4ever@yahoo.com>
+
+	* passwd.c, version.c: code cleanup patch
+
 1999-08-23  Cristian Gafton  <gafton@redhat.com>
 
 	* pwdb.c (pwdb_lock_password): Fixed the passwd -u problem.

@@ -498,18 +498,32 @@ main(int argc, const char **argv)
 	/* If we need to read the new password from stdin, read it and switch
 	 * to the really-quiet stdin conversation function. */
 	if (passwd_flags & PASSWD_STDIN) {
-		char newPassword[80];
+		char *ptr, newPassword[80];
 		int i;
 
 		i = read(STDIN_FILENO, newPassword,
 			 sizeof(newPassword) - 1);
-		newPassword[i - 1] = '\0';
+		if (i < 0) {
+			fprintf(stderr,
+				_("passwd: error reading from stdin\n"));
+			exit(1);
+		}
+
+		newPassword[i] = '\0';
+		ptr = strchr(newPassword, '\n');
+		if (ptr)
+			*ptr = 0;
 		conv.conv = stdin_conv;
 		conv.appdata_ptr = strdup(newPassword);
 	}
 
 	/* Start up PAM. */
 	retval = pam_start("passwd", username, &conv, &pamh);
+	if (retval != PAM_SUCCESS) {
+		fprintf(stderr,
+			_("passwd: unable to start pam\n"));
+		exit(1);
+	}
 
 #ifdef HAVE_PAM_FAIL_DELAY
 	/* We have to pause on failure, so tell libpam the minimum amount

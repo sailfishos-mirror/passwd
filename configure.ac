@@ -1,8 +1,21 @@
-AC_INIT(configure.ac)
-AM_INIT_AUTOMAKE(passwd,`grep ^Version: passwd.spec | awk '{print $NF}'`)
+AC_INIT
+AC_CONFIG_SRCDIR([configure.ac])
+AM_INIT_AUTOMAKE([passwd],[0.68])
 
 AC_PROG_CC
 AC_PROG_RANLIB
+
+# Checks for header files.
+AC_HEADER_STDC
+AC_CHECK_HEADERS([stdlib.h string.h unistd.h])
+
+# Checks for typedefs, structures, and compiler characteristics.
+AC_C_CONST
+
+# Checks for library functions.
+AC_FUNC_ALLOCA
+AC_FUNC_MALLOC
+AC_CHECK_FUNCS([memset strdup])
 
 AC_ARG_WITH(pwdb,
 AS_HELP_STRING([--with-pwdb],[usepwdb for modifying user accounts]),
@@ -83,5 +96,6 @@ if test x$GCC = xyes ; then
 	CFLAGS="$CFLAGS $WARNINGS"
 fi
 
-AC_CONFIG_HEADER(config.h)
-AC_OUTPUT(Makefile)
+AC_CONFIG_HEADER([config.h])
+AC_CONFIG_FILES([Makefile])
+AC_OUTPUT
