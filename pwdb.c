@@ -90,9 +90,17 @@ int pwdb_lock_password(const char *username)
 	/* already locked... */
 	return 0;
     }
-    snprintf(new_pass, _pwe->length+1, "!%s", t);
-    retval = pwdb_set_entry(_pwdb, "passwd", new_pass,
-			    _pwe->length+1, NULL, NULL, 0);
+    /*
+     * Avoid creating single char '!' crypted passwords that could
+     * be interpreted  as shadow or some other crap
+     */
+    if (_pwe->length < 3) {
+	snprintf(new_pass, _pwe->length+5, "!!%s", t);
+    } else {
+	snprintf(new_pass, _pwe->length+5, "!%s", t);
+    }	
+    retval = pwdb_set_entry(_pwdb, "passwd", new_pass, strlen(new_pass)+1,
+			    NULL, NULL, 0);
     CHECK_ERROR(retval);
 
     retval = pwdb_entry_delete(&_pwe);
@@ -137,21 +145,33 @@ int pwdb_unlock_password(const char *username, int force)
 	pwdb_delete(&_pwdb);
 	pwdb_end();
 	return 0;
-    } else if (_pwe->length <= 2) {
-	/* avoid leaving empty passwords */
-	if (force) { 
-	    t++; /* The user really knows what is going on... */
-	} else {
-	    fprintf(stderr, "Warning: unlocked password for %s is the empty string.\n"
-		    "Use the -f flag to force the creation of a passwordless account.\n",
-		    username);
-	    pwdb_delete(&_pwdb);
-	    pwdb_end();
-	    return -2;
+    }	
+
+    while (*t == '!') {
+	if (_pwe->length <= 1) {
+	    t = "";
+	    _pwe->length = 1;
+	    break;
 	}
-    } else {
-	/* okay, we need to "unlock" it */
+	/* try to remove as many ! signs as we find... */
+	if (_pwe->length == 2) {
+	    /* avoid leaving empty passwords */
+	    if (force) { 
+		t++; /* The user really knows what is going on... */
+		_pwe->length--;
+		continue;
+	    } else {
+		fprintf(stderr, "Warning: unlocked password for %s is the empty string.\n"
+			"Use the -f flag to force the creation of a passwordless account.\n",
+			username);
+		pwdb_delete(&_pwdb);
+		pwdb_end();
+		return -2;
+	    }
+	}
+	/* we have plenty of room to unlock it... */
 	t++;
+	_pwe->length--;
     }
     retval = pwdb_set_entry(_pwdb, "passwd", t,
 			    _pwe->length-1, NULL, NULL, 0);
