@@ -85,7 +85,7 @@ static void usage(void) {
 	    "     \t-k        - keep non-expired authentication tokens\n"
 	    "  (*)\t-l        - lock the named account\n"
 	    "  (*)\t-u        - unlock the named account\n"
-	    "     \t-f	      - force operation\n"
+	    "     \t-f        - force operation\n"
 	    "  (*)\t-d        - delete the password for the named account\n"
 	    "  (*)\t-S        - report password status on the named account\n"
 	    "  (*)\tusername  - update tokens for named user\n"
@@ -98,7 +98,7 @@ static void parse_args(int argc, char * const argv[])
     while (1) {
 	int c;
 
-	c = getopt(argc, argv, "kludS");
+	c = getopt(argc, argv, "klufdS");
 	if (c == -1)
 	    break;
 	switch (c) {
@@ -179,6 +179,7 @@ static void parse_args(int argc, char * const argv[])
 		    progname, username);
 	    exit(-4);
 	}
+	printf("Changing password for user %s\n", username);
     }
 }
 
@@ -249,13 +250,13 @@ int main(int argc, char * const argv[])
 	exit(0);
     }
 
+    if (retval != PAM_SUCCESS)
+	fprintf(stderr, "passwd: %s\n", pam_strerror(pamh, retval));
+
     if (pamh != NULL) {
 	(void) pam_end(pamh,PAM_SUCCESS);
 	pamh = NULL;
     }
-
-    if (retval != PAM_SUCCESS)
-	fprintf(stderr, "passwd: %s\n", pam_strerror(pamh, retval));
 
     exit(1);
 }
