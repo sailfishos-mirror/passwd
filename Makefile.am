@@ -1,4 +1,5 @@
 bin_PROGRAMS = passwd
+man1_MANS = passwd.1
 noinst_PROGRAMS = pwdstat
 noinst_LIBRARIES = libstuff.a
 EXTRA_DIST = passwd.pamd passwd.1
