@@ -56,7 +56,7 @@ extern const char *progname;
 #define CHECK_ERROR(x) \
 if (x != NULL) { \
 	fprintf(stderr, "%s: Error %d - %s.\n", \
-		progname, __LINE__, lu_strerror(error)); \
+		progname, __LINE__, lu_strerror(x)); \
 	lu_error_free(&x); \
 	return -1; \
 }
