@@ -2,10 +2,24 @@
 # $Id$
 #
 
+BACKLIB=pwdb
+
+ifeq (libuser,$(BACKLIB))
+CFLAGS  = $(shell pkg-config --cflags libuser)
+LDFLAGS = $(shell pkg-config --libs   libuser)
+DEFS = -DLIBUSER
+endif
+
+ifeq (pwdb,$(BACKLIB))
+CFLAGS =
+LDFLAGS = -lpwdb
+DEFS = -DPWDB
+endif
+
 CC	= gcc
 DEBUG	= -g
-CFLAGS	= $(RPM_OPT_FLAGS) -Wall -D_GNU_SOURCE $(DEBUG)
-LDFLAGS	= -ldl -lpam -lpam_misc -lpwdb
+CFLAGS	+= $(RPM_OPT_FLAGS) -Wall -D_GNU_SOURCE $(DEBUG) $(DEFS)
+LDFLAGS	+= -ldl -lpam -lpam_misc
 PROGS	= passwd chfn chsh
 POPT	= -lpopt
 
@@ -17,8 +31,6 @@ CVSTAG = r$(subst .,-,$(VERSION)-$(RELEASE))
 
 bindir=/usr/bin
 mandir=/usr/man
-DESTDIR	= $(TOP_DIR)$(bindir)
-MANDIR	= $(TOP_DIR)$(mandir)
 
 all: date.h $(PROGS) pwdstat
 #	chmod 4555 $(PROGS)
@@ -26,24 +38,23 @@ all: date.h $(PROGS) pwdstat
 %.o : %.c Makefile
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-passwd: passwd.o pwdb.o
+passwd: passwd.o libuser.o pwdb.o
 	$(CC) $(LDFLAGS) -o $@ $^ $(POPT)
 
-chfn: chfn.o pwdb.o version.o
+chfn: chfn.o libuser.o pwdb.o version.o
 	$(CC) $(LDFLAGS) -o $@ $^
 
-chsh: chsh.o pwdb.o version.o
+chsh: chsh.o libuser.o pwdb.o version.o
 	$(CC) $(LDFLAGS) -o $@ $^
 
 pwdstat: pwdstat.o
 	$(CC) $(LDFLAGS) -o $@ $^
 
 install: all
-	if [ ! -d $(DESTDIR) ] ; then mkdir -p $(DESTDIR) ; fi
-	install -m 4555 $(PROGS) $(DESTDIR)
-	if [ ! -d $(MANDIR) ] ; then mkdir -p $(MANDIR) ; fi
-	if [ ! -d $(MANDIR)/man1 ] ; then mkdir -p $(MANDIR)/man1 ; fi
-	install -m 644 $(wildcard *.1) $(MANDIR)/man1
+	if [ ! -d $(DESTDIR)$(bindir) ] ; then mkdir -p $(DESTDIR)$(bindir) ; fi
+	if [ ! -d $(DESTDIR)$(mandir)/man1 ] ; then mkdir -p $(DESTDIR)$(mandir)/man1 ; fi
+	install -m 4555 $(PROGS) $(DESTDIR)$(bindir)/
+	install -m 644 $(wildcard *.1) $(DESTDIR)$(mandir)/man1/
 
 clean:
 	rm -f *.o *~ $(PROGS) date.h
@@ -54,8 +65,13 @@ version.o: date.h
 date.h: 
 	echo "static char version_date[] = \"" `date +%D` "\";" > date.h
 
+tag:
+	cvs tag -cR $(CVSTAG) .
+
+force-tag:
+	cvs tag -cFR $(CVSTAG) .
+
 archive:
-	cvs tag -F $(CVSTAG) .
 	@rm -rf /tmp/$(PROJECT)-$(VERSION) /tmp/password
 	@cd /tmp; cvs export -r$(CVSTAG) password
 	@mv /tmp/password /tmp/$(PROJECT)-$(VERSION)

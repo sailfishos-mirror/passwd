@@ -1,14 +1,13 @@
 Summary: The passwd utility for setting/changing passwords using PAM.
 Name: passwd
-Version: 0.64.1
-Release: 9
+Version: 0.68
+Release: 1
 License: BSD
 Group: System Environment/Base
 Source: passwd-%{version}-%{release}.tar.gz
 Buildroot: %{_tmppath}/passwd-root
 Requires: pam >= 0.59, /etc/pam.d/system-auth
-Requires: pwdb >= 0.58
-BuildPrereq: pam-devel, pwdb
+BuildPrereq: glib2-devel, libuser-devel, pam-devel
 
 %description
 The passwd package contains a system utility (passwd) which sets
@@ -21,14 +20,16 @@ To use passwd, you should have PAM installed on your system.
 %setup -q
 
 %build
-make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+make DEBUG= RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 
 %install
-mkdir -p $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
-make install TOP_DIR=$RPM_BUILD_ROOT bindir=%{_bindir} mandir=%{_mandir}
+make install DESTDIR=$RPM_BUILD_ROOT bindir=%{_bindir} mandir=%{_mandir}
 strip $RPM_BUILD_ROOT%{_bindir}/passwd
-mkdir -p $RPM_BUILD_ROOT/etc/pam.d/
+install -m 755 -d $RPM_BUILD_ROOT/etc/pam.d/
 install -m 644 passwd.pamd $RPM_BUILD_ROOT/etc/pam.d/passwd
+
+rm $RPM_BUILD_ROOT/%{_bindir}/{chfn,chsh}
+rm $RPM_BUILD_ROOT/%{_mandir}/man1/{chfn,chsh}.*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -40,6 +41,42 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* Mon Dec  9 2002 Nalin Dahyabhai <nalin@redhat.com> 0.68-0.2.1
+- build using BACKLIB=pwdb for use with RHL AS 2.1
+
+* Mon Dec  9 2002 Nalin Dahyabhai <nalin@redhat.com> 0.68-1
+- implement aging adjustments for pwdb
+
+* Mon Nov 11 2002 Nalin Dahyabhai <nalin@redhat.com> 0.67-4
+- modify default PAM configuration file to not specify directories, so that
+  the same configuration can be used for all arches on multilib systems
+- fix BuildPrereq on glib-devel to specify glib2-devel instead
+- remove unpackaged files in %%install phase
+
+* Tue May 28 2002 Nalin Dahyabhai <nalin@redhat.com> 0.67-3
+- rebuild
+
+* Mon May 20 2002 Nalin Dahyabhai <nalin@redhat.com> 0.67-2
+- rebuild in new environment
+
+* Wed Mar 13 2002 Nalin Dahyabhai <nalin@redhat.com> 0.67-1
+- add the -i, -n, -w, and -x options to passwd
+
+* Mon Mar 11 2002 Nalin Dahyabhai <nalin@redhat.com> 0.65-5
+- rebuild
+
+* Mon Feb 25 2002 Nalin Dahyabhai <nalin@redhat.com> 0.65-4
+- rebuild
+
+* Fri Feb 22 2002 Nalin Dahyabhai <nalin@redhat.com> 0.65-3
+- rebuild
+
+* Thu Jan 31 2002 Nalin Dahyabhai <nalin@redhat.com> 0.65-2
+- rebuild to get dependencies right
+
+* Tue Jan 29 2002 Nalin Dahyabhai <nalin@redhat.com> 0.65-1
+- change dependency from pwdb to libuser
+
 * Fri Jan 25 2002 Nalin Dahyabhai <nalin@redhat.com> 0.64.1-9
 - rebuild
 
