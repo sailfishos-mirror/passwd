@@ -55,7 +55,7 @@
 #include <security/pam_appl.h>
 #include <security/pam_misc.h>
 #include <pwd.h>
-#include <getopt.h>
+#include <popt.h>
 
 #include "pwdb.h"
 
@@ -75,6 +75,7 @@ int passwd_flags 	= 0;	/* flags specified by root */
 #define PASSWD_KEEP 	0x08 /* keep un-expired tokens */
 #define PASSWD_STATUS 	0x10 /* report the password status */
 #define PASSWD_FORCE 	0x20 /* report the password status */
+#define PASSWD_STDIN 	0x40 /* read the password from stdin (root only) */
 
 #ifdef HAVE_PAM_FAIL_DELAY
 #define PASSWD_FAIL_DELAY 	2000000 /* usec delay on failure */
@@ -93,26 +94,83 @@ static void usage(void) {
 	    );
 }
 
+static int stdin_conv(int num_msg, const struct pam_message **msgm,
+		      struct pam_response **response, void *appdata_ptr) {
+    struct pam_response *reply;
+    int count;
+
+    if (num_msg <= 0)
+	return PAM_CONV_ERR;
+
+    reply = (struct pam_response *) calloc(num_msg,
+					   sizeof(struct pam_response));
+    if (reply == NULL) {
+	return PAM_CONV_ERR;
+    }
+
+    for (count=0; count < num_msg; ++count) {
+	reply[count].resp_retcode = 0;
+	reply[count].resp = strdup(appdata_ptr);
+    }
+
+    *response = reply;
+    reply = NULL;
+
+    return PAM_SUCCESS;
+}
+
 static void parse_args(int argc, char * const argv[])
 {
-    while (1) {
-	int c;
+    poptContext optCon;
+    int delete = 0, force = 0, keep = 0, lock = 0, status = 0, unlock = 0;
+    int stdin = 0;
+    int rc;
+    const char ** extraArgs;
+    struct poptOption options[] = {
+	{ "delete", 'd', POPT_ARG_NONE, &delete, 0,
+	    "delete the password for the named account (root only)" },
+	{ "force", 'f', POPT_ARG_NONE, &force, 0,
+	    "force operation\n" },
+	{ "keep-tokens", 'k', POPT_ARG_NONE, &keep, 0,
+	    "keep non-expired authentication tokens" },
+	{ "lock", 'l', POPT_ARG_NONE, &lock, 0,
+	    "lock the named account (root only)" },
+	{ "status", 'S', POPT_ARG_NONE, &status, 0,
+	    "report password status on the named account (root only)" },
+	{ "stdin", '\0', POPT_ARG_NONE, &stdin, 0,
+	    "read new tokens from stdin (root only)" },
+	{ "unlock", 'u', POPT_ARG_NONE, &unlock, 0,
+	    "unlock the named account (root only)" },
+	POPT_AUTOHELP
+	{ NULL, '\0', 0, NULL },
+    };
 
-	c = getopt(argc, argv, "klufdS");
-	if (c == -1)
-	    break;
-	switch (c) {
-	    case 'k': passwd_flags |= PASSWD_KEEP; break;
-	    case 'l': passwd_flags |= PASSWD_LOCK; break;
-	    case 'u': passwd_flags |= PASSWD_UNLOCK; break;
-	    case 'S': passwd_flags |= PASSWD_STATUS; break;
-	    case 'd': passwd_flags |= PASSWD_DELETE; break;
-	    case 'f': passwd_flags |= PASSWD_FORCE; break;
-	    default:
-		usage();
-		exit(-1);
-	}
+    optCon = poptGetContext("passwd", argc, (char **) argv, options,0);
+    poptSetOtherOptionHelp(optCon, "[OPTION...] <accountName>");
+
+    if ((rc = poptGetNextOpt(optCon)) < -1) {
+	fprintf(stderr, "%s: bad argument %s: %s\n", progname,
+		poptBadOption(optCon, POPT_BADOPTION_NOALIAS), 
+		poptStrerror(rc));
+	exit(-3);
     }
+
+    extraArgs = poptGetArgs(optCon);
+
+    if (keep)
+	passwd_flags |= PASSWD_KEEP;
+    if (lock)
+	passwd_flags |= PASSWD_LOCK;
+    if (unlock)
+	passwd_flags |= PASSWD_UNLOCK;
+    if (status)
+	passwd_flags |= PASSWD_STATUS;
+    if (delete)
+	passwd_flags |= PASSWD_DELETE;
+    if (force)
+	passwd_flags |= PASSWD_FORCE;
+    if (stdin)
+	passwd_flags |= PASSWD_STDIN;
 
     /* the only flag available to an user id -k */
     if ((passwd_flags & ~PASSWD_KEEP) && getuid()) {
@@ -127,7 +185,7 @@ static void parse_args(int argc, char * const argv[])
 	    if (tmp & 0x01)
 		count++;
 	if (count > 1) {
-	    fprintf(stderr, "%s: Only one flag can be specified.\n",
+	    fprintf(stderr, "%s: Only one flag may be specified.\n",
 		    progname);
 	    exit(-2);
 	}
@@ -135,20 +193,26 @@ static void parse_args(int argc, char * const argv[])
 
     /* now, only root can specify an username */
     username = NULL;
-    if (argc - optind > 0) {
+    if (extraArgs && extraArgs[0]) {
 	if (getuid()) {
 	    /* non root */
 	    fprintf(stderr, "%s: Only root can specify a username\n",
 		    progname);
 	    exit(-3);
 	} else {
-	    username = argv[optind];
+	    username = extraArgs[0];
 	    /* test the username for length */
 	    if (strlen(username) > MAX_USERNAMESIZE) {
 		fprintf(stderr, "%s: The username supplied is too long\n",
 			progname);
 		exit(-3);
 	    }
+	}
+
+	if (extraArgs[1]) {
+	    fprintf(stderr, "%s: Only one user name may be specified\n",
+		    progname);
+	    exit(-3);
 	}
     }
 
@@ -222,7 +286,16 @@ int main(int argc, char * const argv[])
     /* here we know whose passwords are to be changed and whether
        we'll change everything or just the expired ones */
 
-    retval = pam_start("passwd", username, &conv, &pamh);
+    if (passwd_flags & PASSWD_STDIN) {
+	char newPassword[80];
+	int i;
+
+	i = read(0, newPassword, sizeof(newPassword) - 1);
+	newPassword[i - 1] = '\0';
+	conv.conv = stdin_conv;
+	conv.appdata_ptr = strdup(newPassword);
+	retval = pam_start("passwd", username, &conv, &pamh);
+    }
 
 #ifdef HAVE_PAM_FAIL_DELAY
     /* have to pause on failure. At least this long (doubles..) */

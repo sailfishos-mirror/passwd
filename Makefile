@@ -4,9 +4,10 @@
 
 CC	= gcc
 DEBUG	= -g
-CFLAGS	= $(RPM_OPT_FLAGS) -Wall -pedantic -D_GNU_SOURCE $(DEBUG)
+CFLAGS	= $(RPM_OPT_FLAGS) -Wall -D_GNU_SOURCE $(DEBUG)
 LDFLAGS	= -ldl -lpam -lpam_misc -lpwdb
 PROGS	= passwd chfn chsh
+POPT	= -lpopt
 
 PROJECT	= passwd
 
@@ -23,7 +24,7 @@ all: date.h $(PROGS) pwdstat
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 passwd: passwd.o pwdb.o
-	$(CC) $(LDFLAGS) -o $@ $^
+	$(CC) $(LDFLAGS) -o $@ $^ $(POPT)
 
 chfn: chfn.o pwdb.o version.o
 	$(CC) $(LDFLAGS) -o $@ $^
