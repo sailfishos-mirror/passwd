@@ -4,7 +4,7 @@ Version: 0.64.1
 Release: 8
 License: BSD
 Group: System Environment/Base
-Source: passwd-%{version}.tar.gz
+Source: passwd-%{version}-%{release}.tar.gz
 Buildroot: %{_tmppath}/passwd-root
 Requires: pam >= 0.59, /etc/pam.d/system-auth
 Requires: pwdb >= 0.58
