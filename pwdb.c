@@ -43,9 +43,9 @@
  * Written by Cristian Gafton <gafton@redhat.com>
  */
 
-#ifdef PWDB
-
 #ident "$Id$"
+
+#include "config.h"
 
 #include "pwdb.h"
 
@@ -54,8 +54,11 @@
 #include <unistd.h>
 #include <string.h>
 
+#ifdef PWDB
+
 #include <pwdb/pwdb_public.h>
 #include <pwdb/pwdb_shadow.h>
+
 extern const char *progname;
 
 #define CHECK_ERROR(x)     if (x != PWDB_SUCCESS) { \

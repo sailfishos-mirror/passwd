@@ -37,6 +37,8 @@
 
 #ident "$Id$"
 
+#include "config.h"
+
 #include <sys/types.h>
 
 #include <ctype.h>
@@ -45,7 +47,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-
 #include <popt.h>
 #include <security/pam_appl.h>
 #include <security/pam_misc.h>

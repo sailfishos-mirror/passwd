@@ -1,0 +1,87 @@
+AC_INIT(configure.ac)
+AM_INIT_AUTOMAKE(passwd,`grep ^Version: passwd.spec | awk '{print $NF}'`)
+
+AC_PROG_CC
+AC_PROG_RANLIB
+
+AC_ARG_WITH(pwdb,
+AS_HELP_STRING([--with-pwdb],[usepwdb for modifying user accounts]),
+use_pwdb=$withval,
+use_pwdb=no)
+
+AC_ARG_WITH(libuser,
+AS_HELP_STRING([--without-libuser],[don't use libuser for modifying user accounts]),
+use_libuser=$withval,
+use_libuser=no)
+
+if test x$use_pwdb = xno -a x$use_libuser = xno ; then
+	use_libuser=yes
+fi
+
+if test x$use_libuser != xno ; then
+	PKG_CHECK_MODULES(LIBUSER,libuser)
+	AC_DEFINE(LIBUSER,1,[Define if you wish to use libuser.])
+else
+	if test x$use_pwdb != xno ; then
+		AC_DEFINE(PWDB,1,[Define if you wish to use pwdb.])
+		if "$use_pwdb" != "yes" ; then
+			if "$use_pwdb" != "/usr" ; then
+				CFLAGS="$CFLAGS -I$use_pwdb/include"
+				LIBS="$LIBS -L$use_pwdb/lib"
+			fi
+		fi
+	fi
+fi
+
+AC_ARG_WITH(selinux,
+AS_HELP_STRING([--with-selinux],[use SELinux]),
+use_selinux=$withval,
+use_selinux=auto)
+if test x$use_selinux != xno ; then
+	AC_CHECK_FUNC(security_compute_av,,
+		      [AC_CHECK_LIB(selinux,security_compute_av)])
+	if test $ac_cv_lib_selinux_security_compute_av = xno ; then
+		if test x$use_selinux != xauto ; then
+			AC_MSG_ERROR([requested SELinux, but libselinux was not found])
+		fi
+	else
+		AC_DEFINE(WITH_SELINUX,1,[Define if you want to use SELinux.])
+	fi
+fi
+
+AC_ARG_WITH(laus,
+AS_HELP_STRING([--with-laus],[log using LAuS in addition to syslog]),
+use_laus=$withval,
+use_laus=auto)
+if test x$use_laus != xno ; then
+	AC_CHECK_FUNC(laus_init,,
+		      [AC_CHECK_LIB(laus,laus_init)])
+	if test $ac_cv_lib_laus_laus_init = xno ; then
+		if test x$use_laus != xauto ; then
+			AC_MSG_ERROR([requested LAuS, but liblaus was not found])
+		fi
+	else
+		AC_DEFINE(WITH_LAUS,1,[Define if you want to use LAuS.])
+	fi
+fi
+
+AC_DEFINE(_GNU_SOURCE,1,[Define if you want to use GNU extensions.])
+
+AM_MAINTAINER_MODE
+
+AM_CONDITIONAL(USE_SELINUX,test x$use_selinux != xno)
+AM_CONDITIONAL(USE_LAUS,test x$use_laus != xno)
+AM_CONDITIONAL(USE_LIBUSER,test x$use_libuser != xno)
+
+AC_CHECK_FUNC(dlopen,,[AC_CHECK_LIB(dl,dlopen)])
+AC_CHECK_FUNC(misc_conv,,[AC_CHECK_LIB(pam_misc,misc_conv)])
+AC_CHECK_FUNC(pam_authenticate,,[AC_CHECK_LIB(pam,pam_authenticate)])
+AC_CHECK_FUNC(poptGetContext,,[AC_CHECK_LIB(popt,poptGetContext)])
+
+if test x$GCC = xyes ; then
+	WARNINGS="-Waggregate-return -Wcast-align -Wimplicit -Wmissing-declarations -Wmissing-prototypes -Wpointer-arith -Wstrict-prototypes -Wuninitialized -Wsign-compare -Wunused-value"
+	CFLAGS="$CFLAGS $WARNINGS"
+fi
+
+AC_CONFIG_HEADER(config.h)
+AC_OUTPUT(Makefile)

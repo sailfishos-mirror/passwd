@@ -39,14 +39,16 @@
  * to that of the previous versions as possible.
  */
 
-#ifdef LIBUSER
-
 #ident "$Id$"
+
+#include "config.h"
 
 #include <string.h>
 #include <unistd.h>
 #include <libuser/user.h>
 #include "pwdb.h"
+
+#ifdef LIBUSER
 
 extern const char *progname;
 
