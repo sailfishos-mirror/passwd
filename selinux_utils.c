@@ -1,5 +1,5 @@
 /*
- * Copyright Red Hat, Inc., 2003.
+ * Copyright Red Hat, Inc., 2003,2004.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -44,31 +44,38 @@
 #include <selinux/context.h>
 #include "selinux_utils.h"
 
-int checkAccess(char *chuser, int access) {
-  int status=-1;
-  security_context_t user_context;
-  char *user=NULL;
-  if( getprevcon(&user_context)==0 ) {
-    context_t c=context_new(user_context);
-    user=context_user_get(c);
-    if (strcmp(chuser, user) == 0) {
-      status=0;
-    } else {
-      struct av_decision avd;
-      int retval = security_compute_av(user_context,
-				       user_context,
-				       SECCLASS_PASSWD,
-				       access,
-				       &avd);
-	  
-      if (((retval == 0) && 
-	  ((access & avd.allowed) == access)) || (security_getenforce()==0)) {
-	status=0;
-      }
-    }
-    context_free(c);
-    freecon(user_context);
-  }
-  return status;
-}
+int
+check_selinux_access(const char *chuser, int access)
+{
+	int status = -1;
+	security_context_t user_context;
+	const char *user;
 
+	if (security_getenforce() == 0) {
+		status = 0;
+	} else {
+		if (getprevcon(&user_context) == 0) {
+			context_t c;
+			c = context_new(user_context);
+			user = context_user_get(c);
+			if (strcmp(chuser, user) == 0) {
+				status = 0;
+			} else {
+				struct av_decision avd;
+				int retval;
+				retval = security_compute_av(user_context,
+							     user_context,
+							     SECCLASS_PASSWD,
+							     access,
+							     &avd);
+				if ((retval == 0) && 
+				    ((access & avd.allowed) == access)) {
+					status = 0;
+				}
+			}
+			context_free(c);
+			freecon(user_context);
+		}
+	}
+	return status;
+}
