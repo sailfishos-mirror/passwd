@@ -1,13 +1,13 @@
 Summary: The passwd utility for setting/changing passwords using PAM.
 Name: passwd
 Version: 0.67
-Release: 3
+Release: 4
 License: BSD
 Group: System Environment/Base
 Source: passwd-%{version}-%{release}.tar.gz
 Buildroot: %{_tmppath}/passwd-root
 Requires: pam >= 0.59, /etc/pam.d/system-auth
-BuildPrereq: glib-devel, libuser-devel, pam-devel
+BuildPrereq: glib2-devel, libuser-devel, pam-devel
 
 %description
 The passwd package contains a system utility (passwd) which sets
@@ -38,6 +38,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* Mon Nov 11 2002 Nalin Dahyabhai <nalin@redhat.com> 0.67-4
+- modify default PAM configuration file to not specify directories, so that
+  the same configuration can be used for all arches on multilib systems
+- fix BuildPrereq on glib-devel to specify glib2-devel instead
+
 * Tue May 28 2002 Nalin Dahyabhai <nalin@redhat.com> 0.67-3
 - rebuild
 
