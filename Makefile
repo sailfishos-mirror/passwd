@@ -12,7 +12,8 @@ POPT	= -lpopt
 PROJECT	= passwd
 
 VERSION = $(shell awk '/^Version:/ { print $$2 }' $(PROJECT).spec)
-CVSTAG = r$(subst .,-,$(VERSION))
+RELEASE = $(shell awk '/^Release:/ { print $$2 }' $(PROJECT).spec)
+CVSTAG = r$(subst .,-,$(VERSION)-$(RELEASE))
 
 bindir=/usr/bin
 mandir=/usr/man

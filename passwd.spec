@@ -1,13 +1,14 @@
 Summary: The passwd utility for setting/changing passwords using PAM.
 Name: passwd
 Version: 0.64.1
-Release: 3
-Copyright: BSD
+Release: 4
+License: BSD
 Group: System Environment/Base
 Source: passwd-%{version}.tar.gz
 Buildroot: %{_tmppath}/passwd-root
 Requires: pam >= 0.59, /etc/pam.d/system-auth
 Requires: pwdb >= 0.58
+BuildPrereq: pam-devel
 
 %description
 The passwd package contains a system utility (passwd) which sets
@@ -39,8 +40,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
-* The next time we build passwd.
-- fix unguarded printf() (note from Chris Evans)
+* Mon Aug  6 2001 Nalin Dahyabhai <nalin@redhat.com>
+- fix unguarded printf() (noted by Chris Evans)
 
 * Mon Jun  5 2000 Nalin Dahyabhai <nalin@redhat.com>
 - move man pages to %{_mandir}
