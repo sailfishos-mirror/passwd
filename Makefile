@@ -8,7 +8,7 @@ CFLAGS	= $(RPM_OPT_FLAGS) -Wall -pedantic -D_GNU_SOURCE $(DEBUG)
 LDFLAGS	= -ldl -lpam -lpam_misc -lpwdb
 PROGS	= passwd chfn chsh
 
-PROJECT	= password
+PROJECT	= passwd
 
 VERSION = $(shell awk '/^Version:/ { print $$2 }' $(PROJECT).spec)
 CVSTAG = r$(subst .,-,$(VERSION))
@@ -46,7 +46,7 @@ date.h:
 archive:
 	cvs tag -F $(CVSTAG) .
 	@rm -rf /tmp/$(PROJECT)-$(VERSION) /tmp/$(PROJECT)
-	@cd /tmp; cvs export -r$(CVSTAG) $(PROJECT)
+	@cd /tmp; cvs export -r$(CVSTAG) password
 	@mv /tmp/$(PROJECT) /tmp/$(PROJECT)-$(VERSION)
 	@dir=$$PWD; cd /tmp; tar cvzf $$dir/$(PROJECT)-$(VERSION).tar.gz $(PROJECT)-$(VERSION)
 	@rm -rf /tmp/$(PROJECT)-$(VERSION)
