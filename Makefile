@@ -10,7 +10,7 @@ PROGS	= passwd chfn chsh
 
 PROJECT	= password
 
-VERSION = $(shell awk '/^Version:/ { print $$2 }' passwd.spec)
+VERSION = $(shell awk '/^Version:/ { print $$2 }' $(PROJECT).spec)
 CVSTAG = r$(subst .,-,$(VERSION))
 
 DESTDIR	= $(TOP_DIR)/usr/bin
