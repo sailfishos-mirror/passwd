@@ -63,7 +63,7 @@ static struct lu_context *libuser = NULL;
 
 /* Shut down libuser. */
 static int
-shutdown_libuser()
+shutdown_libuser(void)
 {
 	lu_end(libuser);
 	libuser = NULL;
