@@ -14,8 +14,10 @@ PROJECT	= passwd
 VERSION = $(shell awk '/^Version:/ { print $$2 }' $(PROJECT).spec)
 CVSTAG = r$(subst .,-,$(VERSION))
 
-DESTDIR	= $(TOP_DIR)/usr/bin
-MANDIR	= $(TOP_DIR)/usr/man
+bindir=/usr/bin
+mandir=/usr/man
+DESTDIR	= $(TOP_DIR)$(bindir)
+MANDIR	= $(TOP_DIR)$(mandir)
 
 all: date.h $(PROGS) pwdstat
 #	chmod 4555 $(PROGS)
