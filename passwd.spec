@@ -1,11 +1,11 @@
 Summary: The passwd utility for setting/changing passwords using PAM.
 Name: passwd
-Version: 0.63
+Version: 0.64
 Release: 1
 Copyright: BSD
 Group: System Environment/Base
 Source: passwd-%{version}.tar.gz
-Buildroot: /var/tmp/passwd-root
+Buildroot: %{_tmppath}/passwd-root
 Requires: pam >= 0.59
 Requires: pwdb >= 0.58
 
@@ -39,5 +39,8 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man1/passwd.1
 
 %changelog
+* Fri Feb 04 2000 Nalin Dahyabhai <nalin@redhat.com>
+- document --stdin in man page
+
 * Sat Apr 10 1999 Cristian Gafton <gafton@redhat.com>
 - first build from the new source code base.

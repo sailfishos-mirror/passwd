@@ -96,6 +96,10 @@ to root only. The locking is performed by rendering the encrypted
 password into an invalid string (by prefixing the encrypted string
 with an !).
 
+.IP \fB--stdin\fR
+This option is used to indicate that \fBpasswd\fR should read the new
+password from standard input, which can be a pipe.
+
 .IP \fB-u\fR
 This is the reverse of the previous - it will unlock the account
 password by removing the ! prefix. This option is available to root
