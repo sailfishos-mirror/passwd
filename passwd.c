@@ -159,8 +159,6 @@ static void parse_args(int argc, char * const argv[])
     if (stdin)
 	passwd_flags |= PASSWD_STDIN;
 
-    printf("Flags :%0x\n", passwd_flags);
-    
     /* the only flag available to an user id -k */
     if ((passwd_flags & ~PASSWD_KEEP) && getuid()) {
 	fprintf(stderr, "Only root can do that\n");
