@@ -34,10 +34,10 @@
  */
 
 /*
- *
  * Written by Cristian Gafton <gafton@redhat.com>
- * $Id$
  */
+
+#ident "$Id$"
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -41,6 +41,8 @@
 
 #ifdef LIBUSER
 
+#ident "$Id$"
+
 #include <string.h>
 #include <unistd.h>
 #include <libuser/user.h>

@@ -33,8 +33,9 @@
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/* Written by Cristian Gafton <gafton@redhat.com>
- * $Id$ */
+/* Written by Cristian Gafton <gafton@redhat.com> */
+
+#ident "$Id$"
 
 #include <sys/types.h>
 

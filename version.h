@@ -34,7 +34,6 @@
  */
 
 /*
- *
  * Written by Cristian Gafton <gafton@redhat.com>
  * $Id$
  */

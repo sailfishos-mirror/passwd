@@ -1,8 +1,8 @@
 /*
- *
  * Written by Cristian Gafton <gafton@redhat.com>
- * $Id$
  */
+
+#ident "$Id$"
 
 #include <assert.h>
 #include <ctype.h>

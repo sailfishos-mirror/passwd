@@ -41,10 +41,11 @@
 
 /*
  * Written by Cristian Gafton <gafton@redhat.com>
- * $Id$
  */
 
 #ifdef PWDB
+
+#ident "$Id$"
 
 #include "pwdb.h"
 
