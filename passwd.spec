@@ -28,8 +28,8 @@ strip $RPM_BUILD_ROOT%{_bindir}/passwd
 install -m 755 -d $RPM_BUILD_ROOT/etc/pam.d/
 install -m 644 passwd.pamd $RPM_BUILD_ROOT/etc/pam.d/passwd
 
-rm $RPM_BUILD_ROOT/%{_bindir}/{chfn,chsh}
-rm $RPM_BUILD_ROOT/%{_mandir}/man1/{chfn,chsh}.*
+rm -f $RPM_BUILD_ROOT/%{_bindir}/{chfn,chsh}
+rm -f $RPM_BUILD_ROOT/%{_mandir}/man1/{chfn,chsh}.*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
