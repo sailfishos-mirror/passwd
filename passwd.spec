@@ -1,7 +1,7 @@
 Summary: The passwd utility for setting/changing passwords using PAM.
 Name: passwd
 Version: 0.68
-Release: 0.2.1
+Release: 1.2.1
 License: BSD
 Group: System Environment/Base
 Source: passwd-%{version}-%{release}.tar.gz
@@ -41,6 +41,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* Thu Feb 13 2003 Nalin Dahyabhai <nalin@redhat.com> 0.68-1.2.1
+- add the aging command flags to the passwd(1) synopsis
+
 * Mon Dec  9 2002 Nalin Dahyabhai <nalin@redhat.com> 0.68-0.2.1
 - build using BACKLIB=pwdb for use with RHL AS 2.1
 - change BuildPrereq from glib2-devel/libuser-devel to pwdb
