@@ -159,6 +159,8 @@ static void parse_args(int argc, char * const argv[])
     if (stdin)
 	passwd_flags |= PASSWD_STDIN;
 
+    printf("Flags :%0x\n", passwd_flags);
+    
     /* the only flag available to an user id -k */
     if ((passwd_flags & ~PASSWD_KEEP) && getuid()) {
 	fprintf(stderr, "Only root can do that\n");
@@ -293,6 +295,7 @@ int main(int argc, char * const argv[])
 	exit(1);
     }
 #endif /* HAVE_PAM_FAIL_DELAY */
+
     while (retval == PAM_SUCCESS) {      /* use loop to avoid goto... */
 	/* the user is authenticated by the passwd module; change
 	   the password(s) too. */
