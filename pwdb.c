@@ -54,6 +54,7 @@
 #include <string.h>
 
 #include <pwdb/pwdb_public.h>
+#include <pwdb/pwdb_shadow.h>
 extern const char *progname;
 
 #define CHECK_ERROR(x)     if (x != PWDB_SUCCESS) { \
@@ -295,7 +296,7 @@ pwdb_display_status(const char *username)
 	retval = pwdb_delete(&_pwdb);
 	CHECK_ERROR(retval);
 	pwdb_end();
-	return 0;
+	return retval;
 }
 
 int
@@ -369,16 +370,67 @@ pwdb_update_shell(const char *username, const char *shell)
 	retval = pwdb_delete(&_pwdb);
 	CHECK_ERROR(retval);
 	pwdb_end();
-	return 0;
+	return retval;
 }
 
 int
 pwdb_update_aging(const char *username,
 		  long min, long max, long warn, long inact)
 {
-	/* FIXME */
-	fprintf(stderr, "Function not implemented.\n");
-	return -1;
+	const struct pwdb *_pwdb = NULL;
+	__pwdb_sptime sptime;
+	int retval, flags;
+
+	/* Now update the user entry */
+	retval = pwdb_start();
+	if (retval != PWDB_SUCCESS) {
+		return -1;
+	}
+	retval = pwdb_locate("user", PWDB_DEFAULT, username, PWDB_ID_UNKNOWN,
+			     &_pwdb);
+	CHECK_ERROR(retval);
+
+	retval = pwdb_flags("user", _pwdb->source, &flags);
+	CHECK_ERROR(retval);
+	if (flags & PWDB_F_NOUPDATE) {
+		fprintf(stderr,
+			"%s: insufficient privilege to complete operation\n",
+			progname);
+		pwdb_delete(&_pwdb);
+		pwdb_end();
+		return -1;
+	}
+
+	sptime = min;
+	retval = pwdb_set_entry(_pwdb, "min_change", &sptime, sizeof(sptime),
+				NULL, NULL, 0);
+	CHECK_ERROR(retval);
+
+	sptime = max;
+	retval = pwdb_set_entry(_pwdb, "max_change", &sptime, sizeof(sptime),
+				NULL, NULL, 0);
+	CHECK_ERROR(retval);
+
+	sptime = warn;
+	retval = pwdb_set_entry(_pwdb, "warn_change", &sptime, sizeof(sptime),
+				NULL, NULL, 0);
+	CHECK_ERROR(retval);
+
+	sptime = inact;
+	retval = pwdb_set_entry(_pwdb, "defer_change", &sptime, sizeof(sptime),
+				NULL, NULL, 0);
+	CHECK_ERROR(retval);
+
+	retval = pwdb_replace("user", _pwdb->source, username,
+			      PWDB_ID_UNKNOWN, &_pwdb);
+	CHECK_ERROR(retval);
+
+	retval = pwdb_delete(&_pwdb);
+	CHECK_ERROR(retval);
+
+	pwdb_end();
+
+	return retval;
 }
 
 #endif
