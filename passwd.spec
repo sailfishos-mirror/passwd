@@ -1,7 +1,7 @@
 Summary: The passwd utility for setting/changing passwords using PAM.
 Name: passwd
 Version: 0.64.1
-Release: 7
+Release: 8
 License: BSD
 Group: System Environment/Base
 Source: passwd-%{version}.tar.gz
@@ -40,7 +40,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
-* Mon Aug  6 2001 Nalin Dahyabhai <nalin@redhat.com>
+* Thu Aug 30 2001 Nalin Dahyabhai <nalin@redhat.com> 0.64.1-8
+- man page fix (-r is the opposite of -l, not --stdin, which precedes it)
+  from Felipe Gustavo de Almeida
+
+* Mon Aug  6 2001 Nalin Dahyabhai <nalin@redhat.com> 0.64.1-7
 - fix unguarded printf() (noted by Chris Evans)
 - add missing build dependency on pwdb and pam-devel (#49550)
 
