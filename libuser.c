@@ -163,8 +163,9 @@ pwdb_unlock_password(const char *username, int force)
 				 * bad idea. */
 				retval = -2;
 			}
-		} else {
-			/* Go blind. */
+		}
+		if (retval != -2) {
+			/* Go blind, or force it. */
 			if (lu_user_unlock(libuser, ent, &error)) {
 				retval = 0;
 			}
