@@ -51,6 +51,13 @@
 #include <security/pam_misc.h>
 #include "pwdb.h"
 
+#ifdef WITH_SELINUX
+#include <selinux/selinux.h>
+#include <selinux/context.h>
+#include <selinux/av_permissions.h>
+#include "selinux_utils.h"
+#endif
+
 #define _(String) String
 #define N_(String) String
 
@@ -312,6 +319,23 @@ main(int argc, const char **argv)
 	/* Parse command-line arguments. */
 	progname = basename(argv[0]);
 	parse_args(argc, argv, &min, &max, &warn, &inact);
+
+#ifdef WITH_SELINUX
+	if (is_selinux_enabled()) {
+	  if ((getuid() == 0) && 
+	      (checkAccess((char *) username,PASSWD__PASSWD)!=0)) {
+	    security_context_t user_context;
+	    if (getprevcon(&user_context) < 0)
+	      user_context=(security_context_t) strdup(_("Unknown user context"));
+	    syslog(LOG_ALERT,  _("%s is not authorized to change the password of %s\n"),
+		   user_context, username);
+	    fprintf(stderr, _("%s: %s is not authorized to change the password of %s\n"),
+		    progname, user_context, username);
+	    freecon(user_context);
+	    exit(1);
+	  }
+	}
+#endif
 
 	/* Handle account locking request. */
 	if (passwd_flags & PASSWD_LOCK) {
