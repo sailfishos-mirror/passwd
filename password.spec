@@ -4,8 +4,7 @@ Version: 0.57
 Release: 1
 Copyright: BSD
 Group: System Environment/Base
-Source: passwd-%{version}.tar.gz
-Source1: passwd.pamd
+Source: password-%{version}.tar.gz
 Buildroot: /var/tmp/passwd-root
 Requires: pam >= 0.59
 Requires: pwdb >= 0.57
@@ -28,7 +27,7 @@ mkdir -p $RPM_BUILD_ROOT/usr/{bin,man/man1}
 make install TOP_DIR=$RPM_BUILD_ROOT
 strip $RPM_BUILD_ROOT/usr/bin/passwd
 mkdir -p $RPM_BUILD_ROOT/etc/pam.d/
-install -m 644 %{SOURCE1} $RPM_BUILD_ROOT/etc/pam.d/passwd
+install -m 644 passwd.pamd $RPM_BUILD_ROOT/etc/pam.d/passwd
 
 %clean
 rm -rf $RPM_BUILD_ROOT
