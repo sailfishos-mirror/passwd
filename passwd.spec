@@ -7,7 +7,7 @@ Group: System Environment/Base
 Source: passwd-%{version}-%{release}.tar.gz
 Buildroot: %{_tmppath}/passwd-root
 Requires: pam >= 0.59, /etc/pam.d/system-auth
-BuildPrereq: libuser-devel, pam-devel
+BuildPrereq: glib-devel, libuser-devel, pam-devel
 
 %description
 The passwd package contains a system utility (passwd) which sets
