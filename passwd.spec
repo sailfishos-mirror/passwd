@@ -39,7 +39,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
-* XXX YYY ZZ 2002 Nalin Dahyabhai <nalin@redhat.com> 0.65-1
+* Tue Jan 29 2002 Nalin Dahyabhai <nalin@redhat.com> 0.65-1
 - change dependency from pwdb to libuser
 
 * Fri Jan 25 2002 Nalin Dahyabhai <nalin@redhat.com> 0.64.1-9
