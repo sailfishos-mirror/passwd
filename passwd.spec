@@ -1,10 +1,10 @@
 %if %{?WITH_SELINUX:0}%{!?WITH_SELINUX:1}
-%define WITH_SELINUX 0
+%define WITH_SELINUX 1
 %endif
 Summary: The passwd utility for setting/changing passwords using PAM.
 Name: passwd
 Version: 0.68
-Release: 6 
+Release: 7 
 License: BSD
 Group: System Environment/Base
 Source: passwd-%{version}-%{release}.tar.gz
@@ -47,6 +47,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* Mon Jan 26 2004 Dan Walsh <dwalsh@redhat.com> 0.68-7
+- fix is_selinux_enabled
+
 * Fri Sep 5 2003 Dan Walsh <dwalsh@redhat.com> 0.68-6
 - turn off selinux
 
