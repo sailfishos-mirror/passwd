@@ -1,0 +1,127 @@
+.\" Hey Emacs! This file is -*- nroff -*- source.
+.\" (above from Rik Faith..:*)
+.\" Copyright (c) Andrew G. Morgan 1996, <morgan@parc.power.net>
+.\" Copyright (c) Cristian Gafton, 1998, <gafton@redhat.com>
+.\"
+.TH PASSWD 1 "Jan 03 1998" "PAM + PWDB applications" "User utilities"
+.SH NAME
+
+passwd \- update a user's authentication tokens(s)
+
+.SH SYNOPSIS
+.B passwd [-k] [-l] [-u] [-d] [-S] [username]
+.sp 2
+.SH DESCRIPTION
+Passwd is used to update a user's authentication token(s).
+
+Passwd is configured to work through the
+.BR "Linux-PAM API" ". "
+Essentially, it initializes itself as a "passwd" service with
+.I Linux-PAM
+and utilizes configured
+.I "password"
+modules to authenticate and then update a user's password.
+
+.sp
+A simple entry in the
+.I Linux-PAM
+configuration file for this service would be:
+.br
+  
+.br
+ #
+.br
+ # passwd service entry that does strength checking of
+.br
+ # a proposed password before updating it.
+.br
+ #
+.br
+ passwd password requisite \\
+.br
+             /usr/lib/security/pam_cracklib.so retry=3
+.br
+ passwd password required \\
+.br
+             /usr/lib/security/pam_pwdb.so use_authtok
+.br
+ #
+
+.sp
+Note, other module-types are not required for this application to
+function correctly.
+
+.SH OPTIONS
+
+.IP \fB-k\fR
+The option,
+.BR -k ", "
+is used to indicate that the update should only be for expired
+authentication tokens (passwords); the user wishes to keep their
+non-expired tokens as before.
+
+.IP \fB-l\fR
+This option is used to lock the specified account and it is available
+to root only. The locking is performed by rendering the encrypted
+password into an invalid string (by prefixing the encrypted string
+with an !).
+
+.IP \fB-u\fR
+This is the reverse of the previous - it will unlock the account
+password by removing the ! prefix. This option is available to root
+only.
+
+.IP \fB-d\fR
+This is a quick way to disable a password for an account. It will set
+the named account passwordless. Available to root only.
+
+.IP \fB-S\fR
+This will output a short information about the status of the password
+for a given account. Available to root user only.
+
+
+.SH "EXIT CODE"
+
+On successful completion of its task,
+.B passwd
+will complete with exit code 0.  An exit code of 1 indicates an error
+occurred.  Textual errors are written to the standard error stream.
+
+.SH "CONFORMING TO"
+.br
+.BR Linux-PAM
+(Pluggable Authentication modules for Linux).
+.br
+Note, if your distribution of Linux-PAM conforms to the Linux
+Filesystem Standard, you may find the modules in
+.I /lib/security/
+instead of /usr/lib/security/, as indicated in the example.
+
+.SH "FILES"
+.br
+.B /etc/pam.d/passwd
+- the
+.BR Linux-PAM
+configuration file
+
+.SH BUGS
+.sp 2
+None known.
+
+.SH "SEE ALSO"
+
+.BR pam "(8), "
+and
+.BR pam_chauthok "(2). "
+
+.sp
+For more complete information on how to configure this application
+with
+.BR Linux-PAM ", "
+see the
+.BR "Linux-PAM System Administrators' Guide" " at "
+.br
+.I "<http://parc.power.net/morgan/Linux-PAM/index.html>"
+
+.SH AUTHOR
+Cristian Gafton <gafton@redhat.com>

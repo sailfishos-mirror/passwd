@@ -1,0 +1,54 @@
+.\"
+.\"  chsh.1 -- change your login shell
+.\"  (c) 1994 by salvatore valente <svalente@athena.mit.edu>
+.\"
+.\"  this program is free software.  you can redistribute it and
+.\"  modify it under the terms of the gnu general public license.
+.\"  there is no warranty.
+.\"
+.\"  $Author$
+.\"  $Revision$
+.\"  $Date$
+.\"
+.\" Copyright (c) Cristian Gafton, 1998, <gafton@redhat.com>
+.\"
+.TH CHSH 1 "Jan 03 1998" "PAM + PWDB applications" "User utilities"
+.SH NAME
+chsh \- change your login shell
+.SH SYNOPSIS
+.B chsh
+[\ \-s\ shell\ ] [\ \-l\ ] [\ \-u\ ] [\ \-v\ ] [\ username\ ]
+.SH DESCRIPTION
+.B chsh
+is used to change your login shell.
+If a shell is not given on the command line,
+.B chsh
+prompts for one.
+.SS VALID SHELLS
+.B chsh
+will accept the full pathname of any executable file on the system.
+However, it will issue a warning if the shell is not listed in the
+.I /etc/shells
+file.
+.SH OPTIONS
+.TP
+.I "\-s, \-\-shell"
+Specify your login shell.
+.TP
+.I "\-l, \-\-list-shells"
+Print the list of shells listed in
+.I /etc/shells
+and exit.
+.TP
+.I "\-u, \-\-help"
+Print a usage message and exit.
+.TP
+.I "-v, \-\-version"
+Print version information and exit.
+.SH "SEE ALSO"
+.BR login (1),
+.BR passwd (5),
+.BR shells (5)
+.SH AUTHOR
+Cristian Gafton <gafton@redhat.com>. Man page derived from the one
+included in util-linux, by Salvatore Valente <svalente@mit.edu>.
