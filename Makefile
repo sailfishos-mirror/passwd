@@ -16,7 +16,7 @@ CVSTAG = r$(subst .,-,$(VERSION))
 DESTDIR	= $(TOP_DIR)/usr/bin
 MANDIR	= $(TOP_DIR)/usr/man
 
-all: date.h $(PROGS)
+all: date.h $(PROGS) pwdstat
 #	chmod 4555 $(PROGS)
 
 %.o : %.c Makefile
@@ -29,6 +29,9 @@ chfn: chfn.o pwdb.o version.o
 	$(CC) $(LDFLAGS) -o $@ $^
 
 chsh: chsh.o pwdb.o version.o
+	$(CC) $(LDFLAGS) -o $@ $^
+
+pwdstat: pwdstat.o
 	$(CC) $(LDFLAGS) -o $@ $^
 
 install: all

@@ -1,3 +1,7 @@
+1999-08-13  Cristian Gafton  <gafton@redhat.com>
+
+	* pwdstat.c: New file for examples
+
 1999-04-14  Cristian Gafton  <gafton@redhat.com>
 
 	* pwdb.c (pwdb_lock_password): Put two !! for a locked password.
