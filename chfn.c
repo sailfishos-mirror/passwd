@@ -292,6 +292,12 @@ int main(int argc, char *argv[])
 	    /* username specified... */
 	    struct passwd *pw;
 	    user_name = argv[optind];
+	    /* test the username for length */
+	    if (strlen(user_name) > MAX_USERNAMESIZE) {
+		fprintf(stderr, "%s: The username supplied is too long\n",
+			progname);
+		exit(-3);
+	    }
 	    pw = getpwnam(user_name);
 	    if (pw == (struct passwd *)NULL) {
 		fprintf(stderr, "%s: Unknown user name '%s'\n",
