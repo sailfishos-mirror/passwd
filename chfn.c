@@ -84,29 +84,6 @@ static int O_flg = 0;		/* -O flag = change the other information */
 const char *progname = NULL;
 
 /*
- * Read a string from stdin, returns a malloced memory to it
- */
-static char *
-read_string(void)
-{
-	char *buffer = NULL;
-	char *check = NULL;
-	int slen = 0;
-
-	buffer = (char *) malloc(BUFSIZ);
-	if (buffer == NULL)
-		return NULL;
-
-	check = fgets(buffer, BUFSIZ, stdin);
-	if (check != buffer)
-		return NULL;
-	slen = strlen(buffer);
-	if (buffer[slen - 1] == '\n')
-		buffer[slen - 1] = '\0';
-	return buffer;
-}
-
-/*
  * the structure pointing at the conversation function for
  * auth and changing the password
  */
@@ -160,7 +137,7 @@ process_gecos(char *gecos)
  * returns -1.  Zero is returned for success.
  */
 
-int
+static int
 invalid_field(const char *field, const char *illegal)
 {
 	const char *cp;
