@@ -24,7 +24,7 @@ PROGS	= passwd chfn chsh
 POPT	= -lpopt
 ifeq ($(WITH_SELINUX),yes)
 CFLAGS += -DWITH_SELINUX
-LDFLAGS += -lselinux -lattr
+LDFLAGS += -lselinux 
 SELINUX_UTILS=selinux_utils.o
 endif
 
