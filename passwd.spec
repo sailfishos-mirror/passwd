@@ -1,6 +1,6 @@
 Summary: The passwd utility for setting/changing passwords using PAM.
 Name: passwd
-Version: 0.61
+Version: 0.62
 Release: 1
 Copyright: BSD
 Group: System Environment/Base
