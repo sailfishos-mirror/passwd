@@ -8,7 +8,7 @@ Source: passwd-%{version}.tar.gz
 Buildroot: %{_tmppath}/passwd-root
 Requires: pam >= 0.59, /etc/pam.d/system-auth
 Requires: pwdb >= 0.58
-BuildPrereq: pam-devel
+BuildPrereq: pam-devel, pwdb
 
 %description
 The passwd package contains a system utility (passwd) which sets
@@ -42,7 +42,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Mon Aug  6 2001 Nalin Dahyabhai <nalin@redhat.com>
 - fix unguarded printf() (noted by Chris Evans)
-- add missing dependency on pam-devel (#49550)
+- add missing build dependency on pwdb and pam-devel (#49550)
 
 * Sun Jun 24 2001 Elliot Lee <sopwith@redhat.com>
 - Bump release + rebuild.
