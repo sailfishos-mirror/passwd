@@ -71,14 +71,14 @@ const char *username = NULL;	/* username specified on the command line */
 const char *progname = NULL;	/* the name of the program */
 int passwd_flags = 0;		/* flags specified by root */
 
-#define PASSWD_KEEP 	0x0001	/* keep un-expired tokens */
+#define PASSWD_KEEP	0x0001	/* keep un-expired tokens */
 
-#define PASSWD_LOCK 	0x0002	/* lock the password */
-#define PASSWD_UNLOCK 	0x0004	/* unlock the password, if locked */
-#define PASSWD_DELETE 	0x0008	/* delete the user's password */
-#define PASSWD_STATUS 	0x0010	/* report the password status */
-#define PASSWD_FORCE 	0x0020	/* force change of expired token */
-#define PASSWD_STDIN 	0x0040	/* read the password from stdin (root only) */
+#define PASSWD_LOCK	0x0002	/* lock the password */
+#define PASSWD_UNLOCK	0x0004	/* unlock the password, if locked */
+#define PASSWD_DELETE	0x0008	/* delete the user's password */
+#define PASSWD_STATUS	0x0010	/* report the password status */
+#define PASSWD_FORCE	0x0020	/* force change of expired token */
+#define PASSWD_STDIN	0x0040	/* read the password from stdin (root only) */
 #define PASSWD_ROOT	0x001E	/* options which are mutually exclusive */
 
 #define PASSWD_MIN	0x0100	/* set the minimum password lifetime */
@@ -88,7 +88,7 @@ int passwd_flags = 0;		/* flags specified by root */
 #define PASSWD_AGING	0x0F00	/* aging options */
 
 #ifdef HAVE_PAM_FAIL_DELAY
-#define PASSWD_FAIL_DELAY 	2000000	/* usec delay on failure */
+#define PASSWD_FAIL_DELAY	2000000	/* usec delay on failure */
 #endif
 
 /* A conversation function which uses an internally-stored value for
@@ -321,19 +321,22 @@ main(int argc, const char **argv)
 	parse_args(argc, argv, &min, &max, &warn, &inact);
 
 #ifdef WITH_SELINUX
-	if (is_selinux_enabled()>0) {
-	  if ((getuid() == 0) && 
-	      (checkAccess((char *) username,PASSWD__PASSWD)!=0)) {
-	    security_context_t user_context;
-	    if (getprevcon(&user_context) < 0)
-	      user_context=(security_context_t) strdup(_("Unknown user context"));
-	    syslog(LOG_ALERT,  _("%s is not authorized to change the password of %s\n"),
-		   user_context, username);
-	    fprintf(stderr, _("%s: %s is not authorized to change the password of %s\n"),
-		    progname, user_context, username);
-	    freecon(user_context);
-	    exit(1);
-	  }
+	if ((is_selinux_enabled() > 0) &&
+	    (getuid() == 0) && 
+	    (check_selinux_access(username, PASSWD__PASSWD) != 0)) {
+		security_context_t user_context;
+		if (getprevcon(&user_context) < 0) {
+			user_context = strdup(_("Unknown user context"));
+		}
+		syslog(LOG_ALERT,
+		       _("%s is not authorized to change the password of %s\n"),
+		       user_context, username);
+		fprintf(stderr,
+			_("%s: %s is not authorized to change the "
+			  "password of %s\n"),
+			progname, user_context, username);
+		freecon(user_context);
+		exit(1);
 	}
 #endif
 
@@ -363,7 +366,7 @@ main(int argc, const char **argv)
 		printf(_("Removing password for user %s.\n"), username);
 		retval = pwdb_clear_password(username);
 		printf("%s: %s\n", progname,
-		       retval == 0 ? _("Success") : _("Error"));
+		       (retval == 0) ? _("Success") : _("Error"));
 		return retval;
 	}
 	/* Display account status. */
@@ -376,7 +379,7 @@ main(int argc, const char **argv)
 		printf(_("Adjusting aging data for user %s.\n"), username);
 		retval = pwdb_update_aging(username, min, max, warn, inact);
 		printf("%s: %s\n", progname,
-		       retval == 0 ? _("Success") : _("Error"));
+		       (retval == 0) ? _("Success") : _("Error"));
 		return retval;
 	}
 
@@ -406,8 +409,7 @@ main(int argc, const char **argv)
 	 * of time it should wait after a failure. */
 	retval = pam_fail_delay(pamh, PASSWD_FAIL_DELAY);
 	if (retval != PAM_SUCCESS) {
-		fprintf(stderr,
-			_("passwd: unable to set failure delay\n"));
+		fprintf(stderr, _("passwd: unable to set failure delay\n"));
 		exit(1);
 	}
 #endif
@@ -419,7 +421,6 @@ main(int argc, const char **argv)
 	if (retval == PAM_SUCCESS) {
 		/* We're done.  Tell the invoking user that it worked. */
 		retval = pam_end(pamh, PAM_SUCCESS);
-		pamh = NULL;
 		if (passwd_flags & PASSWD_KEEP) {
 			printf(_("passwd: expired authentication tokens updated successfully.\n"));
 		} else {
@@ -430,8 +431,7 @@ main(int argc, const char **argv)
 		/* Horrors!  It failed.  Relay the bad news. */
 		fprintf(stderr, _("passwd: %s\n"),
 			pam_strerror(pamh, retval));
-		retval = pam_end(pamh, PAM_SUCCESS);
-		pamh = NULL;
+		pam_end(pamh, retval);
 		retval = 1;
 	}
 	return retval;
