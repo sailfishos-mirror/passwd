@@ -151,16 +151,7 @@ pwdb_unlock_password(const char *username, int force)
 			value = g_value_array_get_nth(values, 0);
 		}
 		if (value) {
-			if (G_VALUE_HOLDS_STRING(value)) {
-				current = g_value_dup_string(value);
-			} else if (G_VALUE_HOLDS_LONG(value)) {
-				current =
-				    g_strdup_printf("%ld",
-						    g_value_get_long
-						    (value));
-			} else {
-				g_assert_not_reached();
-			}
+			current = lu_value_strdup(value);
 		}
 		if (current && (force == 0)) {
 			/* Search for a non-locking character. */
@@ -241,16 +232,7 @@ pwdb_display_status(const char *username)
 			value = g_value_array_get_nth(values, 0);
 		}
 		if (value) {
-			if (G_VALUE_HOLDS_STRING(value)) {
-				current = g_value_dup_string(value);
-			} else if (G_VALUE_HOLDS_LONG(value)) {
-				current =
-				    g_strdup_printf("%ld",
-						    g_value_get_long
-						    (value));
-			} else {
-				g_assert_not_reached();
-			}
+			current = lu_value_strdup(value);
 		}
 		if (current) {
 			if (strlen(current) == 0) {
