@@ -20,7 +20,7 @@ To use passwd, you should have PAM installed on your system.
 %setup -q
 
 %build
-make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+make DEBUG= RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 
 %install
 make install DESTDIR=$RPM_BUILD_ROOT bindir=%{_bindir} mandir=%{_mandir}
