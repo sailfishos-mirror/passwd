@@ -23,10 +23,9 @@ To use passwd, you should have PAM installed on your system.
 make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 
 %install
-mkdir -p $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
-make install TOP_DIR=$RPM_BUILD_ROOT bindir=%{_bindir} mandir=%{_mandir}
+make install DESTDIR=$RPM_BUILD_ROOT bindir=%{_bindir} mandir=%{_mandir}
 strip $RPM_BUILD_ROOT%{_bindir}/passwd
-mkdir -p $RPM_BUILD_ROOT/etc/pam.d/
+install -m 755 -d $RPM_BUILD_ROOT/etc/pam.d/
 install -m 644 passwd.pamd $RPM_BUILD_ROOT/etc/pam.d/passwd
 
 %clean
