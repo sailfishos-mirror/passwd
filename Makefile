@@ -59,6 +59,6 @@ archive:
 	@rm -rf /tmp/$(PROJECT)-$(VERSION) /tmp/password
 	@cd /tmp; cvs export -r$(CVSTAG) password
 	@mv /tmp/password /tmp/$(PROJECT)-$(VERSION)
-	@dir=$$PWD; cd /tmp; tar cvzf $$dir/$(PROJECT)-$(VERSION).tar.gz $(PROJECT)-$(VERSION)
+	@dir=$$PWD; cd /tmp; tar cvzf $$dir/$(PROJECT)-$(VERSION)-$(RELEASE).tar.gz $(PROJECT)-$(VERSION)
 	@rm -rf /tmp/$(PROJECT)-$(VERSION)
-	@echo "The archive is in $(PROJECT)-$(VERSION).tar.gz"
+	@echo "The archive is in $(PROJECT)-$(VERSION)-$(RELEASE).tar.gz"
