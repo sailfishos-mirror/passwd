@@ -119,7 +119,7 @@ pwdb_unlock_password(const char *username, int force)
 		"Use the -f flag to force the creation of a passwordless account.\n",
 		username);
 #endif
-	int retval = 1;
+	int retval = 1, i;
 	struct lu_ent *ent;
 	struct lu_error *error = NULL;
 	GValueArray *values;
@@ -151,9 +151,18 @@ pwdb_unlock_password(const char *username, int force)
 				g_assert_not_reached();
 			}
 		}
-		if (current && (strcmp(current, "!") == 0) && (force == 0)) {
-			/* Warn the admin -- this is probably a bad idea. */
-			retval = -2;
+		if (current && (force == 0)) {
+			/* Search for a non-locking character. */
+			for (i = 0; (current[i] == '!'); i++) {
+				/*nothing*/
+			};
+			/* If the first non-locking character is the end of the
+			 * string, */
+			if (current[i] == '\0') {
+				/* warn the admin, because this is probably a
+				 * bad idea. */
+				retval = -2;
+			}
 		} else {
 			/* Go blind. */
 			if (lu_user_unlock(libuser, ent, &error)) {
