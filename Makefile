@@ -34,6 +34,7 @@ PROJECT	= passwd
 VERSION = $(shell awk '/^Version:/ { print $$2 }' $(PROJECT).spec)
 RELEASE = $(shell awk '/^Release:/ { print $$2 }' $(PROJECT).spec)
 CVSTAG = r$(subst .,-,$(VERSION)-$(RELEASE))
+CVSROOT = $(shell cat CVS/Root)
 
 bindir=/usr/bin
 mandir=/usr/share/man
@@ -79,7 +80,7 @@ force-tag:
 
 archive:
 	@rm -rf /tmp/$(PROJECT)-$(VERSION) /tmp/password
-	@cd /tmp; cvs export -r$(CVSTAG) password
+	@cd /tmp; cvs -d $(CVSROOT) export -r$(CVSTAG) password
 	@mv /tmp/password /tmp/$(PROJECT)-$(VERSION)
 	@dir=$$PWD; cd /tmp; tar cvzf $$dir/$(PROJECT)-$(VERSION)-$(RELEASE).tar.gz $(PROJECT)-$(VERSION)
 	@rm -rf /tmp/$(PROJECT)-$(VERSION)
