@@ -81,19 +81,6 @@ int passwd_flags 	= 0;	/* flags specified by root */
 #define PASSWD_FAIL_DELAY 	2000000 /* usec delay on failure */
 #endif
 
-static void usage(void) {	
-    fprintf(stderr, "usage: passwd [-k] [-l] [-u [-f]] [-d] [-S] [ username ]\n"
-	    "     \t-k        - keep non-expired authentication tokens\n"
-	    "  (*)\t-l        - lock the named account\n"
-	    "  (*)\t-u        - unlock the named account\n"
-	    "     \t-f        - force operation\n"
-	    "  (*)\t-d        - delete the password for the named account\n"
-	    "  (*)\t-S        - report password status on the named account\n"
-	    "  (*)\tusername  - update tokens for named user\n"
-	    "\n (*) - option available only to root\n"
-	    );
-}
-
 static int stdin_conv(int num_msg, const struct pam_message **msgm,
 		      struct pam_response **response, void *appdata_ptr) {
     struct pam_response *reply;
@@ -294,8 +281,9 @@ int main(int argc, char * const argv[])
 	newPassword[i - 1] = '\0';
 	conv.conv = stdin_conv;
 	conv.appdata_ptr = strdup(newPassword);
-	retval = pam_start("passwd", username, &conv, &pamh);
     }
+
+    retval = pam_start("passwd", username, &conv, &pamh);
 
 #ifdef HAVE_PAM_FAIL_DELAY
     /* have to pause on failure. At least this long (doubles..) */
