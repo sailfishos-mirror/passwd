@@ -42,6 +42,7 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Mon Aug  6 2001 Nalin Dahyabhai <nalin@redhat.com>
 - fix unguarded printf() (noted by Chris Evans)
+- add missing dependency on pam-devel (#49550)
 
 * Mon Jun  5 2000 Nalin Dahyabhai <nalin@redhat.com>
 - move man pages to %{_mandir}
