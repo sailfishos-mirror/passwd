@@ -1,3 +1,8 @@
+1999-08-23  Cristian Gafton  <gafton@redhat.com>
+
+	* pwdb.c (pwdb_lock_password): Fixed the passwd -u problem.
+	Patch from Mihai Ibanescu <misa@necomm.ro>
+
 1999-08-13  Cristian Gafton  <gafton@redhat.com>
 
 	* pwdstat.c: New file for examples
