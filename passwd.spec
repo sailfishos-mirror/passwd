@@ -41,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
-* Mon Jan 27 2002 Nalin Dahyabhai <nalin@redhat.com> 0.68-2
+* Mon Jan 27 2003 Nalin Dahyabhai <nalin@redhat.com> 0.68-2
 - rebuild
 
 * Mon Dec  9 2002 Nalin Dahyabhai <nalin@redhat.com> 0.68-1
