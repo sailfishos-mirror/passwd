@@ -69,7 +69,7 @@ int pwdb_lock_password(const char *username)
     const struct pwdb *_pwdb = NULL;
     const struct pwdb_entry *_pwe = NULL;
     char *new_pass, *t;
-    int retval, flags;
+    int retval, flags, new_len;
 
     retval = pwdb_start();
     if (retval != PWDB_SUCCESS)
@@ -84,7 +84,7 @@ int pwdb_lock_password(const char *username)
 	return -1;
     }
     
-    new_pass = alloca(_pwe->length+1);
+    new_pass = alloca(_pwe->length+3);
     t = (char *)_pwe->value;
     if (*t == '!') {
 	/* already locked... */
@@ -94,12 +94,13 @@ int pwdb_lock_password(const char *username)
      * Avoid creating single char '!' crypted passwords that could
      * be interpreted  as shadow or some other crap
      */
+    new_len = _pwe->length + 2;
     if (_pwe->length < 3) {
-	snprintf(new_pass, _pwe->length+5, "!!%s", t);
+	snprintf(new_pass, new_len++, "!!%s", t);
     } else {
-	snprintf(new_pass, _pwe->length+5, "!%s", t);
+	snprintf(new_pass, new_len, "!%s", t);
     }	
-    retval = pwdb_set_entry(_pwdb, "passwd", new_pass, strlen(new_pass)+1,
+    retval = pwdb_set_entry(_pwdb, "passwd", new_pass, new_len,
 			    NULL, NULL, 0);
     CHECK_ERROR(retval);
 
@@ -174,7 +175,7 @@ int pwdb_unlock_password(const char *username, int force)
 	_pwe->length--;
     }
     retval = pwdb_set_entry(_pwdb, "passwd", t,
-			    _pwe->length-1, NULL, NULL, 0);
+			    _pwe->length, NULL, NULL, 0);
     CHECK_ERROR(retval);
 
     retval = pwdb_entry_delete(&_pwe);
