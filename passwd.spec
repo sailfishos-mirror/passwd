@@ -1,14 +1,13 @@
 Summary: The passwd utility for setting/changing passwords using PAM.
 Name: passwd
-Version: 0.64.1
-Release: 9
+Version: 0.65
+Release: 1
 License: BSD
 Group: System Environment/Base
 Source: passwd-%{version}-%{release}.tar.gz
 Buildroot: %{_tmppath}/passwd-root
 Requires: pam >= 0.59, /etc/pam.d/system-auth
-Requires: pwdb >= 0.58
-BuildPrereq: pam-devel, pwdb
+BuildPrereq: libuser-devel, pam-devel
 
 %description
 The passwd package contains a system utility (passwd) which sets
@@ -40,6 +39,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* XXX YYY ZZ 2002 Nalin Dahyabhai <nalin@redhat.com> 0.65-1
+- change dependency from pwdb to libuser
+
 * Fri Jan 25 2002 Nalin Dahyabhai <nalin@redhat.com> 0.64.1-9
 - rebuild
 

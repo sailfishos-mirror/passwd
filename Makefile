@@ -2,10 +2,12 @@
 # $Id$
 #
 
+GLIB_CFLAGS  = $(shell pkg-config --cflags libuser)
+GLIB_LDFLAGS = $(shell pkg-config --libs   libuser)
 CC	= gcc
 DEBUG	= -g
-CFLAGS	= $(RPM_OPT_FLAGS) -Wall -D_GNU_SOURCE $(DEBUG)
-LDFLAGS	= -ldl -lpam -lpam_misc -lpwdb
+CFLAGS	= $(RPM_OPT_FLAGS) -Wall -D_GNU_SOURCE $(DEBUG) $(GLIB_CFLAGS)
+LDFLAGS	= -ldl -lpam -lpam_misc -luser $(GLIB_LDFLAGS)
 PROGS	= passwd chfn chsh
 POPT	= -lpopt
 
@@ -17,8 +19,6 @@ CVSTAG = r$(subst .,-,$(VERSION)-$(RELEASE))
 
 bindir=/usr/bin
 mandir=/usr/man
-DESTDIR	= $(TOP_DIR)$(bindir)
-MANDIR	= $(TOP_DIR)$(mandir)
 
 all: date.h $(PROGS) pwdstat
 #	chmod 4555 $(PROGS)
@@ -26,24 +26,23 @@ all: date.h $(PROGS) pwdstat
 %.o : %.c Makefile
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-passwd: passwd.o pwdb.o
+passwd: passwd.o libuser.o
 	$(CC) $(LDFLAGS) -o $@ $^ $(POPT)
 
-chfn: chfn.o pwdb.o version.o
+chfn: chfn.o libuser.o version.o
 	$(CC) $(LDFLAGS) -o $@ $^
 
-chsh: chsh.o pwdb.o version.o
+chsh: chsh.o libuser.o version.o
 	$(CC) $(LDFLAGS) -o $@ $^
 
 pwdstat: pwdstat.o
 	$(CC) $(LDFLAGS) -o $@ $^
 
 install: all
-	if [ ! -d $(DESTDIR) ] ; then mkdir -p $(DESTDIR) ; fi
-	install -m 4555 $(PROGS) $(DESTDIR)
-	if [ ! -d $(MANDIR) ] ; then mkdir -p $(MANDIR) ; fi
-	if [ ! -d $(MANDIR)/man1 ] ; then mkdir -p $(MANDIR)/man1 ; fi
-	install -m 644 $(wildcard *.1) $(MANDIR)/man1
+	if [ ! -d $(DESTDIR)$(bindir) ] ; then mkdir -p $(DESTDIR)$(bindir) ; fi
+	if [ ! -d $(DESTDIR)$(mandir)/man1 ] ; then mkdir -p $(DESTDIR)$(mandir)/man1 ; fi
+	install -m 4555 $(PROGS) $(DESTDIR)$(mandir)/
+	install -m 644 $(wildcard *.1) $(DESTDIR)$(mandir)/man1/
 
 clean:
 	rm -f *.o *~ $(PROGS) date.h

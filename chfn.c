@@ -1,9 +1,4 @@
 /*
- * This is meant to be yet another version of the popular
- * chfn program
- */
-
-/*
  * Copyright Red Hat Software, Inc., 1998, 1999.
  *
  * Redistribution and use in source and binary forms, with or without

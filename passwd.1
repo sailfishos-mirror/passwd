@@ -1,4 +1,4 @@
-.\" Copyright Red Hat Software, Inc., 1998, 1999.
+.\" Copyright Red Hat, Inc., 1998, 1999, 2002.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
 .\" modification, are permitted provided that the following conditions
@@ -33,7 +33,7 @@
 .\"
 .\" Copyright (c) Cristian Gafton, 1998, <gafton@redhat.com>
 .\"
-.TH PASSWD 1 "Jan 03 1998" "PAM + PWDB applications" "User utilities"
+.TH PASSWD 1 "Jan 03 1998" "Red Hat Linux" "User utilities"
 .SH NAME
 
 passwd \- update a user's authentication tokens(s)
@@ -73,7 +73,7 @@ configuration file for this service would be:
 .br
  passwd password required \\
 .br
-             /usr/lib/security/pam_pwdb.so use_authtok
+             /usr/lib/security/pam_unix.so use_authtok
 .br
  #
 

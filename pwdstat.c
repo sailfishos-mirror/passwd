@@ -4,6 +4,7 @@
  * $Id$
  */
 
+#include <assert.h>
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -70,7 +71,8 @@ static struct pam_conv conv = {
     NULL
 };
 
-int main(int argc, char * const argv[])
+int
+main(int argc, char * const argv[])
 {
     int retval;
     pam_handle_t *pamh=NULL;
@@ -80,6 +82,8 @@ int main(int argc, char * const argv[])
      * here you should obtains somehow the username and password and
      * set the global variables
      */
+    assert(username != NULL);
+    assert(password != NULL);
 
     retval = pam_start("passwd", username, &conv, &pamh);
     while (retval == PAM_SUCCESS) {      /* use loop to avoid goto... */
