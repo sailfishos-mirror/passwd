@@ -65,8 +65,13 @@ version.o: date.h
 date.h: 
 	echo "static char version_date[] = \"" `date +%D` "\";" > date.h
 
+tag:
+	cvs tag -cR $(CVSTAG) .
+
+force-tag:
+	cvs tag -cFR $(CVSTAG) .
+
 archive:
-	cvs tag -F $(CVSTAG) .
 	@rm -rf /tmp/$(PROJECT)-$(VERSION) /tmp/password
 	@cd /tmp; cvs export -r$(CVSTAG) password
 	@mv /tmp/password /tmp/$(PROJECT)-$(VERSION)
