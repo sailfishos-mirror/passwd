@@ -1,6 +1,6 @@
-AC_INIT
+AC_INIT(passwd, 0.70)
 AC_CONFIG_SRCDIR([configure.ac])
-AM_INIT_AUTOMAKE([passwd],[0.69])
+AM_INIT_AUTOMAKE([dist-bzip2 no-dist-gzip])
 
 AC_PROG_CC
 AC_PROG_RANLIB
@@ -62,19 +62,19 @@ if test x$use_selinux != xno ; then
 	fi
 fi
 
-AC_ARG_WITH(laus,
-AS_HELP_STRING([--with-laus],[log using LAuS in addition to syslog]),
-use_laus=$withval,
-use_laus=auto)
-if test x$use_laus != xno ; then
-	AC_CHECK_FUNC(laus_open,,
-		      [AC_CHECK_LIB(laus,laus_open)])
-	if test x$ac_cv_lib_laus_laus_open != xyes ; then
-		if test x$use_laus != xauto ; then
-			AC_MSG_ERROR([requested LAuS, but liblaus was not found])
+AC_ARG_WITH(audit,
+AS_HELP_STRING([--with-audit],[log using Linux Audit in addition to syslog]),
+use_audit=$withval,
+use_audit=auto)
+if test x$use_audit != xno ; then
+	AC_CHECK_FUNC(audit_open,,
+		      [AC_CHECK_LIB(audit,audit_open)])
+	if test x$ac_cv_lib_audit_audit_open != xyes ; then
+		if test x$use_audit != xauto ; then
+			AC_MSG_ERROR([requested Linux Audit, but libaudit was not found])
 		fi
 	else
-		AC_DEFINE(WITH_LAUS,1,[Define if you want to use LAuS.])
+		AC_DEFINE(WITH_AUDIT,1,[Define if you want to use Linux Audit.])
 	fi
 fi
 
@@ -83,7 +83,7 @@ AC_DEFINE(_GNU_SOURCE,1,[Define if you want to use GNU extensions.])
 AM_MAINTAINER_MODE
 
 AM_CONDITIONAL(USE_SELINUX,test x$use_selinux != xno)
-AM_CONDITIONAL(USE_LAUS,test x$use_laus != xno)
+AM_CONDITIONAL(USE_AUDIT,test x$use_audit != xno)
 AM_CONDITIONAL(USE_LIBUSER,test x$use_libuser != xno)
 
 AC_CHECK_FUNC(dlopen,,[AC_CHECK_LIB(dl,dlopen)])

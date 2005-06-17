@@ -2,7 +2,7 @@ bin_PROGRAMS = passwd
 man1_MANS = passwd.1
 noinst_PROGRAMS = pwdstat
 noinst_LIBRARIES = libstuff.a
-EXTRA_DIST = passwd.pamd passwd.1
+EXTRA_DIST = passwd.pamd passwd.1 passwd.spec.in passwd.spec
 libstuff_a_SOURCES = \
 	date.h \
 	pwdb.h \
@@ -30,3 +30,6 @@ passwd_SOURCES = \
 
 pwdstat_SOURCES = \
 	pwdstat.c
+
+passwd.spec: passwd.spec.in configure.ac
+	./autogen.sh

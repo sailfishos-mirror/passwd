@@ -1,9 +1,12 @@
 %if %{?WITH_SELINUX:0}%{!?WITH_SELINUX:1}
 %define WITH_SELINUX 1
 %endif
+%if %{?WITH_AUDIT:0}%{!?WITH_AUDIT:1}
+%define WITH_AUDIT 1
+%endif
 Summary: The passwd utility for setting/changing passwords using PAM.
 Name: passwd
-Version: 0.69
+Version: @PACKAGE_VERSION@
 Release: 1
 License: BSD
 Group: System Environment/Base
@@ -15,6 +18,9 @@ BuildPrereq: glib2-devel, libuser-devel, pam-devel, libselinux-devel
 BuildPrereq: libuser >= 0.53-1
 %else
 BuildPrereq: glib2-devel, libuser-devel, pam-devel, libuser >= 0.53-1
+%endif
+%if %{WITH_AUDIT}
+BuildPrereq: audit-libs-devel
 %endif
 
 %description
@@ -50,6 +56,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* Fri Jun 17 2005 Tomas Mraz <tmraz@redhat.com> 0.70-1
+- replace laus with audit
+- auto* build changes
+
 * Fri Jan 28 2005 Jindrich Novy <jnovy@redhat.com> 0.69-1
 - spec file fixes
 - add libuser >= 0.53-1 BuildPrereq (#139331)
