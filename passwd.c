@@ -125,7 +125,7 @@ stdin_conv(int num_msg, const struct pam_message **msgm,
 
 	/* Each prompt elicits the same response. */
 	for (count = 0; count < num_msg; ++count) {
-		if ((*msgm)[count].msg_style == PAM_PROMPT_ECHO_OFF) {
+		if (msgm[count]->msg_style == PAM_PROMPT_ECHO_OFF) {
 			reply[count].resp_retcode = 0;
 			reply[count].resp = strdup(appdata_ptr);
 		} else {
