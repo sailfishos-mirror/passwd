@@ -48,8 +48,6 @@
 #include <string.h>
 #include <unistd.h>
 #include <popt.h>
-#include <security/pam_appl.h>
-#include <security/pam_misc.h>
 #include "pwdb.h"
 
 #ifdef WITH_SELINUX
@@ -65,6 +63,10 @@
 #define audit_open() -1
 #define audit_log_if_enabled(d,t,f,...) do { ; } while(0) 
 #endif
+
+#include <security/pam_appl.h>
+#include <security/pam_misc.h>
+
 static int audit_fd = -1;
 
 #define _(String) String
@@ -123,7 +125,7 @@ stdin_conv(int num_msg, const struct pam_message **msgm,
 
 	/* Each prompt elicits the same response. */
 	for (count = 0; count < num_msg; ++count) {
-		if (msgm[count].msg_style == PAM_PROMPT_ECHO_OFF) {
+		if ((*msgm)[count].msg_style == PAM_PROMPT_ECHO_OFF) {
 			reply[count].resp_retcode = 0;
 			reply[count].resp = strdup(appdata_ptr);
 		} else {
