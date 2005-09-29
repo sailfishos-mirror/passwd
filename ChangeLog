@@ -1,3 +1,20 @@
+2005-09-29 Tomas Mraz <tmraz@redhat.com>
+	* libuser.c (pwdb_update_shell): Replace LU_GECOS
+	with LU_LOGINSHELL (#168029)
+
+2005-06-17 Tomas Mraz <tmraz@redhat.com>
+	* configure.ac (AM_INIT_AUTOMAKE, AC_INIT): Change to the new
+	style of initialization.
+	
+	* passwd.c (stdin_conv): Respond with password only on
+	PAM_PROMPT_ECHO_OFF
+
+	* passwd.c: Replace LAuS with Audit.
+	(laus_help_errmsg, laus_help_log, laus_help_open): Removed.
+	
+	* passwd.spec: Removed.
+	* passwd.spec.in: New file. Template for passwd.spec.
+
 2005-01-25 Dan Walsh <dwalsh@redhat.com>
 	* Improve SELinux priv checking
 

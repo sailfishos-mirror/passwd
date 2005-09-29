@@ -315,7 +315,7 @@ pwdb_update_shell(const char *username, const char *shell)
 
 	ent = lu_ent_new();
 	if (lu_user_lookup_name(libuser, username, ent, &error)) {
-		lu_ent_clear(ent, LU_GECOS);
+		lu_ent_clear(ent, LU_LOGINSHELL);
 
 		memset(&value, 0, sizeof(value));
 		g_value_init(&value, G_TYPE_STRING);
