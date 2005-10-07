@@ -1,3 +1,8 @@
+2005-10-07 Tomas Mraz <tmraz@redhat.com>
+	* configure.ac: Version 0.71
+	
+	* passwd.pamd: Replace pam_stack with include.
+	
 2005-09-29 Tomas Mraz <tmraz@redhat.com>
 	* libuser.c (pwdb_update_shell): Replace LU_GECOS
 	with LU_LOGINSHELL (#168029)
