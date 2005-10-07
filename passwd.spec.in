@@ -12,7 +12,7 @@ License: BSD
 Group: System Environment/Base
 Source: %{name}-%{version}.tar.bz2
 Buildroot: %{_tmppath}/passwd-root
-Requires: pam >= 0.59, /etc/pam.d/system-auth, 
+Requires: pam >= 0.78, /etc/pam.d/system-auth, 
 %if %{WITH_SELINUX}
 BuildPrereq: glib2-devel, libuser-devel, pam-devel, libselinux-devel
 BuildPrereq: libuser >= 0.53-1
@@ -56,6 +56,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* Fri Oct  7 2005 Tomas Mraz <tmraz@redhat.com> 0.71-1
+- use include instead of pam_stack in pam config
+
 * Fri Jun 17 2005 Tomas Mraz <tmraz@redhat.com> 0.70-1
 - replace laus with audit
 - auto* build changes
