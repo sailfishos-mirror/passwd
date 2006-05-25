@@ -1,3 +1,7 @@
+2006-05-25 Tomas Mraz <tmraz@redhat.com>
+	* passwd.1: Change reference to the Linux-PAM administrators
+	guide (#193084)
+
 2005-10-07 Tomas Mraz <tmraz@redhat.com>
 	* configure.ac: Version 0.71
 	
