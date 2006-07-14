@@ -48,6 +48,9 @@
 #include <string.h>
 #include <unistd.h>
 #include <popt.h>
+#include <errno.h>
+#include <limits.h>
+#include <syslog.h>
 #include "pwdb.h"
 
 #ifdef WITH_SELINUX
@@ -60,8 +63,9 @@
 #ifdef WITH_AUDIT
 #include <libaudit.h>
 #else
-#define audit_open() -1
-#define audit_log_if_enabled(d,t,f,...) do { ; } while(0) 
+#define audit_log_user_message(d,ty,m,h,a,t,r) do { ; } while(0) 
+#define audit_log_acct_message(d,ty,p,o,n,i,h,a,t,r) do { ; } while(0) 
+static int audit_open(void) { errno = EPROTONOSUPPORT; return -1; } 
 #endif
 
 #include <security/pam_appl.h>
@@ -261,16 +265,19 @@ parse_args(int argc, const char **argv,
 	/* The only flag which unprivileged users get to use is -k. */
 	if ((passwd_flags & ~PASSWD_KEEP) && 
 #ifdef WITH_SELINUX
-	    ((getuid() != 0) || checkPasswdAccess(PASSWD__PASSWD))) {
+	    ((getuid() != 0) || is_selinux_enabled() <= 0 ||
+		    checkPasswdAccess(PASSWD__PASSWD))) {
 #else
 	    (getuid() != 0)) {
 #endif
 		if (passwd_flags & PASSWD_STATUS) {
-			audit_log_if_enabled(audit_fd, AUDIT_USER_CHAUTHTOK,
-		"passwd: password status display for all users denied");
+			audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
+				NULL, "password status display",
+				NULL, getuid(), NULL, NULL, NULL, 0);
 		} else {
-			audit_log_if_enabled(audit_fd, AUDIT_USER_CHAUTHTOK,
-			"passwd: password attribute change denied");
+			audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
+				NULL, "password attribute change",
+				NULL, getuid(), NULL, NULL, NULL, 0);
 		}
 		fprintf(stderr, _("Only root can do that.\n"));
 		exit(-2);
@@ -281,9 +288,9 @@ parse_args(int argc, const char **argv,
 	if ((extraArgs != NULL) && (extraArgs[0] != NULL)) {
 		if (getuid() != 0) {
 			/* The invoking user was not root. */
-			audit_log_if_enabled(audit_fd, AUDIT_USER_CHAUTHTOK,
-			"passwd: password change denied - user=%s",
-				      extraArgs[0]);
+			audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
+				NULL, "password change", extraArgs[0],
+				getuid(), NULL, NULL, NULL, 0);
 			fprintf(stderr,
 				_("%s: Only root can specify a user name.\n"),
 				progname);
@@ -351,6 +358,13 @@ main(int argc, const char **argv)
 	char *tty_name, *ttyn;
 
 	audit_fd = audit_open();
+	if (audit_fd < 0 && !(errno == EINVAL || errno == EPROTONOSUPPORT ||
+				errno == EAFNOSUPPORT)) {
+		/* The above error codes are only given when the kernel doesn't
+		 * have audit compiled in. */
+		fprintf(stderr, "Error - unable to connect to audit system\n");
+		exit(1);
+	}
 
 	/* Parse command-line arguments. */
 	progname = basename(argv[0]);
@@ -379,6 +393,9 @@ main(int argc, const char **argv)
 			  "password of %s\n"),
 			progname, user_context, username);
 		freecon(user_context);
+		audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
+			NULL, "change password", NULL, pwd->pw_uid,
+			NULL, NULL, NULL, 0);
 		exit(1);
 	}
 #endif
@@ -390,11 +407,9 @@ main(int argc, const char **argv)
 		printf("%s: %s\n", progname,
 		       retval ==
 		       0 ? "Success" : "Error (password not set?)");
-		if (retval == 0) {
-			audit_log_if_enabled(audit_fd, AUDIT_USER_CHAUTHTOK,
-			"passwd: password locked - user=%s, uid=%u",
-			      username, pwd->pw_uid);
-		}
+		audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
+			NULL, "lock password", NULL, pwd->pw_uid,
+			NULL, NULL, NULL, retval == 0);
 		return retval;
 	}
 	/* Handle account unlocking request. */
@@ -407,11 +422,9 @@ main(int argc, const char **argv)
 		       retval ==
 		       -2 ? _("Unsafe operation (use -f to force).") :
 		       _("Error (password not set?)"));
-		if (retval == 0) {
-			audit_log_if_enabled(audit_fd, AUDIT_USER_CHAUTHTOK,
-			"passwd: password unlocked - user=%s, uid=%u",
-			      username, pwd->pw_uid);
-		}
+		audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
+			NULL, "unlock password", NULL, pwd->pw_uid,
+			NULL, NULL, NULL, retval == 0);
 		return retval;
 	}
 	/* Handle password clearing request. */
@@ -420,36 +433,32 @@ main(int argc, const char **argv)
 		retval = pwdb_clear_password(username);
 		printf("%s: %s\n", progname,
 		       (retval == 0) ? _("Success") : _("Error"));
-		if (retval == 0) {
-			audit_log_if_enabled(audit_fd, AUDIT_USER_CHAUTHTOK, 
-			"passwd: password deleted - user=%s, uid=%u",
-			      username, pwd->pw_uid);
-		}
+		audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
+			NULL, "delete password", NULL, pwd->pw_uid,
+			NULL, NULL, NULL, retval == 0);
 		return retval;
 	}
 	/* Display account status. */
 	if (passwd_flags & PASSWD_STATUS) {
 		retval = pwdb_display_status(username);
-		if (retval == 0) {
-		audit_log_if_enabled(audit_fd, AUDIT_USER_CHAUTHTOK, 
-			"passwd: password status displayed for all users");
-		}
+		audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
+			NULL, "password status displayed for user",
+			NULL, pwd->pw_uid, NULL, NULL, NULL, retval == 0);
 		return retval;
 	}
 	/* Adjust aging parameters. */
 	if (passwd_flags & PASSWD_AGING) {
+		char aubuf[PATH_MAX];
 		printf(_("Adjusting aging data for user %s.\n"), username);
 		retval = pwdb_update_aging(username, min, max, warn, inact);
 		printf("%s: %s\n", progname,
 		       (retval == 0) ? _("Success") : _("Error"));
-		if (retval == 0) {
-			audit_log_if_enabled(audit_fd, AUDIT_USER_CHAUTHTOK,
-				"passwd: password aging data "
-					"updated - user=%s, uid=%u, min=%li, "
-					"max=%li, warn=%li, inact=%li",
-					username, pwd->pw_uid, min,
-					max, warn, inact);
-		}
+		snprintf(aubuf, sizeof(aubuf), "password aging data updated "
+				"- acct=%s, uid=%u, min=%li, max=%li,"
+				" warn=%li, inact=%li", username, 
+				pwd->pw_uid, min, max, warn, inact);
+		audit_log_user_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
+			aubuf, NULL, NULL, NULL, retval == 0);
 		return retval;
 	}
 
@@ -519,22 +528,23 @@ main(int argc, const char **argv)
 		/* We're done.  Tell the invoking user that it worked. */
 		retval = pam_end(pamh, PAM_SUCCESS);
 		if (passwd_flags & PASSWD_KEEP) {
-			audit_log_if_enabled(audit_fd, AUDIT_USER_CHAUTHTOK,
-				"passwd: password changed - user=%s, uid=%u",
-				username, pwd->pw_uid);
+			audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
+				NULL, "change expired password", NULL,
+				pwd->pw_uid, NULL, NULL, NULL,
+				retval == PAM_SUCCESS);
 			printf(_("passwd: expired authentication tokens updated successfully.\n"));
 		} else {
-			audit_log_if_enabled(audit_fd, AUDIT_USER_CHAUTHTOK,
-				"passwd: password changed - user=%s, uid=%u",
-				username, pwd->pw_uid);
+			audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
+				NULL, "change password", NULL, pwd->pw_uid,
+				NULL, NULL, NULL, retval == PAM_SUCCESS);
 			printf(_("passwd: all authentication tokens updated successfully.\n"));
 		}
 		retval = 0;
 	} else {
 		/* Horrors!  It failed.  Relay the bad news. */
-		audit_log_if_enabled(audit_fd, AUDIT_USER_CHAUTHTOK, 
-			"passwd: password change failed - user=%s, uid=%u",
-			username,pwd->pw_uid);
+		audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
+				NULL, "change password", NULL, pwd->pw_uid,
+				NULL, NULL, NULL, retval == PAM_SUCCESS);
 		fprintf(stderr, _("passwd: %s\n"),
 			pam_strerror(pamh, retval));
 		pam_end(pamh, retval);

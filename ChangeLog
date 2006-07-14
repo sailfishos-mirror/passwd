@@ -1,17 +1,33 @@
+2006-07-14 Tomas Mraz <tmraz@redhat.com>
+
+	* configure.ac: Set use_selinux to no if not available,
+	version	0.72
+	
+	* libuser.c (ent_value_strdup, ent_value_int64): New.
+	(pwdb_display_status): Improve status output, print expiration
+	values.
+	
+	* passwd.c (parse_args, main): Use new audit calls, don't
+	call selinux_check_passwd_access when selinux is disabled.
+
 2006-05-25 Tomas Mraz <tmraz@redhat.com>
+
 	* passwd.1: Change reference to the Linux-PAM administrators
 	guide (#193084)
 
 2005-10-07 Tomas Mraz <tmraz@redhat.com>
+
 	* configure.ac: Version 0.71
 	
 	* passwd.pamd: Replace pam_stack with include.
-	
+
 2005-09-29 Tomas Mraz <tmraz@redhat.com>
+
 	* libuser.c (pwdb_update_shell): Replace LU_GECOS
 	with LU_LOGINSHELL (#168029)
 
 2005-06-17 Tomas Mraz <tmraz@redhat.com>
+
 	* configure.ac (AM_INIT_AUTOMAKE, AC_INIT): Change to the new
 	style of initialization.
 	
@@ -25,9 +41,11 @@
 	* passwd.spec.in: New file. Template for passwd.spec.
 
 2005-01-25 Dan Walsh <dwalsh@redhat.com>
+
 	* Improve SELinux priv checking
 
 2004-08-23 Jindrich Novy <jnovy@redhat.com>
+
 	* passwd.1: updated man page
 
 2004-08-23  Steve Grubb <linux_4ever@yahoo.com>

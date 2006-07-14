@@ -1,4 +1,4 @@
-AC_INIT(passwd, 0.71)
+AC_INIT(passwd, 0.72)
 AC_CONFIG_SRCDIR([configure.ac])
 AM_INIT_AUTOMAKE([dist-bzip2 no-dist-gzip])
 
@@ -57,6 +57,7 @@ if test x$use_selinux != xno ; then
 		if test x$use_selinux != xauto ; then
 			AC_MSG_ERROR([requested SELinux, but libselinux was not found])
 		fi
+		use_selinux=no
 	else
 		AC_DEFINE(WITH_SELINUX,1,[Define if you want to use SELinux.])
 	fi

@@ -1,5 +1,5 @@
 /*
- * Copyright Red Hat, Inc., 2002.
+ * Copyright Red Hat, Inc., 2002, 2006.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -45,6 +45,8 @@
 
 #include <string.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include <time.h>
 #include <libuser/user.h>
 #include "pwdb.h"
 
@@ -208,63 +210,128 @@ pwdb_clear_password(const char *username)
 	return retval;
 }
 
+static char *
+ent_value_strdup(struct lu_ent *ent, const char *attribute)
+{
+	GValueArray *values;
+	GValue *value;
+        value = NULL;
+        values = lu_ent_get(ent, attribute);
+        if (values) {
+		value = g_value_array_get_nth(values, 0);
+	}
+	if (value) {
+	        return lu_value_strdup(value);
+        }
+        return NULL;
+}
+
+static long long
+ent_value_int64(struct lu_ent *ent, const char *attribute)
+{
+	GValueArray *values;
+	GValue *value;
+        value = NULL;
+        values = lu_ent_get(ent, attribute);
+        if (values) {
+		value = g_value_array_get_nth(values, 0);
+	}
+	if (value) {
+		if (G_VALUE_HOLDS_STRING(value)) {
+			return strtoll(g_value_get_string(value), NULL, 10);
+		}
+	        else if (G_VALUE_HOLDS_LONG(value)) {
+	                return g_value_get_long(value);
+	        }
+	        else if (G_VALUE_HOLDS_INT64(value)) {
+	                return (long long)g_value_get_int64(value);
+		}
+        }
+        return -1;
+}
+
 int
 pwdb_display_status(const char *username)
 {
 	int retval = 1;
 	struct lu_ent *ent;
 	struct lu_error *error = NULL;
-	GValue *value;
-	GValueArray *values;
 	char *current;
+	char *realname;
+	const char *msg;
+	int shadow = 1;
+	time_t sp_lstchg = 0;
+	long long sp_min = 0;
+	long long sp_max = 0;
+	long long sp_warn = 0;
+	long long sp_inact= 0;
+	char date[80];
+	const char *status;
+	struct tm tm;
 
 	startup_libuser(username);
 
 	ent = lu_ent_new();
 	if (lu_user_lookup_name(libuser, username, ent, &error)) {
-		current = NULL;
-		value = NULL;
-		values = lu_ent_get(ent, LU_SHADOWPASSWORD);
-		if (values == NULL) {
-			values = lu_ent_get(ent, LU_USERPASSWORD);
+		realname = ent_value_strdup(ent, LU_USERNAME);
+		if (realname == NULL) {
+			printf(_("Corrupted passwd entry.\n"));
+			goto bail;
 		}
-		if (values) {
-			value = g_value_array_get_nth(values, 0);
-		}
-		if (value) {
-			current = lu_value_strdup(value);
+		current = ent_value_strdup(ent, LU_SHADOWPASSWORD);
+		if (current == NULL) {
+			shadow = 0;
+			current = ent_value_strdup(ent, LU_USERPASSWORD);
+		} else {
+			sp_lstchg = (time_t) ent_value_int64(ent, LU_SHADOWLASTCHANGE);
+			sp_min = ent_value_int64(ent, LU_SHADOWMIN);
+			sp_max = ent_value_int64(ent, LU_SHADOWMAX);
+			sp_warn = ent_value_int64(ent, LU_SHADOWWARNING);
+			sp_inact = ent_value_int64(ent, LU_SHADOWINACTIVE);
 		}
 		if (current) {
+			status = "PS";
 			if (strlen(current) == 0) {
-				printf(_("Empty password.\n"));
+				msg = _("Empty password.");
+				status = "NP";
 			} else if (current[0] == '!') {
-				printf(_("Password locked.\n"));
+				msg = _("Password locked.");
+				status = "LK";
 			} else if (current[0] == '$') {
 				if (strncmp(current, "$1$", 3) == 0) {
-					printf(_
-					       ("Password set, MD5 crypt.\n"));
+					msg = _("Password set, MD5 crypt.");
 				} else if (strncmp(current, "$2a$", 4) ==
 					   0) {
-					printf(_
-					       ("Password set, blowfish crypt.\n"));
+					msg = _("Password set, blowfish crypt.");
 				} else {
-					printf(_
-					       ("Password set, unknown crypt variant.\n"));
+					msg = _("Password set, unknown crypt variant.");
 				}
 			} else if (strlen(current) < 11) {
-				printf(_
-				       ("Alternate authentication scheme in use.\n"));
+				msg = _("Alternate authentication scheme in use.");
+				if (current[0] == '*' || current[0] == 'x') {
+					status = "LK";
+				}
 			} else {
-				printf(_("Password set, DES crypt.\n"));
+				msg = _("Password set, DES crypt.");
+			}
+			if (shadow) {
+				sp_lstchg = sp_lstchg * 24L * 3600L;
+				localtime_r(&sp_lstchg, &tm);
+				strftime(date, sizeof(date), "%Y-%m-%d", &tm);
+				printf("%s %s %s %lld %lld %lld %lld (%s)\n", realname, status,
+					date, sp_min, sp_max, sp_warn, sp_inact, msg);
+			} else {
+				printf("%s %s (%s)\n", realname, status, msg);
 			}
 			g_free(current);
+			g_free(realname);
 		} else {
 			printf(_("No password set.\n"));
 		}
 	} else {
 		printf(_("Unknown user.\n"));
 	}
-
+bail:
 	CHECK_ERROR(error);
 
 	shutdown_libuser();

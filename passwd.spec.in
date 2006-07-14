@@ -4,7 +4,7 @@
 %if %{?WITH_AUDIT:0}%{!?WITH_AUDIT:1}
 %define WITH_AUDIT 1
 %endif
-Summary: The passwd utility for setting/changing passwords using PAM.
+Summary: The passwd utility for setting/changing passwords using PAM
 Name: passwd
 Version: @PACKAGE_VERSION@
 Release: 1
@@ -14,13 +14,14 @@ Source: %{name}-%{version}.tar.bz2
 Buildroot: %{_tmppath}/passwd-root
 Requires: pam >= 0.78, /etc/pam.d/system-auth, 
 %if %{WITH_SELINUX}
-BuildPrereq: glib2-devel, libuser-devel, pam-devel, libselinux-devel
-BuildPrereq: libuser >= 0.53-1
+BuildRequires: glib2-devel, libuser-devel, pam-devel, libselinux-devel
+BuildRequires: libuser >= 0.53-1
 %else
-BuildPrereq: glib2-devel, libuser-devel, pam-devel, libuser >= 0.53-1
+BuildRequires: glib2-devel, libuser-devel, pam-devel, libuser >= 0.53-1
 %endif
 %if %{WITH_AUDIT}
-BuildPrereq: audit-libs-devel
+BuildRequires: audit-libs-devel >= 1.0.14
+Requires: audit-libs >= 1.0.14
 %endif
 
 %description
@@ -51,11 +52,36 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%config /etc/pam.d/passwd
-%attr(4511,root,root) %{_bindir}/passwd
+%config(noreplace) /etc/pam.d/passwd
+%attr(4755,root,root) %{_bindir}/passwd
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* Fri Jul 14 2006 Tomas Mraz <tmraz@redhat.com> 0.72-1
+- merged audit patch to upstream cvs
+- improved passwd -S output (#170344)
+- make passwd -d work with stripped down proc (#196851)
+- corrected link to pam docs (#193084)
+- spec file cleanups
+
+* Wed Jul 12 2006 Jesse Keating <jkeating@redhat.com> - 0.71-3.2.1
+- rebuild
+
+* Fri Feb 10 2006 Jesse Keating <jkeating@redhat.com> - 0.71-3.2
+- bump again for double-long bug on ppc(64)
+
+* Tue Feb 07 2006 Jesse Keating <jkeating@redhat.com> - 0.71-3.1
+- rebuilt for new gcc4.1 snapshot and glibc changes
+
+* Tue Jan 31 2006 Steve Grubb <sgrubb@redhat.com> 0.71-3
+- Adjust audit patch so it builds without libaudit
+
+* Fri Dec 09 2005 Jesse Keating <jkeating@redhat.com>
+- rebuilt
+
+* Tue Oct 25 2005 Steve Grubb <sgrubb@redhat.com> 0.71-2
+- adjust audit communication to use common logging functions
+
 * Fri Oct  7 2005 Tomas Mraz <tmraz@redhat.com> 0.71-1
 - use include instead of pam_stack in pam config
 
