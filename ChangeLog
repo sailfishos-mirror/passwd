@@ -1,3 +1,9 @@
+2006-07-17 Tomas Mraz <tmraz@redhat.com>
+
+	* configure.ac: Version 0.73.
+	
+	* passwd.c (parse_args): Fix broken logic from the last change.
+
 2006-07-14 Tomas Mraz <tmraz@redhat.com>
 
 	* configure.ac: Set use_selinux to no if not available,

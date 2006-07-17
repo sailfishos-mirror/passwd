@@ -57,6 +57,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* Mon Jul 17 2006 Tomas Mraz <tmraz@redhat.com> 0.73-1
+- fixed broken logic from the last change (#196851)
+
 * Fri Jul 14 2006 Tomas Mraz <tmraz@redhat.com> 0.72-1
 - merged audit patch to upstream cvs
 - improved passwd -S output (#170344)

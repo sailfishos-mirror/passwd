@@ -265,8 +265,8 @@ parse_args(int argc, const char **argv,
 	/* The only flag which unprivileged users get to use is -k. */
 	if ((passwd_flags & ~PASSWD_KEEP) && 
 #ifdef WITH_SELINUX
-	    ((getuid() != 0) || is_selinux_enabled() <= 0 ||
-		    checkPasswdAccess(PASSWD__PASSWD))) {
+	    ((getuid() != 0) || (is_selinux_enabled() > 0 &&
+		    checkPasswdAccess(PASSWD__PASSWD)))) {
 #else
 	    (getuid() != 0)) {
 #endif
