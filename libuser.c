@@ -57,7 +57,7 @@ extern const char *progname;
 #define _(String) String
 #define CHECK_ERROR(x) \
 if (x != NULL) { \
-	fprintf(stderr, "%s: Error %d - %s.\n", \
+	fprintf(stderr, "%s: Libuser error at line: %d - %s.\n", \
 		progname, __LINE__, lu_strerror(x)); \
 	lu_error_free(&x); \
 	return -1; \
@@ -66,18 +66,17 @@ if (x != NULL) { \
 static struct lu_context *libuser = NULL;
 
 /* Shut down libuser. */
-static int
+static void
 shutdown_libuser(void)
 {
 	lu_end(libuser);
 	libuser = NULL;
-	return 0;
 }
 
 /* Start up the library, suggesting the name of the user which was
  * passed in as the name the library should use if it needs to
  * authenticate to data sources. */
-static int
+static void
 startup_libuser(const char *user)
 {
 	struct lu_error *error = NULL;
@@ -86,13 +85,20 @@ startup_libuser(const char *user)
 	}
 	libuser = lu_start(user, lu_user, NULL, NULL,
 			   lu_prompt_console, NULL, &error);
-	if (libuser == NULL) {
+	if (error != NULL || libuser == NULL) {
 		fprintf(stderr,
-			_("passwd: libuser initialization error.\n"));
+			_("passwd: libuser initialization error:"));
+	}
+	if (error != NULL) {
+		fprintf(stderr,
+			" %s\n", lu_strerror(error));
 		_exit(1);
 	}
-	CHECK_ERROR(error);
-	return 0;
+	if (libuser == NULL) {
+		fprintf(stderr,
+			" unknown error\n");
+		_exit(1);
+	}
 }
 
 /* Lock an account. */
@@ -124,12 +130,6 @@ pwdb_lock_password(const char *username)
 int
 pwdb_unlock_password(const char *username, int force)
 {
-#if 0
-	fprintf(stderr,
-		"Warning: unlocked password for %s is the empty string.\n"
-		"Use the -f flag to force the creation of a passwordless account.\n",
-		username);
-#endif
 	int retval = 1, i;
 	struct lu_ent *ent;
 	struct lu_error *error = NULL;
@@ -163,6 +163,8 @@ pwdb_unlock_password(const char *username, int force)
 			/* If the first non-locking character is the end of the
 			 * string, */
 			if (current[i] == '\0') {
+				fprintf(stderr, "%s: %s\n", progname,
+					_("Warning: unlocked password would be empty."));
 				/* warn the admin, because this is probably a
 				 * bad idea. */
 				retval = -2;
@@ -275,7 +277,8 @@ pwdb_display_status(const char *username)
 	if (lu_user_lookup_name(libuser, username, ent, &error)) {
 		realname = ent_value_strdup(ent, LU_USERNAME);
 		if (realname == NULL) {
-			printf(_("Corrupted passwd entry.\n"));
+			fprintf(stderr, "%s: %s\n", progname,
+				_("Corrupted passwd entry."));
 			goto bail;
 		}
 		current = ent_value_strdup(ent, LU_SHADOWPASSWORD);
@@ -328,8 +331,10 @@ pwdb_display_status(const char *username)
 		} else {
 			printf(_("No password set.\n"));
 		}
+		retval = 0;
 	} else {
 		printf(_("Unknown user.\n"));
+		retval = 2;
 	}
 bail:
 	CHECK_ERROR(error);

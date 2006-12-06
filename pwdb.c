@@ -62,7 +62,7 @@
 extern const char *progname;
 
 #define CHECK_ERROR(x)     if (x != PWDB_SUCCESS) { \
- 	fprintf(stderr, "%s: Error %d - %s.\n", \
+ 	fprintf(stderr, "%s: Pwdb error at line: %d - %s.\n", \
 		progname, __LINE__, pwdb_strerror(x)); /* that is an old trick... */ \
 	if (_pwdb != (struct pwdb *)NULL) \
 	    pwdb_delete(&_pwdb); \

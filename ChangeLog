@@ -1,3 +1,14 @@
+2006-12-06 Tomas Mraz <tmraz@redhat.com>
+
+	* libuser.c (CHECK_ERROR): Improve the error message.
+	(shutdown_libuser): Make it void function.
+	(startup_libuser): Make it void function. Improve error
+	reporting.
+	(pwdb_unlock_password): Warn the admin about the empty password.
+	(pwdb_display_status): Error should be printed on stderr, return
+	meaningful value.
+	* pwdb.c (CHECK_ERROR): Improve the error message.
+
 2006-07-17 Tomas Mraz <tmraz@redhat.com>
 
 	* configure.ac: Version 0.73.
