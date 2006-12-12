@@ -12,13 +12,12 @@ License: BSD
 Group: System Environment/Base
 Source: %{name}-%{version}.tar.bz2
 Buildroot: %{_tmppath}/passwd-root
-Requires: pam >= 0.78, /etc/pam.d/system-auth, 
+Requires: pam >= 0.78, /etc/pam.d/system-auth
 %if %{WITH_SELINUX}
-BuildRequires: glib2-devel, libuser-devel, pam-devel, libselinux-devel
-BuildRequires: libuser >= 0.53-1
-%else
-BuildRequires: glib2-devel, libuser-devel, pam-devel, libuser >= 0.53-1
+BuildRequires: libselinux-devel
 %endif
+BuildRequires: glib2-devel, libuser-devel, pam-devel, libuser >= 0.53-1
+BuildRequires: gettext
 %if %{WITH_AUDIT}
 BuildRequires: audit-libs-devel >= 1.0.14
 Requires: audit-libs >= 1.0.14
