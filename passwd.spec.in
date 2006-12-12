@@ -58,6 +58,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* Tue Dec 12 2006 Tomas Mraz <tmraz@redhat.com> 0.74-1
+- minor fixes in error reporting
+- localize messages (#204022)
+
 * Mon Jul 17 2006 Tomas Mraz <tmraz@redhat.com> 0.73-1
 - fixed broken logic from the last change (#196851)
 
