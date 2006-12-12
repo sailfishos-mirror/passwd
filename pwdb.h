@@ -52,6 +52,8 @@
 /* general defines */
 #define MAX_USERNAMESIZE	32	/* max username size */
 
+#define _(String) gettext(String)
+
 int pwdb_lock_password(const char *username);
 int pwdb_unlock_password(const char *username, int force);
 int pwdb_clear_password(const char *username);

@@ -48,13 +48,13 @@
 #include <stdlib.h>
 #include <time.h>
 #include <libuser/user.h>
+#include <libintl.h>
 #include "pwdb.h"
 
 #ifdef LIBUSER
 
 extern const char *progname;
 
-#define _(String) String
 #define CHECK_ERROR(x) \
 if (x != NULL) { \
 	fprintf(stderr, "%s: Libuser error at line: %d - %s.\n", \
@@ -87,7 +87,7 @@ startup_libuser(const char *user)
 			   lu_prompt_console, NULL, &error);
 	if (error != NULL || libuser == NULL) {
 		fprintf(stderr,
-			_("passwd: libuser initialization error:"));
+			_("%s: libuser initialization error:"), progname);
 	}
 	if (error != NULL) {
 		fprintf(stderr,
@@ -428,8 +428,8 @@ pwdb_update_aging(const char *username,
 		    !lu_ent_get(ent, LU_SHADOWMAX) &&
 		    !lu_ent_get(ent, LU_SHADOWWARNING) &&
 		    !lu_ent_get(ent, LU_SHADOWINACTIVE)) {
-			fprintf(stderr, _("passwd: user account has no support "
-					  "for password aging\n"));
+			fprintf(stderr, _("%s: user account has no support "
+					  "for password aging.\n"), progname);
 			shutdown_libuser();
 			return retval;
 		}

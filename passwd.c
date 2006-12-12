@@ -51,6 +51,8 @@
 #include <errno.h>
 #include <limits.h>
 #include <syslog.h>
+#include <locale.h>
+#include <libintl.h>
 #include "pwdb.h"
 
 #ifdef WITH_SELINUX
@@ -72,9 +74,6 @@ static int audit_open(void) { errno = EPROTONOSUPPORT; return -1; }
 #include <security/pam_misc.h>
 
 static int audit_fd = -1;
-
-#define _(String) String
-#define N_(String) String
 
 /* conversation function & corresponding structure */
 static struct pam_conv conv = {
@@ -156,36 +155,36 @@ parse_args(int argc, const char **argv,
 	const char **extraArgs;
 	struct poptOption options[] = {
 		{"keep-tokens", 'k', POPT_ARG_NONE, &keep, 0,
-		 "keep non-expired authentication tokens"},
+		 _("keep non-expired authentication tokens")},
 		{"delete", 'd', POPT_ARG_NONE, &delete, 0,
-		 "delete the password for the named account (root only)"},
+		 _("delete the password for the named account (root only)")},
 		{"lock", 'l', POPT_ARG_NONE, &lock, 0,
-		 "lock the named account (root only)"},
+		 _("lock the named account (root only)")},
 		{"unlock", 'u', POPT_ARG_NONE, &unlock, 0,
-		 "unlock the named account (root only)"},
+		 _("unlock the named account (root only)")},
 		{"force", 'f', POPT_ARG_NONE, &force, 0,
-		 "force operation\n"},
+		 _("force operation")},
 		{"maximum", 'x', POPT_ARG_LONG, max, 0,
-		 "maximum password lifetime (root only)", "DAYS"},
+		 _("maximum password lifetime (root only)"), "DAYS"},
 		{"minimum", 'n', POPT_ARG_LONG, min, 0,
-		 "minimum password lifetime (root only)", "DAYS"},
+		 _("minimum password lifetime (root only)"), "DAYS"},
 		{"warning", 'w', POPT_ARG_LONG, warn, 0,
-		 "number of days warning users receives before password "
-		 "expiration (root only)", "DAYS"},
+		 _("number of days warning users receives before password "
+		 "expiration (root only)"), "DAYS"},
 		{"inactive", 'i', POPT_ARG_LONG, inact, 0,
-		 "number of days after password expiration when an account "
-		 "becomes disabled (root only)", "DAYS"},
+		 _("number of days after password expiration when an account "
+		 "becomes disabled (root only)"), "DAYS"},
 		{"status", 'S', POPT_ARG_NONE, &status, 0,
-		 "report password status on the named account (root only)"},
+		 _("report password status on the named account (root only)")},
 		{"stdin", '\0', POPT_ARG_NONE, &use_stdin, 0,
-		 "read new tokens from stdin (root only)"},
+		 _("read new tokens from stdin (root only)")},
 		POPT_AUTOHELP {NULL, '\0', 0, NULL},
 	};
 	struct passwd *pw;
 
 	*min = *max = *warn = *inact = -2;
 	optCon = poptGetContext("passwd", argc, argv, options, 0);
-	poptSetOtherOptionHelp(optCon, "[OPTION...] <accountName>");
+	poptSetOtherOptionHelp(optCon, _("[OPTION...] <accountName>"));
 
 	if ((rc = poptGetNextOpt(optCon)) < -1) {
 		fprintf(stderr, _("%s: bad argument %s: %s\n"), progname,
@@ -357,6 +356,10 @@ main(int argc, const char **argv)
 	struct passwd *pwd;
 	char *tty_name, *ttyn;
 
+	setlocale(LC_ALL, "");
+	bindtextdomain("passwd", "/usr/share/locale");
+	textdomain("passwd");
+	
 	audit_fd = audit_open();
 	if (audit_fd < 0 && !(errno == EINVAL || errno == EPROTONOSUPPORT ||
 				errno == EAFNOSUPPORT)) {
@@ -383,10 +386,10 @@ main(int argc, const char **argv)
 	    (check_selinux_access(username, pwd->pw_uid, PASSWD__PASSWD) != 0)) {
 		security_context_t user_context;
 		if (getprevcon(&user_context) < 0) {
-			user_context = strdup(_("Unknown user context"));
+			user_context = strdup("Unknown user context");
 		}
 		syslog(LOG_ALERT,
-		       _("%s is not authorized to change the password of %s\n"),
+		       "%s is not authorized to change the password of %s",
 		       user_context, username);
 		fprintf(stderr,
 			_("%s: %s is not authorized to change the "
@@ -406,7 +409,7 @@ main(int argc, const char **argv)
 		retval = pwdb_lock_password(username);
 		printf("%s: %s\n", progname,
 		       retval ==
-		       0 ? "Success" : "Error (password not set?)");
+		       0 ? _("Success") : _("Error (password not set?)"));
 		audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
 			NULL, "lock password", NULL, pwd->pw_uid,
 			NULL, NULL, NULL, retval == 0);
@@ -418,9 +421,9 @@ main(int argc, const char **argv)
 		retval = pwdb_unlock_password(username,
 					      passwd_flags & PASSWD_FORCE);
 		printf("%s: %s\n", progname,
-		       retval == 0 ? _("Success.") :
+		       retval == 0 ? _("Success") :
 		       retval ==
-		       -2 ? _("Unsafe operation (use -f to force).") :
+		       -2 ? _("Unsafe operation (use -f to force)") :
 		       _("Error (password not set?)"));
 		audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
 			NULL, "unlock password", NULL, pwd->pw_uid,
@@ -477,7 +480,8 @@ main(int argc, const char **argv)
 			 sizeof(newPassword) - 1);
 		if (i < 0) {
 			fprintf(stderr,
-				_("passwd: error reading from stdin\n"));
+				_("%s: error reading from stdin: %s\n"), progname,
+				strerror(errno));
 			exit(1);
 		}
 
@@ -493,7 +497,8 @@ main(int argc, const char **argv)
 	retval = pam_start("passwd", username, &conv, &pamh);
 	if (retval != PAM_SUCCESS) {
 		fprintf(stderr,
-			_("passwd: unable to start pam\n"));
+			_("%s: unable to start pam: %s\n"), progname,
+			pam_strerror(pamh, retval));
 		exit(1);
 	}
 
@@ -505,7 +510,8 @@ main(int argc, const char **argv)
 		retval = pam_set_item(pamh, PAM_TTY, tty_name);
 		if (retval != PAM_SUCCESS) {
 			fprintf(stderr,
-				_("passwd: unable to set tty for pam\n"));
+				_("%s: unable to set tty for pam: %s\n"), progname,
+				pam_strerror(pamh, retval));
 			pam_end(pamh, retval);
 			exit(1);
 		}
@@ -515,7 +521,8 @@ main(int argc, const char **argv)
 	 * of time it should wait after a failure. */
 	retval = pam_fail_delay(pamh, PASSWD_FAIL_DELAY);
 	if (retval != PAM_SUCCESS) {
-		fprintf(stderr, _("passwd: unable to set failure delay\n"));
+		fprintf(stderr, _("%s: unable to set failure delay: %s\n"),
+			progname, pam_strerror(pamh, retval));
 		exit(1);
 	}
 #endif
@@ -532,12 +539,14 @@ main(int argc, const char **argv)
 				NULL, "change expired password", NULL,
 				pwd->pw_uid, NULL, NULL, NULL,
 				retval == PAM_SUCCESS);
-			printf(_("passwd: expired authentication tokens updated successfully.\n"));
+			printf(_("%s: expired authentication tokens updated successfully.\n"),
+				progname);
 		} else {
 			audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
 				NULL, "change password", NULL, pwd->pw_uid,
 				NULL, NULL, NULL, retval == PAM_SUCCESS);
-			printf(_("passwd: all authentication tokens updated successfully.\n"));
+			printf(_("%s: all authentication tokens updated successfully.\n"),
+				progname);
 		}
 		retval = 0;
 	} else {
@@ -545,7 +554,7 @@ main(int argc, const char **argv)
 		audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
 				NULL, "change password", NULL, pwd->pw_uid,
 				NULL, NULL, NULL, retval == PAM_SUCCESS);
-		fprintf(stderr, _("passwd: %s\n"),
+		fprintf(stderr, "%s: %s\n", progname,
 			pam_strerror(pamh, retval));
 		pam_end(pamh, retval);
 		retval = 1;

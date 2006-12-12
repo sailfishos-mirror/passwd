@@ -1,8 +1,10 @@
+SUBDIRS = po
+ACLOCAL_AMFLAGS = -I m4
 bin_PROGRAMS = passwd
 man1_MANS = passwd.1
 noinst_PROGRAMS = pwdstat
 noinst_LIBRARIES = libstuff.a
-EXTRA_DIST = passwd.pamd passwd.1 passwd.spec.in passwd.spec
+EXTRA_DIST = config.rpath mkinstalldirs m4/ChangeLog passwd.pamd passwd.1 passwd.spec.in passwd.spec
 libstuff_a_SOURCES = \
 	date.h \
 	pwdb.h \

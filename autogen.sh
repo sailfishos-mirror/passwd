@@ -1,6 +1,6 @@
 #!/bin/sh
 set -x
-aclocal
+aclocal -I m4
 autoheader
 automake -a
 autoconf

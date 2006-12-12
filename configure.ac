@@ -1,4 +1,4 @@
-AC_INIT(passwd, 0.73)
+AC_INIT(passwd, 0.74)
 AC_CONFIG_SRCDIR([configure.ac])
 AM_INIT_AUTOMAKE([dist-bzip2 no-dist-gzip])
 
@@ -97,6 +97,10 @@ if test x$GCC = xyes ; then
 	CFLAGS="$CFLAGS $WARNINGS"
 fi
 
+AM_GNU_GETTEXT_VERSION
+AM_GNU_GETTEXT([external])
+AC_CHECK_FUNCS(dngettext)
+
 AC_CONFIG_HEADER([config.h])
-AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([Makefile po/Makefile.in])
 AC_OUTPUT

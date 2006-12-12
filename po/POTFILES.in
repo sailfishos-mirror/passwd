@@ -1,0 +1,9 @@
+# List of source files which contain translatable strings.
+chfn.c
+chsh.c
+libuser.c
+passwd.c
+pwdb.c
+pwdstat.c
+selinux_utils.c
+version.c
