@@ -9,8 +9,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2006-12-06 23:11+0100\n"
 "PO-Revision-Date: 2006-12-06 13:25+0100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"Last-Translator: Heiko Adams <heiko.adams@gmx.de>\n"
+"Language-Team: FedoraForum.de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -121,7 +121,7 @@ msgstr ""
 
 #: passwd.c:187
 msgid "[OPTION...] <accountName>"
-msgstr ""
+msgstr "[OPTION...] <accountName>"
 
 #: passwd.c:190
 #, c-format
@@ -185,11 +185,11 @@ msgstr ""
 
 #: passwd.c:412 passwd.c:424 passwd.c:438 passwd.c:458
 msgid "Success"
-msgstr ""
+msgstr "erfolgreich"
 
 #: passwd.c:412 passwd.c:427
 msgid "Error (password not set?)"
-msgstr ""
+msgstr "Fehler (kein Passwort gesetzt?)"
 
 #: passwd.c:420
 #, c-format
@@ -207,7 +207,7 @@ msgstr ""
 
 #: passwd.c:438 passwd.c:458
 msgid "Error"
-msgstr ""
+msgstr "Fehler"
 
 #: passwd.c:455
 #, c-format
