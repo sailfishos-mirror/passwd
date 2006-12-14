@@ -19,11 +19,11 @@ msgstr ""
 #: libuser.c:90
 #, c-format
 msgid "%s: libuser initialization error:"
-msgstr ""
+msgstr "%s: libuser Initialisierungsfehler:"
 
 #: libuser.c:167
 msgid "Warning: unlocked password would be empty."
-msgstr ""
+msgstr "Warnung: entschlüsseltes Passwort wird leer sein."
 
 #: libuser.c:281
 msgid "Corrupted passwd entry."
