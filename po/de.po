@@ -27,35 +27,35 @@ msgstr "Warnung: entschlüsseltes Passwort wird leer sein."
 
 #: libuser.c:281
 msgid "Corrupted passwd entry."
-msgstr ""
+msgstr "beschädigter Passwort-Eintrag"
 
 #: libuser.c:298
 msgid "Empty password."
-msgstr ""
+msgstr "leeres Passwort"
 
 #: libuser.c:301
 msgid "Password locked."
-msgstr ""
+msgstr "Passwort gesperrt."
 
 #: libuser.c:305
 msgid "Password set, MD5 crypt."
-msgstr ""
+msgstr "Passwort mit MD5 Verschlüsselung gesetzt"
 
 #: libuser.c:308
 msgid "Password set, blowfish crypt."
-msgstr ""
+msgstr "Passwort mit blowfish Verschlüsselung gesetzt"
 
 #: libuser.c:310
 msgid "Password set, unknown crypt variant."
-msgstr ""
+msgstr "Passwort mit unbekannter Verschlüsselung gesetzt"
 
 #: libuser.c:313
 msgid "Alternate authentication scheme in use."
-msgstr ""
+msgstr "alternatives Autentifizierungsmuster wird verwendet"
 
 #: libuser.c:318
 msgid "Password set, DES crypt."
-msgstr ""
+msgstr "Passwort mit DES Verschlüsselung gesetzt"
 
 #: libuser.c:332
 #, c-format
