@@ -60,17 +60,17 @@ msgstr "Passwort mit DES Verschlüsselung gesetzt"
 #: libuser.c:332
 #, c-format
 msgid "No password set.\n"
-msgstr ""
+msgstr "kein Passwort gesetzt.\n"
 
 #: libuser.c:336
 #, c-format
 msgid "Unknown user.\n"
-msgstr ""
+msgstr "unbekannter Benutzer.\n"
 
 #: libuser.c:431
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr ""
+msgstr "%s: Benutzer Account unterstützt keine Passwortveralterung\n"
 
 #: passwd.c:158
 msgid "keep non-expired authentication tokens"
