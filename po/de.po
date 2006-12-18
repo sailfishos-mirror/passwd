@@ -86,11 +86,11 @@ msgstr "sperre den genannten Account (nur als root möglich)"
 
 #: passwd.c:164
 msgid "unlock the named account (root only)"
-msgstr ""
+msgstr "entsperre den genannten Account (nur als root möglich)"
 
 #: passwd.c:166
 msgid "force operation"
-msgstr ""
+msgstr "erzwinge Operation"
 
 #: passwd.c:168
 msgid "maximum password lifetime (root only)"
