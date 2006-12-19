@@ -94,30 +94,32 @@ msgstr "erzwinge Operation"
 
 #: passwd.c:168
 msgid "maximum password lifetime (root only)"
-msgstr ""
+msgstr "maximale Lebensdauer des Passwortes (nur als root möglich)"
 
 #: passwd.c:170
 msgid "minimum password lifetime (root only)"
-msgstr ""
+msgstr "minimale Lebensdauer des Passwortes (nur als root möglich)"
 
 #: passwd.c:172
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
+msgstr "Anzahl der Tage die Benutzer vor dem Ablauf des Passwortes gewarnt werden solle (nur als root möglich)"
 
 #: passwd.c:175
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
 msgstr ""
+"Anzahl der Tage nach Ablauf des Passwortes nach denen ein Account deaktivert wird "
+"(nur als root möglich)"
 
 #: passwd.c:178
 msgid "report password status on the named account (root only)"
-msgstr ""
+msgstr "melde Passwortstatus des genannten Accounts (nur als root möglich)"
 
 #: passwd.c:180
 msgid "read new tokens from stdin (root only)"
-msgstr ""
+msgstr "neue Token von stdin lesen (nur als root möglich)"
 
 #: passwd.c:187
 msgid "[OPTION...] <accountName>"
@@ -126,27 +128,27 @@ msgstr "[OPTION...] <accountName>"
 #: passwd.c:190
 #, c-format
 msgid "%s: bad argument %s: %s\n"
-msgstr ""
+msgstr "%s: ungültiges Argument %s: %s\n"
 
 #: passwd.c:248
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
-msgstr ""
+msgstr "%s: nur einer von -l, -u, -d, -S kann angegeben werden.\n"
 
 #: passwd.c:257
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
+msgstr "%s: Die Patameter -l, -u, -d, -S und -i, -n, -w, -x können nicht kombiniert werden.\n"
 
 #: passwd.c:281
 #, c-format
 msgid "Only root can do that.\n"
-msgstr ""
+msgstr "Dies ist nur als root möglich.\n"
 
 #: passwd.c:294
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
-msgstr ""
+msgstr "%s: Nur root kann einen Benutzernamen angeben.\n"
 
 #: passwd.c:303
 #, c-format
