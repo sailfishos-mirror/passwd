@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: passwd 0.73\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2006-12-06 23:11+0100\n"
-"PO-Revision-Date: 2006-12-21 00:25+0800\n"
+"PO-Revision-Date: 2006-12-22 11:21+0800\n"
 "Last-Translator: QiuQiu <qiuqiu_translation@126.com>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -191,7 +191,7 @@ msgstr "操作成功"
 #: passwd.c:412
 #: passwd.c:427
 msgid "Error (password not set?)"
-msgstr "错误（口令为设置？）"
+msgstr "错误（口令未设置？）"
 
 #: passwd.c:420
 #, c-format
@@ -215,7 +215,7 @@ msgstr "错误"
 #: passwd.c:455
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
-msgstr "调整用户的老化数据%s。\n"
+msgstr "调整用户口令老化数据%s。\n"
 
 #: passwd.c:471
 #, c-format
