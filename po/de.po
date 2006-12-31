@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: passwd 0.73\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2006-12-06 23:11+0100\n"
-"PO-Revision-Date: 2006-12-20 17:25+0100\n"
+"PO-Revision-Date: 2006-12-24 00:23+0100\n"
 "Last-Translator: Heiko Adams <heiko.adams@gmx.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -39,11 +39,11 @@ msgstr "Passwort gesperrt."
 
 #: libuser.c:305
 msgid "Password set, MD5 crypt."
-msgstr "Passwort mit MD5 Verschlüsselung gesetzt"
+msgstr "Passwort mit MD5-Verschlüsselung gesetzt"
 
 #: libuser.c:308
 msgid "Password set, blowfish crypt."
-msgstr "Passwort mit blowfish Verschlüsselung gesetzt"
+msgstr "Passwort mit Blowfish-Verschlüsselung gesetzt"
 
 #: libuser.c:310
 msgid "Password set, unknown crypt variant."
@@ -55,7 +55,7 @@ msgstr "alternatives Autentifizierungsmuster wird verwendet"
 
 #: libuser.c:318
 msgid "Password set, DES crypt."
-msgstr "Passwort mit DES Verschlüsselung gesetzt"
+msgstr "Passwort mit DES-Verschlüsselung gesetzt"
 
 #: libuser.c:332
 #, c-format
@@ -70,11 +70,11 @@ msgstr "unbekannter Benutzer.\n"
 #: libuser.c:431
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr "%s: Benutzer Account unterstützt keine Passwortveralterung\n"
+msgstr "%s: Verfall von Passwörtern wird vom Benutzer-Account nicht unterstützt.\n"
 
 #: passwd.c:158
 msgid "keep non-expired authentication tokens"
-msgstr "behalte nicht-verfallende Authentifizierungs Token"
+msgstr "behalte nicht-verfallende Authentifizierungsmerkmale"
 
 #: passwd.c:160
 msgid "delete the password for the named account (root only)"
@@ -101,17 +101,12 @@ msgid "minimum password lifetime (root only)"
 msgstr "minimale Lebensdauer des Passwortes (nur als root möglich)"
 
 #: passwd.c:172
-msgid ""
-"number of days warning users receives before password expiration (root only)"
+msgid "number of days warning users receives before password expiration (root only)"
 msgstr "Anzahl der Tage die Benutzer vor dem Ablauf des Passwortes gewarnt werden solle (nur als root möglich)"
 
 #: passwd.c:175
-msgid ""
-"number of days after password expiration when an account becomes disabled "
-"(root only)"
-msgstr ""
-"Anzahl der Tage nach Ablauf des Passwortes nach denen ein Account deaktivert wird "
-"(nur als root möglich)"
+msgid "number of days after password expiration when an account becomes disabled (root only)"
+msgstr "Anzahl der Tage nach Ablauf des Passwortes nach denen ein Account deaktivert wird (nur als root möglich)"
 
 #: passwd.c:178
 msgid "report password status on the named account (root only)"
@@ -170,7 +165,8 @@ msgstr "%s: Diese Option benötigt einen Benutzernamen.\n"
 msgid "%s: Can not identify you!\n"
 msgstr "%s: kann Sie nicht identifizieren!\n"
 
-#: passwd.c:343 passwd.c:378
+#: passwd.c:343
+#: passwd.c:378
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: Unbekannter Benutzername '%s'.\n"
@@ -185,11 +181,15 @@ msgstr "%s: %s ist nicht berechtigt das Passwort von %s zu ändern\n"
 msgid "Locking password for user %s.\n"
 msgstr "Sperre Passwort für Benutzer %s.\n"
 
-#: passwd.c:412 passwd.c:424 passwd.c:438 passwd.c:458
+#: passwd.c:412
+#: passwd.c:424
+#: passwd.c:438
+#: passwd.c:458
 msgid "Success"
 msgstr "erfolgreich"
 
-#: passwd.c:412 passwd.c:427
+#: passwd.c:412
+#: passwd.c:427
 msgid "Error (password not set?)"
 msgstr "Fehler (kein Passwort gesetzt?)"
 
@@ -207,7 +207,8 @@ msgstr "unsichere Operation (benutzen Sie -f zum Erzwingen)"
 msgid "Removing password for user %s.\n"
 msgstr "entferne Passwort für Benutzer %s.\n"
 
-#: passwd.c:438 passwd.c:458
+#: passwd.c:438
+#: passwd.c:458
 msgid "Error"
 msgstr "Fehler"
 
@@ -244,9 +245,10 @@ msgstr "%s: kann Fehlerverzögerung nicht setzen: %s\n"
 #: passwd.c:542
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr "%s: abgelaufene Authentifizierungs Token erfolgreich aktualisiert.\n"
+msgstr "%s: abgelaufene Authentifizierungsmerkmale erfolgreich aktualisiert.\n"
 
 #: passwd.c:548
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
-msgstr "%s: alle Authentifizierungs Token erfolgreich aktualisiert.\n"
+msgstr "%s: alle Authentifizierungsmerkmale erfolgreich aktualisiert.\n"
+
