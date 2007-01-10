@@ -8,244 +8,248 @@ msgstr ""
 "Project-Id-Version: passwd 0.73\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2006-12-06 23:11+0100\n"
-"PO-Revision-Date: 2006-12-06 13:25+0100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2007-01-10 15:03-0500\n"
+"Last-Translator: Igor Miletic <grejigl-gnomeprevod@yahoo.ca>\n"
+"Language-Team: Serbian (sr) <fedora@prevod.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-Bookmarks: -1,-1,22,-1,-1,-1,-1,-1,-1,-1\n"
 
 #: libuser.c:90
 #, c-format
 msgid "%s: libuser initialization error:"
-msgstr ""
+msgstr "%s: грешка при иницијализацији libuser-а:"
 
 #: libuser.c:167
 msgid "Warning: unlocked password would be empty."
-msgstr ""
+msgstr "Упозорење: откључана лозинка ће бити празна."
 
 #: libuser.c:281
 msgid "Corrupted passwd entry."
-msgstr ""
+msgstr "Оштећен унос лозинке."
 
 #: libuser.c:298
 msgid "Empty password."
-msgstr ""
+msgstr "Празна лозинка."
 
 #: libuser.c:301
 msgid "Password locked."
-msgstr ""
+msgstr "Лозинка закључана."
 
 #: libuser.c:305
 msgid "Password set, MD5 crypt."
-msgstr ""
+msgstr "Лозинка је постављена, шифрирање MD5."
 
 #: libuser.c:308
 msgid "Password set, blowfish crypt."
-msgstr ""
+msgstr "Лозинка је постављена, шифрирање Blowfish."
 
 #: libuser.c:310
 msgid "Password set, unknown crypt variant."
-msgstr ""
+msgstr "Лозинка је постављена, врста шифрирања није позната."
 
 #: libuser.c:313
 msgid "Alternate authentication scheme in use."
-msgstr ""
+msgstr "Алтернативна шема за аутентификацију се користи."
 
 #: libuser.c:318
 msgid "Password set, DES crypt."
-msgstr ""
+msgstr "Лозинка је постављена, шифрирање DES."
 
 #: libuser.c:332
 #, c-format
 msgid "No password set.\n"
-msgstr ""
+msgstr "Лозинка није постављена.\n"
 
 #: libuser.c:336
 #, c-format
 msgid "Unknown user.\n"
-msgstr ""
+msgstr "Непознати корисник.\n"
 
 #: libuser.c:431
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr ""
+msgstr "%s: кориснички налог нема подршку за застаривање важења лозинке.\n"
 
 #: passwd.c:158
 msgid "keep non-expired authentication tokens"
-msgstr ""
+msgstr "задржи изразе за аутентификацију који нису истекли"
 
 #: passwd.c:160
 msgid "delete the password for the named account (root only)"
-msgstr ""
+msgstr "избриши лозинку за именовани налог (само root)"
 
 #: passwd.c:162
 msgid "lock the named account (root only)"
-msgstr ""
+msgstr "закључај само именовани налог (само root)"
 
 #: passwd.c:164
 msgid "unlock the named account (root only)"
-msgstr ""
+msgstr "откључај именовани налог (само root)"
 
 #: passwd.c:166
 msgid "force operation"
-msgstr ""
+msgstr "Присили операцију"
 
 #: passwd.c:168
 msgid "maximum password lifetime (root only)"
-msgstr ""
+msgstr "Најдужи рок трајања лозинке (само root)"
 
 #: passwd.c:170
 msgid "minimum password lifetime (root only)"
-msgstr ""
+msgstr "Најкраћи рок трајања лозинке (само root)"
 
 #: passwd.c:172
-msgid ""
-"number of days warning users receives before password expiration (root only)"
-msgstr ""
+msgid "number of days warning users receives before password expiration (root only)"
+msgstr "број дана током којих је корисник упозорен пре истека лозинке (само root)"
 
 #: passwd.c:175
-msgid ""
-"number of days after password expiration when an account becomes disabled "
-"(root only)"
-msgstr ""
+msgid "number of days after password expiration when an account becomes disabled (root only)"
+msgstr "број дана после истека лозинке када налог постаје онемогућен (само root)"
 
 #: passwd.c:178
 msgid "report password status on the named account (root only)"
-msgstr ""
+msgstr "извести о стању лозинке именованог налога (само root)"
 
 #: passwd.c:180
 msgid "read new tokens from stdin (root only)"
-msgstr ""
+msgstr "читање нових израза са stdin (само root)"
 
 #: passwd.c:187
 msgid "[OPTION...] <accountName>"
-msgstr ""
+msgstr "[ОПЦИЈА...] <имеНалога>"
 
 #: passwd.c:190
 #, c-format
 msgid "%s: bad argument %s: %s\n"
-msgstr ""
+msgstr "%s: лоша аргумент %s: %s\n"
 
 #: passwd.c:248
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
-msgstr ""
+msgstr "%s: Само једно од -l, -u, -d, -S може бити одређено.\n"
 
 #: passwd.c:257
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
+msgstr "%s: један од аргумената -l, -u, -d, -S се неможе мешати са једним од аргумената -i, -n, -w, -x.\n"
 
 #: passwd.c:281
 #, c-format
 msgid "Only root can do that.\n"
-msgstr ""
+msgstr "Само root може то да уради.\n"
 
 #: passwd.c:294
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
-msgstr ""
+msgstr "%s:Само root може одредити корисничко име.\n"
 
 #: passwd.c:303
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
-msgstr ""
+msgstr "%s: Унесено корисничко име је предуго.\n"
 
 #: passwd.c:313
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
-msgstr ""
+msgstr "%s: Само једно корисничко име може бити одређено.\n"
 
 #: passwd.c:323
 #, c-format
 msgid "%s: This option requires a user name.\n"
-msgstr ""
+msgstr "%s: Ова опција захтева корисничко име.\n"
 
 #: passwd.c:334
 #, c-format
 msgid "%s: Can not identify you!\n"
-msgstr ""
+msgstr "%s: Није вас могуће препознати!\n"
 
-#: passwd.c:343 passwd.c:378
+#: passwd.c:343
+#: passwd.c:378
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
-msgstr ""
+msgstr "%s: Непознато корисничко име '%s'.\n"
 
 #: passwd.c:395
 #, c-format
 msgid "%s: %s is not authorized to change the password of %s\n"
-msgstr ""
+msgstr "%s: %s није овлашћен да промени лозинку за %s\n"
 
 #: passwd.c:408
 #, c-format
 msgid "Locking password for user %s.\n"
-msgstr ""
+msgstr "Закључавање лозинке корисника %s.\n"
 
-#: passwd.c:412 passwd.c:424 passwd.c:438 passwd.c:458
+#: passwd.c:412
+#: passwd.c:424
+#: passwd.c:438
+#: passwd.c:458
 msgid "Success"
-msgstr ""
+msgstr "Успех"
 
-#: passwd.c:412 passwd.c:427
+#: passwd.c:412
+#: passwd.c:427
 msgid "Error (password not set?)"
-msgstr ""
+msgstr "Грешка (можда лозинка није постављена?)"
 
 #: passwd.c:420
 #, c-format
 msgid "Unlocking password for user %s.\n"
-msgstr ""
+msgstr "Откључавање лозинке корисника %s.\n"
 
 #: passwd.c:426
 msgid "Unsafe operation (use -f to force)"
-msgstr ""
+msgstr "Несигурна операција (користи -f да се присили)"
 
 #: passwd.c:435
 #, c-format
 msgid "Removing password for user %s.\n"
-msgstr ""
+msgstr "Уклањање лозинке корисника %s.\n"
 
-#: passwd.c:438 passwd.c:458
+#: passwd.c:438
+#: passwd.c:458
 msgid "Error"
-msgstr ""
+msgstr "Грешка"
 
 #: passwd.c:455
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
-msgstr ""
+msgstr "Прилагођавање података о застаревању за корисника %s.\n"
 
 #: passwd.c:471
 #, c-format
 msgid "Changing password for user %s.\n"
-msgstr ""
+msgstr "Измена лозинке за корисника %s.\n"
 
 #: passwd.c:483
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
-msgstr ""
+msgstr "%s: грешка при читању stdin: %s\n"
 
 #: passwd.c:500
 #, c-format
 msgid "%s: unable to start pam: %s\n"
-msgstr ""
+msgstr "%s: није могуће покренути pam: %s\n"
 
 #: passwd.c:513
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
-msgstr ""
+msgstr "%s: није могуће поставити tty за pam: %s\n"
 
 #: passwd.c:524
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
-msgstr ""
+msgstr "%s: није могуће поставити одлагање неуспеха : %s\n"
 
 #: passwd.c:542
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr ""
+msgstr "%s: изрази за аутентификацију који су истекли су успешно ажурирани.\n"
 
 #: passwd.c:548
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
-msgstr ""
+msgstr "%s: сви изрази за аутентификацију су успешно ажурирани.\n"
+
