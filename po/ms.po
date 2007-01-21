@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: password\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2006-12-06 23:11+0100\n"
-"PO-Revision-Date: 2006-12-23 12:21+0800\n"
+"PO-Revision-Date: 2007-01-22 01:10+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -226,19 +226,19 @@ msgid "Adjusting aging data for user %s.\n"
 msgstr ""
 
 #: passwd.c:471
-#, fuzzy, c-format
+#, c-format
 msgid "Changing password for user %s.\n"
-msgstr "Ralat menetapkan katalaluan untuk pengguna %s: %s.\n"
+msgstr "Menukar katalaluan untuk pengguna %s.\n"
 
 #: passwd.c:483
-#, fuzzy, c-format
+#, c-format
 msgid "%s: error reading from stdin: %s\n"
-msgstr "ralat membaca daripada direktori %s: %s\n"
+msgstr "%s: ralat membaca daripada stdin: %s\n"
 
 #: passwd.c:500
-#, fuzzy, c-format
+#, c-format
 msgid "%s: unable to start pam: %s\n"
-msgstr "Cuba melaksanakan pelayan X."
+msgstr "%s: tidak dapat memulakan pam: %s\n"
 
 #: passwd.c:513
 #, c-format
