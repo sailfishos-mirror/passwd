@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: password\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2006-12-06 23:11+0100\n"
-"PO-Revision-Date: 2007-02-04 00:22+0800\n"
+"PO-Revision-Date: 2007-02-17 13:53+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -174,19 +174,19 @@ msgstr "Anda tidak menyatakan namahos."
 
 #: passwd.c:343
 #: passwd.c:378
-#, fuzzy, c-format
+#, c-format
 msgid "%s: Unknown user name '%s'.\n"
-msgstr "Nama Pengguna Teruk"
+msgstr "%s: Nama pengguna '%s' tidak diketahui.\n"
 
 #: passwd.c:395
-#, fuzzy, c-format
+#, c-format
 msgid "%s: %s is not authorized to change the password of %s\n"
-msgstr "%s tidak dibenarkan untuk mengubah maklumat finger bagi %s\n"
+msgstr "%s: %s tidak dibenarkan untuk mengubah kata laluan bagi %s\n"
 
 #: passwd.c:408
-#, fuzzy, c-format
+#, c-format
 msgid "Locking password for user %s.\n"
-msgstr "Ralat menetapkan katalaluan untuk pengguna %s: %s.\n"
+msgstr "Mengunci katalaluan untuk pengguna %s.\n"
 
 #: passwd.c:412
 #: passwd.c:424
