@@ -101,11 +101,14 @@ msgid "minimum password lifetime (root only)"
 msgstr "口令的最短有效时限（只有根用户才能进行此操作）"
 
 #: passwd.c:172
-msgid "number of days warning users receives before password expiration (root only)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
 msgstr "在口令过期前多少天开始提醒用户（只有根用户才能进行此操作）"
 
 #: passwd.c:175
-msgid "number of days after password expiration when an account becomes disabled (root only)"
+msgid ""
+"number of days after password expiration when an account becomes disabled "
+"(root only)"
 msgstr "当口令过期后经过多少天该帐号会被禁用（只有根用户才能进行此操作）"
 
 #: passwd.c:178
@@ -133,7 +136,8 @@ msgstr "%s： 参数 -l， -u， -d， -S只能指定其中的一个。\n"
 #: passwd.c:257
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s：参数 -l， -u， -d， -S 不能和参数 -i， -n， -w， -x中的任一个选项合用。\n"
+msgstr ""
+"%s：参数 -l， -u， -d， -S 不能和参数 -i， -n， -w， -x中的任一个选项合用。\n"
 
 #: passwd.c:281
 #, c-format
@@ -165,8 +169,7 @@ msgstr "%s： 该选项需要使用用户名称。\n"
 msgid "%s: Can not identify you!\n"
 msgstr "%s： 无法确认您的身份！\n"
 
-#: passwd.c:343
-#: passwd.c:378
+#: passwd.c:343 passwd.c:378
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s： 未知的用户名称 '%s'。\n"
@@ -181,15 +184,11 @@ msgstr "%s： %s 无权限更改 %s 的口令 \n"
 msgid "Locking password for user %s.\n"
 msgstr "锁定用户 %s 的口令 。\n"
 
-#: passwd.c:412
-#: passwd.c:424
-#: passwd.c:438
-#: passwd.c:458
+#: passwd.c:412 passwd.c:424 passwd.c:438 passwd.c:458
 msgid "Success"
 msgstr "操作成功"
 
-#: passwd.c:412
-#: passwd.c:427
+#: passwd.c:412 passwd.c:427
 msgid "Error (password not set?)"
 msgstr "错误（口令未设置？）"
 
@@ -207,8 +206,7 @@ msgstr "不安全的操作（使用 -f 参数强制进行该操作）"
 msgid "Removing password for user %s.\n"
 msgstr "清除用户的口令 %s。\n"
 
-#: passwd.c:438
-#: passwd.c:458
+#: passwd.c:438 passwd.c:458
 msgid "Error"
 msgstr "错误"
 
@@ -251,4 +249,3 @@ msgstr "%s：过期的身份验证令牌已经成功更新。\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s： 所有的身份验证令牌已经成功更新。\n"
-
