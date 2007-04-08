@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: password\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2006-12-06 23:11+0100\n"
-"PO-Revision-Date: 2007-04-01 17:15+0800\n"
+"PO-Revision-Date: 2007-04-08 19:01+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -133,19 +133,19 @@ msgid "%s: bad argument %s: %s\n"
 msgstr "Argumen fungsi salah\n"
 
 #: passwd.c:248
-#, fuzzy, c-format
+#, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
-msgstr "hanya satu jenis senarai boleh dinyatakan"
+msgstr "%s: Hanya satu dari -l, -u, -d, -S boleh dinyatakan.\n"
 
 #: passwd.c:257
-#, fuzzy, c-format
+#, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "tak dapat menentukan peranti dan inod bagi %s"
+msgstr "%s: Tidak dapat mencampurkan salah satu dari -l, -u, -d, -S dan satu dari -i, -n, -w, -x.\n"
 
 #: passwd.c:281
-#, fuzzy, c-format
+#, c-format
 msgid "Only root can do that.\n"
-msgstr "hanya boleh dilaksanakan sebagai root"
+msgstr "Hanya root boleh melakukannya.\n"
 
 #: passwd.c:294
 #, c-format
