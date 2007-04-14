@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: passwd 0.73\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2006-12-06 23:11+0100\n"
-"PO-Revision-Date: 2007-02-18 11:10+0100\n"
+"PO-Revision-Date: 2007-04-14 10:53+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -38,11 +38,11 @@ msgstr "Avís: la contrasenya desblocada seria buida."
 
 #: libuser.c:281
 msgid "Corrupted passwd entry."
-msgstr "L'entrada de la contrassenya està malmesa."
+msgstr "L'entrada de la contrasenya està malmesa."
 
 #: libuser.c:298
 msgid "Empty password."
-msgstr "La contrasenya buida."
+msgstr "La contrasenya és buida."
 
 #: libuser.c:301
 msgid "Password locked."
@@ -62,7 +62,7 @@ msgstr "La contrasenya està establerta, i xifrada amb una variant desconeguda."
 
 #: libuser.c:313
 msgid "Alternate authentication scheme in use."
-msgstr "S'està emprant un esquema d'autenticació alternant."
+msgstr "S'està emprant un esquema d'autenticació alternatiu."
 
 #: libuser.c:318
 msgid "Password set, DES crypt."
@@ -124,7 +124,7 @@ msgid ""
 "(root only)"
 msgstr ""
 "el nombre de dies després que venci la contrasenya perquè el compte de "
-"l'usuari expiri (només el superusuari)"
+"l'usuari venci (només el superusuari)"
 
 #: passwd.c:178
 msgid "report password status on the named account (root only)"
@@ -134,7 +134,7 @@ msgstr ""
 
 #: passwd.c:180
 msgid "read new tokens from stdin (root only)"
-msgstr "llegeix nous testimonis de l'entrada estàndard (només el superuruari)"
+msgstr "llegeix nous testimonis de l'entrada estàndard (només el superusuari)"
 
 #: passwd.c:187
 msgid "[OPTION...] <accountName>"
@@ -176,7 +176,7 @@ msgstr "%s: el nom d'usuari indicat és massa llarg.\n"
 #: passwd.c:313
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
-msgstr "%s: només es pot indicar un sol nom d'uauri.\n"
+msgstr "%s: només es pot indicar un sol nom d'usuari.\n"
 
 #: passwd.c:323
 #, c-format
@@ -244,7 +244,7 @@ msgstr "S'està canviant la contrasenya de l'usuari %s.\n"
 #: passwd.c:483
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
-msgstr "%s: s'ha produït un error en llegir de l'entrda estàndard: %s\n"
+msgstr "%s: s'ha produït un error en llegir de l'entarda estàndard: %s\n"
 
 #: passwd.c:500
 #, c-format
