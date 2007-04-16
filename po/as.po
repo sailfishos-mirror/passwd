@@ -1,75 +1,79 @@
+# translation of as.po to Assamese
 # Assamese translations for passwd package.
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
-# Automatically generated, 2006.
 #
+# Automatically generated, 2006.
+# Amitakhya Phukan <aphukan@redhat.com>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: passwd 0.73\n"
+"Project-Id-Version: as\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2006-12-06 23:11+0100\n"
-"PO-Revision-Date: 2006-12-06 13:25+0100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2007-04-16 21:57+0530\n"
+"Last-Translator: Amitakhya Phukan <aphukan@redhat.com>\n"
+"Language-Team: Assamese <assam@mm.assam-glug.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1)\n"
 
 #: libuser.c:90
 #, c-format
 msgid "%s: libuser initialization error:"
-msgstr ""
+msgstr "%s: libuser আৰম্ভ কৰাত ভুল:"
 
 #: libuser.c:167
 msgid "Warning: unlocked password would be empty."
-msgstr ""
+msgstr "সকিয়নী: বন্ধ নকৰা গুপ্তশব্দ ৰিক্ত হ'ব ।"
 
 #: libuser.c:281
 msgid "Corrupted passwd entry."
-msgstr ""
+msgstr "দূষিত গুপ্তশব্দৰ নিবেশ ।"
 
 #: libuser.c:298
 msgid "Empty password."
-msgstr ""
+msgstr "ৰিক্ত গুপ্তশব্দ ।"
 
 #: libuser.c:301
 msgid "Password locked."
-msgstr ""
+msgstr "গুপ্তশব্দ বন্ধ কৰা হ'ল ।"
 
 #: libuser.c:305
 msgid "Password set, MD5 crypt."
-msgstr ""
+msgstr "গুপ্তশব্দ নিৰ্দ্ধাৰিত কৰা হ'ল, MD5 এৰে গুপুত কৰা হ'ল ।"
 
 #: libuser.c:308
 msgid "Password set, blowfish crypt."
-msgstr ""
+msgstr "গুপ্তশব্দ নিৰ্দ্ধাৰিত কৰা হ'ল, blowfish এৰে গুপুত কৰা হ'ল ।"
 
 #: libuser.c:310
 msgid "Password set, unknown crypt variant."
-msgstr ""
+msgstr "গুপ্তশব্দ নিৰ্দ্ধাৰিত কৰা হ'ল, অজ্ঞাত গুপুত কৰা বিভেদক ।"
 
 #: libuser.c:313
 msgid "Alternate authentication scheme in use."
-msgstr ""
+msgstr "বৈকল্পপিক প্ৰমাণীকৰণৰ আঁচনি ব্যৱহাৰত আছে ।"
 
 #: libuser.c:318
 msgid "Password set, DES crypt."
-msgstr ""
+msgstr "গুপ্তশব্দ নিৰ্দ্ধাৰিত কৰা হ'ল, DES এৰে গুপুত কৰা হ'ল ।"
 
 #: libuser.c:332
 #, c-format
 msgid "No password set.\n"
-msgstr ""
+msgstr "কোনো গুপ্তশবদ নিৰ্দ্ধাৰিত কৰা হোৱা নাই ।\n"
 
 #: libuser.c:336
 #, c-format
 msgid "Unknown user.\n"
-msgstr ""
+msgstr "অজ্ঞাত ব্যৱহাৰকৰোঁতা ।\n"
 
 #: libuser.c:431
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr ""
+msgstr "%s: ব্যৱহাৰকৰোঁতাৰ হিচাপত গুপ্তশব্দ পুৰণি হোৱাৰ সমৰ্থন নাই ।\n"
 
 #: passwd.c:158
 msgid "keep non-expired authentication tokens"
@@ -100,8 +104,7 @@ msgid "minimum password lifetime (root only)"
 msgstr ""
 
 #: passwd.c:172
-msgid ""
-"number of days warning users receives before password expiration (root only)"
+msgid "number of days warning users receives before password expiration (root only)"
 msgstr ""
 
 #: passwd.c:175
@@ -247,3 +250,4 @@ msgstr ""
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr ""
+
