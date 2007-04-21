@@ -103,14 +103,19 @@ msgid "minimum password lifetime (root only)"
 msgstr "минимален живот на паролата (само root)"
 
 #: passwd.c:172
-msgid "number of days warning users receives before password expiration (root only)"
-msgstr "брой дни които потребителя получава предупреждение за изтичане на паролата (само root)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
+msgstr ""
+"брой дни които потребителя получава предупреждение за изтичане на паролата "
+"(само root)"
 
 #: passwd.c:175
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr "брой дни след изтичане на паролата след които акаунта бива забранен (само root)"
+msgstr ""
+"брой дни след изтичане на паролата след които акаунта бива забранен (само "
+"root)"
 
 #: passwd.c:178
 msgid "report password status on the named account (root only)"
@@ -249,4 +254,3 @@ msgstr "%s: изтеклите полета за удостоверяване б
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: всички полета за удостоверяване бяха обновени успешно.\n"
-
