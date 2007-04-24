@@ -1,16 +1,16 @@
 # Icelandic translations for passwd package.
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
-# Automatically generated, 2006.
+# Richard Allen <ra@ra.is>, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.73\n"
-"Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
+"Report-Msgid-Bugs-To: Richard Allen <ra@ra.is>\n"
 "POT-Creation-Date: 2006-12-06 23:11+0100\n"
-"PO-Revision-Date: 2006-12-06 13:25+0100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2007-04-24 13:25+0100\n"
+"Last-Translator: Richard Allen <ra@ra.is>\n"
+"Language-Team: is <kde-isl@molar.is>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,53 +18,53 @@ msgstr ""
 #: libuser.c:90
 #, c-format
 msgid "%s: libuser initialization error:"
-msgstr ""
+msgstr "%s: libuser frumstillingavilla:"
 
 #: libuser.c:167
 msgid "Warning: unlocked password would be empty."
-msgstr ""
+msgstr "Aðvörun: ólæst lykilorð yrði tómt."
 
 #: libuser.c:281
 msgid "Corrupted passwd entry."
-msgstr ""
+msgstr "Skemmd lykilorðafærsla."
 
 #: libuser.c:298
 msgid "Empty password."
-msgstr ""
+msgstr "Tómt lykilorð."
 
 #: libuser.c:301
 msgid "Password locked."
-msgstr ""
+msgstr "Lykilorð læst."
 
 #: libuser.c:305
 msgid "Password set, MD5 crypt."
-msgstr ""
+msgstr "Lykilorð sett, MD5 dulritun."
 
 #: libuser.c:308
 msgid "Password set, blowfish crypt."
-msgstr ""
+msgstr "Lykilorð sett, blowfish dulritun."
 
 #: libuser.c:310
 msgid "Password set, unknown crypt variant."
-msgstr ""
+msgstr "Lykilorð sett, óþekkt dulritun."
 
 #: libuser.c:313
 msgid "Alternate authentication scheme in use."
-msgstr ""
+msgstr "Önnur auðkenningaaðferð í notkun."
 
 #: libuser.c:318
 msgid "Password set, DES crypt."
-msgstr ""
+msgstr "Lykilorð sett, DES dulritun."
 
 #: libuser.c:332
 #, c-format
 msgid "No password set.\n"
-msgstr ""
+msgstr "Ekkert lykilorð.\n"
 
 #: libuser.c:336
 #, c-format
 msgid "Unknown user.\n"
-msgstr ""
+msgstr "Óþekktur notandi.\n"
 
 #: libuser.c:431
 #, c-format
