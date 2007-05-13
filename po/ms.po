@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: password\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2006-12-06 23:11+0100\n"
-"PO-Revision-Date: 2007-04-13 23:27+0800\n"
+"PO-Revision-Date: 2007-05-11 22:13+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -58,19 +58,18 @@ msgid "Alternate authentication scheme in use."
 msgstr ""
 
 #: libuser.c:318
-#, fuzzy
 msgid "Password set, DES crypt."
-msgstr "Sila tetapkan katalaluan bagi %s."
+msgstr "Katalaluan ditetapkan, crypt DES."
 
 #: libuser.c:332
-#, fuzzy, c-format
+#, c-format
 msgid "No password set.\n"
-msgstr "Tetapkan Katalaluan Root"
+msgstr "Tiada katalaluan ditetapkan.\n"
 
 #: libuser.c:336
-#, fuzzy, c-format
+#, c-format
 msgid "Unknown user.\n"
-msgstr "Penggunat tidak diketahui."
+msgstr "Pengguna tidak diketahui.\n"
 
 #: libuser.c:431
 #, c-format
