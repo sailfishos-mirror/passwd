@@ -31,15 +31,15 @@ msgstr ""
 
 #: libuser.c:298
 msgid "Empty password."
-msgstr ""
+msgstr "Tomt passord"
 
 #: libuser.c:301
 msgid "Password locked."
-msgstr ""
+msgstr "Passord låst."
 
 #: libuser.c:305
 msgid "Password set, MD5 crypt."
-msgstr ""
+msgstr "Passord satt. MD5 krypt."
 
 #: libuser.c:308
 msgid "Password set, blowfish crypt."
@@ -60,12 +60,12 @@ msgstr ""
 #: libuser.c:332
 #, c-format
 msgid "No password set.\n"
-msgstr ""
+msgstr "Ingen passord satt.\n"
 
 #: libuser.c:336
 #, c-format
 msgid "Unknown user.\n"
-msgstr ""
+msgstr "Ukjent bruker.\n"
 
 #: libuser.c:431
 #, c-format
@@ -141,7 +141,7 @@ msgstr ""
 #: passwd.c:281
 #, c-format
 msgid "Only root can do that.\n"
-msgstr ""
+msgstr "Kun root kan gjøre det.\n"
 
 #: passwd.c:294
 #, c-format
@@ -166,12 +166,12 @@ msgstr ""
 #: passwd.c:334
 #, c-format
 msgid "%s: Can not identify you!\n"
-msgstr ""
+msgstr "%s: Kan ikke identifisere deg!\n"
 
 #: passwd.c:343 passwd.c:378
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
-msgstr ""
+msgstr "%s: Ukjent brukernavn «%s».\n"
 
 #: passwd.c:395
 #, c-format
@@ -185,11 +185,11 @@ msgstr ""
 
 #: passwd.c:412 passwd.c:424 passwd.c:438 passwd.c:458
 msgid "Success"
-msgstr ""
+msgstr "Suksess"
 
 #: passwd.c:412 passwd.c:427
 msgid "Error (password not set?)"
-msgstr ""
+msgstr "Feil (passord ikke satt?)"
 
 #: passwd.c:420
 #, c-format
@@ -207,7 +207,7 @@ msgstr ""
 
 #: passwd.c:438 passwd.c:458
 msgid "Error"
-msgstr ""
+msgstr "Feil"
 
 #: passwd.c:455
 #, c-format
