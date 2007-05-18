@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: password\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2006-12-06 23:11+0100\n"
-"PO-Revision-Date: 2007-05-11 22:13+0800\n"
+"PO-Revision-Date: 2007-05-19 00:45+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -35,19 +35,16 @@ msgid "Empty password."
 msgstr "Tiada katalaluan"
 
 #: libuser.c:301
-#, fuzzy
 msgid "Password locked."
-msgstr "Kata_laluan tempatan dikunci"
+msgstr "Katalaluan dikunci."
 
 #: libuser.c:305
-#, fuzzy
 msgid "Password set, MD5 crypt."
-msgstr "Sila tetapkan katalaluan bagi %s."
+msgstr "Katalaluan ditetapkan, crypt MD5."
 
 #: libuser.c:308
-#, fuzzy
 msgid "Password set, blowfish crypt."
-msgstr "Sila tetapkan katalaluan bagi %s."
+msgstr "Katalaluan ditetapkan, crypt blowfish."
 
 #: libuser.c:310
 msgid "Password set, unknown crypt variant."
