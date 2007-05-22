@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: password\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2006-12-06 23:11+0100\n"
-"PO-Revision-Date: 2007-05-19 00:45+0800\n"
+"PO-Revision-Date: 2007-05-22 23:33+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -16,23 +16,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: libuser.c:90
-#, fuzzy, c-format
+#, c-format
 msgid "%s: libuser initialization error:"
-msgstr "ralat permulaan dalaman"
+msgstr "%s: ralat permulaan libuser:"
 
 #: libuser.c:167
 msgid "Warning: unlocked password would be empty."
 msgstr ""
 
 #: libuser.c:281
-#, fuzzy
 msgid "Corrupted passwd entry."
-msgstr "Masukan tidak dijumpai.\n"
+msgstr "Masukan katalaluan rosak."
 
 #: libuser.c:298
-#, fuzzy
 msgid "Empty password."
-msgstr "Tiada katalaluan"
+msgstr "Katalaluan kosong."
 
 #: libuser.c:301
 msgid "Password locked."
