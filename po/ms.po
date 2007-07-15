@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: password\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2006-12-06 23:11+0100\n"
-"PO-Revision-Date: 2007-05-22 23:33+0800\n"
+"PO-Revision-Date: 2007-07-15 15:38+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -234,7 +234,7 @@ msgstr "%s: tidak dapat memulakan pam: %s\n"
 #: passwd.c:513
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
-msgstr ""
+msgstr "%s: tidak dapat menetapkan tty untuk pam: %s\n"
 
 #: passwd.c:524
 #, c-format
@@ -244,10 +244,10 @@ msgstr "%s: tidak dapat menetapkan lengahan kegagalan: %s\n"
 #: passwd.c:542
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr ""
+msgstr "%s: token pengesahan tamat tempoh telah berjaya dikemaskini.\n"
 
 #: passwd.c:548
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
-msgstr ""
+msgstr "%s: semua token pengesahan telah berjaya dikemaskini.\n"
 
