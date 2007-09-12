@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: ko\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2006-12-06 23:11+0100\n"
-"PO-Revision-Date: 2007-09-11 17:31+1000\n"
+"PO-Revision-Date: 2007-09-12 10:47+1000\n"
 "Last-Translator: Eunju Kim <eukim@redhat.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr "%s: libuser 초기화 오류:"
 
 #: libuser.c:167
 msgid "Warning: unlocked password would be empty."
-msgstr "경고: 잠금 해제로 비밀번호 입력란이 공백으로 됩니다."
+msgstr "경고: 잠금 해제로 비밀 번호 입력란이 공백으로 됩니다."
 
 #: libuser.c:281
 msgid "Corrupted passwd entry."
@@ -34,11 +34,11 @@ msgstr "손상된 passwd 항목"
 
 #: libuser.c:298
 msgid "Empty password."
-msgstr "비밀번호란이 비어있음."
+msgstr "비밀 번호란이 비어있음."
 
 #: libuser.c:301
 msgid "Password locked."
-msgstr "비밀번호 잠금."
+msgstr "비밀 번호 잠금."
 
 #: libuser.c:305
 msgid "Password set, MD5 crypt."
@@ -54,7 +54,7 @@ msgstr "비밀번호 설정, 알 수 없는 암호화 유형."
 
 #: libuser.c:313
 msgid "Alternate authentication scheme in use."
-msgstr "다른 인증 스키마가 사용되고 있음."
+msgstr "다른 인증 스키마 사용 중"
 
 #: libuser.c:318
 msgid "Password set, DES crypt."
@@ -73,7 +73,7 @@ msgstr "알 수 없는 사용자.\n"
 #: libuser.c:431
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr "%s: 사용자 계정이 암호 사용 기한을 지원하지 않음.\n"
+msgstr "%s: 사용자 계정이 비밀번호 사용 기한을 지원하지 않음.\n"
 
 #: passwd.c:158
 msgid "keep non-expired authentication tokens"
@@ -104,16 +104,14 @@ msgid "minimum password lifetime (root only)"
 msgstr "비밀번호 최소 유효기간 (root로만 실행 가능)"
 
 #: passwd.c:172
-#, fuzzy
 msgid "number of days warning users receives before password expiration (root only)"
-msgstr "비밀번호가 만료되기 전 사용자에게 부여되는 기간 (root로만 실행 가능)"
+msgstr "비밀번호가 만료되기 전 사용자에게 주어지는 경고 기간 (root로만 실행 가능)"
 
 #: passwd.c:175
-#, fuzzy
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr "비밀번호 만료 후 계정이 비활성화되는 시기 (root로만 실행 가능)"
+msgstr "비밀번호 만료 후 계정이 비활성화되는 기간 (root로만 실행 가능)"
 
 #: passwd.c:178
 msgid "report password status on the named account (root only)"
@@ -134,15 +132,13 @@ msgstr "%s: 잘못된 인수 %s: %s\n"
 
 #: passwd.c:248
 #, c-format
-#, fuzzy
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr "%s:  -l, -u, -d, -S 중 하나만을 지정할 수 있음.\n"
 
 #: passwd.c:257
 #, c-format
-#, fuzzy
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: -l, -u, -d, -S 중 한 개 또는 -i, -n, -w, -x 중 한개를 혼용할 수 없음.\n"
+msgstr "%s: -l, -u, -d, -S 중 하나 또는 -i, -n, -w, -x 중 하나를 혼용할 수 없음.\n"
 
 #: passwd.c:281
 #, c-format
@@ -186,9 +182,8 @@ msgstr "%s: %s은(는) %s의 비밀 번호를 변경할 수 있는 권한이 없
 
 #: passwd.c:408
 #, c-format
-#, fuzzy
 msgid "Locking password for user %s.\n"
-msgstr "%s 사용자의 비밀 번호를 잠금\n"
+msgstr "%s 사용자의 비밀 번호 잠금\n"
 
 #: passwd.c:412 passwd.c:424 passwd.c:438 passwd.c:458
 msgid "Success"
@@ -243,7 +238,6 @@ msgstr "%s: pam의 tty 설정 불가능: %s\n"
 
 #: passwd.c:524
 #, c-format
-#, fuzzy
 msgid "%s: unable to set failure delay: %s\n"
 msgstr "%s: 실패 지연 설정 불가능: %s\n"
 
