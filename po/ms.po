@@ -1,14 +1,14 @@
 # password Bahasa Melayu (Malay) (ms).
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
-# Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>, 2006.
+# Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>, 2006, 2007.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: password\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2006-12-06 23:11+0100\n"
-"PO-Revision-Date: 2007-08-03 01:26+0800\n"
+"PO-Revision-Date: 2007-09-26 01:01+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -97,15 +97,15 @@ msgstr ""
 
 #: passwd.c:170
 msgid "minimum password lifetime (root only)"
-msgstr ""
+msgstr "jangka hayat minimum katalaluan (hanya root)"
 
 #: passwd.c:172
 msgid "number of days warning users receives before password expiration (root only)"
-msgstr ""
+msgstr "jumpah hari amaran diterima oleh pengguna sebelum katalaluan tamat tempoh (root sahaja)"
 
 #: passwd.c:175
 msgid "number of days after password expiration when an account becomes disabled (root only)"
-msgstr ""
+msgstr "jumlah hari selepas katalaluan tamat tempoh apabila akaun dimatikan (hanya root)"
 
 #: passwd.c:178
 msgid "report password status on the named account (root only)"
