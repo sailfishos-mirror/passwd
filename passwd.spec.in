@@ -11,13 +11,13 @@ Release: 1
 License: BSD
 Group: System Environment/Base
 Source: %{name}-%{version}.tar.bz2
-Buildroot: %{_tmppath}/passwd-root
+Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: pam >= 0.78, /etc/pam.d/system-auth
 %if %{WITH_SELINUX}
 BuildRequires: libselinux-devel
 %endif
 BuildRequires: glib2-devel, libuser-devel, pam-devel, libuser >= 0.53-1
-BuildRequires: gettext
+BuildRequires: gettext, popt-devel
 %if %{WITH_AUDIT}
 BuildRequires: audit-libs-devel >= 1.0.14
 Requires: audit-libs >= 1.0.14
@@ -34,29 +34,53 @@ To use passwd, you should have PAM installed on your system.
 %setup -q -n %{name}-%{version}
 
 %build
-%configure
-make DEBUG= RPM_OPT_FLAGS="$RPM_OPT_FLAGS" \
+%configure \
 %if %{WITH_SELINUX}
-	WITH_SELINUX=yes
+        --with-selinux \
+%else
+        --without-selinux \
 %endif
+%if %{WITH_AUDIT}
+        --with-audit
+%else
+        --without-audit
+%endif
+make DEBUG= RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 
 %install
+rm -rf $RPM_BUILD_ROOT
+
 make install DESTDIR=$RPM_BUILD_ROOT bindir=%{_bindir} mandir=%{_mandir}
-strip $RPM_BUILD_ROOT%{_bindir}/passwd
-install -m 755 -d $RPM_BUILD_ROOT/etc/pam.d/
-install -m 644 passwd.pamd $RPM_BUILD_ROOT/etc/pam.d/passwd
+install -m 755 -d $RPM_BUILD_ROOT%{_sysconfdir}/pam.d/
+install -m 644 passwd.pamd $RPM_BUILD_ROOT%{_sysconfdir}/pam.d/passwd
 %find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
-%defattr(-,root,root)
-%config(noreplace) /etc/pam.d/passwd
+%defattr(-,root,root,-)
+%config(noreplace) %{_sysconfdir}/pam.d/passwd
 %attr(4755,root,root) %{_bindir}/passwd
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* Tue Feb 19 2008 Tomas Mraz <tmraz@redhat.com> 0.75-1
+- fix disabling SELinux and audit in spec (#433284)
+- remove obsolete no.po (#332121)
+
+* Tue Sep 25 2007 Tomas Mraz <tmraz@redhat.com> 0.74-5
+- buildrequires popt-devel
+
+* Wed Aug 22 2007 Tomas Mraz <tmraz@redhat.com> 0.74-4
+- spec file cleanups
+
+* Thu Apr  5 2007 Tomas Mraz <tmraz@redhat.com> 0.74-3
+- use std buildroot, add dist tag (#226232)
+
+* Tue Jan 30 2007 Tomas Mraz <tmraz@redhat.com> 0.74-2
+- do not explicitly strip the binary
+
 * Tue Dec 12 2006 Tomas Mraz <tmraz@redhat.com> 0.74-1
 - minor fixes in error reporting
 - localize messages (#204022)

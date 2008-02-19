@@ -1,3 +1,10 @@
+2008-02-19 Tomas Mraz <tmraz@redhat.com>
+
+	* configure.ac: Version 0.75
+	* passwd.spec.in: Fedora review fixes. Non-SELinux build fixes.
+	* po/no.po: Removed.
+	* po/LINGUAS: Removed obsolete no translation.
+
 2006-12-12 Tomas Mraz <tmraz@redhat.com>
 
 	* configure.ac: Version 0.74, add gettext support
