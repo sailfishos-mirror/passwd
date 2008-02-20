@@ -2,8 +2,6 @@
  * Written by Cristian Gafton <gafton@redhat.com>
  */
 
-#ident "$Id$"
-
 #include "config.h"
 
 #include <assert.h>

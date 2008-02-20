@@ -65,9 +65,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
-* Tue Feb 19 2008 Tomas Mraz <tmraz@redhat.com> 0.75-1
+* Tue Feb 20 2008 Tomas Mraz <tmraz@redhat.com> 0.75-1
 - fix disabling SELinux and audit in spec (#433284)
 - remove obsolete no.po (#332121)
+- updated translations
 
 * Tue Sep 25 2007 Tomas Mraz <tmraz@redhat.com> 0.74-5
 - buildrequires popt-devel

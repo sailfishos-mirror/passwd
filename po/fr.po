@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2006-12-06 23:11+0100\n"
+"POT-Creation-Date: 2008-02-20 17:49+0100\n"
 "PO-Revision-Date: 2007-01-12 23:30+0100\n"
 "Last-Translator: Guillaume CHARDIN  <guillaume.chardin@gmail.com>\n"
 "Language-Team: fr_FR <fedora-trans-fr@redhat.com>\n"
@@ -19,95 +19,101 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: libuser.c:90
+#: libuser.c:88
 #, c-format
 msgid "%s: libuser initialization error:"
 msgstr "%s : erreur lors de l'initialisation de libuser :"
 
-#: libuser.c:167
+#: libuser.c:165
 msgid "Warning: unlocked password would be empty."
 msgstr "Attention : le mot de passe déverrouillé devrait être vide."
 
-#: libuser.c:281
+#: libuser.c:279
 msgid "Corrupted passwd entry."
 msgstr "Entrée passwd corrompue."
 
-#: libuser.c:298
+#: libuser.c:296
 msgid "Empty password."
 msgstr "Mot de passe vide."
 
-#: libuser.c:301
+#: libuser.c:299
 msgid "Password locked."
 msgstr "Mot de passe verrouillé."
 
-#: libuser.c:305
+#: libuser.c:303
 msgid "Password set, MD5 crypt."
 msgstr "Mot de passe défini, cryptage MD5."
 
-#: libuser.c:308
+#: libuser.c:306
 msgid "Password set, blowfish crypt."
 msgstr "Mot de passe défini, cryptage Blowfish."
 
-#: libuser.c:310
+#: libuser.c:308
 msgid "Password set, unknown crypt variant."
 msgstr "Mot de passe défini, type de cryptage inconnu."
 
-#: libuser.c:313
+#: libuser.c:311
 msgid "Alternate authentication scheme in use."
 msgstr "Plan d'authentification alternatif en cours d'utilisation"
 
-#: libuser.c:318
+#: libuser.c:316
 msgid "Password set, DES crypt."
 msgstr "Mot de passe défini, cryptage DES."
 
-#: libuser.c:332
+#: libuser.c:330
 #, c-format
 msgid "No password set.\n"
 msgstr "Aucun mot de passe défini.\n"
 
-#: libuser.c:336
+#: libuser.c:334
 #, c-format
 msgid "Unknown user.\n"
 msgstr "Utilisateur inconnu.\n"
 
-#: libuser.c:431
+#: libuser.c:429
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr "%s : le compte utilisateur ne supporte pas l'expiration du mot de passe.\n"
+msgstr ""
+"%s : le compte utilisateur ne supporte pas l'expiration du mot de passe.\n"
 
-#: passwd.c:158
+#: passwd.c:156
 msgid "keep non-expired authentication tokens"
 msgstr "conserve les jetons d'authentification non-expirés"
 
-#: passwd.c:160
+#: passwd.c:158
 msgid "delete the password for the named account (root only)"
-msgstr "supprime le mot de passe pour le compte utilisateur (super-utilisateur seulement)"
+msgstr ""
+"supprime le mot de passe pour le compte utilisateur (super-utilisateur "
+"seulement)"
 
-#: passwd.c:162
+#: passwd.c:160
 msgid "lock the named account (root only)"
 msgstr "verrouille le compte (super-utilisateur seulement)"
 
-#: passwd.c:164
+#: passwd.c:162
 msgid "unlock the named account (root only)"
 msgstr "déverrouille le compte utilisateur (super-utilisateur seulement)"
 
-#: passwd.c:166
+#: passwd.c:164
 msgid "force operation"
 msgstr "force l'opération"
 
-#: passwd.c:168
+#: passwd.c:166
 msgid "maximum password lifetime (root only)"
 msgstr "durée de vie maximale du mot de passe (super-utilisateur seulement)"
 
-#: passwd.c:170
+#: passwd.c:168
 msgid "minimum password lifetime (root only)"
 msgstr "durée de vie minimale du mot de passe (super-utilisateur seulement)"
 
-#: passwd.c:172
-msgid "number of days warning users receives before password expiration (root only)"
-msgstr "nombres de jours pendant lesquels l'utilisateur recevra un avertissement avant l'expiration du mot de passe (super-utilisateur seulement)"
+#: passwd.c:170
+msgid ""
+"number of days warning users receives before password expiration (root only)"
+msgstr ""
+"nombres de jours pendant lesquels l'utilisateur recevra un avertissement "
+"avant l'expiration du mot de passe (super-utilisateur seulement)"
 
-#: passwd.c:175
+#: passwd.c:173
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
@@ -115,141 +121,144 @@ msgstr ""
 "nombre de jours après expiration du mot de passe pour la désactivation du "
 "compte utilisateur (super-utilisateur seulement)"
 
-#: passwd.c:178
+#: passwd.c:176
 msgid "report password status on the named account (root only)"
-msgstr "affiche le statut du mot de passe du compte sélectionné (super-utilisateur seulement)"
+msgstr ""
+"affiche le statut du mot de passe du compte sélectionné (super-utilisateur "
+"seulement)"
 
-#: passwd.c:180
+#: passwd.c:178
 msgid "read new tokens from stdin (root only)"
 msgstr "lit les nouveaux jetons depuis stdin (super-utilisateur seulement)"
 
-#: passwd.c:187
+#: passwd.c:185
 msgid "[OPTION...] <accountName>"
 msgstr "[OPTION...] <NomDuCompte>"
 
-#: passwd.c:190
+#: passwd.c:188
 #, c-format
 msgid "%s: bad argument %s: %s\n"
 msgstr "%s : mauvais argument %s: %s\n"
 
-#: passwd.c:248
+#: passwd.c:246
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr "%s : seule une option parmi -l, -u, -d, -S doit être spécifiée.\n"
 
-#: passwd.c:257
+#: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s : Impossible de combiner l'une des options -l, -u, -d, -S avec -i, -n, -w, -x.\n"
+msgstr ""
+"%s : Impossible de combiner l'une des options -l, -u, -d, -S avec -i, -n, -"
+"w, -x.\n"
 
-#: passwd.c:281
+#: passwd.c:279
 #, c-format
 msgid "Only root can do that.\n"
 msgstr "Seul le super-utilisateur peut faire cela.\n"
 
-#: passwd.c:294
+#: passwd.c:292
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
 msgstr "%s : Seul le super-utilisateur peut indiquer un nom d'utilisateur.\n"
 
-#: passwd.c:303
+#: passwd.c:301
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
 msgstr "%s : Le nom d'utilisateur spécifié est trop long.\n"
 
-#: passwd.c:313
+#: passwd.c:311
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
 msgstr "%s : Un seul nom d'utilisateur peut être spécifié.\n"
 
-#: passwd.c:323
+#: passwd.c:321
 #, c-format
 msgid "%s: This option requires a user name.\n"
 msgstr "%s : Cette option nécessite un nom d'utilisateur.\n"
 
-#: passwd.c:334
+#: passwd.c:332
 #, c-format
 msgid "%s: Can not identify you!\n"
 msgstr "%s : Impossible de vous identifier !\n"
 
-#: passwd.c:343 passwd.c:378
+#: passwd.c:341 passwd.c:376
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s : Nom d'utilisateur inconnu « %s ».\n"
 
-#: passwd.c:395
+#: passwd.c:393
 #, c-format
 msgid "%s: %s is not authorized to change the password of %s\n"
 msgstr "%s : %s n'est pas autorisé à changer le mot de passe de %s \n"
 
-#: passwd.c:408
+#: passwd.c:406
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr "Verrouillage du mot de passe pour l'utilisateur %s.\n"
 
-#: passwd.c:412 passwd.c:424 passwd.c:438 passwd.c:458
+#: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
 msgid "Success"
 msgstr "Succès"
 
-#: passwd.c:412 passwd.c:427
+#: passwd.c:410 passwd.c:425
 msgid "Error (password not set?)"
 msgstr "Erreur (mot de passe non défini ?)"
 
-#: passwd.c:420
+#: passwd.c:418
 #, c-format
 msgid "Unlocking password for user %s.\n"
 msgstr "Déverrouillage du mot de passe pour l'utilisateur %s.\n"
 
-#: passwd.c:426
+#: passwd.c:424
 msgid "Unsafe operation (use -f to force)"
 msgstr "Opération peu sûre, (utiliser -f pour forcer l'opération)"
 
-#: passwd.c:435
+#: passwd.c:433
 #, c-format
 msgid "Removing password for user %s.\n"
 msgstr "Suppression du mot de passe pour l'utilisateur %s.\n"
 
-#: passwd.c:438 passwd.c:458
+#: passwd.c:436 passwd.c:456
 msgid "Error"
 msgstr "Erreur"
 
-#: passwd.c:455
+#: passwd.c:453
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
 msgstr "Ajustement des données d'expiration pour l'utilisateur %s.\n"
 
-#: passwd.c:471
+#: passwd.c:469
 #, c-format
 msgid "Changing password for user %s.\n"
 msgstr "Changement de mot de passe pour l'utilisateur %s.\n"
 
-#: passwd.c:483
+#: passwd.c:481
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s : erreur lors de la lecture depuis stdin : %s\n"
 
-#: passwd.c:500
+#: passwd.c:498
 #, c-format
 msgid "%s: unable to start pam: %s\n"
 msgstr "%s : impossible de démarrer pam : %s\n"
 
-#: passwd.c:513
+#: passwd.c:511
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
 msgstr "%s : impossible d'assigner un tty pour pam : %s\n"
 
-#: passwd.c:524
+#: passwd.c:522
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
 msgstr "%s : impossible de définir le délai d'échec : %s\n"
 
-#: passwd.c:542
+#: passwd.c:540
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
 msgstr "%s : mise à jour réussie des jetons d'authentification expirés.\n"
 
-#: passwd.c:548
+#: passwd.c:546
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s : mise à jour réussie de tous les jetons d'authentification.\n"
-

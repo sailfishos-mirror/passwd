@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.73\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2006-12-06 23:11+0100\n"
+"POT-Creation-Date: 2008-02-20 17:49+0100\n"
 "PO-Revision-Date: 2006-12-06 13:25+0100\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -16,235 +16,235 @@ msgstr ""
 "Content-Type: text/plain; charset=BIG5\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: libuser.c:90
+#: libuser.c:88
 #, c-format
 msgid "%s: libuser initialization error:"
 msgstr ""
 
-#: libuser.c:167
+#: libuser.c:165
 msgid "Warning: unlocked password would be empty."
 msgstr ""
 
-#: libuser.c:281
+#: libuser.c:279
 msgid "Corrupted passwd entry."
 msgstr ""
 
-#: libuser.c:298
+#: libuser.c:296
 msgid "Empty password."
 msgstr ""
 
-#: libuser.c:301
+#: libuser.c:299
 msgid "Password locked."
 msgstr ""
 
-#: libuser.c:305
+#: libuser.c:303
 msgid "Password set, MD5 crypt."
 msgstr ""
 
-#: libuser.c:308
+#: libuser.c:306
 msgid "Password set, blowfish crypt."
 msgstr ""
 
-#: libuser.c:310
+#: libuser.c:308
 msgid "Password set, unknown crypt variant."
 msgstr ""
 
-#: libuser.c:313
+#: libuser.c:311
 msgid "Alternate authentication scheme in use."
 msgstr ""
 
-#: libuser.c:318
+#: libuser.c:316
 msgid "Password set, DES crypt."
 msgstr ""
 
-#: libuser.c:332
+#: libuser.c:330
 #, c-format
 msgid "No password set.\n"
 msgstr ""
 
-#: libuser.c:336
+#: libuser.c:334
 #, c-format
 msgid "Unknown user.\n"
 msgstr ""
 
-#: libuser.c:431
+#: libuser.c:429
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr ""
 
-#: passwd.c:158
+#: passwd.c:156
 msgid "keep non-expired authentication tokens"
 msgstr ""
 
-#: passwd.c:160
+#: passwd.c:158
 msgid "delete the password for the named account (root only)"
 msgstr ""
 
-#: passwd.c:162
+#: passwd.c:160
 msgid "lock the named account (root only)"
 msgstr ""
 
-#: passwd.c:164
+#: passwd.c:162
 msgid "unlock the named account (root only)"
 msgstr ""
 
-#: passwd.c:166
+#: passwd.c:164
 msgid "force operation"
 msgstr ""
 
-#: passwd.c:168
+#: passwd.c:166
 msgid "maximum password lifetime (root only)"
 msgstr ""
 
-#: passwd.c:170
+#: passwd.c:168
 msgid "minimum password lifetime (root only)"
 msgstr ""
 
-#: passwd.c:172
+#: passwd.c:170
 msgid ""
 "number of days warning users receives before password expiration (root only)"
 msgstr ""
 
-#: passwd.c:175
+#: passwd.c:173
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
 msgstr ""
 
-#: passwd.c:178
+#: passwd.c:176
 msgid "report password status on the named account (root only)"
 msgstr ""
 
-#: passwd.c:180
+#: passwd.c:178
 msgid "read new tokens from stdin (root only)"
 msgstr ""
 
-#: passwd.c:187
+#: passwd.c:185
 msgid "[OPTION...] <accountName>"
 msgstr ""
 
-#: passwd.c:190
+#: passwd.c:188
 #, c-format
 msgid "%s: bad argument %s: %s\n"
 msgstr ""
 
-#: passwd.c:248
+#: passwd.c:246
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr ""
 
-#: passwd.c:257
+#: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr ""
 
-#: passwd.c:281
+#: passwd.c:279
 #, c-format
 msgid "Only root can do that.\n"
 msgstr ""
 
-#: passwd.c:294
+#: passwd.c:292
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
 msgstr ""
 
-#: passwd.c:303
+#: passwd.c:301
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
 msgstr ""
 
-#: passwd.c:313
+#: passwd.c:311
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
 msgstr ""
 
-#: passwd.c:323
+#: passwd.c:321
 #, c-format
 msgid "%s: This option requires a user name.\n"
 msgstr ""
 
-#: passwd.c:334
+#: passwd.c:332
 #, c-format
 msgid "%s: Can not identify you!\n"
 msgstr ""
 
-#: passwd.c:343 passwd.c:378
+#: passwd.c:341 passwd.c:376
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr ""
 
-#: passwd.c:395
+#: passwd.c:393
 #, c-format
 msgid "%s: %s is not authorized to change the password of %s\n"
 msgstr ""
 
-#: passwd.c:408
+#: passwd.c:406
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr ""
 
-#: passwd.c:412 passwd.c:424 passwd.c:438 passwd.c:458
+#: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
 msgid "Success"
 msgstr ""
 
-#: passwd.c:412 passwd.c:427
+#: passwd.c:410 passwd.c:425
 msgid "Error (password not set?)"
 msgstr ""
 
-#: passwd.c:420
+#: passwd.c:418
 #, c-format
 msgid "Unlocking password for user %s.\n"
 msgstr ""
 
-#: passwd.c:426
+#: passwd.c:424
 msgid "Unsafe operation (use -f to force)"
 msgstr ""
 
-#: passwd.c:435
+#: passwd.c:433
 #, c-format
 msgid "Removing password for user %s.\n"
 msgstr ""
 
-#: passwd.c:438 passwd.c:458
+#: passwd.c:436 passwd.c:456
 msgid "Error"
 msgstr ""
 
-#: passwd.c:455
+#: passwd.c:453
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
 msgstr ""
 
-#: passwd.c:471
+#: passwd.c:469
 #, c-format
 msgid "Changing password for user %s.\n"
 msgstr ""
 
-#: passwd.c:483
+#: passwd.c:481
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
 msgstr ""
 
-#: passwd.c:500
+#: passwd.c:498
 #, c-format
 msgid "%s: unable to start pam: %s\n"
 msgstr ""
 
-#: passwd.c:513
+#: passwd.c:511
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
 msgstr ""
 
-#: passwd.c:524
+#: passwd.c:522
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
 msgstr ""
 
-#: passwd.c:542
+#: passwd.c:540
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
 msgstr ""
 
-#: passwd.c:548
+#: passwd.c:546
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr ""

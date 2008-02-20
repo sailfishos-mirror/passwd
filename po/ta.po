@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ta\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2006-12-06 23:11+0100\n"
+"POT-Creation-Date: 2008-02-20 17:49+0100\n"
 "PO-Revision-Date: 2006-12-14 18:14+0530\n"
 "Last-Translator: Felix <ifelix@redhat.com>\n"
 "Language-Team: Tamil <ta@li.org>\n"
@@ -17,237 +17,240 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"\n"
 
-#: libuser.c:90
+#: libuser.c:88
 #, c-format
 msgid "%s: libuser initialization error:"
 msgstr "%s: libuser ஆரம்ப பிழை:"
 
-#: libuser.c:167
+#: libuser.c:165
 msgid "Warning: unlocked password would be empty."
 msgstr "எச்சரிக்கை: பூட்டப்படாத கடவுச்சொல் வெறுமையாக இருக்கும்."
 
-#: libuser.c:281
+#: libuser.c:279
 msgid "Corrupted passwd entry."
 msgstr "அழிக்கப்பட்ட கடவுச்சொல் உள்ளீடு"
 
-#: libuser.c:298
+#: libuser.c:296
 msgid "Empty password."
 msgstr "வெற்று கடவுச்சொல்"
 
-#: libuser.c:301
+#: libuser.c:299
 msgid "Password locked."
 msgstr "கடவுச்சொல் பூட்டப்பட்டது."
 
-#: libuser.c:305
+#: libuser.c:303
 msgid "Password set, MD5 crypt."
 msgstr "கடவுச்சொல் அமைத்தல், MD5 crypt."
 
-#: libuser.c:308
+#: libuser.c:306
 msgid "Password set, blowfish crypt."
 msgstr "கடவுச்சொல் அமைத்தல், blowfish crypt."
 
-#: libuser.c:310
+#: libuser.c:308
 msgid "Password set, unknown crypt variant."
 msgstr "கடவுச்சொல் அமைத்தல், தெரியாத crypt மாறி."
 
-#: libuser.c:313
+#: libuser.c:311
 msgid "Alternate authentication scheme in use."
 msgstr "மாற்று அங்கீகார திட்டம் பயனில் உள்ளது."
 
-#: libuser.c:318
+#: libuser.c:316
 msgid "Password set, DES crypt."
 msgstr "கடவுச்சொல் அமைத்தல், DES crypt."
 
-#: libuser.c:332
+#: libuser.c:330
 #, c-format
 msgid "No password set.\n"
 msgstr "கடவுச்சொல் அமைக்கப்படவில்லை.\n"
 
-#: libuser.c:336
+#: libuser.c:334
 #, c-format
 msgid "Unknown user.\n"
 msgstr "தெரியாத பயனர்.\n"
 
-#: libuser.c:431
+#: libuser.c:429
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: பயனர் கணக்கு கடவுச்சொல் மூப்படைதலுக்கு துணையில்லை.\n"
 
-#: passwd.c:158
+#: passwd.c:156
 msgid "keep non-expired authentication tokens"
 msgstr "முடிவுறாத அங்கீகார டோக்கன்களை வைத்திருக்கவும்"
 
-#: passwd.c:160
+#: passwd.c:158
 msgid "delete the password for the named account (root only)"
 msgstr "பெயரிடப்பட்ட கணக்கிற்கு கடவுச்சொல்லை அழிக்கவும் (ரூட் மட்டும்)"
 
-#: passwd.c:162
+#: passwd.c:160
 msgid "lock the named account (root only)"
 msgstr "பெயரிடப்பட்ட கணக்கை பூட்டவும் (ரூட் மட்டும்)"
 
-#: passwd.c:164
+#: passwd.c:162
 msgid "unlock the named account (root only)"
 msgstr "பெயரிடப்பட்ட கணக்கை திறக்கவும் (ரூட் மட்டும்)"
 
-#: passwd.c:166
+#: passwd.c:164
 msgid "force operation"
 msgstr "செயல்பாட்டை வலியுறுத்தவும்"
 
-#: passwd.c:168
+#: passwd.c:166
 msgid "maximum password lifetime (root only)"
 msgstr "அதிகபட்ச கடவுச்சொல் வாழ்நாள் (ரூட்டுக்கு மட்டும்)"
 
-#: passwd.c:170
+#: passwd.c:168
 msgid "minimum password lifetime (root only)"
 msgstr "குறைந்தபட்ச கடவுச்சொல் வாழ்நாள் (ரூட்டுக்கு மட்டும்)"
 
-#: passwd.c:172
-msgid "number of days warning users receives before password expiration (root only)"
-msgstr "கடவுச்சொல் முடிவுறுவதற்கு முன் பயனர்கள் பெறும் எச்சரிக்கை நாட்களின் எண்ணிக்கை (ரூட் மட்டும்)"
+#: passwd.c:170
+msgid ""
+"number of days warning users receives before password expiration (root only)"
+msgstr ""
+"கடவுச்சொல் முடிவுறுவதற்கு முன் பயனர்கள் பெறும் எச்சரிக்கை நாட்களின் எண்ணிக்கை (ரூட் மட்டும்)"
 
-#: passwd.c:175
+#: passwd.c:173
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
 msgstr "கடவுச்சொல் முடிந்த பின் கணக்கு செயல்நீக்கப்படும் நாட்களின் எண்ணிக்கை (ரூட் மட்டும்)"
 
-#: passwd.c:178
+#: passwd.c:176
 msgid "report password status on the named account (root only)"
 msgstr "பெயரிடப்பட்ட கணக்கில் கடவுச்சொல் நிலையை அறிக்கையிடவும் (ரூட் மட்டும்)"
 
-#: passwd.c:180
+#: passwd.c:178
 msgid "read new tokens from stdin (root only)"
 msgstr "stdin இலிருந்து புதிய டோக்கன்களை வாசிக்கவும் (ரூட் மட்டும்)"
 
-#: passwd.c:187
+#: passwd.c:185
 msgid "[OPTION...] <accountName>"
 msgstr "[OPTION...] <accountName>"
 
-#: passwd.c:190
+#: passwd.c:188
 #, c-format
 msgid "%s: bad argument %s: %s\n"
 msgstr "%s: தவறான அளவுரு %s: %s\n"
 
-#: passwd.c:248
+#: passwd.c:246
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr "%s: -l, -u, -d, -S இல் ஏதாவது ஒன்று மட்டுமே குறிப்பிடப்படலாம்.\n"
 
-#: passwd.c:257
+#: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: -l, -u, -d, -S இல் ஒன்று மற்றும்  -i, -n, -w, -x இல் ஒன்றை கலக்க முடியாது.\n"
+msgstr ""
+"%s: -l, -u, -d, -S இல் ஒன்று மற்றும்  -i, -n, -w, -x இல் ஒன்றை கலக்க முடியாது.\n"
 
-#: passwd.c:281
+#: passwd.c:279
 #, c-format
 msgid "Only root can do that.\n"
 msgstr "ரூட் மட்டுமே செய்ய முடியும்.\n"
 
-#: passwd.c:294
+#: passwd.c:292
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
 msgstr "%s: ரூட் மட்டுமே ஒரு பயனர் பெயரை குறிப்பட முடியும்.\n"
 
-#: passwd.c:303
+#: passwd.c:301
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
 msgstr "%s: கொடுக்கப்பட்ட பயனர் பெயர் நீளமானது.\n"
 
-#: passwd.c:313
+#: passwd.c:311
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
 msgstr "%s: ஒரே ஒரு பயனர் பெயரை மட்டுமே குறிப்பிடலாம்.\n"
 
-#: passwd.c:323
+#: passwd.c:321
 #, c-format
 msgid "%s: This option requires a user name.\n"
 msgstr "%s: இந்த விருப்பத்திற்கு ஒரு பயனர் பெயர் தேவை.\n"
 
-#: passwd.c:334
+#: passwd.c:332
 #, c-format
 msgid "%s: Can not identify you!\n"
 msgstr "%s: உங்களை அடையாளப்படுத்த முடியவில்லை!\n"
 
-#: passwd.c:343 passwd.c:378
+#: passwd.c:341 passwd.c:376
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: தெரியாத பயனர் பெயர் '%s'.\n"
 
-#: passwd.c:395
+#: passwd.c:393
 #, c-format
 msgid "%s: %s is not authorized to change the password of %s\n"
 msgstr "%s: %sக்கு %sஇன் கடவுச்சொல்லை மாற்ற உரிமை இல்லை\n"
 
-#: passwd.c:408
+#: passwd.c:406
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr "பயனர் %sக்கு கடவுச்சொல்லை பூட்டுகிறது.\n"
 
-#: passwd.c:412 passwd.c:424 passwd.c:438 passwd.c:458
+#: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
 msgid "Success"
 msgstr "வெற்றி"
 
-#: passwd.c:412 passwd.c:427
+#: passwd.c:410 passwd.c:425
 msgid "Error (password not set?)"
 msgstr "பிழை (கடவுச்சொல்லை அமைக்கப்படவில்லையா?)"
 
-#: passwd.c:420
+#: passwd.c:418
 #, c-format
 msgid "Unlocking password for user %s.\n"
 msgstr "பயனர் %sக்கு கடவுச்சொல்லை திறக்கிறது.\n"
 
-#: passwd.c:426
+#: passwd.c:424
 msgid "Unsafe operation (use -f to force)"
 msgstr "பாதுகாப்பற்ற செயல் (-f ஐ வலியுறுத்த பயன்படுத்தவும்)"
 
-#: passwd.c:435
+#: passwd.c:433
 #, c-format
 msgid "Removing password for user %s.\n"
 msgstr "பயனர் %sக்கு கடவுச்சொல்லை நீக்கவும்.\n"
 
-#: passwd.c:438 passwd.c:458
+#: passwd.c:436 passwd.c:456
 msgid "Error"
 msgstr "பிழை"
 
-#: passwd.c:455
+#: passwd.c:453
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
 msgstr "பயனர் %sக்கு மூப்படையும் தரவுகளை சரி செய்கிறது.\n"
 
-#: passwd.c:471
+#: passwd.c:469
 #, c-format
 msgid "Changing password for user %s.\n"
 msgstr "பயனர் %sக்கு கடவுச்சொல்லை மாற்றுகிறது.\n"
 
-#: passwd.c:483
+#: passwd.c:481
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s: stdin இலிருந்து வாசிக்கும் போது பிழை: %s\n"
 
-#: passwd.c:500
+#: passwd.c:498
 #, c-format
 msgid "%s: unable to start pam: %s\n"
 msgstr "%s: pamஐ துவக்க முடியவில்லை: %s\n"
 
-#: passwd.c:513
+#: passwd.c:511
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
 msgstr "%s: ttyஐ pamக்கு அமைக்க முடியவில்லை: %s\n"
 
-#: passwd.c:524
+#: passwd.c:522
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
 msgstr "%s: செயலிழப்பு தாமதத்தை அமைக்க முடியவில்லை: %s\n"
 
-#: passwd.c:542
+#: passwd.c:540
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
 msgstr "%s: முடிவுற்ற அங்கீகார டோக்கன்கள் வெற்றிகரமாக மேம்படுத்தப்பட்டன.\n"
 
-#: passwd.c:548
+#: passwd.c:546
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: அனைத்து அங்கீகார டோக்கன்களும் வெற்றிகரமாக மேம்படுத்தப்பட்டன.\n"
-

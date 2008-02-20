@@ -39,8 +39,6 @@
  * to that of the previous versions as possible.
  */
 
-#ident "$Id$"
-
 #include "config.h"
 
 #include <string.h>

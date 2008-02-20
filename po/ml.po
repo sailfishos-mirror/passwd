@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ml\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2006-12-06 23:11+0100\n"
+"POT-Creation-Date: 2008-02-20 17:49+0100\n"
 "PO-Revision-Date: 2006-12-13 15:02+0530\n"
 "Last-Translator: Ani Peter <apeter@redhat.com>\n"
 "Language-Team: Malayalam <en@li.org>\n"
@@ -18,239 +18,242 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: libuser.c:90
+#: libuser.c:88
 #, c-format
 msgid "%s: libuser initialization error:"
 msgstr "%s: libuser-ന്‍റെ തുടക്കത്തിലുളള പിശക്:"
 
-#: libuser.c:167
+#: libuser.c:165
 msgid "Warning: unlocked password would be empty."
 msgstr "മുന്നറിയിപ്പ്: ലോക്ക് ചെയ്യാത്ത പാസ്‌വേറ്‍ഡ് ശൂന്യമാണ്."
 
-#: libuser.c:281
+#: libuser.c:279
 msgid "Corrupted passwd entry."
 msgstr "passwd-ല്‍ തെറ്റായ എന്‍ട്റി."
 
-#: libuser.c:298
+#: libuser.c:296
 msgid "Empty password."
 msgstr "പാസ്‌വേറ്‍ഡ് ശൂന്യമാണ്."
 
-#: libuser.c:301
+#: libuser.c:299
 msgid "Password locked."
 msgstr "പാസ്‌വേറ്‍ഡ് പൂട്ടിയിരിക്കുന്നു."
 
-#: libuser.c:305
+#: libuser.c:303
 msgid "Password set, MD5 crypt."
 msgstr "പാസ്‌വേറ്‍ഡ് സെറ്റ് ചെയ്തു, MD5 crypt."
 
-#: libuser.c:308
+#: libuser.c:306
 msgid "Password set, blowfish crypt."
 msgstr "പാസ്‌വേറ്‍ഡ് സെറ്റ് ചെയ്തു, blowfish crypt."
 
-#: libuser.c:310
+#: libuser.c:308
 msgid "Password set, unknown crypt variant."
 msgstr "പാസ്‌വേറ്‍ഡ് സെറ്റ് ചെയ്തു, അപരിചിതമായ ക്റിപ്റ്റ് വേരിയന്‍റ്."
 
-#: libuser.c:313
+#: libuser.c:311
 msgid "Alternate authentication scheme in use."
 msgstr "ആധികാരികത ഉറപ്പാക്കുന്നതിന് മറ്റോരു സംവിധാനം ഉപയോഗിക്കുന്നു."
 
-#: libuser.c:318
+#: libuser.c:316
 msgid "Password set, DES crypt."
 msgstr "പാസ്‌വേറ്‍ഡ് സെറ്റ് ചെയ്തു, DES crypt."
 
-#: libuser.c:332
+#: libuser.c:330
 #, c-format
 msgid "No password set.\n"
 msgstr "പാസ്‌വേറ്‍ഡ് ക്റമികരിച്ചിട്ടില്ല.\n"
 
-#: libuser.c:336
+#: libuser.c:334
 #, c-format
 msgid "Unknown user.\n"
 msgstr "അപരിചിതമായ യൂസറ്‍.\n"
 
-#: libuser.c:431
+#: libuser.c:429
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: പാസ്‌വേറ്‍ഡ് ഇടയ്ക്ക് മാറ്റുന്നതിനുളള പിന്തുണ യൂസറിന് ലഭ്യമല്ല.\n"
 
-#: passwd.c:158
+#: passwd.c:156
 msgid "keep non-expired authentication tokens"
 msgstr "കാലാവധി കഴിയാത്ത ഓഥന്‍റിക്കേഷന്‍ ടോക്കനുകള്‍ സൂക്ഷിക്കുക"
 
-#: passwd.c:160
+#: passwd.c:158
 msgid "delete the password for the named account (root only)"
 msgstr "പറഞ്ഞിരിക്കുന്ന അക്കൌണ്ടിന് പാസ്‌വേറ്‍ഡ് നീക്കം ചെയ്യുക (root-ന് മാത്റം അധികാരമുള്ളൂ)"
 
-#: passwd.c:162
+#: passwd.c:160
 msgid "lock the named account (root only)"
 msgstr "പറഞ്ഞിരിക്കുന്ന അക്കൌണ്ടിന് പൂട്ടുക (root-ന് മാത്റം അധികാരമുള്ളൂ)"
 
-#: passwd.c:164
+#: passwd.c:162
 msgid "unlock the named account (root only)"
 msgstr "പറഞ്ഞിരിക്കുന്ന അക്കൌണ്ടിന്‍റെ പൂട്ട് നീക്കുക (root-ന് മാത്റം അധികാരമുള്ളൂ)"
 
-#: passwd.c:166
+#: passwd.c:164
 msgid "force operation"
 msgstr "നിറ്‍ബന്ധപൂറ്‍വ്വം നടത്തുന്ന പ്റക്റിയ"
 
-#: passwd.c:168
+#: passwd.c:166
 msgid "maximum password lifetime (root only)"
 msgstr "പാസ്‌വേറ്‍ഡിനുളള ഏറ്റവും കൂടുതല്‍ കാലാവധി (root-ന് മാത്റം അധികാരമുള്ളൂ)"
 
-#: passwd.c:170
+#: passwd.c:168
 msgid "minimum password lifetime (root only)"
 msgstr "പാസ്‌വേറ്‍ഡിനുളള ഏറ്റവും കുറഞ്ഞ കാലാവധി (root-ന് മാത്റം അധികാരമുള്ളൂ)"
 
-#: passwd.c:172
-msgid "number of days warning users receives before password expiration (root only)"
+#: passwd.c:170
+msgid ""
+"number of days warning users receives before password expiration (root only)"
 msgstr ""
-"പാസ്‌വേറ്‍ഡിന്‍റെ കാലാവധി അവസാനിക്കുന്നതിന് മുന്പ് യൂസറുകള്‍ക്ക് എത്റ ദിവസം മുന്നറിയിപ്പ് "
-"ലഭിക്കുന്നു (root-ന് മാത്റം അധികാരമുള്ളൂ)"
+"പാസ്‌വേറ്‍ഡിന്‍റെ കാലാവധി അവസാനിക്കുന്നതിന് മുന്പ് യൂസറുകള്‍ക്ക് എത്റ ദിവസം മുന്നറിയിപ്പ് ലഭിക്കുന്നു "
+"(root-ന് മാത്റം അധികാരമുള്ളൂ)"
 
-#: passwd.c:175
+#: passwd.c:173
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
 msgstr ""
-"പാസ്‌വേറ്‍ഡിന്‍റെ കാലാവധി അവസാനിച്ച ശേഷം യൂസറിന്‍റെ അക്കൌണ്ട് എത്റ ദിവസത്തിന് ശേഷം"
-"പ്റവറ്‍ത്തന രഹിതമാകുന്നു (root-ന് മാത്റം അധികാരമുള്ളൂ)"
+"പാസ്‌വേറ്‍ഡിന്‍റെ കാലാവധി അവസാനിച്ച ശേഷം യൂസറിന്‍റെ അക്കൌണ്ട് എത്റ ദിവസത്തിന് ശേഷംപ്റവറ്‍ത്തന "
+"രഹിതമാകുന്നു (root-ന് മാത്റം അധികാരമുള്ളൂ)"
+
+#: passwd.c:176
+msgid "report password status on the named account (root only)"
+msgstr ""
+"പറഞ്ഞിരിക്കുന്ന അക്കൌണ്ടില്‍ പാസ്‌വേറ്‍ഡിന്‍റെ നിലവാരം വ്യക്തമാക്കുക (root-ന് മാത്റം അധികാരമുള്ളൂ)"
 
 #: passwd.c:178
-msgid "report password status on the named account (root only)"
-msgstr "പറഞ്ഞിരിക്കുന്ന അക്കൌണ്ടില്‍ പാസ്‌വേറ്‍ഡിന്‍റെ നിലവാരം വ്യക്തമാക്കുക (root-ന് മാത്റം അധികാരമുള്ളൂ)"
-
-#: passwd.c:180
 msgid "read new tokens from stdin (root only)"
 msgstr "stdin-ല്‍ നിന്നും പുതിയ ടോക്കനുകള്‍ ലഭ്യമാക്കുക (root-ന് മാത്റം അധികാരമുള്ളൂ)"
 
-#: passwd.c:187
+#: passwd.c:185
 msgid "[OPTION...] <accountName>"
 msgstr "[OPTION...] <accountName>"
 
-#: passwd.c:190
+#: passwd.c:188
 #, c-format
 msgid "%s: bad argument %s: %s\n"
 msgstr "%s: തെറ്റായ ആറ്‍ഗ്യുമെന്‍റ് %s: %s\n"
 
-#: passwd.c:248
+#: passwd.c:246
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr "%s: -l, -u, -d, -S എന്നിവയില്‍ ഒന്ന് നല്‍കുക.\n"
 
-#: passwd.c:257
+#: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: -l, -u, -d, -S എന്നിവയില്‍ ഒന്ന് -i, -n, -w, -x എന്നിവയായി ചേറ്‍ത്ത് നല്‍കുവാന്‍ സാധ്യമല്ല.\n"
+msgstr ""
+"%s: -l, -u, -d, -S എന്നിവയില്‍ ഒന്ന് -i, -n, -w, -x എന്നിവയായി ചേറ്‍ത്ത് നല്‍കുവാന്‍ "
+"സാധ്യമല്ല.\n"
 
-#: passwd.c:281
+#: passwd.c:279
 #, c-format
 msgid "Only root can do that.\n"
 msgstr "root-ന് മാത്റമേ ഇത് സാധ്യമാകൂ.\n"
 
-#: passwd.c:294
+#: passwd.c:292
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
 msgstr "%s: root-ന് മാത്റമേ യൂസറിനെ വ്യക്തമാക്കുവാന്‍ സാധിക്കുകയുള്ളൂ.\n"
 
-#: passwd.c:303
+#: passwd.c:301
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
 msgstr "%s: നല്‍കിയ യൂസറ്‍ നെയിം വളരെ വലുതാണ്.\n"
 
-#: passwd.c:313
+#: passwd.c:311
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
 msgstr "%s: ഒരു യൂസറ്‍ നെയിം മാത്റം നല്‍കുക.\n"
 
-#: passwd.c:323
+#: passwd.c:321
 #, c-format
 msgid "%s: This option requires a user name.\n"
 msgstr "%s: ഈ ഉപാധിയ്ക്ക് ഒരു യൂസറ്‍ നെയിം ആവശ്യമുണ്ട്.\n"
 
-#: passwd.c:334
+#: passwd.c:332
 #, c-format
 msgid "%s: Can not identify you!\n"
 msgstr "%s: നിങ്ങള്‍ ആരെന്ന മനസ്സിലാക്കുവാന്‍ സാധ്യമല്ല!\n"
 
-#: passwd.c:343 passwd.c:378
+#: passwd.c:341 passwd.c:376
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: '%s' എന്ന അപരിചിതമായ യൂസറ്‍ നെയിം.\n"
 
-#: passwd.c:395
+#: passwd.c:393
 #, c-format
 msgid "%s: %s is not authorized to change the password of %s\n"
 msgstr "%s: %s-ന് %s-ന്‍റെ പാസ്‌വേറ്‍ഡ് മാറ്റുന്നതിനുളള അധികാരമില്ല\n"
 
-#: passwd.c:408
+#: passwd.c:406
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr "%s എന്ന യൂസറിനുളള പാസ്‌വേറ്‍ഡ് പൂട്ടുന്നു.\n"
 
-#: passwd.c:412 passwd.c:424 passwd.c:438 passwd.c:458
+#: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
 msgid "Success"
 msgstr "വിജയിച്ചു"
 
-#: passwd.c:412 passwd.c:427
+#: passwd.c:410 passwd.c:425
 msgid "Error (password not set?)"
 msgstr "പിശക് (പാസ്‌വേറ്‍ഡ് ക്റമികരിച്ചുവോ?)"
 
-#: passwd.c:420
+#: passwd.c:418
 #, c-format
 msgid "Unlocking password for user %s.\n"
 msgstr "%s എന്ന യൂസറിനുളള പാസ്‌വേറ്‍ഡിന്‍റെ പൂട്ട് നീക്കുന്നു\n"
 
-#: passwd.c:426
+#: passwd.c:424
 msgid "Unsafe operation (use -f to force)"
 msgstr "പാടില്ലാത്ത പ്റക്റിയ (നിറ്‍ബന്ധപൂറ്‍വ്വം ചെയ്യുന്നതിന് -f ഉപയോഗിക്കുക)"
 
-#: passwd.c:435
+#: passwd.c:433
 #, c-format
 msgid "Removing password for user %s.\n"
 msgstr "%s എന്ന യൂസറിനുളള പാസ്‌വേറ്‍ഡ് നീക്കം ചെയ്യുന്നു.\n"
 
-#: passwd.c:438 passwd.c:458
+#: passwd.c:436 passwd.c:456
 msgid "Error"
 msgstr "പിശക്"
 
-#: passwd.c:455
+#: passwd.c:453
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
 msgstr "%s എന്ന യൂസറിനുളള കാലാവധി ക്റമികരിക്കുന്നു.\n"
 
-#: passwd.c:471
+#: passwd.c:469
 #, c-format
 msgid "Changing password for user %s.\n"
 msgstr "%s എന്ന യൂസറിനുളള പാസ്‌വേറ്‍ഡ് മാറ്റുന്നു.\n"
 
-#: passwd.c:483
+#: passwd.c:481
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s: stdin-ല്‍ നിന്നും ലഭ്യമാക്കുന്നതില്‍ പിശക്: %s\n"
 
-#: passwd.c:500
+#: passwd.c:498
 #, c-format
 msgid "%s: unable to start pam: %s\n"
 msgstr "%s: pam ആരംഭിക്കുവാന്‍ സാധ്യമല്ല: %s\n"
 
-#: passwd.c:513
+#: passwd.c:511
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
 msgstr "%s: pam-നുളള tty ക്റമികരിക്കുവാന്‍ സാധ്യമല്ല: %s\n"
 
-#: passwd.c:524
+#: passwd.c:522
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
 msgstr "%s: പ്റവറ്‍ത്തന സമയം ക്റമികരിക്കുവാന്‍ സാധ്യമായില്ല: %s\n"
 
-#: passwd.c:542
+#: passwd.c:540
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
 msgstr "%s: കാലാവധി കഴിഞ്ഞ ഓഥന്‍റിക്കേഷന്‍ ടോക്കനുകള്‍ വിജയകരമായി പുതുക്കിയിരിക്കുന്നു.\n"
 
-#: passwd.c:548
+#: passwd.c:546
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: എല്ലാ ഓഥന്‍റിക്കേഷന്‍ ടോക്കനുകളും വിജയകരമായി പുതുക്കിയിരിക്കുന്നു.\n"
-

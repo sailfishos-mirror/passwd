@@ -5,14 +5,7 @@ man1_MANS = passwd.1
 noinst_PROGRAMS = pwdstat
 noinst_LIBRARIES = libstuff.a
 EXTRA_DIST = config.rpath mkinstalldirs m4/ChangeLog passwd.pamd passwd.1 passwd.spec.in passwd.spec
-libstuff_a_SOURCES = \
-	date.h \
-	pwdb.h \
-	version.c \
-	version.h 
-
-date.h:
-	echo 'static const char *version_date = "' `date +%D` '";' > date.h
+libstuff_a_SOURCES = pwdb.h
 
 AM_CFLAGS = @LIBUSER_CFLAGS@
 LDADD = libstuff.a @LIBUSER_LIBS@ @LIBS@
