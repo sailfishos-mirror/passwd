@@ -7,7 +7,7 @@
 Summary: The passwd utility for setting/changing passwords using PAM
 Name: passwd
 Version: @PACKAGE_VERSION@
-Release: 1
+Release: 1%{?dist}
 License: BSD
 Group: System Environment/Base
 Source: %{name}-%{version}.tar.bz2
@@ -210,7 +210,7 @@ rm -rf $RPM_BUILD_ROOT
 - automatic rebuild
 
 * Mon Jun  5 2000 Nalin Dahyabhai <nalin@redhat.com>
-- move man pages to %{_mandir}
+- move man pages to _mandir
 
 * Thu Jun  1 2000 Nalin Dahyabhai <nalin@redhat.com>
 - modify PAM setup to use system-auth
