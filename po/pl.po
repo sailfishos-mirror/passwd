@@ -1,13 +1,13 @@
 # translation of pl.po to Polish
-# Piotr Drąg <raven@pmail.pl>, 2006.
+# Piotr Drąg <piotrdrag@gmail.com>, 2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2008-02-20 17:49+0100\n"
-"PO-Revision-Date: 2007-06-10 17:41+0200\n"
-"Last-Translator: Piotr Drąg <raven@pmail.pl>\n"
+"PO-Revision-Date: 2008-02-26 00:01+0200\n"
+"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,15 +36,15 @@ msgstr "Hasło jest zablokowane."
 
 #: libuser.c:303
 msgid "Password set, MD5 crypt."
-msgstr "Hasło jest ustawione, szyfrowane MD5."
+msgstr "Hasło zostało ustawione, szyfrowane MD5."
 
 #: libuser.c:306
 msgid "Password set, blowfish crypt."
-msgstr "Hasło jest ustawione, szyfrowane blowfish."
+msgstr "Hasło zostało ustawione, szyfrowane blowfish."
 
 #: libuser.c:308
 msgid "Password set, unknown crypt variant."
-msgstr "Hasło jest ustawione, nieznany wariant szyfrowania."
+msgstr "Hasło zostało ustawione, nieznany wariant szyfrowania."
 
 #: libuser.c:311
 msgid "Alternate authentication scheme in use."
@@ -52,7 +52,7 @@ msgstr "Używany jest alternatywny schemat uwierzytelniania."
 
 #: libuser.c:316
 msgid "Password set, DES crypt."
-msgstr "Hasło jest ustawione, szyfrowane DES."
+msgstr "Hasło zostało ustawione, szyfrowane DES."
 
 #: libuser.c:330
 #, c-format
@@ -67,11 +67,11 @@ msgstr "Nieznany użytkownik.\n"
 #: libuser.c:429
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr "%s: konto użytkownika nie posiada obsługi wiekowania hasła.\n"
+msgstr "%s: konto użytkownika nie obsługuje wygasania hasła.\n"
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
-msgstr "zatrzymaj niewygasłe tokeny uwierzytelaniania"
+msgstr "zatrzymaj niewygasłe tokeny uwierzytelniania"
 
 #: passwd.c:158
 msgid "delete the password for the named account (root only)"
@@ -130,7 +130,7 @@ msgstr "%s: błędny argument %s: %s\n"
 #: passwd.c:246
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
-msgstr "%s: może być określony tylko jeden z -l, -u, -d lub -S.\n"
+msgstr "%s: może być podany tylko jeden z -l, -u, -d lub -S.\n"
 
 #: passwd.c:255
 #, c-format
@@ -147,17 +147,17 @@ msgstr "Tylko root może to zrobić.\n"
 #: passwd.c:292
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
-msgstr "%s: tylko root może określić nazwę konta.\n"
+msgstr "%s: tylko root może podać nazwę konta.\n"
 
 #: passwd.c:301
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
-msgstr "%s: dostarczona nazwa użytkownika jest za długa.\n"
+msgstr "%s: podana nazwa użytkownika jest za długa.\n"
 
 #: passwd.c:311
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
-msgstr "%s: może zostać określona tylko jedna nazwa użytkownika.\n"
+msgstr "%s: może zostać podana tylko jedna nazwa użytkownika.\n"
 
 #: passwd.c:321
 #, c-format
@@ -213,7 +213,7 @@ msgstr "Błąd"
 #: passwd.c:453
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
-msgstr "Przystosowywanie danych wiekowania użytkownika %s.\n"
+msgstr "Przystosowywanie danych wygasania użytkownika %s.\n"
 
 #: passwd.c:469
 #, c-format
@@ -228,12 +228,12 @@ msgstr "%s: błąd podczas odczytywania ze standardowego wejścia: %s\n"
 #: passwd.c:498
 #, c-format
 msgid "%s: unable to start pam: %s\n"
-msgstr "%s: nie można uruchomić pam: %s\n"
+msgstr "%s: nie można uruchomić PAM: %s\n"
 
 #: passwd.c:511
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
-msgstr "%s: nie można ustawić TTY dla pam: %s\n"
+msgstr "%s: nie można ustawić TTY dla PAM: %s\n"
 
 #: passwd.c:522
 #, c-format
