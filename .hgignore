@@ -32,3 +32,5 @@ passwd.spec
 po/stamp-*
 passwd
 pwdstat
+po/remove-*
+passwd-*.tar.*
