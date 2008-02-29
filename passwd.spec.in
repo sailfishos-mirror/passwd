@@ -10,7 +10,8 @@ Version: @PACKAGE_VERSION@
 Release: 1%{?dist}
 License: BSD
 Group: System Environment/Base
-Source: %{name}-%{version}.tar.bz2
+URL: http://fedorahosted.org/passwd
+Source: https://fedorahosted.org/releases/p/a/%{name}/%{name}-%{version}.tar.bz2
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: pam >= 0.78, /etc/pam.d/system-auth
 %if %{WITH_SELINUX}
@@ -27,8 +28,6 @@ Requires: audit-libs >= 1.0.14
 The passwd package contains a system utility (passwd) which sets
 and/or changes passwords, using PAM (Pluggable Authentication
 Modules).
-
-To use passwd, you should have PAM installed on your system.
 
 %prep
 %setup -q -n %{name}-%{version}
