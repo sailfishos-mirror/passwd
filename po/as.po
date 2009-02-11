@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: as\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2008-02-20 17:49+0100\n"
+"POT-Creation-Date: 2009-02-11 15:00+0100\n"
 "PO-Revision-Date: 2007-04-17 15:21+0530\n"
 "Last-Translator: Amitakhya Phukan <aphukan@redhat.com>\n"
 "Language-Team: Assamese <assam@mm.assam-glug.org>\n"
@@ -48,29 +48,39 @@ msgstr "গুপ্তশব্দ নিৰ্দ্ধাৰিত কৰা 
 msgid "Password set, blowfish crypt."
 msgstr "গুপ্তশব্দ নিৰ্দ্ধাৰিত কৰা হ'ল, blowfish এৰে গুপুত কৰা হ'ল ।"
 
-#: libuser.c:308
+#: libuser.c:309
+#, fuzzy
+msgid "Password set, SHA256 crypt."
+msgstr "গুপ্তশব্দ নিৰ্দ্ধাৰিত কৰা হ'ল, MD5 এৰে গুপুত কৰা হ'ল ।"
+
+#: libuser.c:312
+#, fuzzy
+msgid "Password set, SHA512 crypt."
+msgstr "গুপ্তশব্দ নিৰ্দ্ধাৰিত কৰা হ'ল, MD5 এৰে গুপুত কৰা হ'ল ।"
+
+#: libuser.c:314
 msgid "Password set, unknown crypt variant."
 msgstr "গুপ্তশব্দ নিৰ্দ্ধাৰিত কৰা হ'ল, অজ্ঞাত গুপুত কৰা বিভেদক ।"
 
-#: libuser.c:311
+#: libuser.c:317
 msgid "Alternate authentication scheme in use."
 msgstr "বৈকল্পপিক প্ৰমাণীকৰণৰ আঁচনি ব্যৱহাৰত আছে ।"
 
-#: libuser.c:316
+#: libuser.c:322
 msgid "Password set, DES crypt."
 msgstr "গুপ্তশব্দ নিৰ্দ্ধাৰিত কৰা হ'ল, DES এৰে গুপুত কৰা হ'ল ।"
 
-#: libuser.c:330
+#: libuser.c:336
 #, c-format
 msgid "No password set.\n"
 msgstr "কোনো গুপ্তশবদ নিৰ্দ্ধাৰিত কৰা হোৱা নাই ।\n"
 
-#: libuser.c:334
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "অজ্ঞাত ব্যৱহাৰকৰোঁতা ।\n"
 
-#: libuser.c:429
+#: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: ব্যৱহাৰকৰোঁতাৰ হিচাপত গুপ্তশব্দ পুৰণি হোৱাৰ সমৰ্থন নাই ।\n"

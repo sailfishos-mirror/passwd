@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gu\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2008-02-20 17:49+0100\n"
+"POT-Creation-Date: 2009-02-11 15:00+0100\n"
 "PO-Revision-Date: 2006-12-13 19:15+0530\n"
 "Last-Translator: Ankit Patel <ankit@redhat.com>\n"
 "Language-Team: Gujarati <fedora-trans-gu@redhat.com>\n"
@@ -49,29 +49,39 @@ msgstr "પાસવર્ડ સુયોજિત, MD5 ક્રિપ્ટ."
 msgid "Password set, blowfish crypt."
 msgstr "પાસવર્ડ સુયોજિત, blowfish ક્રિપ્ટ."
 
-#: libuser.c:308
+#: libuser.c:309
+#, fuzzy
+msgid "Password set, SHA256 crypt."
+msgstr "પાસવર્ડ સુયોજિત, MD5 ક્રિપ્ટ."
+
+#: libuser.c:312
+#, fuzzy
+msgid "Password set, SHA512 crypt."
+msgstr "પાસવર્ડ સુયોજિત, MD5 ક્રિપ્ટ."
+
+#: libuser.c:314
 msgid "Password set, unknown crypt variant."
 msgstr "પાસવર્ડ સુયોજિત, અજ્ઞાત ક્રિપ્ટ ચલ."
 
-#: libuser.c:311
+#: libuser.c:317
 msgid "Alternate authentication scheme in use."
 msgstr "વૈકલ્પિક સત્તાધિકરણ પદ્ધતિ વપરાશમાં."
 
-#: libuser.c:316
+#: libuser.c:322
 msgid "Password set, DES crypt."
 msgstr "પાસવર્ડ સુયોજિત, DES ક્રિપ્ટ."
 
-#: libuser.c:330
+#: libuser.c:336
 #, c-format
 msgid "No password set.\n"
 msgstr "કોઈ પાસવર્ડ સુયોજિત નથી.\n"
 
-#: libuser.c:334
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "અજ્ઞાત વપરાશકર્તા.\n"
 
-#: libuser.c:429
+#: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: પાસવર્ડ એજીંગ માટે વપરાશકર્તા ખાતાને કોઈ આધાર નથી.\n"

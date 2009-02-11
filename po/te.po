@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: te\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2008-02-20 17:49+0100\n"
+"POT-Creation-Date: 2009-02-11 15:00+0100\n"
 "PO-Revision-Date: 2007-12-07 13:04+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -47,29 +47,39 @@ msgstr "MD5 క్రిప్ట్  లో,సంకేతపదం అమర�
 msgid "Password set, blowfish crypt."
 msgstr "బ్లోఫిష్ క్రిప్ట్  లో, సంకేతపదం అమర్చబడింది."
 
-#: libuser.c:308
+#: libuser.c:309
+#, fuzzy
+msgid "Password set, SHA256 crypt."
+msgstr "MD5 క్రిప్ట్  లో,సంకేతపదం అమర్చబడింది."
+
+#: libuser.c:312
+#, fuzzy
+msgid "Password set, SHA512 crypt."
+msgstr "MD5 క్రిప్ట్  లో,సంకేతపదం అమర్చబడింది."
+
+#: libuser.c:314
 msgid "Password set, unknown crypt variant."
 msgstr "సంకేతపదం అమర్చబడింది, తెలియని క్రిప్ట్  వేరియంట్ తో."
 
-#: libuser.c:311
+#: libuser.c:317
 msgid "Alternate authentication scheme in use."
 msgstr "తత్సంభంధ దృవీకరణ స్కీమ్ ఉపయోగంలో ఉంది."
 
-#: libuser.c:316
+#: libuser.c:322
 msgid "Password set, DES crypt."
 msgstr "DES క్రిప్టు నందు,సంకేతపదం అమర్చబడింది."
 
-#: libuser.c:330
+#: libuser.c:336
 #, c-format
 msgid "No password set.\n"
 msgstr "ఏ సంకేతపదం అమర్చబడలేదు.\n"
 
-#: libuser.c:334
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "తెలియని వినియోగదారి.\n"
 
-#: libuser.c:429
+#: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: వినియోగదారుని ఖాతా సంకేతపదం ఏజింగ్ కు ఏ మద్దతు కలిగిలేదు.\n"

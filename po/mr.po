@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mr\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2008-02-20 17:49+0100\n"
+"POT-Creation-Date: 2009-02-11 15:00+0100\n"
 "PO-Revision-Date: 2007-09-24 00:44+0530\n"
 "Last-Translator: sandeep shedmake <sandeep.shedmake@gmail.com>\n"
 "Language-Team: marathi\n"
@@ -50,29 +50,39 @@ msgstr "गुप्तशब्द निश्चित, MD5 क्रीप�
 msgid "Password set, blowfish crypt."
 msgstr "गुप्तशब्द निश्चित,blowfish क्रीप्ट."
 
-#: libuser.c:308
+#: libuser.c:309
+#, fuzzy
+msgid "Password set, SHA256 crypt."
+msgstr "गुप्तशब्द निश्चित, MD5 क्रीप्ट."
+
+#: libuser.c:312
+#, fuzzy
+msgid "Password set, SHA512 crypt."
+msgstr "गुप्तशब्द निश्चित, MD5 क्रीप्ट."
+
+#: libuser.c:314
 msgid "Password set, unknown crypt variant."
 msgstr "गुप्तशब्द निश्चित,अपरिचीत क्रीप्ट विकल्प."
 
-#: libuser.c:311
+#: libuser.c:317
 msgid "Alternate authentication scheme in use."
 msgstr "अगाऊ अधिप्रमाणन रचना वापरणीत आहे."
 
-#: libuser.c:316
+#: libuser.c:322
 msgid "Password set, DES crypt."
 msgstr "गुप्तशब्द निश्चित, DES क्रीप्ट."
 
-#: libuser.c:330
+#: libuser.c:336
 #, c-format
 msgid "No password set.\n"
 msgstr "गुप्तशब्द निश्चित नाही.\n"
 
-#: libuser.c:334
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "अपरिचीत वापर्कता.\n"
 
-#: libuser.c:429
+#: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: जुना होत असलेल्या गुप्तशब्दास वापर्कता खातेचे समर्थन नाही.\n"

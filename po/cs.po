@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.73\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2008-02-20 17:49+0100\n"
-"PO-Revision-Date: 2006-12-06 13:25+0100\n"
+"POT-Creation-Date: 2009-02-11 15:00+0100\n"
+"PO-Revision-Date: 2009-02-11 15:25+0100\n"
 "Last-Translator: Tomas Mraz <tmraz@redhat.com>\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -44,29 +44,37 @@ msgstr "Heslo nastaveno, šifrování MD5."
 msgid "Password set, blowfish crypt."
 msgstr "Heslo nastaveno, šifrování blowfish."
 
-#: libuser.c:308
+#: libuser.c:309
+msgid "Password set, SHA256 crypt."
+msgstr "Heslo nastaveno, šifrování SHA256."
+
+#: libuser.c:312
+msgid "Password set, SHA512 crypt."
+msgstr "Heslo nastaveno, šifrování SHA512."
+
+#: libuser.c:314
 msgid "Password set, unknown crypt variant."
 msgstr "Heslo nastaveno, neznámé šifrování."
 
-#: libuser.c:311
+#: libuser.c:317
 msgid "Alternate authentication scheme in use."
 msgstr "Použito jiné autentizační schéma."
 
-#: libuser.c:316
+#: libuser.c:322
 msgid "Password set, DES crypt."
 msgstr "Heslo nastaveno, šifrování DES."
 
-#: libuser.c:330
+#: libuser.c:336
 #, c-format
 msgid "No password set.\n"
 msgstr "Heslo není nastaveno.\n"
 
-#: libuser.c:334
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "Neznámý uživatel.\n"
 
-#: libuser.c:429
+#: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: uživatelský účet nemá podporu pro stárnutí hesla.\n"

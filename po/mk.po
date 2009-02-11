@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2008-02-20 17:49+0100\n"
+"POT-Creation-Date: 2009-02-11 15:00+0100\n"
 "PO-Revision-Date: 2007-07-14 09:56+0200\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mk@li.org>\n"
@@ -47,29 +47,39 @@ msgstr "Лозинката е поставена, криптоалгоритам
 msgid "Password set, blowfish crypt."
 msgstr "Лозинката е поставена, криптоалгоритам blowfish."
 
-#: libuser.c:308
+#: libuser.c:309
+#, fuzzy
+msgid "Password set, SHA256 crypt."
+msgstr "Лозинката е поставена, криптоалгоритам MD5."
+
+#: libuser.c:312
+#, fuzzy
+msgid "Password set, SHA512 crypt."
+msgstr "Лозинката е поставена, криптоалгоритам MD5."
+
+#: libuser.c:314
 msgid "Password set, unknown crypt variant."
 msgstr "Лозинката е поставена, непозната варијанта на криптоалгоритам."
 
-#: libuser.c:311
+#: libuser.c:317
 msgid "Alternate authentication scheme in use."
 msgstr "Се користи алтернативна шема на проверување автентичност."
 
-#: libuser.c:316
+#: libuser.c:322
 msgid "Password set, DES crypt."
 msgstr "Лозинката е поставена, криптоалгоритам DES."
 
-#: libuser.c:330
+#: libuser.c:336
 #, c-format
 msgid "No password set.\n"
 msgstr "Нема поставена лозинка.\n"
 
-#: libuser.c:334
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "Непознат корисник.\n"
 
-#: libuser.c:429
+#: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: корисничката сметка нема поддршка за стареење на лозинката.\n"

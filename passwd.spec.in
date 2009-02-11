@@ -4,7 +4,7 @@
 %if %{?WITH_AUDIT:0}%{!?WITH_AUDIT:1}
 %define WITH_AUDIT 1
 %endif
-Summary: The passwd utility for setting/changing passwords using PAM
+Summary: An utility for setting or changing passwords using PAM
 Name: passwd
 Version: @PACKAGE_VERSION@
 Release: 1%{?dist}
@@ -13,7 +13,7 @@ Group: System Environment/Base
 URL: http://fedorahosted.org/passwd
 Source: https://fedorahosted.org/releases/p/a/%{name}/%{name}-%{version}.tar.bz2
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-Requires: pam >= 0.78, /etc/pam.d/system-auth
+Requires: pam >= 1.0.90, /etc/pam.d/system-auth
 %if %{WITH_SELINUX}
 BuildRequires: libselinux-devel
 %endif
@@ -25,9 +25,9 @@ Requires: audit-libs >= 1.0.14
 %endif
 
 %description
-The passwd package contains a system utility (passwd) which sets
-and/or changes passwords, using PAM (Pluggable Authentication
-Modules).
+This package contains a system utility (passwd) which sets
+or changes passwords, using PAM (Pluggable Authentication
+Modules) library.
 
 %prep
 %setup -q -n %{name}-%{version}
@@ -64,6 +64,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* Wed Feb 11 2008 Tomas Mraz <tmraz@redhat.com> 0.76-1
+- identify SHA-256 and SHA-512 password hashes (#484994)
+
+* Tue Apr  8 2008 Tomas Mraz <tmraz@redhat.com> 0.75-2
+- add optional pam_gnome_keyring module to passwd pam
+  config (#441225)
+
 * Wed Feb 20 2008 Tomas Mraz <tmraz@redhat.com> 0.75-1
 - fix disabling SELinux and audit in spec (#433284)
 - remove obsolete no.po (#332121)

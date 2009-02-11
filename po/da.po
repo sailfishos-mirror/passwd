@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: da\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2008-02-20 17:49+0100\n"
+"POT-Creation-Date: 2009-02-11 15:00+0100\n"
 "PO-Revision-Date: 2007-04-15 12:16+0200\n"
 "Last-Translator: Keld Simonsen <keld@rap.dk>\n"
 "Language-Team:  <da@li.org>\n"
@@ -48,29 +48,39 @@ msgstr "Adgangskode sat, MD5-krypt."
 msgid "Password set, blowfish crypt."
 msgstr "Adgangskode sat, blowfish-krypt."
 
-#: libuser.c:308
+#: libuser.c:309
+#, fuzzy
+msgid "Password set, SHA256 crypt."
+msgstr "Adgangskode sat, MD5-krypt."
+
+#: libuser.c:312
+#, fuzzy
+msgid "Password set, SHA512 crypt."
+msgstr "Adgangskode sat, MD5-krypt."
+
+#: libuser.c:314
 msgid "Password set, unknown crypt variant."
 msgstr "Adgangskode sat, ukendt krypt-variant."
 
-#: libuser.c:311
+#: libuser.c:317
 msgid "Alternate authentication scheme in use."
 msgstr "Alternativ autentiseringsskema i brug."
 
-#: libuser.c:316
+#: libuser.c:322
 msgid "Password set, DES crypt."
 msgstr "Adgangskode sat, DES-krypt."
 
-#: libuser.c:330
+#: libuser.c:336
 #, c-format
 msgid "No password set.\n"
 msgstr "Ingen adgangskode sat.\n"
 
-#: libuser.c:334
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "Ukendt bruger.\n"
 
-#: libuser.c:429
+#: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: brugerkonto har ingen understøttelse for adgangskodeforældelse.\n"

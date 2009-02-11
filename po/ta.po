@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ta\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2008-02-20 17:49+0100\n"
+"POT-Creation-Date: 2009-02-11 15:00+0100\n"
 "PO-Revision-Date: 2006-12-14 18:14+0530\n"
 "Last-Translator: Felix <ifelix@redhat.com>\n"
 "Language-Team: Tamil <ta@li.org>\n"
@@ -49,29 +49,39 @@ msgstr "கடவுச்சொல் அமைத்தல், MD5 crypt."
 msgid "Password set, blowfish crypt."
 msgstr "கடவுச்சொல் அமைத்தல், blowfish crypt."
 
-#: libuser.c:308
+#: libuser.c:309
+#, fuzzy
+msgid "Password set, SHA256 crypt."
+msgstr "கடவுச்சொல் அமைத்தல், MD5 crypt."
+
+#: libuser.c:312
+#, fuzzy
+msgid "Password set, SHA512 crypt."
+msgstr "கடவுச்சொல் அமைத்தல், MD5 crypt."
+
+#: libuser.c:314
 msgid "Password set, unknown crypt variant."
 msgstr "கடவுச்சொல் அமைத்தல், தெரியாத crypt மாறி."
 
-#: libuser.c:311
+#: libuser.c:317
 msgid "Alternate authentication scheme in use."
 msgstr "மாற்று அங்கீகார திட்டம் பயனில் உள்ளது."
 
-#: libuser.c:316
+#: libuser.c:322
 msgid "Password set, DES crypt."
 msgstr "கடவுச்சொல் அமைத்தல், DES crypt."
 
-#: libuser.c:330
+#: libuser.c:336
 #, c-format
 msgid "No password set.\n"
 msgstr "கடவுச்சொல் அமைக்கப்படவில்லை.\n"
 
-#: libuser.c:334
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "தெரியாத பயனர்.\n"
 
-#: libuser.c:429
+#: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: பயனர் கணக்கு கடவுச்சொல் மூப்படைதலுக்கு துணையில்லை.\n"

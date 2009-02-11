@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kn\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2008-02-20 17:49+0100\n"
+"POT-Creation-Date: 2009-02-11 15:00+0100\n"
 "PO-Revision-Date: 2007-06-25 15:34+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -48,29 +48,39 @@ msgstr "ಗುಪ್ತಪದ ಸಂಯೋಜಿತಗೊಂಡಿದೆ, MD5 cr
 msgid "Password set, blowfish crypt."
 msgstr "ಗುಪ್ತಪದ ಸಂಯೋಜಿತಗೊಂಡಿದೆ, blowfish crypt."
 
-#: libuser.c:308
+#: libuser.c:309
+#, fuzzy
+msgid "Password set, SHA256 crypt."
+msgstr "ಗುಪ್ತಪದ ಸಂಯೋಜಿತಗೊಂಡಿದೆ, MD5 crypt."
+
+#: libuser.c:312
+#, fuzzy
+msgid "Password set, SHA512 crypt."
+msgstr "ಗುಪ್ತಪದ ಸಂಯೋಜಿತಗೊಂಡಿದೆ, MD5 crypt."
+
+#: libuser.c:314
 msgid "Password set, unknown crypt variant."
 msgstr "ಗುಪ್ತಪದ ಸಂಯೋಜಿತಗೊಂಡಿದೆ, ಗೊತ್ತಿರದ crypt ವೇರಿಯಂಟ್."
 
-#: libuser.c:311
+#: libuser.c:317
 msgid "Alternate authentication scheme in use."
 msgstr "ಪರ್ಯಾಯ ದೃಢೀಕರಣ ಸ್ಕೀಮ್ ಬಳಸಲಾಗುತ್ತಿದೆ."
 
-#: libuser.c:316
+#: libuser.c:322
 msgid "Password set, DES crypt."
 msgstr "ಗುಪ್ತಪದ ಸಂಯೋಜಿತಗೊಂಡಿದೆ, DES crypt."
 
-#: libuser.c:330
+#: libuser.c:336
 #, c-format
 msgid "No password set.\n"
 msgstr "ಯಾವುದೇ ಗುಪ್ತಪದ ಸಂಯೋಜಿತಗೊಂಡಿಲ್ಲ.\n"
 
-#: libuser.c:334
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "ಗೊತ್ತಿರದ ಬಳಕೆದಾರ.\n"
 
-#: libuser.c:429
+#: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: ಗುಪ್ತಪದವು ಮುಪ್ಪಾಗದಂತೆ ತಡೆಯಲು ಬಳಕೆದಾರನ ಖಾತೆಗೆ ಯಾವ ಬೆಂಬಲವೂ ಇಲ್ಲ.\n"

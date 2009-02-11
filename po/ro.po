@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ro\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2008-02-20 17:49+0100\n"
+"POT-Creation-Date: 2009-02-11 15:00+0100\n"
 "PO-Revision-Date: 2007-04-13 19:13+0300\n"
 "Last-Translator: MIrcea Daniel <visez.trance@gmail.com>\n"
 "Language-Team:  <ro@li.org>\n"
@@ -47,29 +47,39 @@ msgstr "Parolă setată, criptare MD5."
 msgid "Password set, blowfish crypt."
 msgstr "Parolă setată, criptare blowfish."
 
-#: libuser.c:308
+#: libuser.c:309
+#, fuzzy
+msgid "Password set, SHA256 crypt."
+msgstr "Parolă setată, criptare MD5."
+
+#: libuser.c:312
+#, fuzzy
+msgid "Password set, SHA512 crypt."
+msgstr "Parolă setată, criptare MD5."
+
+#: libuser.c:314
 msgid "Password set, unknown crypt variant."
 msgstr "Parolă setată, tip de criptare necunoscut."
 
-#: libuser.c:311
+#: libuser.c:317
 msgid "Alternate authentication scheme in use."
 msgstr "Plan de autentificare alternativ în folosinţă."
 
-#: libuser.c:316
+#: libuser.c:322
 msgid "Password set, DES crypt."
 msgstr "Parolă setată, criptare DES."
 
-#: libuser.c:330
+#: libuser.c:336
 #, c-format
 msgid "No password set.\n"
 msgstr "Nu este setată nici o parolă.\n"
 
-#: libuser.c:334
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "Utilizator necunoscut.\n"
 
-#: libuser.c:429
+#: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: contul utilizatorului nu are suport pentru expirarea parolei.\n"

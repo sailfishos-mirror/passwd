@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ja\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2008-02-20 17:49+0100\n"
+"POT-Creation-Date: 2009-02-11 15:00+0100\n"
 "PO-Revision-Date: 2007-03-08 16:53+1000\n"
 "Last-Translator: kiyoto james hashida <khashida@brisbane.redhat.com>\n"
 "Language-Team:  <ja@li.org>\n"
@@ -51,29 +51,39 @@ msgstr "パスワード設定済み、MD5 暗号化。"
 msgid "Password set, blowfish crypt."
 msgstr "パスワード設定済み、blowfish 暗号化。"
 
-#: libuser.c:308
+#: libuser.c:309
+#, fuzzy
+msgid "Password set, SHA256 crypt."
+msgstr "パスワード設定済み、MD5 暗号化。"
+
+#: libuser.c:312
+#, fuzzy
+msgid "Password set, SHA512 crypt."
+msgstr "パスワード設定済み、MD5 暗号化。"
+
+#: libuser.c:314
 msgid "Password set, unknown crypt variant."
 msgstr "パスワード設定済み、不明な暗号化変種。"
 
-#: libuser.c:311
+#: libuser.c:317
 msgid "Alternate authentication scheme in use."
 msgstr "代替の認証方針が使用されています。"
 
-#: libuser.c:316
+#: libuser.c:322
 msgid "Password set, DES crypt."
 msgstr "パスワード設定済み、DES 暗号化"
 
-#: libuser.c:330
+#: libuser.c:336
 #, c-format
 msgid "No password set.\n"
 msgstr "パスワードの設定なし。\n"
 
-#: libuser.c:334
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "不明なユーザー。\n"
 
-#: libuser.c:429
+#: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr ""

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ka\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2008-02-20 17:49+0100\n"
+"POT-Creation-Date: 2009-02-11 15:00+0100\n"
 "PO-Revision-Date: 2007-03-05 21:21+0400\n"
 "Last-Translator: George Machitidze <giomac@gmail.com>\n"
 "Language-Team: Georgian <guiasher@mes.gov.ge>\n"
@@ -48,29 +48,39 @@ msgstr "პაროლი დაყენებულია, MD5 შიფრ�
 msgid "Password set, blowfish crypt."
 msgstr "პაროლი დაყენებულია, blowfish შიფრაცია."
 
-#: libuser.c:308
+#: libuser.c:309
+#, fuzzy
+msgid "Password set, SHA256 crypt."
+msgstr "პაროლი დაყენებულია, MD5 შიფრაცია."
+
+#: libuser.c:312
+#, fuzzy
+msgid "Password set, SHA512 crypt."
+msgstr "პაროლი დაყენებულია, MD5 შიფრაცია."
+
+#: libuser.c:314
 msgid "Password set, unknown crypt variant."
 msgstr "პაროლი დაყენებულია, შიფრაციის უცნობი ვარიანტი."
 
-#: libuser.c:311
+#: libuser.c:317
 msgid "Alternate authentication scheme in use."
 msgstr "ავთენტიკაციის ალტერნატიული ქსემა გამოყენებაშია."
 
-#: libuser.c:316
+#: libuser.c:322
 msgid "Password set, DES crypt."
 msgstr "პაროლი დაყენებულია, DES შიფრაცია."
 
-#: libuser.c:330
+#: libuser.c:336
 #, c-format
 msgid "No password set.\n"
 msgstr "პაროლი არაა დაყენებული.\n"
 
-#: libuser.c:334
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "მომხმარებელი უცნობია.\n"
 
-#: libuser.c:429
+#: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr ""

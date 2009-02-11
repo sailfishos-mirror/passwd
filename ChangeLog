@@ -1,3 +1,11 @@
+2009-02-11 Tomas Mraz <tmraz@redhat.com>
+
+	* configure.ac: Version 0.76
+	* libuser.c (pwdb_display_status): Add support for SHA512, SHA256
+	hashes.
+	* po/*.po*: Updated translations.
+	* passwd.pamd: Add optional pam_gnome_keyring module.
+
 2008-02-20 Tomas Mraz <tmraz@redhat.com>
 
 	* Makefile.am: Build cleanup.

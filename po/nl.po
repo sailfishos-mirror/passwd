@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: password\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2008-02-20 17:49+0100\n"
+"POT-Creation-Date: 2009-02-11 15:00+0100\n"
 "PO-Revision-Date: 2007-01-09 23:12+0100\n"
 "Last-Translator: Peter van Egdom <p.van.egdom@gmail.com>\n"
 "Language-Team: Dutch <vertaling@nl.linux.org>\n"
@@ -46,29 +46,39 @@ msgstr "Wachtwoord ingesteld, MD5 versleuteling."
 msgid "Password set, blowfish crypt."
 msgstr "Wachtwoord ingesteld, blowfish versleuteling."
 
-#: libuser.c:308
+#: libuser.c:309
+#, fuzzy
+msgid "Password set, SHA256 crypt."
+msgstr "Wachtwoord ingesteld, MD5 versleuteling."
+
+#: libuser.c:312
+#, fuzzy
+msgid "Password set, SHA512 crypt."
+msgstr "Wachtwoord ingesteld, MD5 versleuteling."
+
+#: libuser.c:314
 msgid "Password set, unknown crypt variant."
 msgstr "Wachtwoord ingesteld, onbekende versleuteling."
 
-#: libuser.c:311
+#: libuser.c:317
 msgid "Alternate authentication scheme in use."
 msgstr "Alternatief authenticatieschema in gebruik."
 
-#: libuser.c:316
+#: libuser.c:322
 msgid "Password set, DES crypt."
 msgstr "Wachtwoord ingesteld, DES versleuteling."
 
-#: libuser.c:330
+#: libuser.c:336
 #, c-format
 msgid "No password set.\n"
 msgstr "Geen wachtwoord ingesteld.\n"
 
-#: libuser.c:334
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "Onbekende gebruiker.\n"
 
-#: libuser.c:429
+#: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr ""

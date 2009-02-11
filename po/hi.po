@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hi\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2008-02-20 17:49+0100\n"
+"POT-Creation-Date: 2009-02-11 15:00+0100\n"
 "PO-Revision-Date: 2007-04-17 12:25+0530\n"
 "Last-Translator: hi <rranjan@redhat.com>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -47,29 +47,39 @@ msgstr "शब्दकूट सेट, MD5 गोपित."
 msgid "Password set, blowfish crypt."
 msgstr "शब्दकूट सेट, blowfish गोपित."
 
-#: libuser.c:308
+#: libuser.c:309
+#, fuzzy
+msgid "Password set, SHA256 crypt."
+msgstr "शब्दकूट सेट, MD5 गोपित."
+
+#: libuser.c:312
+#, fuzzy
+msgid "Password set, SHA512 crypt."
+msgstr "शब्दकूट सेट, MD5 गोपित."
+
+#: libuser.c:314
 msgid "Password set, unknown crypt variant."
 msgstr "शब्दकूट सेट, अज्ञात गोपित चर."
 
-#: libuser.c:311
+#: libuser.c:317
 msgid "Alternate authentication scheme in use."
 msgstr "प्रयोग में वैकल्पिक सत्यापन योजना."
 
-#: libuser.c:316
+#: libuser.c:322
 msgid "Password set, DES crypt."
 msgstr "शब्दकूट सेट, DES गोपित."
 
-#: libuser.c:330
+#: libuser.c:336
 #, c-format
 msgid "No password set.\n"
 msgstr "कोई शब्दकूट सेट नहीं.\n"
 
-#: libuser.c:334
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "अज्ञात उपयोक्ता.\n"
 
-#: libuser.c:429
+#: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: उपयोक्ता खाता के खाते में शब्दकूट एजिंग के लिये कोई समर्थन नहीं है.\n"

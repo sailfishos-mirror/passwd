@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: passwd.tip\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2008-10-03 01:53+0000\n"
+"POT-Creation-Date: 2009-02-11 15:00+0100\n"
 "PO-Revision-Date: 2008-10-06 11:53+1000\n"
 "Last-Translator: Terry Chuang <tchuang@redhat.com>\n"
 "Language-Team: Traditional Chinese <zh@li.org>\n"
@@ -16,238 +16,245 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../libuser.c:88
+#: libuser.c:88
 #, c-format
 msgid "%s: libuser initialization error:"
 msgstr "%s：libuser 初始化錯誤："
 
-#: ../libuser.c:165
+#: libuser.c:165
 msgid "Warning: unlocked password would be empty."
 msgstr "警告：未鎖定的密碼會是空的。"
 
-#: ../libuser.c:279
+#: libuser.c:279
 msgid "Corrupted passwd entry."
 msgstr "損毀的 passwd 項目。"
 
-#: ../libuser.c:296
+#: libuser.c:296
 msgid "Empty password."
 msgstr "空的密碼。"
 
-#: ../libuser.c:299
+#: libuser.c:299
 msgid "Password locked."
 msgstr "密碼已鎖定。"
 
-#: ../libuser.c:303
+#: libuser.c:303
 msgid "Password set, MD5 crypt."
 msgstr "密碼已設定，MD5 加密法。"
 
-#: ../libuser.c:306
+#: libuser.c:306
 msgid "Password set, blowfish crypt."
 msgstr "密碼已設定，blowfish 加密法。"
 
-#: ../libuser.c:308
+#: libuser.c:309
+#, fuzzy
+msgid "Password set, SHA256 crypt."
+msgstr "密碼已設定，MD5 加密法。"
+
+#: libuser.c:312
+#, fuzzy
+msgid "Password set, SHA512 crypt."
+msgstr "密碼已設定，MD5 加密法。"
+
+#: libuser.c:314
 msgid "Password set, unknown crypt variant."
 msgstr "密碼已設定，不明的加密類型。"
 
-#: ../libuser.c:311
+#: libuser.c:317
 msgid "Alternate authentication scheme in use."
 msgstr "其它驗證格式正使用中。"
 
-#: ../libuser.c:316
+#: libuser.c:322
 msgid "Password set, DES crypt."
 msgstr "密碼已設定，DES 加密法。"
 
-#: ../libuser.c:330
+#: libuser.c:336
 #, c-format
 msgid "No password set.\n"
 msgstr "密碼未設定。\n"
 
-#: ../libuser.c:334
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "不明用戶。\n"
 
-#: ../libuser.c:429
+#: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s：用戶帳號不支援密碼 aging。\n"
 
-#: ../passwd.c:156
+#: passwd.c:156
 msgid "keep non-expired authentication tokens"
 msgstr "保留未過期的驗證 token"
 
-#: ../passwd.c:158
+#: passwd.c:158
 msgid "delete the password for the named account (root only)"
 msgstr "刪除 named 帳號的密碼（只有 root 可執行）"
 
-#: ../passwd.c:160
+#: passwd.c:160
 msgid "lock the named account (root only)"
 msgstr "鎖定 named 帳號（只有 root 可執行）"
 
-#: ../passwd.c:162
+#: passwd.c:162
 msgid "unlock the named account (root only)"
 msgstr "解開 named 帳號（只有 root 可執行）"
 
-#: ../passwd.c:164
+#: passwd.c:164
 msgid "force operation"
 msgstr "強制作業"
 
-#: ../passwd.c:166
+#: passwd.c:166
 msgid "maximum password lifetime (root only)"
 msgstr "最大密碼有效期限（只有 root 可執行）"
 
-#: ../passwd.c:168
+#: passwd.c:168
 msgid "minimum password lifetime (root only)"
 msgstr "最小密碼有效期限（只有 root 可執行）"
 
-#: ../passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
+#: passwd.c:170
+msgid ""
+"number of days warning users receives before password expiration (root only)"
 msgstr "用戶在密碼過期前收到警告的天數（只有 root 可執行）"
 
-#: ../passwd.c:173
+#: passwd.c:173
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
 msgstr "帳號在密碼過期後即將被停用前的天數（只有 root 可執行）"
 
-#: ../passwd.c:176
+#: passwd.c:176
 msgid "report password status on the named account (root only)"
 msgstr "回報 named 帳號上的密碼狀態（只有 root 可執行）"
 
-#: ../passwd.c:178
+#: passwd.c:178
 msgid "read new tokens from stdin (root only)"
 msgstr "由 stdin 讀取新的 token（只有 root 可執行）"
 
-#: ../passwd.c:185
+#: passwd.c:185
 msgid "[OPTION...] <accountName>"
 msgstr "[OPTION...] <accountName>"
 
-#: ../passwd.c:188
+#: passwd.c:188
 #, c-format
 msgid "%s: bad argument %s: %s\n"
 msgstr "%s：無效的引數 %s：%s\n"
 
-#: ../passwd.c:246
+#: passwd.c:246
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr "%s：只可指定 -l、-u、-d、-S 中的其中一個。\n"
 
-#: ../passwd.c:255
+#: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr "%s：無法同時使用一個 -l、-u、-d、-S 以及一個 -i、-n、-w、-x。\n"
 
-#: ../passwd.c:279
+#: passwd.c:279
 #, c-format
 msgid "Only root can do that.\n"
 msgstr "只有 root 可這麼作。\n"
 
-#: ../passwd.c:292
+#: passwd.c:292
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
 msgstr "%s：只有 root 可指定用戶名稱。\n"
 
-#: ../passwd.c:301
+#: passwd.c:301
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
 msgstr "%s：用戶名稱過長。\n"
 
-#: ../passwd.c:311
+#: passwd.c:311
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
 msgstr "%s：只可指定一組用戶名稱。\n"
 
-#: ../passwd.c:321
+#: passwd.c:321
 #, c-format
 msgid "%s: This option requires a user name.\n"
 msgstr "%s：此選項需要一組用戶名稱。\n"
 
-#: ../passwd.c:332
+#: passwd.c:332
 #, c-format
 msgid "%s: Can not identify you!\n"
 msgstr "%s：您無法通過驗證！\n"
 
-#: ../passwd.c:341 ../passwd.c:376
+#: passwd.c:341 passwd.c:376
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s：不明的用戶名稱 '%s'。\n"
 
-#: ../passwd.c:393
+#: passwd.c:393
 #, c-format
 msgid "%s: %s is not authorized to change the password of %s\n"
 msgstr "%s：%s 沒有更改 %s 密碼的權限\n"
 
-#: ../passwd.c:406
+#: passwd.c:406
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr "鎖定使用者 %s 的密碼。\n"
 
-#: ../passwd.c:410 ../passwd.c:422 ../passwd.c:436 ../passwd.c:456
+#: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
 msgid "Success"
 msgstr "成功"
 
-#: ../passwd.c:410 ../passwd.c:425
+#: passwd.c:410 passwd.c:425
 msgid "Error (password not set?)"
 msgstr "錯誤（密碼是否尚未被設置？）"
 
-#: ../passwd.c:418
+#: passwd.c:418
 #, c-format
 msgid "Unlocking password for user %s.\n"
 msgstr "解開使用者 %s 的密碼。\n"
 
-#: ../passwd.c:424
+#: passwd.c:424
 msgid "Unsafe operation (use -f to force)"
 msgstr "不安全的作業（使用 -f 來強制）"
 
-#: ../passwd.c:433
+#: passwd.c:433
 #, c-format
 msgid "Removing password for user %s.\n"
 msgstr "移除使用者 %s 的密碼。\n"
 
-#: ../passwd.c:436 ../passwd.c:456
+#: passwd.c:436 passwd.c:456
 msgid "Error"
 msgstr "錯誤"
 
-#: ../passwd.c:453
+#: passwd.c:453
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
 msgstr "調整使用者 %s 的期限資料。\n"
 
-#. The standard behavior follows.  At this point we know for whom
-#. * we are going to change a password, so let the invoking user
-#. * know what's going on.
-#: ../passwd.c:469
+#: passwd.c:469
 #, c-format
 msgid "Changing password for user %s.\n"
 msgstr "更改使用者 %s 的密碼。\n"
 
-#: ../passwd.c:481
+#: passwd.c:481
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s：由 stdin 讀取時發生錯誤：%s\n"
 
-#: ../passwd.c:498
+#: passwd.c:498
 #, c-format
 msgid "%s: unable to start pam: %s\n"
 msgstr "%s：無法啟用 pam：%s\n"
 
-#: ../passwd.c:511
+#: passwd.c:511
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
 msgstr "%s：無法為 pam 設置 tty：%s\n"
 
-#: ../passwd.c:522
+#: passwd.c:522
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
 msgstr "%s：無法設置 failure delay：%s\n"
 
-#: ../passwd.c:540
+#: passwd.c:540
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
 msgstr "%s：已成功更新過期的驗證 token。\n"
 
-#: ../passwd.c:546
+#: passwd.c:546
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s：所有驗證 token 都已成功更新。\n"
-

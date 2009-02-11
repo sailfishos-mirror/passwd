@@ -304,6 +304,12 @@ pwdb_display_status(const char *username)
 				} else if (strncmp(current, "$2a$", 4) ==
 					   0) {
 					msg = _("Password set, blowfish crypt.");
+				} else if (strncmp(current, "$5$", 3) ==
+					   0) {
+					msg = _("Password set, SHA256 crypt.");
+				} else if (strncmp(current, "$6$", 3) ==
+					   0) {
+					msg = _("Password set, SHA512 crypt.");
 				} else {
 					msg = _("Password set, unknown crypt variant.");
 				}

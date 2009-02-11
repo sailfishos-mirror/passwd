@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: or\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2008-02-20 17:49+0100\n"
+"POT-Creation-Date: 2009-02-11 15:00+0100\n"
 "PO-Revision-Date: 2006-12-13 17:27+0530\n"
 "Last-Translator: Subhransu Behera <sbehera@redhat.com>\n"
 "Language-Team: Oriya <oriya-group@lists.sarovar.org>\n"
@@ -49,29 +49,39 @@ msgstr "ପ୍ରବେଶ ସଙ୍କେତ ବିନ୍ଯାସ କରନ୍
 msgid "Password set, blowfish crypt."
 msgstr "ପ୍ରବେଶ ସଙ୍କେତ ବିନ୍ଯାସ କରନ୍ତୁ, blowfish ଗୋପନୀୟତା"
 
-#: libuser.c:308
+#: libuser.c:309
+#, fuzzy
+msgid "Password set, SHA256 crypt."
+msgstr "ପ୍ରବେଶ ସଙ୍କେତ ବିନ୍ଯାସ କରନ୍ତୁ, MD5 ଗୋପନୀୟତା"
+
+#: libuser.c:312
+#, fuzzy
+msgid "Password set, SHA512 crypt."
+msgstr "ପ୍ରବେଶ ସଙ୍କେତ ବିନ୍ଯାସ କରନ୍ତୁ, MD5 ଗୋପନୀୟତା"
+
+#: libuser.c:314
 msgid "Password set, unknown crypt variant."
 msgstr "ପ୍ରବେଶ ସଙ୍କେତ ବିନ୍ଯାସ କରନ୍ତୁ, ଅଜଣା ଗୋପନୀୟତା ଚଳ"
 
-#: libuser.c:311
+#: libuser.c:317
 msgid "Alternate authentication scheme in use."
 msgstr "ବ୍ଯବହୃତ ପର୍ଯ୍ଯାୟକ୍ରମିକ ବୈଧିକରଣ ବିବରଣିକା।"
 
-#: libuser.c:316
+#: libuser.c:322
 msgid "Password set, DES crypt."
 msgstr "ପ୍ରବେଶ ସଙ୍କେତ ବିନ୍ଯାସ କରନ୍ତୁ, DES ଗୋପନୀୟତା"
 
-#: libuser.c:330
+#: libuser.c:336
 #, c-format
 msgid "No password set.\n"
 msgstr "କୌଣସି ପ୍ରବେଶ ସଙ୍କେତ ବିନ୍ଯାସ କରାଯାଇ ନାହିଁ।\n"
 
-#: libuser.c:334
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "ଅଜଣା ଚାଳକ।\n"
 
-#: libuser.c:429
+#: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: ଚାଳକ ହିସାବ ଖାତାରେ ପ୍ରବେଶ ସଙ୍କେତ ବର୍ଦ୍ଧନ ପାଇଁ କୌଣସି ସମର୍ଥନ ନାହିଁ।\n"
