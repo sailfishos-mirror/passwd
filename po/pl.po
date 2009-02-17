@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2008-02-26 00:01+0200\n"
+"PO-Revision-Date: 2009-02-17 23:55+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -43,14 +43,12 @@ msgid "Password set, blowfish crypt."
 msgstr "Hasło zostało ustawione, szyfrowane blowfish."
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "Hasło zostało ustawione, szyfrowane MD5."
+msgstr "Hasło zostało ustawione, szyfrowane SHA256."
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "Hasło zostało ustawione, szyfrowane MD5."
+msgstr "Hasło zostało ustawione, szyfrowane SHA512."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
