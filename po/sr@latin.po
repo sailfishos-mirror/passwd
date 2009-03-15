@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: passwd 0.73\n"
+"Project-Id-Version: passwd 0.76\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2007-01-13 00:20-0000\n"
+"PO-Revision-Date: 2009-03-15 14:10+0100\n"
 "Last-Translator: Miloš Komarčević <kmilos@gmail.com>\n"
 "Language-Team: Serbian (sr) <fedora@prevod.org>\n"
 "MIME-Version: 1.0\n"
@@ -47,14 +47,12 @@ msgid "Password set, blowfish crypt."
 msgstr "Lozinka je postavljena, Blowfish šifriranje."
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "Lozinka je postavljena, MD5 šifriranje."
+msgstr "Lozinka je postavljena, SHA256 šifriranje."
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "Lozinka je postavljena, MD5 šifriranje."
+msgstr "Lozinka je postavljena, SHA512 šifriranje."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
@@ -81,7 +79,7 @@ msgstr "Nepoznati korisnik.\n"
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr "%s: korisnički nalog nema podršku za zastarivanje važenja lozinke.\n"
+msgstr "%s: korisnički nalog nema podršku za zastarevanje važenja lozinke.\n"
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
@@ -140,12 +138,12 @@ msgstr "[OPCIJA...] <imeNaloga>"
 #: passwd.c:188
 #, c-format
 msgid "%s: bad argument %s: %s\n"
-msgstr "%s: loša argument %s: %s\n"
+msgstr "%s: loš argument %s: %s\n"
 
 #: passwd.c:246
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
-msgstr "%s: Samo jedna od -l, -u, -d, -S može biti navedena.\n"
+msgstr "%s: Samo jedna od -l, -u, -d, -S opcija sme biti navedena.\n"
 
 #: passwd.c:255
 #, c-format
@@ -205,7 +203,7 @@ msgstr "Uspeh"
 
 #: passwd.c:410 passwd.c:425
 msgid "Error (password not set?)"
-msgstr "Greška (možda lozinka nije postavljena?)"
+msgstr "Greška (lozinka nije postavljena?)"
 
 #: passwd.c:418
 #, c-format
@@ -253,7 +251,7 @@ msgstr "%s: nije moguće postaviti tty za pam: %s\n"
 #: passwd.c:522
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
-msgstr "%s: nije moguće postaviti odlaganje neuspeha : %s\n"
+msgstr "%s: nije moguće postaviti odlaganje neuspeha: %s\n"
 
 #: passwd.c:540
 #, c-format
