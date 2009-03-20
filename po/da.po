@@ -1,23 +1,22 @@
-# translation of da.po to
+# Danish translation of passwd
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
-# Automatically generated, 2006.
 # Copyright Magnus Larsson, <fedoratrans@gmail.com>, 2007.
 # Keld Simonsen <keld@rap.dk>, 2007.
+# Kris Thomsen <lakristho@gmail.com>, 2009.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: da\n"
-"Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
+"Project-Id-Version: passwd\n"
+"Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2007-04-15 12:16+0200\n"
-"Last-Translator: Keld Simonsen <keld@rap.dk>\n"
-"Language-Team:  <da@li.org>\n"
+"PO-Revision-Date: 2009-03-20 02:49+0100\n"
+"Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: libuser.c:88
 #, c-format
@@ -42,33 +41,31 @@ msgstr "Adgangskode låst."
 
 #: libuser.c:303
 msgid "Password set, MD5 crypt."
-msgstr "Adgangskode sat, MD5-krypt."
+msgstr "Adgangskode sat, MD5-krypteret."
 
 #: libuser.c:306
 msgid "Password set, blowfish crypt."
-msgstr "Adgangskode sat, blowfish-krypt."
+msgstr "Adgangskode sat, blowfish-krypteret."
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "Adgangskode sat, MD5-krypt."
+msgstr "Adgangskode sat, SHA256-krypteret."
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "Adgangskode sat, MD5-krypt."
+msgstr "Adgangskode sat, SHA512-krypteret."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
-msgstr "Adgangskode sat, ukendt krypt-variant."
+msgstr "Adgangskode sat, ukendt krypteringsvariant."
 
 #: libuser.c:317
 msgid "Alternate authentication scheme in use."
-msgstr "Alternativ autentiseringsskema i brug."
+msgstr "Alternativ godkendelsesskema i brug."
 
 #: libuser.c:322
 msgid "Password set, DES crypt."
-msgstr "Adgangskode sat, DES-krypt."
+msgstr "Adgangskode sat, DES-krypteret."
 
 #: libuser.c:336
 #, c-format
@@ -87,7 +84,7 @@ msgstr "%s: brugerkonto har ingen understøttelse for adgangskodeforældelse.\n"
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
-msgstr "behold ikke-udløbne autentisieringselementer"
+msgstr "behold ikke-udløbne godkendelsesnøgler"
 
 #: passwd.c:158
 msgid "delete the password for the named account (root only)"
@@ -117,8 +114,7 @@ msgstr "minimal levetid for adgangskode (kun root)"
 msgid ""
 "number of days warning users receives before password expiration (root only)"
 msgstr ""
-"antal dage med advarseler som bruger får inden adgangskoden udløber (kun "
-"root)"
+"antal dage brugere får advarsler inden adgangskoden udløber (kun root)"
 
 #: passwd.c:173
 msgid ""
@@ -133,11 +129,11 @@ msgstr "rapportér adgangskodestatus på named-kontoen (kun root)"
 
 #: passwd.c:178
 msgid "read new tokens from stdin (root only)"
-msgstr "læs nye elementer fra stdin (kun root)"
+msgstr "læs nye nøgler fra standardinddata (kun root)"
 
 #: passwd.c:185
 msgid "[OPTION...] <accountName>"
-msgstr "[FLAG...] <kontoNavn>"
+msgstr "[TILVALG...] <kontoNavn>"
 
 #: passwd.c:188
 #, c-format
@@ -152,8 +148,7 @@ msgstr "%s: Kun en af -l, -u, -d, -S må angives.\n"
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s: Kan ikke have én af -l, -u, -d, -S sammen med én af -i, -n, -w, -x.\n"
+msgstr "%s: Kan ikke kombinere én af -l, -u, -d, -S sammen med én af -i, -n, -w, -x.\n"
 
 #: passwd.c:279
 #, c-format
@@ -178,7 +173,7 @@ msgstr "%s: Kun én bruger kan angives.\n"
 #: passwd.c:321
 #, c-format
 msgid "%s: This option requires a user name.\n"
-msgstr "%s: Dette flag kræver et brugernavn.\n"
+msgstr "%s: Dette tilvalg kræver et brugernavn.\n"
 
 #: passwd.c:332
 #, c-format
@@ -229,7 +224,7 @@ msgstr "Fejl"
 #: passwd.c:453
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
-msgstr "Justerer for forældelsesdata for bruger %s.\n"
+msgstr "Ændrer udløbsdato for konto %s.\n"
 
 #: passwd.c:469
 #, c-format
@@ -259,9 +254,9 @@ msgstr "%s: kan ikke sætte fejlforsinkelse: %s\n"
 #: passwd.c:540
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr "%s: udløbne autentiseringselementer opdateredes.\n"
+msgstr "%s: udløbne godkendelsesnøgler opdateret med succes.\n"
 
 #: passwd.c:546
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
-msgstr "%s: alle autentiseringelementer opdateredes.\n"
+msgstr "%s: alle godkendelsesnøgler opdateret med succes.\n"
