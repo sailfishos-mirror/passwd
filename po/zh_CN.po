@@ -1,20 +1,23 @@
+# translation of passwd.tip.po to Simplified Chinese
 # Chinese translations for passwd package
 # passwd 软件包的简体中文翻译.
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
-# Automatically generated, 2006.
 #
+# Automatically generated, 2006.
+# Leah Liu <lliu@redhat.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: passwd 0.73\n"
+"Project-Id-Version: passwd.tip\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2006-12-22 11:21+0800\n"
-"Last-Translator: QiuQiu <qiuqiu_translation@126.com>\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2009-04-01 21:38+1000\n"
+"Last-Translator: Leah Liu <lliu@redhat.com>\n"
+"Language-Team: Simplified Chinese <zh@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=GB2312\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: libuser.c:88
 #, c-format
@@ -23,7 +26,7 @@ msgstr "%s：libuser初始化错误："
 
 #: libuser.c:165
 msgid "Warning: unlocked password would be empty."
-msgstr "警告：未锁定的口令将是空的。"
+msgstr "警告：未锁定的密码将是空的。"
 
 #: libuser.c:279
 msgid "Corrupted passwd entry."
@@ -31,33 +34,31 @@ msgstr "错误的passwd条目。"
 
 #: libuser.c:296
 msgid "Empty password."
-msgstr "口令为空。"
+msgstr "密码为空。"
 
 #: libuser.c:299
 msgid "Password locked."
-msgstr "口令已被锁定。"
+msgstr "密码已被锁定。"
 
 #: libuser.c:303
 msgid "Password set, MD5 crypt."
-msgstr "口令已设置，使用MD5加密。"
+msgstr "密码已设置，使用MD5加密。"
 
 #: libuser.c:306
 msgid "Password set, blowfish crypt."
-msgstr "口令已设置，使用blowfish进行加密。"
+msgstr "密码已设置，使用blowfish进行加密。"
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "口令已设置，使用MD5加密。"
+msgstr "密码已设置，使用 SHA256 加密。"
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "口令已设置，使用MD5加密。"
+msgstr "密码已设置，使用 SHA512 加密。"
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
-msgstr "口令已设置，加密方式未知。"
+msgstr "密码已设置，加密方式未知。"
 
 #: libuser.c:317
 msgid "Alternate authentication scheme in use."
@@ -65,12 +66,12 @@ msgstr "更改当前使用的认证方案。"
 
 #: libuser.c:322
 msgid "Password set, DES crypt."
-msgstr "口令已设置，使用DES进行加密。"
+msgstr "密码已设置，使用DES进行加密。"
 
 #: libuser.c:336
 #, c-format
 msgid "No password set.\n"
-msgstr "口令未设置。\n"
+msgstr "密码未设置。\n"
 
 #: libuser.c:340
 #, c-format
@@ -80,7 +81,7 @@ msgstr "未知用户。\n"
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr "%s： 用户帐号不支持口令老化功能。\n"
+msgstr "%s： 用户帐号不支持密码老化功能。\n"
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
@@ -88,7 +89,7 @@ msgstr "保持身份验证令牌不过期"
 
 #: passwd.c:158
 msgid "delete the password for the named account (root only)"
-msgstr "删除已命名帐号的口令（只有根用户才能进行此操作）"
+msgstr "删除已命名帐号的密码（只有根用户才能进行此操作）"
 
 #: passwd.c:160
 msgid "lock the named account (root only)"
@@ -104,26 +105,25 @@ msgstr "强制执行操作"
 
 #: passwd.c:166
 msgid "maximum password lifetime (root only)"
-msgstr "口令的最长有效时限（只有根用户才能进行此操作）"
+msgstr "密码的最长有效时限（只有根用户才能进行此操作）"
 
 #: passwd.c:168
 msgid "minimum password lifetime (root only)"
-msgstr "口令的最短有效时限（只有根用户才能进行此操作）"
+msgstr "密码的最短有效时限（只有根用户才能进行此操作）"
 
 #: passwd.c:170
-msgid ""
-"number of days warning users receives before password expiration (root only)"
-msgstr "在口令过期前多少天开始提醒用户（只有根用户才能进行此操作）"
+msgid "number of days warning users receives before password expiration (root only)"
+msgstr "在密码过期前多少天开始提醒用户（只有根用户才能进行此操作）"
 
 #: passwd.c:173
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr "当口令过期后经过多少天该帐号会被禁用（只有根用户才能进行此操作）"
+msgstr "当密码过期后经过多少天该帐号会被禁用（只有根用户才能进行此操作）"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
-msgstr "报告已命名帐号的口令状态（只有根用户才能进行此操作）"
+msgstr "报告已命名帐号的密码状态（只有根用户才能进行此操作）"
 
 #: passwd.c:178
 msgid "read new tokens from stdin (root only)"
@@ -146,8 +146,7 @@ msgstr "%s： 参数 -l， -u， -d， -S只能指定其中的一个。\n"
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s：参数 -l， -u， -d， -S 不能和参数 -i， -n， -w， -x中的任一个选项合用。\n"
+msgstr "%s：参数 -l， -u， -d， -S 不能和参数 -i， -n， -w， -x中的任一个选项合用。\n"
 
 #: passwd.c:279
 #, c-format
@@ -187,12 +186,12 @@ msgstr "%s： 未知的用户名称 '%s'。\n"
 #: passwd.c:393
 #, c-format
 msgid "%s: %s is not authorized to change the password of %s\n"
-msgstr "%s： %s 无权限更改 %s 的口令 \n"
+msgstr "%s： %s 无权限更改 %s 的密码 \n"
 
 #: passwd.c:406
 #, c-format
 msgid "Locking password for user %s.\n"
-msgstr "锁定用户 %s 的口令 。\n"
+msgstr "锁定用户 %s 的密码 。\n"
 
 #: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
 msgid "Success"
@@ -200,12 +199,12 @@ msgstr "操作成功"
 
 #: passwd.c:410 passwd.c:425
 msgid "Error (password not set?)"
-msgstr "错误（口令未设置？）"
+msgstr "错误（密码未设置？）"
 
 #: passwd.c:418
 #, c-format
 msgid "Unlocking password for user %s.\n"
-msgstr "解锁用户 %s 的口令 。\n"
+msgstr "解锁用户 %s 的密码 。\n"
 
 #: passwd.c:424
 msgid "Unsafe operation (use -f to force)"
@@ -214,7 +213,7 @@ msgstr "不安全的操作（使用 -f 参数强制进行该操作）"
 #: passwd.c:433
 #, c-format
 msgid "Removing password for user %s.\n"
-msgstr "清除用户的口令 %s。\n"
+msgstr "清除用户的密码 %s。\n"
 
 #: passwd.c:436 passwd.c:456
 msgid "Error"
@@ -223,12 +222,12 @@ msgstr "错误"
 #: passwd.c:453
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
-msgstr "调整用户口令老化数据%s。\n"
+msgstr "调整用户密码老化数据%s。\n"
 
 #: passwd.c:469
 #, c-format
 msgid "Changing password for user %s.\n"
-msgstr "更改用户 %s 的口令 。\n"
+msgstr "更改用户 %s 的密码 。\n"
 
 #: passwd.c:481
 #, c-format
@@ -259,3 +258,4 @@ msgstr "%s：过期的身份验证令牌已经成功更新。\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s： 所有的身份验证令牌已经成功更新。\n"
+
