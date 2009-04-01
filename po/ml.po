@@ -1,4 +1,4 @@
-# translation of ml.po to Malayalam
+# translation of passwd.tip.ml.po to
 # Malayalam translations for passwd package.
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
@@ -7,12 +7,12 @@
 # Ani Peter <apeter@redhat.com>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: ml\n"
+"Project-Id-Version: passwd.tip.ml\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2006-12-13 15:02+0530\n"
-"Last-Translator: Ani Peter <apeter@redhat.com>\n"
-"Language-Team: Malayalam <en@li.org>\n"
+"PO-Revision-Date: 2009-04-01 14:32+0530\n"
+"Last-Translator: \n"
+"Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -48,14 +48,12 @@ msgid "Password set, blowfish crypt."
 msgstr "പാസ്‌വേറ്‍ഡ് സെറ്റ് ചെയ്തു, blowfish crypt."
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "പാസ്‌വേറ്‍ഡ് സെറ്റ് ചെയ്തു, MD5 crypt."
+msgstr "പാസ്‌വേര്‍ഡ് സജ്ജമാക്കി, SHA256 crypt."
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "പാസ്‌വേറ്‍ഡ് സെറ്റ് ചെയ്തു, MD5 crypt."
+msgstr "പാസ്‌വേര്‍ഡ് സജ്ജമാക്കി, SHA512 crypt."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
@@ -113,8 +111,7 @@ msgid "minimum password lifetime (root only)"
 msgstr "പാസ്‌വേറ്‍ഡിനുളള ഏറ്റവും കുറഞ്ഞ കാലാവധി (root-ന് മാത്റം അധികാരമുള്ളൂ)"
 
 #: passwd.c:170
-msgid ""
-"number of days warning users receives before password expiration (root only)"
+msgid "number of days warning users receives before password expiration (root only)"
 msgstr ""
 "പാസ്‌വേറ്‍ഡിന്‍റെ കാലാവധി അവസാനിക്കുന്നതിന് മുന്പ് യൂസറുകള്‍ക്ക് എത്റ ദിവസം മുന്നറിയിപ്പ് ലഭിക്കുന്നു "
 "(root-ന് മാത്റം അധികാരമുള്ളൂ)"
@@ -129,8 +126,7 @@ msgstr ""
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
-msgstr ""
-"പറഞ്ഞിരിക്കുന്ന അക്കൌണ്ടില്‍ പാസ്‌വേറ്‍ഡിന്‍റെ നിലവാരം വ്യക്തമാക്കുക (root-ന് മാത്റം അധികാരമുള്ളൂ)"
+msgstr "പറഞ്ഞിരിക്കുന്ന അക്കൌണ്ടില്‍ പാസ്‌വേറ്‍ഡിന്‍റെ നിലവാരം വ്യക്തമാക്കുക (root-ന് മാത്റം അധികാരമുള്ളൂ)"
 
 #: passwd.c:178
 msgid "read new tokens from stdin (root only)"
@@ -267,3 +263,4 @@ msgstr "%s: കാലാവധി കഴിഞ്ഞ ഓഥന്‍റിക്
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: എല്ലാ ഓഥന്‍റിക്കേഷന്‍ ടോക്കനുകളും വിജയകരമായി പുതുക്കിയിരിക്കുന്നു.\n"
+
