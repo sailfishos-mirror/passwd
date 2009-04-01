@@ -1,23 +1,24 @@
-# translation of ta.po to Tamil
+# translation of passwd.tip.ta.po to Tamil
 # Tamil translations for passwd package.
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
+#
 # Automatically generated, 2006.
 # Felix <ifelix@redhat.com>, 2006.
-#
+# I. Felix <ifelix@redhat.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: ta\n"
+"Project-Id-Version: passwd.tip.ta\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2006-12-14 18:14+0530\n"
-"Last-Translator: Felix <ifelix@redhat.com>\n"
-"Language-Team: Tamil <ta@li.org>\n"
+"PO-Revision-Date: 2009-04-01 12:44+0530\n"
+"Last-Translator: I. Felix <ifelix@redhat.com>\n"
+"Language-Team: Tamil <fedora-trans-ta@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\\n\n"
 "\n"
 
 #: libuser.c:88
@@ -50,14 +51,12 @@ msgid "Password set, blowfish crypt."
 msgstr "கடவுச்சொல் அமைத்தல், blowfish crypt."
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "கடவுச்சொல் அமைத்தல், MD5 crypt."
+msgstr "கடவுச்சொல் அமைத்தல், SHA256 crypt."
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "கடவுச்சொல் அமைத்தல், MD5 crypt."
+msgstr "கடவுச்சொல் அமைத்தல், SHA512 crypt."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
@@ -115,10 +114,8 @@ msgid "minimum password lifetime (root only)"
 msgstr "குறைந்தபட்ச கடவுச்சொல் வாழ்நாள் (ரூட்டுக்கு மட்டும்)"
 
 #: passwd.c:170
-msgid ""
-"number of days warning users receives before password expiration (root only)"
-msgstr ""
-"கடவுச்சொல் முடிவுறுவதற்கு முன் பயனர்கள் பெறும் எச்சரிக்கை நாட்களின் எண்ணிக்கை (ரூட் மட்டும்)"
+msgid "number of days warning users receives before password expiration (root only)"
+msgstr "கடவுச்சொல் முடிவுறுவதற்கு முன் பயனர்கள் பெறும் எச்சரிக்கை நாட்களின் எண்ணிக்கை (ரூட் மட்டும்)"
 
 #: passwd.c:173
 msgid ""
@@ -151,8 +148,7 @@ msgstr "%s: -l, -u, -d, -S இல் ஏதாவது ஒன்று மட�
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s: -l, -u, -d, -S இல் ஒன்று மற்றும்  -i, -n, -w, -x இல் ஒன்றை கலக்க முடியாது.\n"
+msgstr "%s: -l, -u, -d, -S இல் ஒன்று மற்றும்  -i, -n, -w, -x இல் ஒன்றை கலக்க முடியாது.\n"
 
 #: passwd.c:279
 #, c-format
@@ -264,3 +260,4 @@ msgstr "%s: முடிவுற்ற அங்கீகார டோக்க
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: அனைத்து அங்கீகார டோக்கன்களும் வெற்றிகரமாக மேம்படுத்தப்பட்டன.\n"
+
