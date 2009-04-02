@@ -1,23 +1,24 @@
-# translation of mr.po to marathi
+# translation of passwd.tip.mr.po to marathi
 # Marathi translations for passwd package.
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
 #
 # Automatically generated, 2006.
 # sandeep shedmake <sandeep.shedmake@gmail.com>, 2007.
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: mr\n"
+"Project-Id-Version: passwd.tip.mr\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2007-09-24 00:44+0530\n"
-"Last-Translator: sandeep shedmake <sandeep.shedmake@gmail.com>\n"
+"PO-Revision-Date: 2009-04-02 19:12+0530\n"
+"Last-Translator: Sandeep Shedmake <sandeep.shedmake@gmail.com>\n"
 "Language-Team: marathi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "\n"
 "\n"
 
@@ -44,38 +45,36 @@ msgstr "गुप्तशब्द कुलुपबंद."
 
 #: libuser.c:303
 msgid "Password set, MD5 crypt."
-msgstr "गुप्तशब्द निश्चित, MD5 क्रीप्ट."
+msgstr "परवलीचा शब्द संच, MD5 क्रीप्ट."
 
 #: libuser.c:306
 msgid "Password set, blowfish crypt."
-msgstr "गुप्तशब्द निश्चित,blowfish क्रीप्ट."
+msgstr "परवलीचा शब्द संच, blowfish क्रीप्ट."
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "गुप्तशब्द निश्चित, MD5 क्रीप्ट."
+msgstr "परवलीचा शब्द संच, SHA256 क्रीप्ट."
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "गुप्तशब्द निश्चित, MD5 क्रीप्ट."
+msgstr "परवलीचा शब्द संच, SHA512 क्रीप्ट."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
-msgstr "गुप्तशब्द निश्चित,अपरिचीत क्रीप्ट विकल्प."
+msgstr "परवलीचा शब्द संच, अपरिचीत क्रिप्ट विकल्प."
 
 #: libuser.c:317
 msgid "Alternate authentication scheme in use."
-msgstr "अगाऊ अधिप्रमाणन रचना वापरणीत आहे."
+msgstr "वैक्लपिक ओळख पटवा योजना वापरणीत आहे."
 
 #: libuser.c:322
 msgid "Password set, DES crypt."
-msgstr "गुप्तशब्द निश्चित, DES क्रीप्ट."
+msgstr "परवलीचा शब्द संच, DES क्रीप्ट."
 
 #: libuser.c:336
 #, c-format
 msgid "No password set.\n"
-msgstr "गुप्तशब्द निश्चित नाही.\n"
+msgstr "परवलीचा शब्द संच नाही.\n"
 
 #: libuser.c:340
 #, c-format
@@ -116,10 +115,8 @@ msgid "minimum password lifetime (root only)"
 msgstr "कीमान गुप्तशब्द कार्यकाळ (फक्त रूट)"
 
 #: passwd.c:170
-msgid ""
-"number of days warning users receives before password expiration (root only)"
-msgstr ""
-"गुप्तशब्द मुदत समाप्तीच्या पहिले वापरकर्त्यांना काहिक दिवसांची सावधानता मिळते (फक्त रूट)"
+msgid "number of days warning users receives before password expiration (root only)"
+msgstr "गुप्तशब्द मुदत समाप्तीच्या पहिले वापरकर्त्यांना काहिक दिवसांची सावधानता मिळते (फक्त रूट)"
 
 #: passwd.c:173
 msgid ""
@@ -205,7 +202,7 @@ msgstr "यश"
 
 #: passwd.c:410 passwd.c:425
 msgid "Error (password not set?)"
-msgstr "त्रूटी (गुप्तशब्द निश्चित नाही?)"
+msgstr "त्रूटी (परवलीचा शब्द संच नाही?)"
 
 #: passwd.c:418
 #, c-format
@@ -264,3 +261,4 @@ msgstr "%s: मुदत समाप्ती अधिप्रमाणीत
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: सर्व अधिप्रमाणीत टोकन यशस्वीरीत्या अद्ययावतीत केले.\n"
+
