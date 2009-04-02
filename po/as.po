@@ -5,18 +5,19 @@
 #
 # Automatically generated, 2006.
 # Amitakhya Phukan <aphukan@redhat.com>, 2007.
+# Amitakhya Phukan <aphukan@fedoraproject.org>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: as\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2007-04-17 15:21+0530\n"
-"Last-Translator: Amitakhya Phukan <aphukan@redhat.com>\n"
-"Language-Team: Assamese <assam@mm.assam-glug.org>\n"
+"PO-Revision-Date: 2009-04-02 14:03+0530\n"
+"Last-Translator: Amitakhya Phukan <aphukan@fedoraproject.org>\n"
+"Language-Team: Assamese <fedora-trans-as@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 0.3\n"
 "Plural-Forms: nplurals=2; plural=(n!=1)\n"
 
 #: libuser.c:88
@@ -49,14 +50,12 @@ msgid "Password set, blowfish crypt."
 msgstr "গুপ্তশব্দ নিৰ্দ্ধাৰিত কৰা হ'ল, blowfish এৰে গুপুত কৰা হ'ল ।"
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "গুপ্তশব্দ নিৰ্দ্ধাৰিত কৰা হ'ল, MD5 এৰে গুপুত কৰা হ'ল ।"
+msgstr "গুপ্তশব্দ নিৰ্দ্ধাৰিত কৰা হ'ল, SHA256 এৰে গুপুত কৰা হ'ল ।"
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "গুপ্তশব্দ নিৰ্দ্ধাৰিত কৰা হ'ল, MD5 এৰে গুপুত কৰা হ'ল ।"
+msgstr "গুপ্তশব্দ নিৰ্দ্ধাৰিত কৰা হ'ল, SHA512 এৰে গুপুত কৰা হ'ল ।"
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
@@ -114,8 +113,7 @@ msgid "minimum password lifetime (root only)"
 msgstr "গুপ্তশব্দৰ সৰ্বনিম্ন আয়ুঃকাল (অকল root)"
 
 #: passwd.c:170
-msgid ""
-"number of days warning users receives before password expiration (root only)"
+msgid "number of days warning users receives before password expiration (root only)"
 msgstr ""
 "গুপ্তশব্দৰ আয়ুঃকালপূৰ্তীৰ কেইদিন পূৰ্বে ব্যৱহাৰকৰোঁতাক সতৰ্কবাৰ্তা দিয়া হ'ব (অকল root)"
 
@@ -264,3 +262,4 @@ msgstr "%s: আয়ুঃকাল সমাপ্ত অনুমোদনৰ �
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: সমস্ত অনুমোদনৰ চিহ্ন সফলতাৰে উন্নয়ন কৰা হৈছে ।\n"
+
