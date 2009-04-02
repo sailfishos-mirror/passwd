@@ -2,21 +2,22 @@
 # Gujarati translations for passwd package.
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
+#
 # Automatically generated, 2006.
 # Ankit Patel <ankit@redhat.com>, 2006.
-#
+# Sweta Kothari <swkothar@redhat.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: gu\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2006-12-13 19:15+0530\n"
-"Last-Translator: Ankit Patel <ankit@redhat.com>\n"
-"Language-Team: Gujarati <fedora-trans-gu@redhat.com>\n"
+"PO-Revision-Date: 2009-04-02 14:34+0530\n"
+"Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
+"Language-Team: Gujarati\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "\n"
 
@@ -50,14 +51,12 @@ msgid "Password set, blowfish crypt."
 msgstr "પાસવર્ડ સુયોજિત, blowfish ક્રિપ્ટ."
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "પાસવર્ડ સુયોજિત, MD5 ક્રિપ્ટ."
+msgstr "પાસવર્ડ સુયોજિત, SHA256 ક્રિપ્ટ."
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "પાસવર્ડ સુયોજિત, MD5 ક્રિપ્ટ."
+msgstr "પાસવર્ડ સુયોજિત, SHA512 ક્રિપ્ટ."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
@@ -115,16 +114,14 @@ msgid "minimum password lifetime (root only)"
 msgstr "ન્યૂનતમ પાસવર્ડ જીવનસમય (માત્ર રુટ)"
 
 #: passwd.c:170
-msgid ""
-"number of days warning users receives before password expiration (root only)"
+msgid "number of days warning users receives before password expiration (root only)"
 msgstr "પાસવર્ડ સમયસમાપ્તિ પહેલાં વપરાશકર્તાઓ ચેતવણી મેળવે તે દિવસોની સંખ્યા (માત્ર રુટ)"
 
 #: passwd.c:173
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr ""
-"પાસવર્ડ સમયસમાપ્ત થાય પછી જ્યારે ખાતું નિષ્ક્રિય બની જાય તે દિવસોની સંખ્યા (માત્ર રુટ)"
+msgstr "પાસવર્ડ સમયસમાપ્ત થાય પછી જ્યારે ખાતું નિષ્ક્રિય બની જાય તે દિવસોની સંખ્યા (માત્ર રુટ)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
@@ -263,3 +260,4 @@ msgstr "%s: સમયસમાપ્ત થયેલ સત્તાધિકર
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: બધા સત્તાધિકરણ ટોકનો સફળતાપૂર્વક સુધારાઈ ગયા.\n"
+
