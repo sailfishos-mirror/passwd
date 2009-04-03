@@ -1,16 +1,16 @@
-# translation of kn.po to Kannada
+# translation of passwd.tip.kn.po to Kannada
 # Kannada translations for passwd package.
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
 #
 # Automatically generated, 2006.
-# Shankar Prasad <svenkate@redhat.com>, 2007.
+# Shankar Prasad <svenkate@redhat.com>, 2007, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: kn\n"
+"Project-Id-Version: passwd.tip.kn\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2007-06-25 15:34+0530\n"
+"PO-Revision-Date: 2009-04-03 13:15+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -49,14 +49,12 @@ msgid "Password set, blowfish crypt."
 msgstr "ಗುಪ್ತಪದ ಸಂಯೋಜಿತಗೊಂಡಿದೆ, blowfish crypt."
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "ಗುಪ್ತಪದ ಸಂಯೋಜಿತಗೊಂಡಿದೆ, MD5 crypt."
+msgstr "ಗುಪ್ತಪದ ಸಂಯೋಜಿತಗೊಂಡಿದೆ, SHA256 crypt."
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "ಗುಪ್ತಪದ ಸಂಯೋಜಿತಗೊಂಡಿದೆ, MD5 crypt."
+msgstr "ಗುಪ್ತಪದ ಸಂಯೋಜಿತಗೊಂಡಿದೆ, SHA512 crypt."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
@@ -114,8 +112,7 @@ msgid "minimum password lifetime (root only)"
 msgstr "ಗುಪ್ತಪದದ ಕನಿಷ್ಟ ಕಾಲಮಿತಿ (ಮೂಲಕ್ಕೆ ಮಾತ್ರ)"
 
 #: passwd.c:170
-msgid ""
-"number of days warning users receives before password expiration (root only)"
+msgid "number of days warning users receives before password expiration (root only)"
 msgstr ""
 "ಗುಪ್ತಪದದ ಕಾಲಾವಧಿ ಮೀರುವ ಮುನ್ನ ಇಷ್ಟು ದಿನಗಳ ಮೊದಲು ಬಳಕೆದಾರರಿಗೆ ಎಚ್ಚರಿಕೆ ನೀಡಬೇಕು "
 "(ಮೂಲಕ್ಕೆ ಮಾತ್ರ)"
@@ -267,3 +264,4 @@ msgstr "%s: ಕಾಲಾವಧಿ ಮೀರಿದ ದೃಢೀಕರಣ ಸಂ�
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: ಎಲ್ಲಾ ದೃಢೀಕರಣ ಸಂಕೇತಗಳು ಯಶಸ್ವಿಯಾಗಿ ಅಪ್ಡೇಟ್ ಆಗಿದೆ .\n"
+
