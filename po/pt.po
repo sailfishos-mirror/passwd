@@ -5,17 +5,19 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: passwd 0.73\n"
+"Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2007-02-14 17:14+0000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2009-04-05 18:00+0100\n"
+"Last-Translator: Rui Gouveia <rui.gouveia@globaltek.pt>\n"
+"Language-Team: pt <fedora-trans-pt@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POFile-SpellExtra: MD blowfish libuser passwd DES TTY PAM\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: PORTUGAL\n"
 
 #: libuser.c:88
 #, c-format
@@ -28,7 +30,7 @@ msgstr "Atenção: a senha desbloqueada ficaria em branco."
 
 #: libuser.c:279
 msgid "Corrupted passwd entry."
-msgstr "Item do 'passwd' corrompido."
+msgstr "componente da senha corrompido."
 
 #: libuser.c:296
 msgid "Empty password."
@@ -47,14 +49,12 @@ msgid "Password set, blowfish crypt."
 msgstr "Senha definida, cifra blowfish."
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "Senha definida, cifra MD5."
+msgstr "Senha definida, cifra SHA256."
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "Senha definida, cifra MD5."
+msgstr "Senha definida, cifra SHA512."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
@@ -62,7 +62,7 @@ msgstr "Senha definida, variante de cifra desconhecida."
 
 #: libuser.c:317
 msgid "Alternate authentication scheme in use."
-msgstr "Está um esquema de autenticação alternativo em uso."
+msgstr "Esquema de autenticação alternativo em utilização."
 
 #: libuser.c:322
 msgid "Password set, DES crypt."
@@ -112,18 +112,12 @@ msgid "minimum password lifetime (root only)"
 msgstr "tempo de vida mínimo da senha (apenas com 'root')"
 
 #: passwd.c:170
-msgid ""
-"number of days warning users receives before password expiration (root only)"
-msgstr ""
-"nº de dias de aviso aos utilizadores antes da expiração (apenas com 'root')"
+msgid "number of days warning users receives before password expiration (root only)"
+msgstr "nº de dias de aviso aos utilizadores antes da expiração (apenas com 'root')"
 
 #: passwd.c:173
-msgid ""
-"number of days after password expiration when an account becomes disabled "
-"(root only)"
-msgstr ""
-"nº de dias após a expiração da senha até à desactivação da conta (apenas com "
-"'root')"
+msgid "number of days after password expiration when an account becomes disabled (root only)"
+msgstr "nº de dias após a expiração da senha até à desactivação da conta (apenas com 'root')"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
@@ -150,8 +144,7 @@ msgstr "%s: Só poderá indicar uma das opções -l, -u, -d, -S.\n"
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s: Não poderá misturar uma das opções -l, -u, -d, -S com -i, -n, -w, -x.\n"
+msgstr "%s: Não poderá misturar uma das opções -l, -u, -d, -S com -i, -n, -w, -x.\n"
 
 #: passwd.c:279
 #, c-format
@@ -183,7 +176,8 @@ msgstr "%s: Esta opção precisa de um nome de utilizador.\n"
 msgid "%s: Can not identify you!\n"
 msgstr "%s: Não é possível identificá-lo!\n"
 
-#: passwd.c:341 passwd.c:376
+#: passwd.c:341
+#: passwd.c:376
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: O nome de utilizador '%s' é desconhecido.\n"
@@ -198,11 +192,15 @@ msgstr "%s: o utilizador %s não está autorizado a mudar a senha de %s\n"
 msgid "Locking password for user %s.\n"
 msgstr "A bloquear a senha do utilizador %s.\n"
 
-#: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
+#: passwd.c:410
+#: passwd.c:422
+#: passwd.c:436
+#: passwd.c:456
 msgid "Success"
 msgstr "Sucesso"
 
-#: passwd.c:410 passwd.c:425
+#: passwd.c:410
+#: passwd.c:425
 msgid "Error (password not set?)"
 msgstr "Erro (senha não definida?)"
 
@@ -220,7 +218,8 @@ msgstr "Operação insegura (use o '-f' para obrigar)"
 msgid "Removing password for user %s.\n"
 msgstr "A remover a senha do utilizador %s.\n"
 
-#: passwd.c:436 passwd.c:456
+#: passwd.c:436
+#: passwd.c:456
 msgid "Error"
 msgstr "Erro"
 
@@ -257,10 +256,10 @@ msgstr "%s: não é possível definir o atraso entre falhas: %s\n"
 #: passwd.c:540
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr ""
-"%s: os itens de autenticação expirados foram actualizados com sucesso.\n"
+msgstr "%s: os itens de autenticação expirados foram actualizados com sucesso.\n"
 
 #: passwd.c:546
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: todos os itens de autenticação foram actualizados com sucesso.\n"
+
