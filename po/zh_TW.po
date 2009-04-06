@@ -1,16 +1,16 @@
-# translation of passwd.tip.po to Traditional Chinese
+# translation of passwd.tip.po to
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Terry Chuang <tchuang@redhat.com>, 2008.
+# Terry Chuang <tchuang@redhat.com>, 2008, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd.tip\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2008-10-06 11:53+1000\n"
+"PO-Revision-Date: 2009-04-06 12:40+1000\n"
 "Last-Translator: Terry Chuang <tchuang@redhat.com>\n"
-"Language-Team: Traditional Chinese <zh@li.org>\n"
+"Language-Team:  <zh@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -46,14 +46,12 @@ msgid "Password set, blowfish crypt."
 msgstr "密碼已設定，blowfish 加密法。"
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "密碼已設定，MD5 加密法。"
+msgstr "密碼已設定，SHA256 加密法。"
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "密碼已設定，MD5 加密法。"
+msgstr "密碼已設定，SHA512 加密法。"
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
@@ -111,8 +109,7 @@ msgid "minimum password lifetime (root only)"
 msgstr "最小密碼有效期限（只有 root 可執行）"
 
 #: passwd.c:170
-msgid ""
-"number of days warning users receives before password expiration (root only)"
+msgid "number of days warning users receives before password expiration (root only)"
 msgstr "用戶在密碼過期前收到警告的天數（只有 root 可執行）"
 
 #: passwd.c:173
@@ -258,3 +255,4 @@ msgstr "%s：已成功更新過期的驗證 token。\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s：所有驗證 token 都已成功更新。\n"
+
