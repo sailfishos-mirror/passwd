@@ -1,22 +1,23 @@
-# translation of te.po to Telugu
+# translation of passwd.tip.te.po to Telugu
 # Telugu translations for passwd package.
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
 #
 # Automatically generated, 2006.
-# Krishna Babu K <kkrothap@redhat.com>, 2007.
+# Krishna Babu K <kkrothap@redhat.com>, 2007, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: te\n"
+"Project-Id-Version: passwd.tip.te\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2007-12-07 13:04+0530\n"
+"PO-Revision-Date: 2009-04-06 19:43+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
 
 #: libuser.c:88
 #, c-format
@@ -41,21 +42,19 @@ msgstr "సంకేతపదం లాక్ చేయబడింది."
 
 #: libuser.c:303
 msgid "Password set, MD5 crypt."
-msgstr "MD5 క్రిప్ట్  లో,సంకేతపదం అమర్చబడింది."
+msgstr "MD5 క్రిప్ట్ లో,సంకేతపదం అమర్చబడింది."
 
 #: libuser.c:306
 msgid "Password set, blowfish crypt."
-msgstr "బ్లోఫిష్ క్రిప్ట్  లో, సంకేతపదం అమర్చబడింది."
+msgstr "బ్లోఫిష్ క్రిప్ట్ లో, సంకేతపదం అమర్చబడింది."
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "MD5 క్రిప్ట్  లో,సంకేతపదం అమర్చబడింది."
+msgstr " SHA256 క్రిప్ట్ లో, సంకేతపదము అమర్చబడింది."
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "MD5 క్రిప్ట్  లో,సంకేతపదం అమర్చబడింది."
+msgstr "SHA512 క్రిప్ట్ లో, సంకేతపదము అమర్చబడింది."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
@@ -113,8 +112,7 @@ msgid "minimum password lifetime (root only)"
 msgstr "గరిష్ఠ సంకేతపదం జీవితకాలం(root మాత్రమే)"
 
 #: passwd.c:170
-msgid ""
-"number of days warning users receives before password expiration (root only)"
+msgid "number of days warning users receives before password expiration (root only)"
 msgstr "సంకేతపదం కాలము తీరుటకు ముందు వినియోగదారులు పొందు రోజులసంఖ్య హెచ్చరిక(root మాత్రమే)"
 
 #: passwd.c:173
@@ -148,8 +146,7 @@ msgstr "%s: వీటిలో ఏదో ఒక -l, -u, -d, -S మాత్ర�
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s: వీటిలో ఒకటి గాని -l, -u, -d, -S మరియు వీటిలో ఒకటి గాని -i, -n, -w, -x మిళితం చేయలేము.\n"
+msgstr "%s: వీటిలో ఒకటి గాని -l, -u, -d, -S మరియు వీటిలో ఒకటి గాని -i, -n, -w, -x మిళితం చేయలేము.\n"
 
 #: passwd.c:279
 #, c-format
@@ -261,3 +258,4 @@ msgstr "%s: కాలముతీరిన దృవీకరణ టొకెన
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: అన్ని దృవీకరణ టోకెన్లు సమర్ధవంతంగా నవీకరించబడినవి.\n"
+
