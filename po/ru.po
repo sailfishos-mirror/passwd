@@ -1,23 +1,23 @@
-# translation of ru.po to Russian
+# translation of passwd.tip.ru.po to
 # Russian translations for passwd package.
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
 #
 # Automatically generated, 2006.
 # Andrew Martynov <andrewm@inventa.ru>, 2006.
+# Yulia Poyarkova <yulia.poyarkova@redhat.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: ru\n"
+"Project-Id-Version: passwd.tip.ru\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2006-12-20 23:27+0300\n"
-"Last-Translator: Andrew Martynov <andrewm@inventa.ru>\n"
-"Language-Team: Russian <fedora-trans-ru@redhat.com>\n"
+"PO-Revision-Date: 2009-08-21 14:48+1000\n"
+"Last-Translator: Yulia Poyarkova <yulia.poyarkova@redhat.com>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #: libuser.c:88
@@ -50,14 +50,12 @@ msgid "Password set, blowfish crypt."
 msgstr "Пароль задан, шифр blowfish."
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "Пароль задан, шифр MD5."
+msgstr "Пароль задан, шифр SHA256."
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "Пароль задан, шифр MD5."
+msgstr "Пароль задан, шифр SHA512."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
@@ -104,7 +102,7 @@ msgstr "разблокировать учетную запись (разреше
 
 #: passwd.c:164
 msgid "force operation"
-msgstr "принудительно выполнение"
+msgstr "принудительное выполнение"
 
 #: passwd.c:166
 msgid "maximum password lifetime (root only)"
@@ -115,8 +113,7 @@ msgid "minimum password lifetime (root only)"
 msgstr "минимальный срок действия пароля (разрешено только root)"
 
 #: passwd.c:170
-msgid ""
-"number of days warning users receives before password expiration (root only)"
+msgid "number of days warning users receives before password expiration (root only)"
 msgstr ""
 "за сколько дней до даты устаревания пароля начать предупреждать пользователя "
 "(разрешено только root)"
@@ -149,8 +146,7 @@ msgstr "%s: неверный аргумент %s: %s\n"
 #: passwd.c:246
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
-msgstr ""
-"%s: Допускается указывать только один из параметров: -l, -u, -d или -S.\n"
+msgstr "%s: Допускается указывать только один из параметров: -l, -u, -d или -S.\n"
 
 #: passwd.c:255
 #, c-format
@@ -185,7 +181,7 @@ msgstr "%s: Для этого параметра необходимо имя п�
 #: passwd.c:332
 #, c-format
 msgid "%s: Can not identify you!\n"
-msgstr "%s: Не могу идентифицировать вас!\n"
+msgstr "%s: Не могу вас идентифицировать!\n"
 
 #: passwd.c:341 passwd.c:376
 #, c-format
@@ -267,3 +263,4 @@ msgstr "%s: успешно обновлен устаревший токен пр
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: все токены проверки подлинности (пароли) успешно обновлены.\n"
+
