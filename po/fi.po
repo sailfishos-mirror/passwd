@@ -8,14 +8,13 @@ msgstr ""
 "Project-Id-Version: passwd 0.73\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2007-02-07 22:48+0200\n"
+"PO-Revision-Date: 2009-08-30 19:10+0300\n"
 "Last-Translator: Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>\n"
-"Language-Team: none\n"
+"Language-Team: Finnish <laatu@lokalisointi.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.11.4\n"
 
 #: libuser.c:88
 #, c-format
@@ -47,14 +46,12 @@ msgid "Password set, blowfish crypt."
 msgstr "Salasana on asetettu, blowfish-salaus."
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "Salasana on asetettu, MD5-salaus."
+msgstr "Salasana on asetettu, SHA256-salaus."
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "Salasana on asetettu, MD5-salaus."
+msgstr "Salasana on asetettu, SHA512-salaus."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
