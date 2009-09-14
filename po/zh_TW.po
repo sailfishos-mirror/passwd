@@ -109,7 +109,8 @@ msgid "minimum password lifetime (root only)"
 msgstr "最小密碼有效期限（只有 root 可執行）"
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
 msgstr "用戶在密碼過期前收到警告的天數（只有 root 可執行）"
 
 #: passwd.c:173
@@ -255,4 +256,3 @@ msgstr "%s：已成功更新過期的驗證 token。\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s：所有驗證 token 都已成功更新。\n"
-

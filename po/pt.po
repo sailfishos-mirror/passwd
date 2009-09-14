@@ -112,12 +112,18 @@ msgid "minimum password lifetime (root only)"
 msgstr "tempo de vida mínimo da senha (apenas com 'root')"
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
-msgstr "nº de dias de aviso aos utilizadores antes da expiração (apenas com 'root')"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
+msgstr ""
+"nº de dias de aviso aos utilizadores antes da expiração (apenas com 'root')"
 
 #: passwd.c:173
-msgid "number of days after password expiration when an account becomes disabled (root only)"
-msgstr "nº de dias após a expiração da senha até à desactivação da conta (apenas com 'root')"
+msgid ""
+"number of days after password expiration when an account becomes disabled "
+"(root only)"
+msgstr ""
+"nº de dias após a expiração da senha até à desactivação da conta (apenas com "
+"'root')"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
@@ -144,7 +150,8 @@ msgstr "%s: Só poderá indicar uma das opções -l, -u, -d, -S.\n"
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: Não poderá misturar uma das opções -l, -u, -d, -S com -i, -n, -w, -x.\n"
+msgstr ""
+"%s: Não poderá misturar uma das opções -l, -u, -d, -S com -i, -n, -w, -x.\n"
 
 #: passwd.c:279
 #, c-format
@@ -176,8 +183,7 @@ msgstr "%s: Esta opção precisa de um nome de utilizador.\n"
 msgid "%s: Can not identify you!\n"
 msgstr "%s: Não é possível identificá-lo!\n"
 
-#: passwd.c:341
-#: passwd.c:376
+#: passwd.c:341 passwd.c:376
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: O nome de utilizador '%s' é desconhecido.\n"
@@ -192,15 +198,11 @@ msgstr "%s: o utilizador %s não está autorizado a mudar a senha de %s\n"
 msgid "Locking password for user %s.\n"
 msgstr "A bloquear a senha do utilizador %s.\n"
 
-#: passwd.c:410
-#: passwd.c:422
-#: passwd.c:436
-#: passwd.c:456
+#: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
 msgid "Success"
 msgstr "Sucesso"
 
-#: passwd.c:410
-#: passwd.c:425
+#: passwd.c:410 passwd.c:425
 msgid "Error (password not set?)"
 msgstr "Erro (senha não definida?)"
 
@@ -218,8 +220,7 @@ msgstr "Operação insegura (use o '-f' para obrigar)"
 msgid "Removing password for user %s.\n"
 msgstr "A remover a senha do utilizador %s.\n"
 
-#: passwd.c:436
-#: passwd.c:456
+#: passwd.c:436 passwd.c:456
 msgid "Error"
 msgstr "Erro"
 
@@ -256,10 +257,10 @@ msgstr "%s: não é possível definir o atraso entre falhas: %s\n"
 #: passwd.c:540
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr "%s: os itens de autenticação expirados foram actualizados com sucesso.\n"
+msgstr ""
+"%s: os itens de autenticação expirados foram actualizados com sucesso.\n"
 
 #: passwd.c:546
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: todos os itens de autenticação foram actualizados com sucesso.\n"
-

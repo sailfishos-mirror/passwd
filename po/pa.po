@@ -113,7 +113,8 @@ msgid "minimum password lifetime (root only)"
 msgstr "ਘੱਟੋ-ਘੱਟ ਪਾਸਵਰਡ ਉਮਰ  (root ਹੀ)"
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
 msgstr "ਪਾਸਵਰਡ ਦੀ ਮਿਆਦ ਪੁੱਗਣ (root ਲਈ) ਤੋਂ ਪਹਿਲਾਂ ਯੂਜ਼ਰਾਂ ਨੂੰ ਚੇਤਾਵਨੀ ਦੇਣ ਲਈ ਦਿਨ"
 
 #: passwd.c:173
@@ -259,4 +260,3 @@ msgstr "%s ਮਿਆਦ ਪੁੱਗੇ ਪਰਮਾਣਕਿਤਾ ਟੋਕਨ
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: ਸਭ ਪਰਮਾਣਕਿਤਾ ਟੋਕਨ ਅੱਪਡੇਟ ਕੀਤੇ ਗਏ ਹਨ\n"
-

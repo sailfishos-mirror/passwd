@@ -17,7 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: libuser.c:88
 #, c-format
@@ -264,4 +264,3 @@ msgstr "%s: authentication token scaduti aggiornati con successo.\n"
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr ""
 "%s: tutti gli authentication token sono stati aggiornati con successo.\n"
-

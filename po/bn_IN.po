@@ -112,7 +112,8 @@ msgid "minimum password lifetime (root only)"
 msgstr "পাসওয়ার্ডের সর্বনিম্ন মেয়াদ (শুধুমাত্র root)"
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
 msgstr ""
 "পাসওয়ার্ডের মেয়াদপূর্তীর কতদিন পূর্বে ব্যবহারকারীকে সতর্কবার্তা দেওয়া হবে (শুধুমাত্র "
 "root)"
@@ -262,4 +263,3 @@ msgstr "%s: মেয়াদ সমাপ্ত অনুমোদনের ট�
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: সমস্ত অনুমোদনের টোকেন সাফল্যের সাথে আপডেট করা হয়েছে।\n"
-

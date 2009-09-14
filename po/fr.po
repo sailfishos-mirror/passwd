@@ -272,4 +272,3 @@ msgstr "%s : mise à jour réussie des jetons d'authentification expirés.\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s : mise à jour réussie de tous les jetons d'authentification.\n"
-

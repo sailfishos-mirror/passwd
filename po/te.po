@@ -17,7 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
 
 #: libuser.c:88
 #, c-format
@@ -112,7 +113,8 @@ msgid "minimum password lifetime (root only)"
 msgstr "గరిష్ఠ సంకేతపదం జీవితకాలం(root మాత్రమే)"
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
 msgstr "సంకేతపదం కాలము తీరుటకు ముందు వినియోగదారులు పొందు రోజులసంఖ్య హెచ్చరిక(root మాత్రమే)"
 
 #: passwd.c:173
@@ -146,7 +148,8 @@ msgstr "%s: వీటిలో ఏదో ఒక -l, -u, -d, -S మాత్ర�
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: వీటిలో ఒకటి గాని -l, -u, -d, -S మరియు వీటిలో ఒకటి గాని -i, -n, -w, -x మిళితం చేయలేము.\n"
+msgstr ""
+"%s: వీటిలో ఒకటి గాని -l, -u, -d, -S మరియు వీటిలో ఒకటి గాని -i, -n, -w, -x మిళితం చేయలేము.\n"
 
 #: passwd.c:279
 #, c-format
@@ -258,4 +261,3 @@ msgstr "%s: కాలముతీరిన దృవీకరణ టొకెన
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: అన్ని దృవీకరణ టోకెన్లు సమర్ధవంతంగా నవీకరించబడినవి.\n"
-

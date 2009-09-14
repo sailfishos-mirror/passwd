@@ -114,14 +114,16 @@ msgid "minimum password lifetime (root only)"
 msgstr "ન્યૂનતમ પાસવર્ડ જીવનસમય (માત્ર રુટ)"
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
 msgstr "પાસવર્ડ સમયસમાપ્તિ પહેલાં વપરાશકર્તાઓ ચેતવણી મેળવે તે દિવસોની સંખ્યા (માત્ર રુટ)"
 
 #: passwd.c:173
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr "પાસવર્ડ સમયસમાપ્ત થાય પછી જ્યારે ખાતું નિષ્ક્રિય બની જાય તે દિવસોની સંખ્યા (માત્ર રુટ)"
+msgstr ""
+"પાસવર્ડ સમયસમાપ્ત થાય પછી જ્યારે ખાતું નિષ્ક્રિય બની જાય તે દિવસોની સંખ્યા (માત્ર રુટ)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
@@ -260,4 +262,3 @@ msgstr "%s: સમયસમાપ્ત થયેલ સત્તાધિકર
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: બધા સત્તાધિકરણ ટોકનો સફળતાપૂર્વક સુધારાઈ ગયા.\n"
-

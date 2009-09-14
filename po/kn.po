@@ -112,7 +112,8 @@ msgid "minimum password lifetime (root only)"
 msgstr "ಗುಪ್ತಪದದ ಕನಿಷ್ಟ ಕಾಲಮಿತಿ (ಮೂಲಕ್ಕೆ ಮಾತ್ರ)"
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
 msgstr ""
 "ಗುಪ್ತಪದದ ಕಾಲಾವಧಿ ಮೀರುವ ಮುನ್ನ ಇಷ್ಟು ದಿನಗಳ ಮೊದಲು ಬಳಕೆದಾರರಿಗೆ ಎಚ್ಚರಿಕೆ ನೀಡಬೇಕು "
 "(ಮೂಲಕ್ಕೆ ಮಾತ್ರ)"
@@ -264,4 +265,3 @@ msgstr "%s: ಕಾಲಾವಧಿ ಮೀರಿದ ದೃಢೀಕರಣ ಸಂ�
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: ಎಲ್ಲಾ ದೃಢೀಕರಣ ಸಂಕೇತಗಳು ಯಶಸ್ವಿಯಾಗಿ ಅಪ್ಡೇಟ್ ಆಗಿದೆ .\n"
-

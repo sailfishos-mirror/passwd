@@ -19,7 +19,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #: libuser.c:88
@@ -115,7 +116,8 @@ msgid "minimum password lifetime (root only)"
 msgstr "минимальный срок действия пароля (разрешено только root)"
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
 msgstr ""
 "за сколько дней до даты устаревания пароля начать предупреждать пользователя "
 "(разрешено только root)"
@@ -148,7 +150,8 @@ msgstr "%s: неверный аргумент %s: %s\n"
 #: passwd.c:246
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
-msgstr "%s: Допускается указывать только один из параметров: -l, -u, -d или -S.\n"
+msgstr ""
+"%s: Допускается указывать только один из параметров: -l, -u, -d или -S.\n"
 
 #: passwd.c:255
 #, c-format
@@ -265,4 +268,3 @@ msgstr "%s: успешно обновлен устаревший токен пр
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: все токены проверки подлинности успешно обновлены.\n"
-

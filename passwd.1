@@ -1,4 +1,4 @@
-.\" Copyright Red Hat, Inc., 1998, 1999, 2002.
+.\" Copyright Red Hat, Inc., 1998, 1999, 2002, 2009.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
 .\" modification, are permitted provided that the following conditions
@@ -32,20 +32,22 @@
 .\" OF THE POSSIBILITY OF SUCH DAMAGE.
 .\"
 .\" Copyright (c) Cristian Gafton, 1998, <gafton@redhat.com>
+.\" Copyright (c) Tomas Mraz, 2009, <tmraz@redhat.com>
 .\"
-.TH PASSWD 1 "Aug 23 2004" "Red Hat Linux" "User utilities"
+.TH PASSWD 1 "Sep 24 2009" "GNU/Linux" "User utilities"
 .SH NAME
 
-passwd \- update a user's authentication tokens(s)
+passwd \- update user's authentication tokens
 
 .SH SYNOPSIS
 .B passwd [-k] [-l] [-u [-f]] [-d] [-n mindays] [-x maxdays] [-w warndays] [-i inactivedays] [-S] [--stdin] [username]
 .sp 2
 .SH DESCRIPTION
-Passwd is used to update a user's authentication token(s).
+The passwd utility is used to update user's authentication token(s).
 
-Passwd is configured to work through the
-.BR "Linux-PAM API" ". "
+This task is achieved through calls to the
+.BR "Linux-PAM" " and "
+.BR "Libuser API" ". "
 Essentially, it initializes itself as a "passwd" service with
 .I Linux-PAM
 and utilizes configured
@@ -53,7 +55,7 @@ and utilizes configured
 modules to authenticate and then update a user's password.
 
 .sp
-A simple entry in the
+A simple entry in the global
 .I Linux-PAM
 configuration file for this service would be:
 .br
@@ -67,24 +69,20 @@ configuration file for this service would be:
 .br
  #
 .br
- passwd password requisite \\
+ passwd password requisite pam_cracklib.so retry=3
 .br
-             /usr/lib/security/pam_cracklib.so retry=3
-.br
- passwd password required \\
-.br
-             /usr/lib/security/pam_unix.so use_authtok
+ passwd password required pam_unix.so use_authtok
 .br
  #
 
 .sp
-Note, other module-types are not required for this application to
+Note, other module types are not required for this application to
 function correctly.
 
 .SH OPTIONS
 
 .IP \fB-k\fR
-The option,
+The option
 .BR -k ", "
 is used to indicate that the update should only be for expired
 authentication tokens (passwords); the user wishes to keep their
@@ -101,14 +99,15 @@ This option is used to indicate that \fBpasswd\fR should read the new
 password from standard input, which can be a pipe.
 
 .IP \fB-u\fR
-This is the reverse of the -l option - it will unlock the account
+This is the reverse of the
+.BR -l " option - it will unlock the account"
 password by removing the ! prefix. This option is available to root
 only. By default passwd will refuse to create a passwordless account 
 (it will not unlock an account that has only "!" as a password). The 
 force option \fB-f\fR will override this protection.
 
 .IP \fB-d\fR
-This is a quick way to disable a password for an account. It will set
+This is a quick way to delete a password for an account. It will set
 the named account passwordless. Available to root only.
 
 .IP \fB-n\fR
@@ -149,6 +148,8 @@ Use the password for a limited time and change it periodically.
 
 .IP \fBChoose\ a\ hard-to-guess\ password.\fR
 .I passwd
+through the calls to the
+.BR pam_cracklib " PAM module"
 will try to prevent you from choosing a really bad password,
 but it isn't foolproof; create your password wisely.
 Don't use something you'd find in a dictionary (in any language or jargon).
@@ -161,7 +162,7 @@ simple pattern (such as \"qwerty\", \"abc\", or \"aaa\").  Don't use any of thos
 backwards, followed by a digit, or preceded by a digit. Instead, use
 a mixture of upper and lower case letters, as well as digits or
 punctuation.  When choosing a new password, make sure it's unrelated
-to any previous password. Use long passwords (say 8 characters
+to any previous password. Use long passwords (say at least 8 characters
 long).  You might use a word pair with punctuation inserted, a
 passphrase (an understandable sequence of words), or the first
 letter of each word in a passphrase.
@@ -181,11 +182,6 @@ occurred.  Textual errors are written to the standard error stream.
 .br
 .BR Linux-PAM
 (Pluggable Authentication modules for Linux).
-.br
-Note, if your distribution of Linux-PAM conforms to the Linux
-Filesystem Standard, you may find the modules in
-.I /lib/security/
-instead of /usr/lib/security/, as indicated in the example.
 
 .SH "FILES"
 .br
@@ -201,17 +197,17 @@ None known.
 .SH "SEE ALSO"
 
 .BR pam "(8), "
+.BR pam.d "(5), "
+.BR libuser.conf "(5), "
 and
-.BR pam_chauthok "(2). "
+.BR pam_chauthtok "(3). "
 
 .sp
 For more complete information on how to configure this application
 with
 .BR Linux-PAM ", "
 see the
-.BR "Linux-PAM System Administrators' Guide" " at "
-.br
-.I "/usr/share/doc/pam..."
+.BR "Linux-PAM System Administrators' Guide" "."
 
 .SH AUTHOR
 Cristian Gafton <gafton@redhat.com>

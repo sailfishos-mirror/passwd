@@ -115,8 +115,10 @@ msgid "minimum password lifetime (root only)"
 msgstr "कीमान गुप्तशब्द कार्यकाळ (फक्त रूट)"
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
-msgstr "गुप्तशब्द मुदत समाप्तीच्या पहिले वापरकर्त्यांना काहिक दिवसांची सावधानता मिळते (फक्त रूट)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
+msgstr ""
+"गुप्तशब्द मुदत समाप्तीच्या पहिले वापरकर्त्यांना काहिक दिवसांची सावधानता मिळते (फक्त रूट)"
 
 #: passwd.c:173
 msgid ""
@@ -261,4 +263,3 @@ msgstr "%s: मुदत समाप्ती अधिप्रमाणीत
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: सर्व अधिप्रमाणीत टोकन यशस्वीरीत्या अद्ययावतीत केले.\n"
-

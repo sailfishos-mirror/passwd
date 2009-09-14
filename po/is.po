@@ -111,7 +111,8 @@ msgid "minimum password lifetime (root only)"
 msgstr ""
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
 msgstr ""
 
 #: passwd.c:173
@@ -257,4 +258,3 @@ msgstr ""
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr ""
-

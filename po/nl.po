@@ -81,7 +81,8 @@ msgstr "Onbekende gebruiker.\n"
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr "%s: gebruikersaccount heeft geen ondersteuning voor wachtwoordveroudering.\n"
+msgstr ""
+"%s: gebruikersaccount heeft geen ondersteuning voor wachtwoordveroudering.\n"
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
@@ -112,7 +113,8 @@ msgid "minimum password lifetime (root only)"
 msgstr "minimum wachtwoord levensduur (alleen root)"
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
 msgstr ""
 "aantal dagen waarschuwing die gebruikers ontvangen voordat het wachtwoord "
 "verloopt (alleen root)"
@@ -264,4 +266,3 @@ msgstr "%s: verlopen authenticatie-tokens zijn succesvol bijgewerkt.\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: alle authenticatie-tokens zijn succesvol bijgewerkt.\n"
-

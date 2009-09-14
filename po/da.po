@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
 "PO-Revision-Date: 2009-03-20 02:49+0100\n"
 "Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
@@ -113,8 +113,7 @@ msgstr "minimal levetid for adgangskode (kun root)"
 #: passwd.c:170
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
-"antal dage brugere får advarsler inden adgangskoden udløber (kun root)"
+msgstr "antal dage brugere får advarsler inden adgangskoden udløber (kun root)"
 
 #: passwd.c:173
 msgid ""
@@ -148,7 +147,9 @@ msgstr "%s: Kun en af -l, -u, -d, -S må angives.\n"
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: Kan ikke kombinere én af -l, -u, -d, -S sammen med én af -i, -n, -w, -x.\n"
+msgstr ""
+"%s: Kan ikke kombinere én af -l, -u, -d, -S sammen med én af -i, -n, -w, -"
+"x.\n"
 
 #: passwd.c:279
 #, c-format

@@ -111,7 +111,8 @@ msgid "minimum password lifetime (root only)"
 msgstr "പാസ്‌വേറ്‍ഡിനുളള ഏറ്റവും കുറഞ്ഞ കാലാവധി (root-ന് മാത്റം അധികാരമുള്ളൂ)"
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
 msgstr ""
 "പാസ്‌വേറ്‍ഡിന്‍റെ കാലാവധി അവസാനിക്കുന്നതിന് മുന്പ് യൂസറുകള്‍ക്ക് എത്റ ദിവസം മുന്നറിയിപ്പ് ലഭിക്കുന്നു "
 "(root-ന് മാത്റം അധികാരമുള്ളൂ)"
@@ -126,7 +127,8 @@ msgstr ""
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
-msgstr "പറഞ്ഞിരിക്കുന്ന അക്കൌണ്ടില്‍ പാസ്‌വേറ്‍ഡിന്‍റെ നിലവാരം വ്യക്തമാക്കുക (root-ന് മാത്റം അധികാരമുള്ളൂ)"
+msgstr ""
+"പറഞ്ഞിരിക്കുന്ന അക്കൌണ്ടില്‍ പാസ്‌വേറ്‍ഡിന്‍റെ നിലവാരം വ്യക്തമാക്കുക (root-ന് മാത്റം അധികാരമുള്ളൂ)"
 
 #: passwd.c:178
 msgid "read new tokens from stdin (root only)"
@@ -263,4 +265,3 @@ msgstr "%s: കാലാവധി കഴിഞ്ഞ ഓഥന്‍റിക്
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: എല്ലാ ഓഥന്‍റിക്കേഷന്‍ ടോക്കനുകളും വിജയകരമായി പുതുക്കിയിരിക്കുന്നു.\n"
-

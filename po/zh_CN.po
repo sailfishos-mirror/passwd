@@ -112,7 +112,8 @@ msgid "minimum password lifetime (root only)"
 msgstr "密码的最短有效时限（只有根用户才能进行此操作）"
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
 msgstr "在密码过期前多少天开始提醒用户（只有根用户才能进行此操作）"
 
 #: passwd.c:173
@@ -146,7 +147,8 @@ msgstr "%s： 参数 -l， -u， -d， -S只能指定其中的一个。\n"
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s：参数 -l， -u， -d， -S 不能和参数 -i， -n， -w， -x中的任一个选项合用。\n"
+msgstr ""
+"%s：参数 -l， -u， -d， -S 不能和参数 -i， -n， -w， -x中的任一个选项合用。\n"
 
 #: passwd.c:279
 #, c-format
@@ -258,4 +260,3 @@ msgstr "%s：过期的身份验证令牌已经成功更新。\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s： 所有的身份验证令牌已经成功更新。\n"
-

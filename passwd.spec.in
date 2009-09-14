@@ -64,7 +64,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
-* Wed Feb 11 2008 Tomas Mraz <tmraz@redhat.com> 0.76-1
+* Mon Sep 14 2009 Tomas Mraz <tmraz@redhat.com> 0.77-1
+- updated translations
+- improved manual page
+
+* Wed Feb 11 2009 Tomas Mraz <tmraz@redhat.com> 0.76-1
 - identify SHA-256 and SHA-512 password hashes (#484994)
 
 * Tue Apr  8 2008 Tomas Mraz <tmraz@redhat.com> 0.75-2

@@ -79,7 +79,8 @@ msgstr "Usuario desconocido.\n"
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr "%s: la cuenta del usuario no tiene soporte para envejecimiento de clave.\n"
+msgstr ""
+"%s: la cuenta del usuario no tiene soporte para envejecimiento de clave.\n"
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
@@ -110,12 +111,19 @@ msgid "minimum password lifetime (root only)"
 msgstr "tiempo mínimo de vida de la contraseña (sólo root)"
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
-msgstr "número de días antes del vencimiento de la contraseña en que los usuarios reciben las advertencias de vencimiento (sólo root)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
+msgstr ""
+"número de días antes del vencimiento de la contraseña en que los usuarios "
+"reciben las advertencias de vencimiento (sólo root)"
 
 #: passwd.c:173
-msgid "number of days after password expiration when an account becomes disabled (root only)"
-msgstr "número de días después de que venció la contraseña en que se deshabilitará la cuenta (sólo root)"
+msgid ""
+"number of days after password expiration when an account becomes disabled "
+"(root only)"
+msgstr ""
+"número de días después de que venció la contraseña en que se deshabilitará "
+"la cuenta (sólo root)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
@@ -142,7 +150,9 @@ msgstr "%s: sólo uno de -l, -u, -d, -S se puede especificar.\n"
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: No se pueden mezclar una de las opciones -l, -u, -d, -S y una de -i, -n, -w, -x.\n"
+msgstr ""
+"%s: No se pueden mezclar una de las opciones -l, -u, -d, -S y una de -i, -n, "
+"-w, -x.\n"
 
 #: passwd.c:279
 #, c-format
@@ -174,8 +184,7 @@ msgstr "%s: Esta opción requiere un nombre de usuario.\n"
 msgid "%s: Can not identify you!\n"
 msgstr "%s: No puede identificarlo!\n"
 
-#: passwd.c:341
-#: passwd.c:376
+#: passwd.c:341 passwd.c:376
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: Nombre de usuario desconocido '%s'.\n"
@@ -190,15 +199,11 @@ msgstr "%s: %s no está autorizado a cambiar la contraseña de %s\n"
 msgid "Locking password for user %s.\n"
 msgstr "Bloqueando la contraseña para el usuario %s.\n"
 
-#: passwd.c:410
-#: passwd.c:422
-#: passwd.c:436
-#: passwd.c:456
+#: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
 msgid "Success"
 msgstr "Éxito"
 
-#: passwd.c:410
-#: passwd.c:425
+#: passwd.c:410 passwd.c:425
 msgid "Error (password not set?)"
 msgstr "Error (¿no se puso la contraseña?)"
 
@@ -216,8 +221,7 @@ msgstr "Operación insegura (use -f para forzarla)"
 msgid "Removing password for user %s.\n"
 msgstr "Eliminando la contraseña del usuario %s.\n"
 
-#: passwd.c:436
-#: passwd.c:456
+#: passwd.c:436 passwd.c:456
 msgid "Error"
 msgstr "Error"
 
@@ -260,4 +264,3 @@ msgstr "%s: tokens de autenticación vencidas actualizadas con éxito.\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: todos los tokens de autenticación se actualizaron exitosamente.\n"
-
