@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: passwd 0.73\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2007-01-23 14:58+0300\n"
+"PO-Revision-Date: 2009-10-06 14:58+0300\n"
 "Last-Translator: Maxim V. Dziumanenko <dziumanenko@softprom.kiev.ua>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -47,14 +47,12 @@ msgid "Password set, blowfish crypt."
 msgstr "Пароль заданий, шифр blowfish."
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "Пароль заданий, шифр MD5."
+msgstr "Пароль заданий, шифр SHA256."
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "Пароль заданий, шифр MD5."
+msgstr "Пароль заданий, шифр SHA512."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
