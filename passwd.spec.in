@@ -8,7 +8,7 @@ Summary: An utility for setting or changing passwords using PAM
 Name: passwd
 Version: @PACKAGE_VERSION@
 Release: 1%{?dist}
-License: BSD
+License: BSD or GPLv2+
 Group: System Environment/Base
 URL: http://fedorahosted.org/passwd
 Source: https://fedorahosted.org/releases/p/a/%{name}/%{name}-%{version}.tar.bz2
