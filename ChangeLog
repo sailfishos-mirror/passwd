@@ -1,3 +1,7 @@
+2010-01-28 Tomas Mraz <tmraz@redhat.com>
+
+	* passwd.spec.in: Add COPYING and other things as %doc
+
 2009-10-22 Tomas Mraz <tmraz@redhat.com>
 
 	* po/*.po*: Updated translations from transifex.
