@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the passwd package.
 #
 # Automatically generated, 2006.
-# Tournaris Pavlos <p.tournaris@gmail.com>, 2009.
+# Tournaris Pavlos <p.tournaris@gmail.com>, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.73\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2009-10-23 17:05+0300\n"
+"PO-Revision-Date: 2010-03-02 17:28+0200\n"
 "Last-Translator: Tournaris Pavlos <p.tournaris@gmail.com>\n"
 "Language-Team: Greek <fedora-el-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -25,11 +25,11 @@ msgstr ""
 
 #: libuser.c:165
 msgid "Warning: unlocked password would be empty."
-msgstr ""
+msgstr "Προειδοποίηση: ο ανοιχτός κωδικός θα μείνει άδειος."
 
 #: libuser.c:279
 msgid "Corrupted passwd entry."
-msgstr ""
+msgstr "Εσφαλμένη είσοδος passwd."
 
 #: libuser.c:296
 msgid "Empty password."
@@ -61,7 +61,7 @@ msgstr ""
 
 #: libuser.c:317
 msgid "Alternate authentication scheme in use."
-msgstr ""
+msgstr "Εναλλακτικό σχήμα πιστοποίησης σε χρήση."
 
 #: libuser.c:322
 msgid "Password set, DES crypt."
@@ -70,7 +70,7 @@ msgstr ""
 #: libuser.c:336
 #, c-format
 msgid "No password set.\n"
-msgstr ""
+msgstr "Δεν έχει ρυθμιστεί κωδικός.\n"
 
 #: libuser.c:340
 #, c-format
@@ -88,15 +88,15 @@ msgstr ""
 
 #: passwd.c:158
 msgid "delete the password for the named account (root only)"
-msgstr ""
+msgstr "διαγραφή κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
 
 #: passwd.c:160
 msgid "lock the named account (root only)"
-msgstr ""
+msgstr "κλείδωμα του λογαριασμού που έχει το όνομα (διαχειριστής μόνο)"
 
 #: passwd.c:162
 msgid "unlock the named account (root only)"
-msgstr ""
+msgstr "ξεκλείδωμα του λογαριασμού που έχει το όνομα (διαχειριστής μόνο)"
 
 #: passwd.c:164
 msgid "force operation"
@@ -104,22 +104,19 @@ msgstr ""
 
 #: passwd.c:166
 msgid "maximum password lifetime (root only)"
-msgstr ""
+msgstr "μέγιστη διάρκεια ζωής (διαχειριστής μόνο)"
 
 #: passwd.c:168
 msgid "minimum password lifetime (root only)"
-msgstr ""
+msgstr "ελάχιστη διάρκεια ζωής (διαχειριστής μόνο)"
 
 #: passwd.c:170
-msgid ""
-"number of days warning users receives before password expiration (root only)"
+msgid "number of days warning users receives before password expiration (root only)"
 msgstr ""
 
 #: passwd.c:173
-msgid ""
-"number of days after password expiration when an account becomes disabled "
-"(root only)"
-msgstr ""
+msgid "number of days after password expiration when an account becomes disabled (root only)"
+msgstr "αριθμός ημερών μετά τη λήξη του κωδικού όταν ένας λογαριασμός απενεργοποιείται (διαχειριστής μόνο)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
@@ -151,7 +148,7 @@ msgstr ""
 #: passwd.c:279
 #, c-format
 msgid "Only root can do that.\n"
-msgstr ""
+msgstr "Μόνο ο διαχειριστής μπορεί να το κάνει αυτό.\n"
 
 #: passwd.c:292
 #, c-format
@@ -171,40 +168,45 @@ msgstr ""
 #: passwd.c:321
 #, c-format
 msgid "%s: This option requires a user name.\n"
-msgstr ""
+msgstr "%s: Αυτή η επιλογή χρεάζεται ένα όνομα χρήστη.\n"
 
 #: passwd.c:332
 #, c-format
 msgid "%s: Can not identify you!\n"
-msgstr ""
+msgstr "%s: Αδύνατη η ταυτοποίησή σας!\n"
 
-#: passwd.c:341 passwd.c:376
+#: passwd.c:341
+#: passwd.c:376
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
-msgstr ""
+msgstr "%s: Άγνωστο όνομα χρήστη '%s'.\n"
 
 #: passwd.c:393
 #, c-format
 msgid "%s: %s is not authorized to change the password of %s\n"
-msgstr ""
+msgstr "%s: %s δεν εξουσιοδοτημένος για την αλλαγή του κωδικού του %s\n"
 
 #: passwd.c:406
 #, c-format
 msgid "Locking password for user %s.\n"
-msgstr ""
+msgstr "Κλείδωμα κωδικού για το χρήστη %s.\n"
 
-#: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
+#: passwd.c:410
+#: passwd.c:422
+#: passwd.c:436
+#: passwd.c:456
 msgid "Success"
 msgstr "Επιτυχία"
 
-#: passwd.c:410 passwd.c:425
+#: passwd.c:410
+#: passwd.c:425
 msgid "Error (password not set?)"
 msgstr ""
 
 #: passwd.c:418
 #, c-format
 msgid "Unlocking password for user %s.\n"
-msgstr ""
+msgstr "Ξεκλείδωμα κωδικού για το χρήστη %s.\n"
 
 #: passwd.c:424
 msgid "Unsafe operation (use -f to force)"
@@ -213,9 +215,10 @@ msgstr ""
 #: passwd.c:433
 #, c-format
 msgid "Removing password for user %s.\n"
-msgstr ""
+msgstr "Αφαίρεση κωδικού για το χρήστη %s.\n"
 
-#: passwd.c:436 passwd.c:456
+#: passwd.c:436
+#: passwd.c:456
 msgid "Error"
 msgstr "Σφάλμα"
 
@@ -227,7 +230,7 @@ msgstr ""
 #: passwd.c:469
 #, c-format
 msgid "Changing password for user %s.\n"
-msgstr ""
+msgstr "Αλλαγή κωδικού για το χρήστη %s.\n"
 
 #: passwd.c:481
 #, c-format
