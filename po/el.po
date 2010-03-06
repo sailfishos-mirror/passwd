@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: passwd 0.73\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2010-03-02 17:28+0200\n"
+"PO-Revision-Date: 2010-03-06 12:23+0200\n"
 "Last-Translator: Tournaris Pavlos <p.tournaris@gmail.com>\n"
 "Language-Team: Greek <fedora-el-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: libuser.c:88
 #, c-format
 msgid "%s: libuser initialization error:"
-msgstr ""
+msgstr "%s: libuser σφάλμα αρχικοποίησης:"
 
 #: libuser.c:165
 msgid "Warning: unlocked password would be empty."
@@ -84,7 +84,7 @@ msgstr ""
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
-msgstr ""
+msgstr "διατήρηση των μη ληγμένων τεκμηρίων πιστοποίησης"
 
 #: passwd.c:158
 msgid "delete the password for the named account (root only)"
@@ -100,7 +100,7 @@ msgstr "ξεκλείδωμα του λογαριασμού που έχει το 
 
 #: passwd.c:164
 msgid "force operation"
-msgstr ""
+msgstr "εξαναγκασμός διαδικασίας"
 
 #: passwd.c:166
 msgid "maximum password lifetime (root only)"
@@ -120,11 +120,11 @@ msgstr "αριθμός ημερών μετά τη λήξη του κωδικού
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
-msgstr ""
+msgstr "αναφορά κατάστασης κωδικού στο λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
 
 #: passwd.c:178
 msgid "read new tokens from stdin (root only)"
-msgstr ""
+msgstr "ανάγνωση νέων τεκμηρίων από το stdin (διαχειριστής μόνο)"
 
 #: passwd.c:185
 msgid "[OPTION...] <accountName>"
@@ -138,12 +138,12 @@ msgstr ""
 #: passwd.c:246
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
-msgstr ""
+msgstr "%s: Μόνο ένα από τα -l, -u, -d, -S μπορεί να οριστεί.\n"
 
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
+msgstr "%s: Η ανάμιξη ενός από τα -l, -u, -d, -S και ενός από τα -i, -n, -w, -x είναι αδύνατη.\n"
 
 #: passwd.c:279
 #, c-format
@@ -153,17 +153,17 @@ msgstr "Μόνο ο διαχειριστής μπορεί να το κάνει �
 #: passwd.c:292
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
-msgstr ""
+msgstr "%s: Μόνο ο διαχειριστής μπορεί να ορίσει ένα όνομα χρήστη.\n"
 
 #: passwd.c:301
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
-msgstr ""
+msgstr "%s: Το όνομα χρήστη που δώθηκε είναι πολύ μεγάλο.\n"
 
 #: passwd.c:311
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
-msgstr ""
+msgstr "%s: Μόνο ένα όνομα χρήστη μπορεί να οριστεί.\n"
 
 #: passwd.c:321
 #, c-format
@@ -201,7 +201,7 @@ msgstr "Επιτυχία"
 #: passwd.c:410
 #: passwd.c:425
 msgid "Error (password not set?)"
-msgstr ""
+msgstr "Σφάλμα (δεν ρυθμίστηκε κωδικός;)"
 
 #: passwd.c:418
 #, c-format
@@ -210,7 +210,7 @@ msgstr "Ξεκλείδωμα κωδικού για το χρήστη %s.\n"
 
 #: passwd.c:424
 msgid "Unsafe operation (use -f to force)"
-msgstr ""
+msgstr "Μη ασφαλής διαδικασία (χρησιμοποιήστε το -f για εξαναγκασμό)"
 
 #: passwd.c:433
 #, c-format
@@ -235,7 +235,7 @@ msgstr "Αλλαγή κωδικού για το χρήστη %s.\n"
 #: passwd.c:481
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
-msgstr ""
+msgstr "%s: σφάλμα ανάγνωσης από το stdin: %s\n"
 
 #: passwd.c:498
 #, c-format
@@ -255,10 +255,10 @@ msgstr ""
 #: passwd.c:540
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr ""
+msgstr "%s: τα ληγμένα τεκμήρια πιστοποίησης ενημερώθηκαν επιτυχώς.\n"
 
 #: passwd.c:546
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
-msgstr ""
+msgstr "%s: όλα τα τεκμήρια πιστοποίησης ενημερώθηκαν επιτυχώς.\n"
 
