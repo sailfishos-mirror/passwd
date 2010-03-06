@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: passwd 0.73\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2010-03-06 12:23+0200\n"
+"PO-Revision-Date: 2010-03-06 14:08+0200\n"
 "Last-Translator: Tournaris Pavlos <p.tournaris@gmail.com>\n"
 "Language-Team: Greek <fedora-el-list@redhat.com>\n"
 "MIME-Version: 1.0\n"
@@ -41,23 +41,23 @@ msgstr "Κλειδωμένος κωδικός."
 
 #: libuser.c:303
 msgid "Password set, MD5 crypt."
-msgstr ""
+msgstr "Ρύθμιση κωδικού, MD5 crypt."
 
 #: libuser.c:306
 msgid "Password set, blowfish crypt."
-msgstr ""
+msgstr "Ρύθμιση κωδικού, blowfish crypt."
 
 #: libuser.c:309
 msgid "Password set, SHA256 crypt."
-msgstr ""
+msgstr "Ρύθμιση κωδικού, SHA256 crypt."
 
 #: libuser.c:312
 msgid "Password set, SHA512 crypt."
-msgstr ""
+msgstr "Ρύθμιση κωδικού, SHA512 crypt."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
-msgstr ""
+msgstr "Ρύθμιση κωδικού, άγνωστη μεταβλητή κρυπτογράφησης."
 
 #: libuser.c:317
 msgid "Alternate authentication scheme in use."
@@ -65,7 +65,7 @@ msgstr "Εναλλακτικό σχήμα πιστοποίησης σε χρήσ
 
 #: libuser.c:322
 msgid "Password set, DES crypt."
-msgstr ""
+msgstr "Ρύθμιση κωδικού, DES crypt."
 
 #: libuser.c:336
 #, c-format
@@ -80,7 +80,7 @@ msgstr "Άγνωστος χρήστης.\n"
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr ""
+msgstr "%s: ο λογαριασμός του χρήστη δεν έχει υποστήριξη για γήρανση κωδικού.\n"
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
@@ -133,7 +133,7 @@ msgstr "[Επιλογή...] <accountName>"
 #: passwd.c:188
 #, c-format
 msgid "%s: bad argument %s: %s\n"
-msgstr ""
+msgstr "%s: λανθασμένο όρισμα %s: %s\n"
 
 #: passwd.c:246
 #, c-format
@@ -225,7 +225,7 @@ msgstr "Σφάλμα"
 #: passwd.c:453
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
-msgstr ""
+msgstr "Ρύθμιση πληροφοριών γήρανσης κωδικού για το χρήστη %s.\n"
 
 #: passwd.c:469
 #, c-format
