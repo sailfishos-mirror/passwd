@@ -1,7 +1,7 @@
 # Greek translations for passwd package.
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
-#
+# 
 # Automatically generated, 2006.
 # Tournaris Pavlos <p.tournaris@gmail.com>, 2009, 2010.
 msgid ""
@@ -110,10 +110,6 @@ msgstr "μέγιστη διάρκεια ζωής (διαχειριστής μό�
 msgid "minimum password lifetime (root only)"
 msgstr "ελάχιστη διάρκεια ζωής (διαχειριστής μόνο)"
 
-#: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
-msgstr ""
-
 #: passwd.c:173
 msgid "number of days after password expiration when an account becomes disabled (root only)"
 msgstr "αριθμός ημερών μετά τη λήξη του κωδικού όταν ένας λογαριασμός απενεργοποιείται (διαχειριστής μόνο)"
@@ -175,8 +171,7 @@ msgstr "%s: Αυτή η επιλογή χρεάζεται ένα όνομα χρ
 msgid "%s: Can not identify you!\n"
 msgstr "%s: Αδύνατη η ταυτοποίησή σας!\n"
 
-#: passwd.c:341
-#: passwd.c:376
+#: passwd.c:341 passwd.c:376
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: Άγνωστο όνομα χρήστη '%s'.\n"
@@ -191,15 +186,11 @@ msgstr "%s: %s δεν εξουσιοδοτημένος για την αλλαγ�
 msgid "Locking password for user %s.\n"
 msgstr "Κλείδωμα κωδικού για το χρήστη %s.\n"
 
-#: passwd.c:410
-#: passwd.c:422
-#: passwd.c:436
-#: passwd.c:456
+#: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
 msgid "Success"
 msgstr "Επιτυχία"
 
-#: passwd.c:410
-#: passwd.c:425
+#: passwd.c:410 passwd.c:425
 msgid "Error (password not set?)"
 msgstr "Σφάλμα (δεν ρυθμίστηκε κωδικός;)"
 
@@ -217,8 +208,7 @@ msgstr "Μη ασφαλής διαδικασία (χρησιμοποιήστε �
 msgid "Removing password for user %s.\n"
 msgstr "Αφαίρεση κωδικού για το χρήστη %s.\n"
 
-#: passwd.c:436
-#: passwd.c:456
+#: passwd.c:436 passwd.c:456
 msgid "Error"
 msgstr "Σφάλμα"
 
@@ -237,21 +227,6 @@ msgstr "Αλλαγή κωδικού για το χρήστη %s.\n"
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s: σφάλμα ανάγνωσης από το stdin: %s\n"
 
-#: passwd.c:498
-#, c-format
-msgid "%s: unable to start pam: %s\n"
-msgstr ""
-
-#: passwd.c:511
-#, c-format
-msgid "%s: unable to set tty for pam: %s\n"
-msgstr ""
-
-#: passwd.c:522
-#, c-format
-msgid "%s: unable to set failure delay: %s\n"
-msgstr ""
-
 #: passwd.c:540
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
@@ -262,3 +237,21 @@ msgstr "%s: τα ληγμένα τεκμήρια πιστοποίησης ενη
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: όλα τα τεκμήρια πιστοποίησης ενημερώθηκαν επιτυχώς.\n"
 
+#: passwd.c:522
+#, c-format
+msgid "%s: unable to set failure delay: %s\n"
+msgstr "%s:αδυναμία ορισμού καθυστέρησης αποτυχίας: %s\n"
+
+#: passwd.c:511
+#, c-format
+msgid "%s: unable to set tty for pam: %s\n"
+msgstr "%s: αδυναμία ορισμού tty για pam: %s\n"
+
+#: passwd.c:498
+#, c-format
+msgid "%s: unable to start pam: %s\n"
+msgstr "%s: αδυναμία εκκίνησης pam: %s\n"
+
+#: passwd.c:170
+msgid "number of days warning users receives before password expiration (root only)"
+msgstr "πόσες ημέρες πριν από τη λήξη του κωδικού θα ειδοποιείται ο χρήστης (μόνο root)"
