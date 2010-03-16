@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: passwd 0.73\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2007-07-31 19:57+0200\n"
+"PO-Revision-Date: 2010-03-15 22:42+0100\n"
 "Last-Translator: Espen A. Stefansen <espenas@gmail.com>\n"
 "Language-Team: Norwegian/Bokmaal <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
@@ -46,14 +46,12 @@ msgid "Password set, blowfish crypt."
 msgstr "Passord satt. blowfish kryptering."
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "Passord satt. MD5 krypt."
+msgstr "Passord satt. SHA-kryptering."
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "Passord satt. MD5 krypt."
+msgstr "Passord satt. MD512-kryptering."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
@@ -84,7 +82,7 @@ msgstr "%s: brukerkonto har ikke støtte for passordalder.\n"
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
-msgstr ""
+msgstr "behold ikke-utgåtte autentiseringstegn"
 
 #: passwd.c:158
 msgid "delete the password for the named account (root only)"
@@ -156,7 +154,7 @@ msgstr "Kun root kan gjøre det.\n"
 #: passwd.c:292
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
-msgstr ""
+msgstr "%s: Bare root kan spesifisere et brukernavn.\n"
 
 #: passwd.c:301
 #, c-format
@@ -171,7 +169,7 @@ msgstr "%s: Kun ett brukernavn kan oppgis.\n"
 #: passwd.c:321
 #, c-format
 msgid "%s: This option requires a user name.\n"
-msgstr ""
+msgstr "%s: Dette alternativet krever et brukernavn.\n"
 
 #: passwd.c:332
 #, c-format
@@ -186,7 +184,7 @@ msgstr "%s: Ukjent brukernavn «%s».\n"
 #: passwd.c:393
 #, c-format
 msgid "%s: %s is not authorized to change the password of %s\n"
-msgstr ""
+msgstr "%s: %s er ikke autorisert til å bytte passordet til %s\n"
 
 #: passwd.c:406
 #, c-format
