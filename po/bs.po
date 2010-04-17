@@ -249,10 +249,10 @@ msgstr "%s: Zastarjeli tokeni za provjeravanje autentičnosti uspješno su ažur
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: Svi tokeni za provjeravanje autentičnosti uspješno su ažurirani.\n"
 
-#: libuser.c:312
-msgid "Password set, SHA512 crypt."
-msgstr "Lozinka je postavljena, šifriranje MD5."
-
 #: libuser.c:309
 msgid "Password set, SHA256 crypt."
-msgstr "Lozinka je postavljena, šifriranje MD5."
+msgstr "Lozinka je postavljena, šifriranje SHA256."
+
+#: libuser.c:312
+msgid "Password set, SHA512 crypt."
+msgstr "Lozinka je postavljena, šifriranje SHA512."
