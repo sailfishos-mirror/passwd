@@ -16,8 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #: libuser.c:88
@@ -48,16 +47,6 @@ msgstr "Lozinka je postavljena, šifriranje MD5."
 #: libuser.c:306
 msgid "Password set, blowfish crypt."
 msgstr "Lozinka je postavljena, šifriranje Blowfish."
-
-#: libuser.c:309
-#, fuzzy
-msgid "Password set, SHA256 crypt."
-msgstr "Lozinka je postavljena, šifriranje MD5."
-
-#: libuser.c:312
-#, fuzzy
-msgid "Password set, SHA512 crypt."
-msgstr "Lozinka je postavljena, šifriranje MD5."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
@@ -115,24 +104,16 @@ msgid "minimum password lifetime (root only)"
 msgstr "Najkraće moguće razdoblje trajnosti lozinke (samo korijenski korisnik)"
 
 #: passwd.c:170
-msgid ""
-"number of days warning users receives before password expiration (root only)"
-msgstr ""
-"Broj dana tijekom kojih će korisnici dobivati upozorenje o zastari lozinke "
-"(samo korijenski korisnik)"
+msgid "number of days warning users receives before password expiration (root only)"
+msgstr "Broj dana tijekom kojih će korisnici dobivati upozorenje o zastari lozinke (samo korijenski korisnik)"
 
 #: passwd.c:173
-msgid ""
-"number of days after password expiration when an account becomes disabled "
-"(root only)"
-msgstr ""
-"Broj dana od nastupanja zastare lozinke nakon čega će nalog postati "
-"onemogućen (samo korijenski korisnik)"
+msgid "number of days after password expiration when an account becomes disabled (root only)"
+msgstr "Broj dana od nastupanja zastare lozinke nakon čega će nalog postati onemogućen (samo korijenski korisnik)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
-msgstr ""
-"Prijavljivanje stanja lozinke imenovanog naloga (samo korijenski korisnik)"
+msgstr "Prijavljivanje stanja lozinke imenovanog naloga (samo korijenski korisnik)"
 
 #: passwd.c:178
 msgid "read new tokens from stdin (root only)"
@@ -155,9 +136,7 @@ msgstr "%s: Moguće je odrediti samo jedan od argumenata -l, -u, -d, -S.\n"
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s: Nije moguće kombinirati jedan od argumenata -l, -u, -d, -S, s nekim od "
-"argumenata -i, -n, -w, -x.\n"
+msgstr "%s: Nije moguće kombinirati jedan od argumenata -l, -u, -d, -S, s nekim od argumenata -i, -n, -w, -x.\n"
 
 #: passwd.c:279
 #, c-format
@@ -263,10 +242,17 @@ msgstr "%s: Zadavanje zadrške otkazivanje nije moguće: %s\n"
 #: passwd.c:540
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr ""
-"%s: Zastarjeli tokeni za provjeravanje autentičnosti uspješno su ažurirani.\n"
+msgstr "%s: Zastarjeli tokeni za provjeravanje autentičnosti uspješno su ažurirani.\n"
 
 #: passwd.c:546
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: Svi tokeni za provjeravanje autentičnosti uspješno su ažurirani.\n"
+
+#: libuser.c:312
+msgid "Password set, SHA512 crypt."
+msgstr "Lozinka je postavljena, šifriranje MD5."
+
+#: libuser.c:309
+msgid "Password set, SHA256 crypt."
+msgstr "Lozinka je postavljena, šifriranje MD5."
