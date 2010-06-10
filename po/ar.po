@@ -2,15 +2,15 @@
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
 # Automatically generated, 2006.
-#
+# Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.73\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2006-12-06 13:25+0100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2010-06-05 01:03+0300\n"
+"Last-Translator: Abdalrahim Fakhouri <abdilra7eem@yahoo.com>\n"
+"Language-Team: Arabic <fedora-trans-ar@redhat.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,240 +18,241 @@ msgstr ""
 #: libuser.c:88
 #, c-format
 msgid "%s: libuser initialization error:"
-msgstr ""
+msgstr "%s: خطأ في تهيئة libuser:"
 
 #: libuser.c:165
 msgid "Warning: unlocked password would be empty."
-msgstr ""
+msgstr "تحذير: كلمة المرور غير المقفلة قد تكون فارغة."
 
 #: libuser.c:279
 msgid "Corrupted passwd entry."
-msgstr ""
+msgstr "مدخل كلمة مرور معطوب."
 
 #: libuser.c:296
 msgid "Empty password."
-msgstr ""
+msgstr "كلمة مرور فارغة."
 
 #: libuser.c:299
 msgid "Password locked."
-msgstr ""
+msgstr "كلمة المرور مقفلة."
 
 #: libuser.c:303
 msgid "Password set, MD5 crypt."
-msgstr ""
+msgstr "كلمة المرور مضبوطة، تشفير MD5."
 
 #: libuser.c:306
 msgid "Password set, blowfish crypt."
-msgstr ""
+msgstr "كلمة المرور مضبوطة، تشفير السمكة المنتفخة."
 
 #: libuser.c:309
 msgid "Password set, SHA256 crypt."
-msgstr ""
+msgstr "كلمة المرور مضبوطة، تشفير SHA256."
 
 #: libuser.c:312
 msgid "Password set, SHA512 crypt."
-msgstr ""
+msgstr "كلمة المرور مضبوطة، تشفير SHA512."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
-msgstr ""
+msgstr "كلمة المرور مضبوطة، نوع التشفير مجهول."
 
 #: libuser.c:317
 msgid "Alternate authentication scheme in use."
-msgstr ""
+msgstr "يجري استخدام خطة استيثاق بديلة."
 
 #: libuser.c:322
 msgid "Password set, DES crypt."
-msgstr ""
+msgstr "كلمة المرور مضبوطة، تشفير DES."
 
 #: libuser.c:336
 #, c-format
 msgid "No password set.\n"
-msgstr ""
+msgstr "لم يتم ضبط كلمة مرور.\n"
 
 #: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
-msgstr ""
+msgstr "مستخدِم مجهول.\n"
 
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr ""
+msgstr "%s: لا يدعم حساب المستخدِم تحديد عمر لكلمة المرور.\n"
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
-msgstr ""
+msgstr "الإبقاء على حلقات المفاتيح غير منتهية الصلاحية"
 
 #: passwd.c:158
 msgid "delete the password for the named account (root only)"
-msgstr ""
+msgstr "حذف كلمة مرور الحساب المحدّد (الجذر فقط)."
 
 #: passwd.c:160
 msgid "lock the named account (root only)"
-msgstr ""
+msgstr "قفل الحساب المحدّد (الجذر فقط)"
 
 #: passwd.c:162
 msgid "unlock the named account (root only)"
-msgstr ""
+msgstr "فكّ قفل كلمة مرور الحساب المحدّد (الجذر فقط)"
 
 #: passwd.c:164
 msgid "force operation"
-msgstr ""
+msgstr "إجبار العملية"
 
 #: passwd.c:166
 msgid "maximum password lifetime (root only)"
-msgstr ""
+msgstr "الحدّ الأقصى لعمر كلمة المرور (الجذر فقط)"
 
 #: passwd.c:168
 msgid "minimum password lifetime (root only)"
-msgstr ""
+msgstr "الحدّ الأدنى لعمر كلمة المرور (الجذر فقط)"
 
 #: passwd.c:170
 msgid ""
 "number of days warning users receives before password expiration (root only)"
 msgstr ""
+"عدد أيام استقبال المستخدِم تحذيرات قبل انتهاء صلاحية كلمة المرور (الجذر فقط)"
 
 #: passwd.c:173
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr ""
+msgstr "عدد الأيام قبل قفل حساب انتهت صلاحيّة كلمة مروره (الجذر فقط)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
-msgstr ""
+msgstr "أبلِغ عن حالة كلمة مرور المستخدم المحدّد (الجذر فقط)"
 
 #: passwd.c:178
 msgid "read new tokens from stdin (root only)"
-msgstr ""
+msgstr "اقرأ حلقات المفاتيح الجديدة من stdin (الجذر فقط)"
 
 #: passwd.c:185
 msgid "[OPTION...] <accountName>"
-msgstr ""
+msgstr "[OPTION...] <accountName>"
 
 #: passwd.c:188
 #, c-format
 msgid "%s: bad argument %s: %s\n"
-msgstr ""
+msgstr "%s: معامل خاطئ %s: %s\n"
 
 #: passwd.c:246
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
-msgstr ""
+msgstr "%s: يمكن تحديد واحد من -l, -u, -d, -S فقط.\n"
 
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
+msgstr "%s: لا يمكن خلط واحد من -l, -u, -d, -S وآخر من -i, -n, -w, -x.\n"
 
 #: passwd.c:279
 #, c-format
 msgid "Only root can do that.\n"
-msgstr ""
+msgstr "فقط الجذر يستطيع عمل ذلك.\n"
 
 #: passwd.c:292
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
-msgstr ""
+msgstr "%s: يمكن فقط للجذر أن يحدّد اسم مستخدم.\n"
 
 #: passwd.c:301
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
-msgstr ""
+msgstr "%s: اسم المستخدم المُدخل طويل جدّاً.\n"
 
 #: passwd.c:311
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
-msgstr ""
+msgstr "%s: يمكن تحديد اسم مستخدم واحد فقط.\n"
 
 #: passwd.c:321
 #, c-format
 msgid "%s: This option requires a user name.\n"
-msgstr ""
+msgstr "%s: يتطلّب هذا الخيار اسم مستخدم.\n"
 
 #: passwd.c:332
 #, c-format
 msgid "%s: Can not identify you!\n"
-msgstr ""
+msgstr "%s: تعذّر التعرف عليك!\n"
 
 #: passwd.c:341 passwd.c:376
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
-msgstr ""
+msgstr "%s: اسم مستخدم مجهول '%s'.\n"
 
 #: passwd.c:393
 #, c-format
 msgid "%s: %s is not authorized to change the password of %s\n"
-msgstr ""
+msgstr "%s: ليس مصرّحاً لـ %s أن يغيّر كلمة مرور  %s\n"
 
 #: passwd.c:406
 #, c-format
 msgid "Locking password for user %s.\n"
-msgstr ""
+msgstr "جاري قفل كلمة مرور المستخدم %s.\n"
 
 #: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
 msgid "Success"
-msgstr ""
+msgstr "نجاح"
 
 #: passwd.c:410 passwd.c:425
 msgid "Error (password not set?)"
-msgstr ""
+msgstr "خطأ (لا يوجد كلمة مرور؟)"
 
 #: passwd.c:418
 #, c-format
 msgid "Unlocking password for user %s.\n"
-msgstr ""
+msgstr "جاري فكّ قفل كلمة مرور المستخدِم %s.\n"
 
 #: passwd.c:424
 msgid "Unsafe operation (use -f to force)"
-msgstr ""
+msgstr "عملية خطرة (استخدم -f للإجبار)"
 
 #: passwd.c:433
 #, c-format
 msgid "Removing password for user %s.\n"
-msgstr ""
+msgstr "جاري إزالة كلمة مرور المستخدم %s.\n"
 
 #: passwd.c:436 passwd.c:456
 msgid "Error"
-msgstr ""
+msgstr "خطأ"
 
 #: passwd.c:453
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
-msgstr ""
+msgstr "جاري ضبط بيانات العمر للمستخدم %s.\n"
 
 #: passwd.c:469
 #, c-format
 msgid "Changing password for user %s.\n"
-msgstr ""
+msgstr "جاري تغيير كلمة مرور المستخدم %s.\n"
 
 #: passwd.c:481
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
-msgstr ""
+msgstr "%s: خطأ في القراءة من stdin: %s\n"
 
 #: passwd.c:498
 #, c-format
 msgid "%s: unable to start pam: %s\n"
-msgstr ""
+msgstr "%s: تعذّر تشغيل pam: %s\n"
 
 #: passwd.c:511
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
-msgstr ""
+msgstr "%s: تعذّر ضبط tty لـpam: %s\n"
 
 #: passwd.c:522
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
-msgstr ""
+msgstr "%s: تعذّر تحديد مدة تأخير الخطأ: %s\n"
 
 #: passwd.c:540
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr ""
+msgstr "%s: تم تحديث حلقات مفاتيح الاستيثاق منتهية الصلاحية بنجاح.\n"
 
 #: passwd.c:546
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
-msgstr ""
+msgstr "%s: تم تحديث كل حلقات مفاتيح الاستيثاق بنجاح.\n"
