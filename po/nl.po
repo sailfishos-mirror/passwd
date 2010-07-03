@@ -2,27 +2,28 @@
 # Dutch translations for passwd package.
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
-#
 # Peter van Egdom <p.van.egdom@gmail.com>, 2007.
 # R.E. van der Luit <nippur@fedoraproject.org>, 2009.
+# Geert Warrink <geert.warrink@onsnet.nu>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd.tip.nl\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2009-04-04 17:50+0200\n"
-"Last-Translator: R.E. van der Luit <nippur@fedoraproject.org>\n"
-"Language-Team: Dutch <nippur@fedoraproject.org>\n"
+"PO-Revision-Date: 2010-07-03 13:27+0200\n"
+"Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
+"Language-Team: Fedora\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.6.1\n"
 
 #: libuser.c:88
 #, c-format
 msgid "%s: libuser initialization error:"
-msgstr "%s: libuser initialisatiefout:"
+msgstr "%s: libuser initialisatie fout:"
 
 #: libuser.c:165
 msgid "Warning: unlocked password would be empty."
@@ -30,7 +31,7 @@ msgstr "Waarschuwing: ontgrendeld wachtwoord zou leeg zijn."
 
 #: libuser.c:279
 msgid "Corrupted passwd entry."
-msgstr "Wachtwoord item met fouten."
+msgstr "Wachtwoord ingang met fouten."
 
 #: libuser.c:296
 msgid "Empty password."
@@ -62,7 +63,7 @@ msgstr "Wachtwoord ingesteld, onbekende versleuteling."
 
 #: libuser.c:317
 msgid "Alternate authentication scheme in use."
-msgstr "Alternatief authenticatieschema in gebruik."
+msgstr "Alternatief authenticatie schema in gebruik."
 
 #: libuser.c:322
 msgid "Password set, DES crypt."
@@ -81,12 +82,11 @@ msgstr "Onbekende gebruiker.\n"
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr ""
-"%s: gebruikersaccount heeft geen ondersteuning voor wachtwoordveroudering.\n"
+msgstr "%s: gebruikers account heeft geen ondersteuning voor wachtwoord veroudering.\n"
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
-msgstr "niet-verlopen authenticatie-tokens behouden"
+msgstr "niet-verlopen authenticatie token behouden"
 
 #: passwd.c:158
 msgid "delete the password for the named account (root only)"
@@ -137,7 +137,7 @@ msgstr "nieuwe tokens van stdin lezen (alleen root)"
 
 #: passwd.c:185
 msgid "[OPTION...] <accountName>"
-msgstr "[OPTIE...] <accountnaam>"
+msgstr "[OPTIE...] <account naam>"
 
 #: passwd.c:188
 #, c-format
@@ -152,8 +152,7 @@ msgstr "%s: Slechts één van de opties -l, -u, -d, -S mag worden opgegeven.\n"
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s: Kan niet een van de -l, -u, -d, -S opties en een van de -i, -n, -w, -x "
+msgstr "%s: Kan niet een van de -l, -u, -d, -S opties en een van de -i, -n, -w, -x "
 "opties door elkaar heen gebruiken.\n"
 
 #: passwd.c:279
@@ -184,7 +183,7 @@ msgstr "%s: Deze optie vereist een gebruikersnaam.\n"
 #: passwd.c:332
 #, c-format
 msgid "%s: Can not identify you!\n"
-msgstr "%s: Kan u niet identificeren!\n"
+msgstr "%s: Kan jou niet identificeren!\n"
 
 #: passwd.c:341 passwd.c:376
 #, c-format
@@ -230,7 +229,7 @@ msgstr "Fout"
 #: passwd.c:453
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
-msgstr "Verouderingsgegevens voor gebruiker %s aanpassen.\n"
+msgstr "Veroudering gegevens voor gebruiker %s aanpassen.\n"
 
 #: passwd.c:469
 #, c-format
@@ -255,14 +254,14 @@ msgstr "%s: niet in staat om tty voor pam in te stellen: %s\n"
 #: passwd.c:522
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
-msgstr "%s: niet in staat om faal-vertraging in te stellen: %s\n"
+msgstr "%s: niet in staat om faal vertraging in te stellen: %s\n"
 
 #: passwd.c:540
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr "%s: verlopen authenticatie-tokens zijn succesvol bijgewerkt.\n"
+msgstr "%s: verlopen authenticatie tokens zijn succesvol bijgewerkt.\n"
 
 #: passwd.c:546
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
-msgstr "%s: alle authenticatie-tokens zijn succesvol bijgewerkt.\n"
+msgstr "%s: alle authenticatie tokens zijn succesvol bijgewerkt.\n"
