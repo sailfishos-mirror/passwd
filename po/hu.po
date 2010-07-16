@@ -80,7 +80,8 @@ msgstr "Ismeretlen felhasználó.\n"
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr "%s: a felhasználó fiókja nem támogatja a jelszólejárat-beállítást (aging).\n"
+msgstr ""
+"%s: a felhasználó fiókja nem támogatja a jelszólejárat-beállítást (aging).\n"
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
@@ -111,16 +112,24 @@ msgid "minimum password lifetime (root only)"
 msgstr "jelszó minimális érvényessége (csak rendszergazda)"
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
-msgstr "jelszó lejárta előtti napok száma, amikortól figyelmeztetést kap a használó (csak rendszergazda)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
+msgstr ""
+"jelszó lejárta előtti napok száma, amikortól figyelmeztetést kap a használó "
+"(csak rendszergazda)"
 
 #: passwd.c:173
-msgid "number of days after password expiration when an account becomes disabled (root only)"
-msgstr "jelszó lejárta utáni napok száma, amikortól a fiók letiltásra kerül (csak rendszergazda)"
+msgid ""
+"number of days after password expiration when an account becomes disabled "
+"(root only)"
+msgstr ""
+"jelszó lejárta utáni napok száma, amikortól a fiók letiltásra kerül (csak "
+"rendszergazda)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
-msgstr "jelentés a megnevezett fiók jelszavának állapotáról (csak rendszergazda)"
+msgstr ""
+"jelentés a megnevezett fiók jelszavának állapotáról (csak rendszergazda)"
 
 #: passwd.c:178
 msgid "read new tokens from stdin (root only)"
@@ -143,7 +152,9 @@ msgstr "%s:A -l, -u, -d, -S kapcsolókból csak az egyiket szabad megadni.\n"
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: A -l, -u, -d, -S kapcsolók egyikét sem lehet keverni ezekkel: -i, -n, -w, -x.\n"
+msgstr ""
+"%s: A -l, -u, -d, -S kapcsolók egyikét sem lehet keverni ezekkel: -i, -n, -"
+"w, -x.\n"
 
 #: passwd.c:279
 #, c-format
@@ -175,8 +186,7 @@ msgstr "%s: Ez az opció egy felhasználónevet igényel.\n"
 msgid "%s: Can not identify you!\n"
 msgstr "%s: Ön nem azonosítható!\n"
 
-#: passwd.c:341
-#: passwd.c:376
+#: passwd.c:341 passwd.c:376
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: \"%s\": ismeretlen felhasználónév.\n"
@@ -191,15 +201,11 @@ msgstr "%s: %s számára nem engedélyezett %s jelszavának megváltoztatása\n"
 msgid "Locking password for user %s.\n"
 msgstr "%s felhasználó jelszavának zárolása.\n"
 
-#: passwd.c:410
-#: passwd.c:422
-#: passwd.c:436
-#: passwd.c:456
+#: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
 msgid "Success"
 msgstr "Sikerült"
 
-#: passwd.c:410
-#: passwd.c:425
+#: passwd.c:410 passwd.c:425
 msgid "Error (password not set?)"
 msgstr "Hiba (nincs jelszó beállítva?)"
 
@@ -217,8 +223,7 @@ msgstr "Nem biztonságos művelet (kikényszerítés: -f)"
 msgid "Removing password for user %s.\n"
 msgstr "%s felhasználó jelszavának eltávolítása.\n"
 
-#: passwd.c:436
-#: passwd.c:456
+#: passwd.c:436 passwd.c:456
 msgid "Error"
 msgstr "Hiba"
 
@@ -261,4 +266,3 @@ msgstr "%s: a lejárt azonosítási jegyek frissítése sikerült.\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: minden azonosítási jegy frissítése sikerült.\n"
-

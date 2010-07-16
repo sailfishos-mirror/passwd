@@ -1,7 +1,7 @@
 # Greek translations for passwd package.
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
-# 
+#
 # Automatically generated, 2006.
 # Tournaris Pavlos <p.tournaris@gmail.com>, 2009, 2010.
 msgid ""
@@ -80,7 +80,8 @@ msgstr "Άγνωστος χρήστης.\n"
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr "%s: ο λογαριασμός του χρήστη δεν έχει υποστήριξη για γήρανση κωδικού.\n"
+msgstr ""
+"%s: ο λογαριασμός του χρήστη δεν έχει υποστήριξη για γήρανση κωδικού.\n"
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
@@ -88,7 +89,8 @@ msgstr "διατήρηση των μη ληγμένων τεκμηρίων πι�
 
 #: passwd.c:158
 msgid "delete the password for the named account (root only)"
-msgstr "διαγραφή κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
+msgstr ""
+"διαγραφή κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
 
 #: passwd.c:160
 msgid "lock the named account (root only)"
@@ -110,13 +112,26 @@ msgstr "μέγιστη διάρκεια ζωής (διαχειριστής μό�
 msgid "minimum password lifetime (root only)"
 msgstr "ελάχιστη διάρκεια ζωής (διαχειριστής μόνο)"
 
+#: passwd.c:170
+msgid ""
+"number of days warning users receives before password expiration (root only)"
+msgstr ""
+"πόσες ημέρες πριν από τη λήξη του κωδικού θα ειδοποιείται ο χρήστης (μόνο "
+"root)"
+
 #: passwd.c:173
-msgid "number of days after password expiration when an account becomes disabled (root only)"
-msgstr "αριθμός ημερών μετά τη λήξη του κωδικού όταν ένας λογαριασμός απενεργοποιείται (διαχειριστής μόνο)"
+msgid ""
+"number of days after password expiration when an account becomes disabled "
+"(root only)"
+msgstr ""
+"αριθμός ημερών μετά τη λήξη του κωδικού όταν ένας λογαριασμός "
+"απενεργοποιείται (διαχειριστής μόνο)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
-msgstr "αναφορά κατάστασης κωδικού στο λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
+msgstr ""
+"αναφορά κατάστασης κωδικού στο λογαριασμό που έχει το όνομα (διαχειριστής "
+"μόνο)"
 
 #: passwd.c:178
 msgid "read new tokens from stdin (root only)"
@@ -139,7 +154,9 @@ msgstr "%s: Μόνο ένα από τα -l, -u, -d, -S μπορεί να ορι�
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: Η ανάμιξη ενός από τα -l, -u, -d, -S και ενός από τα -i, -n, -w, -x είναι αδύνατη.\n"
+msgstr ""
+"%s: Η ανάμιξη ενός από τα -l, -u, -d, -S και ενός από τα -i, -n, -w, -x "
+"είναι αδύνατη.\n"
 
 #: passwd.c:279
 #, c-format
@@ -227,6 +244,21 @@ msgstr "Αλλαγή κωδικού για το χρήστη %s.\n"
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s: σφάλμα ανάγνωσης από το stdin: %s\n"
 
+#: passwd.c:498
+#, c-format
+msgid "%s: unable to start pam: %s\n"
+msgstr "%s: αδυναμία εκκίνησης pam: %s\n"
+
+#: passwd.c:511
+#, c-format
+msgid "%s: unable to set tty for pam: %s\n"
+msgstr "%s: αδυναμία ορισμού tty για pam: %s\n"
+
+#: passwd.c:522
+#, c-format
+msgid "%s: unable to set failure delay: %s\n"
+msgstr "%s:αδυναμία ορισμού καθυστέρησης αποτυχίας: %s\n"
+
 #: passwd.c:540
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
@@ -236,22 +268,3 @@ msgstr "%s: τα ληγμένα τεκμήρια πιστοποίησης ενη
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: όλα τα τεκμήρια πιστοποίησης ενημερώθηκαν επιτυχώς.\n"
-
-#: passwd.c:522
-#, c-format
-msgid "%s: unable to set failure delay: %s\n"
-msgstr "%s:αδυναμία ορισμού καθυστέρησης αποτυχίας: %s\n"
-
-#: passwd.c:511
-#, c-format
-msgid "%s: unable to set tty for pam: %s\n"
-msgstr "%s: αδυναμία ορισμού tty για pam: %s\n"
-
-#: passwd.c:498
-#, c-format
-msgid "%s: unable to start pam: %s\n"
-msgstr "%s: αδυναμία εκκίνησης pam: %s\n"
-
-#: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
-msgstr "πόσες ημέρες πριν από τη λήξη του κωδικού θα ειδοποιείται ο χρήστης (μόνο root)"

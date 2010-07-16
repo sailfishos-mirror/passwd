@@ -1,4 +1,4 @@
-AC_INIT(passwd, 0.77)
+AC_INIT(passwd, 0.78)
 AC_CONFIG_SRCDIR([configure.ac])
 AM_INIT_AUTOMAKE([dist-bzip2 no-dist-gzip])
 
@@ -102,5 +102,5 @@ AM_GNU_GETTEXT([external])
 AC_CHECK_FUNCS(dngettext)
 
 AC_CONFIG_HEADER([config.h])
-AC_CONFIG_FILES([Makefile po/Makefile.in])
+AC_CONFIG_FILES([Makefile po/Makefile.in man/Makefile man/ja/Makefile passwd.spec])
 AC_OUTPUT

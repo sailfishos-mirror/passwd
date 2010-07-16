@@ -49,10 +49,16 @@ make DEBUG= RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make install DESTDIR=$RPM_BUILD_ROOT bindir=%{_bindir} mandir=%{_mandir}
+make install DESTDIR=$RPM_BUILD_ROOT
 install -m 755 -d $RPM_BUILD_ROOT%{_sysconfdir}/pam.d/
 install -m 644 passwd.pamd $RPM_BUILD_ROOT%{_sysconfdir}/pam.d/passwd
 %find_lang %{name}
+for dir in $(ls -1d $RPM_BUILD_ROOT%{_mandir}/{??,??_??}) ; do
+    dir=$(echo $dir | sed -e "s|^$RPM_BUILD_ROOT||")
+    lang=$(basename $dir)
+    echo "%%lang($lang) $dir/man*/*" >> %{name}.lang
+done
+
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -65,6 +71,18 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* Fri Jul 16 2010 Tomas Mraz <tmraz@redhat.com> 0.78-1
+- added japanese translation of the man page (#611692)
+- updated translations
+
+* Tue Apr  6 2010 Tomas Mraz <tmraz@redhat.com> 0.77-5
+- first part of fix for pam_gnome_keyring prompting (#578624)
+  needs support for use_authtok to be added to pam_gnome_keyring
+
+* Thu Jan 28 2010 Tomas Mraz <tmraz@redhat.com> 0.77-4
+- add COPYING and other things to doc
+- correct the licence field
+
 * Mon Sep 14 2009 Tomas Mraz <tmraz@redhat.com> 0.77-1
 - updated translations
 - improved manual page

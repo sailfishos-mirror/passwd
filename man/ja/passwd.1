@@ -1,0 +1,194 @@
+.\"$Id: passwd.1,v 1.13 2002/03/09 19:22:30 ankry Exp $
+.\" Copyright 1989 - 1994, Julianne Frances Haugh
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\" 3. Neither the name of Julianne F. Haugh nor the names of its contributors
+.\"    may be used to endorse or promote products derived from this software
+.\"    without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY JULIE HAUGH AND CONTRIBUTORS ``AS IS'' AND
+.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+.\" ARE DISCLAIMED.  IN NO EVENT SHALL JULIE HAUGH OR CONTRIBUTORS BE LIABLE
+.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+.\" SUCH DAMAGE.
+.\"
+.\" Japanese Version Copyright (c) 1997 Kazuyoshi Furutaka
+.\"         all rights reserved.
+.\" Translated Fri Feb 14 23:06:00 JST 1997
+.\"         by Kazuyoshi Furutaka <furutaka@Flux.tokai.jaeri.go.jp>
+.\" Updated 2 Mar 2002 by NAKANO Takeo <nakano@apm.seikei.ac.jp>
+.\" Modified Tue 16 Sep 2002 by NAKANO Takeo <nakano@apm.seikei.ac.jp>
+.\" Modified Tue 6 July 2010 by OSHIRO Moritoshi
+.\"
+.TH PASSWD 1
+.SH 名前
+passwd \- ユーザパスワードを変更する
+.SH 書式
+.B passwd [-k] [-l] [-u [-f]] [-d] [-n mindays] [-x maxdays] [-w warndays] [-i inactivedays] [-S] [--stdin] [username]
+.sp 2
+.SH 説明
+Passwd はユーザアカウント・グループアカウントのパスワードを変更する。
+
+Passwd は
+.BR "Linux-PAM API" を通して機能するように設定されてある。
+
+Passwd は　"passwd" サービスとして
+.I Linux-PAM 
+で初期化し認証するために、設定した
+.I "password"
+モジュールを使用する。その後、ユーザのパスワードを更新する。
+
+.sp
+.I Linux-PAM
+設定ファイルの簡単なエントリは以下に記述する。
+.br
+
+.br
+  
+.br
+ #
+.br
+ # passwd service entry that does strength checking of
+.br
+ # a proposed password before updating it.
+.br
+ #
+.br
+ passwd password requisite \\
+.br
+             /usr/lib/security/pam_cracklib.so retry=3
+.br
+ passwd password required \\
+.br
+             /usr/lib/security/pam_unix.so use_authtok
+.br
+ #
+
+.sp
+注意:　他のモジュールタイプはこのプログラムを適切に機能させるためには必要ない。
+
+
+.SH オプション
+
+
+.IP \fB-k\fR
+オプション
+.BR -k 
+は失効した認証トークン(パスワード)だけを更新する事を指す。ユーザが失効前のトークンをそのまま使用したい場合。
+
+.IP \fB-l\fR
+このオプションは特定のアカウントをロックしたい場合に使用され、root のみ使用可能。ロックは暗号化されたパスワードを不正な文字列として処理する(暗号化されたパスワードの前に!を付ける)事で実行される。
+
+.IP \fB--stdin\fR
+このオプションは \fBpasswd\fR が標準入力から新しいパスワードを読み込む場合を指す。パイプからでも可能である。
+
+.IP \fB-u\fR
+このオプションは -l オプションの逆である。プレフィックス ! を削除する事によってアカウントのパスワードを解除する。root のみ使用可能。
+標準では passwd はパスワードが無いアカウントを拒否する("!" のみパスワードとしている場合はアカウントを解除しない)。強制オプション \fB-f\fR はこの保護を無効にする。
+
+.IP \fB-d\fR
+このオプションはアカウントのパスワードを無効にするための手早い方法である。アカウントをパスワードなしに設定する。root のみ使用可能。
+
+.IP \fB-n\fR
+このオプションはユーザのアカウントがパスワード有効期限に対応している場合、パスワード変更後に再度変更が可能になるまでを日単位で設定する。root のみ使用可能。
+
+.IP \fB-x\fR
+このオプションはユーザのアカウントがパスワード有効期限に対応している場合、パスワード有効期間を日単位で設定する。root のみ使用可能。
+
+.IP \fB-w\fR
+このオプションはユーザのアカウントがパスワード有効期限に対応している場合、パスワード失効前に、ユーザへ警告を日単位で予告するために設定する。root のみ使用可能。
+
+.IP \fB-i\fR
+このオプションはユーザのアカウントがパスワード有効期限に対応している場合、パスワードが有効期限に達して無効とすべき場合、パスワードを無効にするまでの猶予期間を日単位で設定する。root のみ使用可能。
+
+訳注：指定した日数を超えてパスワード期限切れ状態のままにすると、
+ユーザはそのアカウントに入れなくなる。
+
+.IP \fB-S\fR
+このオプションはアカウントのパスワードの状態について短い情報を出力する。rootのみ使用可能。
+
+
+.SH 下記の2原則を忘れるな
+
+.IP \fBパスワードを保護せよ。\fR
+パスワードを書かずに記憶せよ。
+特に、パスワードをメモした紙をそこかしこに放置してはいけない。暗号化されていないファイルに記入してはいけない。他組織によって制御されているシステムとは無関係のパスワードを使用せよ。
+
+特にコンピュータサポートやベンダーと名乗る者には、自分のパスワードを共有、付与してはいけない。
+
+パスワードを入力しているのを誰かにのぞかれてはいけない。
+
+信頼できないコンピュータにパスワードを入力してはいけない。また、何かが\「怪しい」\ 場合、誰かがパスワードをハイジャックしようとしているかもしれない。
+
+パスワードを特定期間のみ使用し、定期的に変更せよ。
+
+.IP \fB予測困難なパスワードを選択せよ。\fR
+
+.I passwd
+は本当に悪いパスワードを選択する事を阻止しようとするが、絶対安全ではない。賢くパスワードを作成せよ。辞書に載っているものを使用してはいけない(いかなる言語、専門用語であってもいけない)。名前(配偶者、親、子、ペット、ファンタシーのキャラクタ、有名人、地名)、または自分に関連するあらゆる個人的な名前や、アカウント名を使用してはいけない。入手可能な(電話番号、車のナンバー、または社会保障番号)個人情報や自分をとりまく環境の情報を使用してはいけない。
+
+誕生日や単純なパターン(例として 
+.I "qwerty" "abc" または "aaa"
+)を使用してはいけない。それらの逆読みに前後して続けて数字を使用してはいけない。そうぜす、大文字、小文字、数字、または句読点を混ぜて使用せよ。新規のパスワードを選択する際には今まで使用してきたどのパスワードにも関連ないように注意する。長いパスワード(例えば8文字)を使用せよ。単語のペアを句読点と一緒にしたり、パスフレーズ(理解可能な複数の単語のシーケンス)、または各パスフレーズの頭文字を使用しても良い。
+
+.SH ""
+これら原則の一部はシステムによって強制されているが、一部のみである。自分の方でも気をつける事がシステムをよりセキュアにすることが可能になる。
+
+
+.SH 返り値
+目的を成功して終了した後に
+.B passwd
+は返り値 0 を出力して終了する。返り値 1  はエラーが発生したことを意味する。エラーメッセージは標準エラー出力に出力される。
+
+.SH 準拠
+.br
+.BR Linux-PAM
+(Linux の Pluggable Authentication モジュール)。
+.br
+注意。使用しているディストリビューションの Linux-PAM がLinuxファイルシステム標準に準拠している場合、例示した様に、/usr/lib/security/ ではなく、
+.I /lib/security/
+にモジュールがある。
+
+.SH ファイル
+.br
+.B /etc/pam.d/passwd
+- the
+.BR Linux-PAM　
+設定ファイル
+
+.SH バグ
+.sp 2
+既知のバグは無い。
+
+.SH 関連事項
+
+.BR pam "(8) "
+と
+.BR pam_chauthok "(2)。 "
+
+.sp
+
+.BR Linux-PAM " "
+にてこのプログラムを設定するためのより精度の高い方法は、
+.I "/usr/share/doc/pam..."
+にある
+.BR "Linux-PAM System Administrators' Guide" " を "
+.br
+参照のこと。
+
+.SH 著者
+Cristian Gafton <gafton@redhat.com>
