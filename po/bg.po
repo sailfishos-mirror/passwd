@@ -2,7 +2,7 @@
 # Bulgarian translations for passwd package.
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
-#
+# 
 # Automatically generated, 2006.
 # Doncho N. Gunchev <gunchev@gmail.com>, 2007.
 msgid ""
@@ -46,16 +46,6 @@ msgstr "Зададена парола, MD5 криптиране."
 #: libuser.c:306
 msgid "Password set, blowfish crypt."
 msgstr "Зададена парола, blowfish криптиране."
-
-#: libuser.c:309
-#, fuzzy
-msgid "Password set, SHA256 crypt."
-msgstr "Зададена парола, MD5 криптиране."
-
-#: libuser.c:312
-#, fuzzy
-msgid "Password set, SHA512 crypt."
-msgstr "Зададена парола, MD5 криптиране."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
@@ -113,19 +103,12 @@ msgid "minimum password lifetime (root only)"
 msgstr "минимален живот на паролата (само root)"
 
 #: passwd.c:170
-msgid ""
-"number of days warning users receives before password expiration (root only)"
-msgstr ""
-"брой дни които потребителя получава предупреждение за изтичане на паролата "
-"(само root)"
+msgid "number of days warning users receives before password expiration (root only)"
+msgstr "брой дни които потребителя получава предупреждение за изтичане на паролата (само root)"
 
 #: passwd.c:173
-msgid ""
-"number of days after password expiration when an account becomes disabled "
-"(root only)"
-msgstr ""
-"брой дни след изтичане на паролата след които акаунта бива забранен (само "
-"root)"
+msgid "number of days after password expiration when an account becomes disabled (root only)"
+msgstr "брой дни след изтичане на паролата след които акаунта бива забранен (само root)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
@@ -264,3 +247,11 @@ msgstr "%s: изтеклите полета за удостоверяване б
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: всички полета за удостоверяване бяха обновени успешно.\n"
+
+#: libuser.c:312
+msgid "Password set, SHA512 crypt."
+msgstr "Зададена парола, SHA512 криптиране."
+
+#: libuser.c:309
+msgid "Password set, SHA256 crypt."
+msgstr "Зададена парола, SHA256 криптиране."
