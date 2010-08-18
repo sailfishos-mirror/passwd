@@ -154,21 +154,6 @@ msgstr "Adjusting aging data for user %s.\n"
 msgid "Changing password for user %s.\n"
 msgstr "Changing password for user %s.\n"
 
-#: passwd.c:522
-#, fuzzy, c-format
-msgid "%s: unable to set failure delay: %s\n"
-msgstr "passwd: unable to set failure delay\n"
-
-#: passwd.c:540
-#, fuzzy, c-format
-msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr "passwd: expired authentication tokens updated successfully.\n"
-
-#: passwd.c:546
-#, fuzzy, c-format
-msgid "%s: all authentication tokens updated successfully.\n"
-msgstr "passwd: all authentication tokens updated successfully.\n"
-
 #: passwd.c:511
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
@@ -253,6 +238,21 @@ msgstr "minium password lifetime (root only)"
 #: passwd.c:170
 msgid "number of days warning users receives before password expiration (root only)"
 msgstr "number of days warning users receives before password expiration (root only)"
+
+#: passwd.c:546
+#, c-format
+msgid "%s: all authentication tokens updated successfully.\n"
+msgstr "%s: all authentication tokens updated successfully.\n"
+
+#: passwd.c:540
+#, c-format
+msgid "%s: expired authentication tokens updated successfully.\n"
+msgstr "%s: expired authentication tokens updated successfully\n"
+
+#: passwd.c:522
+#, c-format
+msgid "%s: unable to set failure delay: %s\n"
+msgstr "%s: unable to set failure delay: %s\n"
 
 #~ msgid "Unknown user context"
 #~ msgstr "Unknown user context"
