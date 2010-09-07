@@ -2,7 +2,7 @@
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
 # Automatically generated, 2006.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.73\n"
@@ -15,25 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: libuser.c:88
-#, c-format
-msgid "%s: libuser initialization error:"
-msgstr ""
-
-#: libuser.c:165
-msgid "Warning: unlocked password would be empty."
-msgstr ""
-
 #: libuser.c:279
 msgid "Corrupted passwd entry."
 msgstr ""
 
 #: libuser.c:296
 msgid "Empty password."
-msgstr ""
-
-#: libuser.c:299
-msgid "Password locked."
 msgstr ""
 
 #: libuser.c:303
@@ -62,16 +49,6 @@ msgstr ""
 
 #: libuser.c:322
 msgid "Password set, DES crypt."
-msgstr ""
-
-#: libuser.c:336
-#, c-format
-msgid "No password set.\n"
-msgstr ""
-
-#: libuser.c:340
-#, c-format
-msgid "Unknown user.\n"
 msgstr ""
 
 #: libuser.c:435
@@ -108,14 +85,11 @@ msgid "minimum password lifetime (root only)"
 msgstr ""
 
 #: passwd.c:170
-msgid ""
-"number of days warning users receives before password expiration (root only)"
+msgid "number of days warning users receives before password expiration (root only)"
 msgstr ""
 
 #: passwd.c:173
-msgid ""
-"number of days after password expiration when an account becomes disabled "
-"(root only)"
+msgid "number of days after password expiration when an account becomes disabled (root only)"
 msgstr ""
 
 #: passwd.c:176
@@ -255,3 +229,26 @@ msgstr ""
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr ""
+
+#: libuser.c:88
+#, c-format
+msgid "%s: libuser initialization error:"
+msgstr "%s: خطای راه‌اندازی اولیه libuser:"
+
+#: libuser.c:165
+msgid "Warning: unlocked password would be empty."
+msgstr "هشدار: گذرواژه قفل نشده خالی خواهد شد."
+
+#: libuser.c:299
+msgid "Password locked."
+msgstr "گذرواژه قفل شده است"
+
+#: libuser.c:336
+#, c-format
+msgid "No password set.\n"
+msgstr "گذرواژه‌ای تنظیم ندشه. \n"
+
+#: libuser.c:340
+#, c-format
+msgid "Unknown user.\n"
+msgstr "کاربر ناشناخته. \n"
