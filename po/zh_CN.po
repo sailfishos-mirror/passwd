@@ -1,262 +1,262 @@
 # translation of passwd.tip.po to Simplified Chinese
 # Chinese translations for passwd package
-# passwd Èí¼ş°üµÄ¼òÌåÖĞÎÄ·­Òë.
-# Copyright (C) 2006 Red Hat, Inc.
+# passwd è½¯ä»¶åŒ…çš„ç®€ä½“ä¸­æ–‡ç¿»è¯‘.
+# Copyright (C) 2010 Free Software Foundation, Inc.
+# Copyright (C) 2006, 2009 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
 #
-# Automatically generated, 2006.
 # Leah Liu <lliu@redhat.com>, 2009.
+# Aron Xu <happyaron.xu@gmail.com>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: passwd.tip\n"
+"Project-Id-Version: passwd master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2009-04-01 21:38+1000\n"
-"Last-Translator: Leah Liu <lliu@redhat.com>\n"
-"Language-Team: Simplified Chinese <zh@li.org>\n"
+"PO-Revision-Date: 2010-09-30 15:47+0800\n"
+"Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
+"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=GB2312\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
 
 #: libuser.c:88
 #, c-format
 msgid "%s: libuser initialization error:"
-msgstr "%s£ºlibuser³õÊ¼»¯´íÎó£º"
+msgstr "%sï¼šlibuser åˆå§‹åŒ–é”™è¯¯ï¼š"
 
 #: libuser.c:165
 msgid "Warning: unlocked password would be empty."
-msgstr "¾¯¸æ£ºÎ´Ëø¶¨µÄÃÜÂë½«ÊÇ¿ÕµÄ¡£"
+msgstr "è­¦å‘Šï¼šæœªé”å®šçš„å¯†ç å°†æ˜¯ç©ºçš„ã€‚"
 
 #: libuser.c:279
 msgid "Corrupted passwd entry."
-msgstr "´íÎóµÄpasswdÌõÄ¿¡£"
+msgstr "å·²æŸåçš„ passwd æ¡ç›®ã€‚"
 
 #: libuser.c:296
 msgid "Empty password."
-msgstr "ÃÜÂëÎª¿Õ¡£"
+msgstr "å¯†ç ä¸ºç©ºã€‚"
 
 #: libuser.c:299
 msgid "Password locked."
-msgstr "ÃÜÂëÒÑ±»Ëø¶¨¡£"
+msgstr "å¯†ç å·²è¢«é”å®šã€‚"
 
 #: libuser.c:303
 msgid "Password set, MD5 crypt."
-msgstr "ÃÜÂëÒÑÉèÖÃ£¬Ê¹ÓÃMD5¼ÓÃÜ¡£"
+msgstr "å¯†ç å·²è®¾ç½®ï¼Œä½¿ç”¨ MD5 ç®—æ³•ã€‚"
 
 #: libuser.c:306
 msgid "Password set, blowfish crypt."
-msgstr "ÃÜÂëÒÑÉèÖÃ£¬Ê¹ÓÃblowfish½øĞĞ¼ÓÃÜ¡£"
+msgstr "å¯†ç å·²è®¾ç½®ï¼Œä½¿ç”¨ blowfish ç®—æ³•ã€‚"
 
 #: libuser.c:309
 msgid "Password set, SHA256 crypt."
-msgstr "ÃÜÂëÒÑÉèÖÃ£¬Ê¹ÓÃ SHA256 ¼ÓÃÜ¡£"
+msgstr "å¯†ç å·²è®¾ç½®ï¼Œä½¿ç”¨ SHA256 ç®—æ³•ã€‚"
 
 #: libuser.c:312
 msgid "Password set, SHA512 crypt."
-msgstr "ÃÜÂëÒÑÉèÖÃ£¬Ê¹ÓÃ SHA512 ¼ÓÃÜ¡£"
+msgstr "å¯†ç å·²è®¾ç½®ï¼Œä½¿ç”¨ SHA512 ç®—æ³•ã€‚"
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
-msgstr "ÃÜÂëÒÑÉèÖÃ£¬¼ÓÃÜ·½Ê½Î´Öª¡£"
+msgstr "å¯†ç å·²è®¾ç½®ï¼ŒåŠ å¯†ç®—æ³•æœªçŸ¥ã€‚"
 
 #: libuser.c:317
 msgid "Alternate authentication scheme in use."
-msgstr "¸ü¸Äµ±Ç°Ê¹ÓÃµÄÈÏÖ¤·½°¸¡£"
+msgstr "æ›´æ”¹å½“å‰ä½¿ç”¨çš„è®¤è¯æ–¹æ¡ˆã€‚"
 
 #: libuser.c:322
 msgid "Password set, DES crypt."
-msgstr "ÃÜÂëÒÑÉèÖÃ£¬Ê¹ÓÃDES½øĞĞ¼ÓÃÜ¡£"
+msgstr "å¯†ç å·²è®¾ç½®ï¼Œä½¿ç”¨ DES ç®—æ³•ã€‚"
 
 #: libuser.c:336
 #, c-format
 msgid "No password set.\n"
-msgstr "ÃÜÂëÎ´ÉèÖÃ¡£\n"
+msgstr "å¯†ç æœªè®¾ç½®ã€‚\n"
 
 #: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
-msgstr "Î´ÖªÓÃ»§¡£\n"
+msgstr "æœªçŸ¥ç”¨æˆ·ã€‚\n"
 
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr "%s£º ÓÃ»§ÕÊºÅ²»Ö§³ÖÃÜÂëÀÏ»¯¹¦ÄÜ¡£\n"
+msgstr "%sï¼šç”¨æˆ·å¸å·ä¸æ”¯æŒå¯†ç è€åŒ–åŠŸèƒ½ã€‚\n"
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
-msgstr "±£³ÖÉí·İÑéÖ¤ÁîÅÆ²»¹ıÆÚ"
+msgstr "ä¿æŒèº«ä»½éªŒè¯ä»¤ç‰Œä¸è¿‡æœŸ"
 
 #: passwd.c:158
 msgid "delete the password for the named account (root only)"
-msgstr "É¾³ıÒÑÃüÃûÕÊºÅµÄÃÜÂë£¨Ö»ÓĞ¸ùÓÃ»§²ÅÄÜ½øĞĞ´Ë²Ù×÷£©"
+msgstr "åˆ é™¤å·²å‘½åå¸å·çš„å¯†ç (åªæœ‰æ ¹ç”¨æˆ·æ‰èƒ½è¿›è¡Œæ­¤æ“ä½œ)"
 
 #: passwd.c:160
 msgid "lock the named account (root only)"
-msgstr "Ëø¶¨ÒÑÃüÃûµÄÕÊºÅ£¨Ö»ÓĞ¸ùÓÃ»§²ÅÄÜ½øĞĞ´Ë²Ù×÷£©"
+msgstr "é”å®šå·²å‘½åçš„å¸å·(åªæœ‰æ ¹ç”¨æˆ·æ‰èƒ½è¿›è¡Œæ­¤æ“ä½œ)"
 
 #: passwd.c:162
 msgid "unlock the named account (root only)"
-msgstr "½âËøÒÑÃüÃûµÄÕÊºÅ£¨Ö»ÓĞ¸ùÓÃ»§²ÅÄÜ½øĞĞ´Ë²Ù×÷£©"
+msgstr "è§£é”å·²å‘½åçš„å¸å·(åªæœ‰æ ¹ç”¨æˆ·æ‰èƒ½è¿›è¡Œæ­¤æ“ä½œ)"
 
 #: passwd.c:164
 msgid "force operation"
-msgstr "Ç¿ÖÆÖ´ĞĞ²Ù×÷"
+msgstr "å¼ºåˆ¶æ‰§è¡Œæ“ä½œ"
 
 #: passwd.c:166
 msgid "maximum password lifetime (root only)"
-msgstr "ÃÜÂëµÄ×î³¤ÓĞĞ§Ê±ÏŞ£¨Ö»ÓĞ¸ùÓÃ»§²ÅÄÜ½øĞĞ´Ë²Ù×÷£©"
+msgstr "å¯†ç çš„æœ€é•¿æœ‰æ•ˆæ—¶é™(åªæœ‰æ ¹ç”¨æˆ·æ‰èƒ½è¿›è¡Œæ­¤æ“ä½œ)"
 
 #: passwd.c:168
 msgid "minimum password lifetime (root only)"
-msgstr "ÃÜÂëµÄ×î¶ÌÓĞĞ§Ê±ÏŞ£¨Ö»ÓĞ¸ùÓÃ»§²ÅÄÜ½øĞĞ´Ë²Ù×÷£©"
+msgstr "å¯†ç çš„æœ€çŸ­æœ‰æ•ˆæ—¶é™(åªæœ‰æ ¹ç”¨æˆ·æ‰èƒ½è¿›è¡Œæ­¤æ“ä½œ)"
 
 #: passwd.c:170
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr "ÔÚÃÜÂë¹ıÆÚÇ°¶àÉÙÌì¿ªÊ¼ÌáĞÑÓÃ»§£¨Ö»ÓĞ¸ùÓÃ»§²ÅÄÜ½øĞĞ´Ë²Ù×÷£©"
+msgstr "åœ¨å¯†ç è¿‡æœŸå‰å¤šå°‘å¤©å¼€å§‹æé†’ç”¨æˆ·(åªæœ‰æ ¹ç”¨æˆ·æ‰èƒ½è¿›è¡Œæ­¤æ“ä½œ)"
 
 #: passwd.c:173
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr "µ±ÃÜÂë¹ıÆÚºó¾­¹ı¶àÉÙÌì¸ÃÕÊºÅ»á±»½ûÓÃ£¨Ö»ÓĞ¸ùÓÃ»§²ÅÄÜ½øĞĞ´Ë²Ù×÷£©"
+msgstr "å½“å¯†ç è¿‡æœŸåç»è¿‡å¤šå°‘å¤©è¯¥å¸å·ä¼šè¢«ç¦ç”¨(åªæœ‰æ ¹ç”¨æˆ·æ‰èƒ½è¿›è¡Œæ­¤æ“ä½œ)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
-msgstr "±¨¸æÒÑÃüÃûÕÊºÅµÄÃÜÂë×´Ì¬£¨Ö»ÓĞ¸ùÓÃ»§²ÅÄÜ½øĞĞ´Ë²Ù×÷£©"
+msgstr "æŠ¥å‘Šå·²å‘½åå¸å·çš„å¯†ç çŠ¶æ€(åªæœ‰æ ¹ç”¨æˆ·æ‰èƒ½è¿›è¡Œæ­¤æ“ä½œ)"
 
 #: passwd.c:178
 msgid "read new tokens from stdin (root only)"
-msgstr "´Ó±ê×¼ÊäÈë¶ÁÈ¡ÁîÅÆ£¨Ö»ÓĞ¸ùÓÃ»§²ÅÄÜ½øĞĞ´Ë²Ù×÷£©"
+msgstr "ä»æ ‡å‡†è¾“å…¥è¯»å–ä»¤ç‰Œ(åªæœ‰æ ¹ç”¨æˆ·æ‰èƒ½è¿›è¡Œæ­¤æ“ä½œ)"
 
 #: passwd.c:185
 msgid "[OPTION...] <accountName>"
-msgstr "[Ñ¡Ïî...] <ÕÊºÅÃû³Æ>"
+msgstr "[é€‰é¡¹...] <å¸å·åç§°>"
 
 #: passwd.c:188
 #, c-format
 msgid "%s: bad argument %s: %s\n"
-msgstr "%s£º´íÎóµÄ²ÎÊı %s£º %s\n"
+msgstr "%sï¼šé”™è¯¯çš„å‚æ•° %sï¼š%s\n"
 
 #: passwd.c:246
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
-msgstr "%s£º ²ÎÊı -l£¬ -u£¬ -d£¬ -SÖ»ÄÜÖ¸¶¨ÆäÖĞµÄÒ»¸ö¡£\n"
+msgstr "%sï¼šå‚æ•° -lï¼Œ-uï¼Œ-dï¼Œ-S åªèƒ½æŒ‡å®šå…¶ä¸­çš„ä¸€ä¸ªã€‚\n"
 
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr ""
-"%s£º²ÎÊı -l£¬ -u£¬ -d£¬ -S ²»ÄÜºÍ²ÎÊı -i£¬ -n£¬ -w£¬ -xÖĞµÄÈÎÒ»¸öÑ¡ÏîºÏÓÃ¡£\n"
+"%sï¼šå‚æ•° -lï¼Œ-uï¼Œ-dï¼Œ-S ä¸èƒ½å’Œå‚æ•° -iï¼Œ-nï¼Œ-wï¼Œ-x ä¸­çš„ä»»ä¸€ä¸ªé€‰é¡¹åˆç”¨ã€‚\n"
 
 #: passwd.c:279
 #, c-format
 msgid "Only root can do that.\n"
-msgstr "Ö»ÓĞ¸ùÓÃ»§²ÅÄÜ½øĞĞ´Ë²Ù×÷¡£\n"
+msgstr "åªæœ‰æ ¹ç”¨æˆ·æ‰èƒ½è¿›è¡Œæ­¤æ“ä½œã€‚\n"
 
 #: passwd.c:292
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
-msgstr "%s£º Ö»ÓĞ¸ùÓÃ»§²ÅÄÜÖ¸¶¨ÓÃ»§Ãû³Æ¡£\n"
+msgstr "%sï¼šåªæœ‰æ ¹ç”¨æˆ·æ‰èƒ½æŒ‡å®šç”¨æˆ·åã€‚\n"
 
 #: passwd.c:301
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
-msgstr "%s£ºÌá¹©µÄÓÃ»§Ãû³Æ³¤¶ÈÌ«³¤¡£\n"
+msgstr "%sï¼šæä¾›çš„ç”¨æˆ·åç§°é•¿åº¦å¤ªé•¿ã€‚\n"
 
 #: passwd.c:311
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
-msgstr "%s£ºÖ»ÄÜÖ¸¶¨Ò»¸öÓÃ»§µÄÃû³Æ¡£\n"
+msgstr "%sï¼šåªèƒ½æŒ‡å®šä¸€ä¸ªç”¨æˆ·çš„åç§°ã€‚\n"
 
 #: passwd.c:321
 #, c-format
 msgid "%s: This option requires a user name.\n"
-msgstr "%s£º ¸ÃÑ¡ÏîĞèÒªÊ¹ÓÃÓÃ»§Ãû³Æ¡£\n"
+msgstr "%sï¼šè¯¥é€‰é¡¹éœ€è¦ä½¿ç”¨ç”¨æˆ·åç§°ã€‚\n"
 
 #: passwd.c:332
 #, c-format
 msgid "%s: Can not identify you!\n"
-msgstr "%s£º ÎŞ·¨È·ÈÏÄúµÄÉí·İ£¡\n"
+msgstr "%sï¼šæ— æ³•ç¡®è®¤æ‚¨çš„èº«ä»½ï¼\n"
 
 #: passwd.c:341 passwd.c:376
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
-msgstr "%s£º Î´ÖªµÄÓÃ»§Ãû³Æ '%s'¡£\n"
+msgstr "%sï¼šæœªçŸ¥çš„ç”¨æˆ·å %sã€‚\n"
 
 #: passwd.c:393
 #, c-format
 msgid "%s: %s is not authorized to change the password of %s\n"
-msgstr "%s£º %s ÎŞÈ¨ÏŞ¸ü¸Ä %s µÄÃÜÂë \n"
+msgstr "%sï¼š%s æ— æƒé™æ›´æ”¹ %s çš„å¯†ç  \n"
 
 #: passwd.c:406
 #, c-format
 msgid "Locking password for user %s.\n"
-msgstr "Ëø¶¨ÓÃ»§ %s µÄÃÜÂë ¡£\n"
+msgstr "é”å®šç”¨æˆ· %s çš„å¯†ç  ã€‚\n"
 
 #: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
 msgid "Success"
-msgstr "²Ù×÷³É¹¦"
+msgstr "æ“ä½œæˆåŠŸ"
 
 #: passwd.c:410 passwd.c:425
 msgid "Error (password not set?)"
-msgstr "´íÎó£¨ÃÜÂëÎ´ÉèÖÃ£¿£©"
+msgstr "é”™è¯¯(å¯†ç æœªè®¾ç½®ï¼Ÿ)"
 
 #: passwd.c:418
 #, c-format
 msgid "Unlocking password for user %s.\n"
-msgstr "½âËøÓÃ»§ %s µÄÃÜÂë ¡£\n"
+msgstr "è§£é”ç”¨æˆ· %s çš„å¯†ç ã€‚\n"
 
 #: passwd.c:424
 msgid "Unsafe operation (use -f to force)"
-msgstr "²»°²È«µÄ²Ù×÷£¨Ê¹ÓÃ -f ²ÎÊıÇ¿ÖÆ½øĞĞ¸Ã²Ù×÷£©"
+msgstr "ä¸å®‰å…¨çš„æ“ä½œ(ä½¿ç”¨ -f å‚æ•°å¼ºåˆ¶è¿›è¡Œè¯¥æ“ä½œ)"
 
 #: passwd.c:433
 #, c-format
 msgid "Removing password for user %s.\n"
-msgstr "Çå³ıÓÃ»§µÄÃÜÂë %s¡£\n"
+msgstr "æ¸…é™¤ç”¨æˆ·çš„å¯†ç  %sã€‚\n"
 
 #: passwd.c:436 passwd.c:456
 msgid "Error"
-msgstr "´íÎó"
+msgstr "é”™è¯¯"
 
 #: passwd.c:453
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
-msgstr "µ÷ÕûÓÃ»§ÃÜÂëÀÏ»¯Êı¾İ%s¡£\n"
+msgstr "è°ƒæ•´ç”¨æˆ·å¯†ç è€åŒ–æ•°æ®%sã€‚\n"
 
 #: passwd.c:469
 #, c-format
 msgid "Changing password for user %s.\n"
-msgstr "¸ü¸ÄÓÃ»§ %s µÄÃÜÂë ¡£\n"
+msgstr "æ›´æ”¹ç”¨æˆ· %s çš„å¯†ç  ã€‚\n"
 
 #: passwd.c:481
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
-msgstr "%s£º´Ó±ê×¼ÊäÈë£º%s ¶ÁÈ¡Ê±·¢Éú´íÎó¡£ \n"
+msgstr "%sï¼šä»æ ‡å‡†è¾“å…¥ï¼š%s è¯»å–æ—¶å‘ç”Ÿé”™è¯¯ã€‚ \n"
 
 #: passwd.c:498
 #, c-format
 msgid "%s: unable to start pam: %s\n"
-msgstr "%s£º²»ÄÜÆô¶¯pam£º %s\n"
+msgstr "%sï¼šä¸èƒ½å¯åŠ¨pamï¼š%s\n"
 
 #: passwd.c:511
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
-msgstr "%s£º²»ÄÜÎªpamÉèÖÃtty£º %s\n"
+msgstr "%sï¼šä¸èƒ½ä¸ºpam è®¾ç½®ttyï¼š%s\n"
 
 #: passwd.c:522
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
-msgstr "%s£º²»ÄÜ¹»ÉèÖÃÊ§°ÜÑÓ³Ù£º %s\n"
+msgstr "%sï¼šä¸èƒ½å¤Ÿè®¾ç½®å¤±è´¥å»¶è¿Ÿï¼š%s\n"
 
 #: passwd.c:540
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr "%s£º¹ıÆÚµÄÉí·İÑéÖ¤ÁîÅÆÒÑ¾­³É¹¦¸üĞÂ¡£\n"
+msgstr "%sï¼šè¿‡æœŸçš„èº«ä»½éªŒè¯ä»¤ç‰Œå·²ç»æˆåŠŸæ›´æ–°ã€‚\n"
 
 #: passwd.c:546
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
-msgstr "%s£º ËùÓĞµÄÉí·İÑéÖ¤ÁîÅÆÒÑ¾­³É¹¦¸üĞÂ¡£\n"
+msgstr "%sï¼šæ‰€æœ‰çš„èº«ä»½éªŒè¯ä»¤ç‰Œå·²ç»æˆåŠŸæ›´æ–°ã€‚\n"
