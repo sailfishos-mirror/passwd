@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: passwd 0.73\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2009-10-30 12:01+0100\n"
-"Last-Translator: astur <malditoastur@gmail.com>\n"
+"PO-Revision-Date: 2010-10-13 17:17+0100\n"
+"Last-Translator: Iñigo Varela <ivarela@softastur.org>\n"
 "Language-Team: Fedora Asturian <alministradores@softastur.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -79,8 +79,7 @@ msgstr "Usuariu desconocíu.\n"
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr ""
-"%s: la cuenta del usuariu nun tien sofitu p'avieyamientu de contraseña.\n"
+msgstr "%s: la cuenta del usuariu nun tien sofitu p'avieyamientu de contraseña.\n"
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
@@ -111,19 +110,12 @@ msgid "minimum password lifetime (root only)"
 msgstr "tiempu mínimu de vida de la contraseña (namái root)"
 
 #: passwd.c:170
-msgid ""
-"number of days warning users receives before password expiration (root only)"
-msgstr ""
-"númberu de díes enantes del vencimientu de la contraseña en que los usuarios "
-"reciban avisos de vencimientu (namái root)"
+msgid "number of days warning users receives before password expiration (root only)"
+msgstr "númberu de díes enantes del vencimientu de la contraseña en que los usuarios reciban avisos de vencimientu (namái root)"
 
 #: passwd.c:173
-msgid ""
-"number of days after password expiration when an account becomes disabled "
-"(root only)"
-msgstr ""
-"númberu de díes dempués de que venció la contraseña en que se deshabilitará "
-"la cuenta (namái root)"
+msgid "number of days after password expiration when an account becomes disabled (root only)"
+msgstr "númberu de díes dempués de que venció la contraseña en que se deshabilitará la cuenta (namái root)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
@@ -150,9 +142,7 @@ msgstr "%s: namái ún de -l, -u, -d, -S se puede especificar.\n"
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s: Nun se pueden mecer una de les opciones -l, -u, -d, -S y una de -i, -n, -"
-"w, -x.\n"
+msgstr "%s: Nun se pueden mecer una de les opciones -l, -u, -d, -S y una de -i, -n, -w, -x.\n"
 
 #: passwd.c:279
 #, c-format
@@ -165,9 +155,9 @@ msgid "%s: Only root can specify a user name.\n"
 msgstr "%s: namái root puede especificar un nome de usuariu.\n"
 
 #: passwd.c:301
-#, fuzzy, c-format
+#, c-format
 msgid "%s: The user name supplied is too long.\n"
-msgstr "%s: el nome d'usuariu apurríu ye enforma llargu.\n"
+msgstr "%s: el nome d'usuariu facilitáu ye enforma llargu.\n"
 
 #: passwd.c:311
 #, c-format
@@ -184,7 +174,8 @@ msgstr "%s: Esta opción requier un nome d'usuariu.\n"
 msgid "%s: Can not identify you!\n"
 msgstr "%s: Nun puede identificate!\n"
 
-#: passwd.c:341 passwd.c:376
+#: passwd.c:341
+#: passwd.c:376
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: Nome d'usuariu desconocíu '%s'.\n"
@@ -199,11 +190,15 @@ msgstr "%s: %s nun tas autorizáu a camudar la contraseña de %s\n"
 msgid "Locking password for user %s.\n"
 msgstr "Bloqueando la contraseña pa l'usuariu %s.\n"
 
-#: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
+#: passwd.c:410
+#: passwd.c:422
+#: passwd.c:436
+#: passwd.c:456
 msgid "Success"
 msgstr "Éxitu"
 
-#: passwd.c:410 passwd.c:425
+#: passwd.c:410
+#: passwd.c:425
 msgid "Error (password not set?)"
 msgstr "Fallu (¿nun se afitó la contraseña?)"
 
@@ -221,7 +216,8 @@ msgstr "Operación insegura (usa -f pa forciala)"
 msgid "Removing password for user %s.\n"
 msgstr "Desaniciando la contraseña del usuariu %s.\n"
 
-#: passwd.c:436 passwd.c:456
+#: passwd.c:436
+#: passwd.c:456
 msgid "Error"
 msgstr "Fallu"
 
@@ -264,3 +260,4 @@ msgstr "%s: tokens d'autentificación vencíes anovaes con éxitu.\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: tolos tokens d'autentificación anováronse bien.\n"
+
