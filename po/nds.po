@@ -1,9 +1,9 @@
 # Low German translations for passwd package.
 # Copyright (C) 2006 Red Hat, Inc.
 # This file is distributed under the same license as the passwd package.
-#
+# 
 # Nils-Christoph Fiedler <ncfiedler@fedoraproject.org>, 2010.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
@@ -25,10 +25,6 @@ msgstr ""
 
 #: libuser.c:165
 msgid "Warning: unlocked password would be empty."
-msgstr ""
-
-#: libuser.c:279
-msgid "Corrupted passwd entry."
 msgstr ""
 
 #: libuser.c:296
@@ -90,10 +86,6 @@ msgstr ""
 msgid "delete the password for the named account (root only)"
 msgstr ""
 
-#: passwd.c:160
-msgid "lock the named account (root only)"
-msgstr ""
-
 #: passwd.c:162
 msgid "unlock the named account (root only)"
 msgstr ""
@@ -124,10 +116,6 @@ msgstr ""
 
 #: passwd.c:178
 msgid "read new tokens from stdin (root only)"
-msgstr ""
-
-#: passwd.c:185
-msgid "[OPTION...] <accountName>"
 msgstr ""
 
 #: passwd.c:188
@@ -175,8 +163,7 @@ msgstr ""
 msgid "%s: Can not identify you!\n"
 msgstr ""
 
-#: passwd.c:341
-#: passwd.c:376
+#: passwd.c:341 passwd.c:376
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr ""
@@ -191,15 +178,11 @@ msgstr ""
 msgid "Locking password for user %s.\n"
 msgstr ""
 
-#: passwd.c:410
-#: passwd.c:422
-#: passwd.c:436
-#: passwd.c:456
+#: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
 msgid "Success"
 msgstr "Erfolg"
 
-#: passwd.c:410
-#: passwd.c:425
+#: passwd.c:410 passwd.c:425
 msgid "Error (password not set?)"
 msgstr "Fehler (Passwoord nich sett?)"
 
@@ -217,8 +200,7 @@ msgstr ""
 msgid "Removing password for user %s.\n"
 msgstr ""
 
-#: passwd.c:436
-#: passwd.c:456
+#: passwd.c:436 passwd.c:456
 msgid "Error"
 msgstr "Fehler"
 
@@ -262,3 +244,14 @@ msgstr ""
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr ""
 
+#: libuser.c:279
+msgid "Corrupted passwd entry."
+msgstr "De Passwoordindrag is im dutt."
+
+#: passwd.c:160
+msgid "lock the named account (root only)"
+msgstr "wählten Togang avsluten (jüst Root)"
+
+#: passwd.c:185
+msgid "[OPTION...] <accountName>"
+msgstr "[OPTION...] <accountName>"
