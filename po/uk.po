@@ -20,7 +20,7 @@ msgstr ""
 #: libuser.c:88
 #, c-format
 msgid "%s: libuser initialization error:"
-msgstr "%s: помилка ініціализації libuser:"
+msgstr "%s: помилка ініціалізації libuser:"
 
 #: libuser.c:165
 msgid "Warning: unlocked password would be empty."
