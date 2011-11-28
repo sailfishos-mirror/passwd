@@ -1,264 +1,257 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR Red Hat, Inc.
-# This file is distributed under the same license as the PACKAGE package.
+# Low German translations for passwd package.
+# Copyright (C) 2006 Red Hat, Inc.
+# This file is distributed under the same license as the passwd package.
 # 
-# Translators:
-# Automatically generated, 2006.
+# Nils-Christoph Fiedler <ncfiedler@fedoraproject.org>, 2010.
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2010-10-13 17:17+0100\n"
-"Last-Translator: Iñigo Varela <ivarela@softastur.org>\n"
-"Language-Team: Fedora Asturian <alministradores@softastur.org>\n"
+"PO-Revision-Date: 2010-12-05 09:48+0100\n"
+"Last-Translator: Nils-Christoph Fiedler <ncfiedler@gnome.org>\n"
+"Language-Team: Low German <nds-lowgerman@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ast\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Low German\n"
 
 #: libuser.c:88
 #, c-format
 msgid "%s: libuser initialization error:"
-msgstr "%s: fallu d'arranque de libuser:"
+msgstr ""
 
 #: libuser.c:165
 msgid "Warning: unlocked password would be empty."
-msgstr "Avisu: el ficheru de claves desbloqueáu puede que tea baleru."
-
-#: libuser.c:279
-msgid "Corrupted passwd entry."
-msgstr "Entrada de passwd corrupta."
+msgstr ""
 
 #: libuser.c:296
 msgid "Empty password."
-msgstr "Contraseña balera."
+msgstr "Leeres Passwoord."
 
 #: libuser.c:299
 msgid "Password locked."
-msgstr "Contraseña bloqueada."
+msgstr "Passwoord avsluten."
 
 #: libuser.c:303
 msgid "Password set, MD5 crypt."
-msgstr "Contraseña afitada, encriptáu MD5."
+msgstr "Passwoord sett, MD5 verslötelt."
 
 #: libuser.c:306
 msgid "Password set, blowfish crypt."
-msgstr "Contraseña afitada, encriptáu blowfish"
+msgstr "Passwoord sett, blowfish verslötelt."
 
 #: libuser.c:309
 msgid "Password set, SHA256 crypt."
-msgstr "Contraseña afitada, encriptáu SHA256."
+msgstr "Passwoord sett, SHA256 verslötelt."
 
 #: libuser.c:312
 msgid "Password set, SHA512 crypt."
-msgstr "Contraseña afitada, encriptáu SHA512."
+msgstr "Passwoord sett, SHA512 verslötelt."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
-msgstr "Contraseña afitada, variante d'encriptación desconocida."
+msgstr "Passwoord sett, unbekannte Verslötelvariante^."
 
 #: libuser.c:317
 msgid "Alternate authentication scheme in use."
-msgstr "Esquema d'autenticación alternativu n'usu."
+msgstr ""
 
 #: libuser.c:322
 msgid "Password set, DES crypt."
-msgstr "Contraseña afitada, encriptáu DES."
+msgstr "Passwoord sett, DES verslötelt."
 
 #: libuser.c:336
 #, c-format
 msgid "No password set.\n"
-msgstr "Nun se afitó contraseña.\n"
+msgstr "Keen Passwoord sett.\n"
 
 #: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
-msgstr "Usuariu desconocíu.\n"
+msgstr "Unbekannter Bruker.\n"
 
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr ""
-"%s: la cuenta del usuariu nun tien sofitu p'avieyamientu de contraseña.\n"
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
-msgstr "caltener los tokens d'autentificación que nun tean vencíos"
+msgstr ""
 
 #: passwd.c:158
 msgid "delete the password for the named account (root only)"
-msgstr "desaniciar la contraseña pa la cuenta named (namái root)"
-
-#: passwd.c:160
-msgid "lock the named account (root only)"
-msgstr "bloquear la cuenta named (namái root)"
+msgstr ""
 
 #: passwd.c:162
 msgid "unlock the named account (root only)"
-msgstr "desbloquear la cuenta named (namái root)"
+msgstr ""
 
 #: passwd.c:164
 msgid "force operation"
-msgstr "forciar la operación"
+msgstr "Operatschoon ertwingen"
 
 #: passwd.c:166
 msgid "maximum password lifetime (root only)"
-msgstr "tiempu de vida máximu de la contraseña (namái root)"
+msgstr ""
 
 #: passwd.c:168
 msgid "minimum password lifetime (root only)"
-msgstr "tiempu mínimu de vida de la contraseña (namái root)"
+msgstr ""
 
 #: passwd.c:170
 msgid "number of days warning users receives before password expiration (root only)"
-msgstr "númberu de díes enantes del vencimientu de la contraseña en que los usuarios reciban avisos de vencimientu (namái root)"
+msgstr ""
 
 #: passwd.c:173
-msgid ""
-"number of days after password expiration when an account becomes disabled "
-"(root only)"
+msgid "number of days after password expiration when an account becomes disabled (root only)"
 msgstr ""
-"númberu de díes dempués de que venció la contraseña en que se deshabilitará "
-"la cuenta (namái root)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
-msgstr "informar del estáu de la contraseña na cuenta named (namái root)"
+msgstr ""
 
 #: passwd.c:178
 msgid "read new tokens from stdin (root only)"
-msgstr "lleer tokens nuevos dende stdin (namái root)"
-
-#: passwd.c:185
-msgid "[OPTION...] <accountName>"
-msgstr "[OPCION...] <nomeDeCuenta>"
+msgstr ""
 
 #: passwd.c:188
 #, c-format
 msgid "%s: bad argument %s: %s\n"
-msgstr "%s: argumentu incorreutu %s: %s\n"
+msgstr ""
 
 #: passwd.c:246
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
-msgstr "%s: namái ún de -l, -u, -d, -S se puede especificar.\n"
+msgstr ""
 
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: Nun se pueden mecer una de les opciones -l, -u, -d, -S y una de -i, -n, -w, -x.\n"
+msgstr ""
 
 #: passwd.c:279
 #, c-format
 msgid "Only root can do that.\n"
-msgstr "Namái root puede facer eso.\n"
+msgstr "Jüst root künn dat doon.\n"
 
 #: passwd.c:292
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
-msgstr "%s: namái root puede especificar un nome de usuariu.\n"
+msgstr ""
 
 #: passwd.c:301
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
-msgstr "%s: el nome d'usuariu facilitáu ye enforma llargu.\n"
+msgstr ""
 
 #: passwd.c:311
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
-msgstr "%s: namái se puede especificar un nome d'usuariu.\n"
+msgstr ""
 
 #: passwd.c:321
 #, c-format
 msgid "%s: This option requires a user name.\n"
-msgstr "%s: Esta opción requier un nome d'usuariu.\n"
+msgstr ""
 
 #: passwd.c:332
 #, c-format
 msgid "%s: Can not identify you!\n"
-msgstr "%s: Nun puede identificate!\n"
+msgstr ""
 
 #: passwd.c:341 passwd.c:376
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
-msgstr "%s: Nome d'usuariu desconocíu '%s'.\n"
+msgstr ""
 
 #: passwd.c:393
 #, c-format
 msgid "%s: %s is not authorized to change the password of %s\n"
-msgstr "%s: %s nun tas autorizáu a camudar la contraseña de %s\n"
+msgstr ""
 
 #: passwd.c:406
 #, c-format
 msgid "Locking password for user %s.\n"
-msgstr "Bloqueando la contraseña pa l'usuariu %s.\n"
+msgstr ""
 
 #: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
 msgid "Success"
-msgstr "Éxitu"
+msgstr "Erfolg"
 
 #: passwd.c:410 passwd.c:425
 msgid "Error (password not set?)"
-msgstr "Fallu (¿nun se afitó la contraseña?)"
+msgstr "Fehler (Passwoord nich sett?)"
 
 #: passwd.c:418
 #, c-format
 msgid "Unlocking password for user %s.\n"
-msgstr "Desbloqueando la contraseña pa l'usuariu %s.\n"
+msgstr ""
 
 #: passwd.c:424
 msgid "Unsafe operation (use -f to force)"
-msgstr "Operación insegura (usa -f pa forciala)"
+msgstr ""
 
 #: passwd.c:433
 #, c-format
 msgid "Removing password for user %s.\n"
-msgstr "Desaniciando la contraseña del usuariu %s.\n"
+msgstr ""
 
 #: passwd.c:436 passwd.c:456
 msgid "Error"
-msgstr "Fallu"
+msgstr "Fehler"
 
 #: passwd.c:453
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
-msgstr "Axustando los datos d'avieyamientu pal usuariu %s.\n"
+msgstr ""
 
 #: passwd.c:469
 #, c-format
 msgid "Changing password for user %s.\n"
-msgstr "Cambiando la contraseña del usuariu %s.\n"
+msgstr ""
 
 #: passwd.c:481
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
-msgstr "%s: fallu al lleer de stdin: %s\n"
+msgstr ""
 
 #: passwd.c:498
 #, c-format
 msgid "%s: unable to start pam: %s\n"
-msgstr "%s: nun pudo aniciase pam: %s\n"
+msgstr ""
 
 #: passwd.c:511
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
-msgstr "%s: nun pudo ponese'l tty pa pam: %s\n"
+msgstr ""
 
 #: passwd.c:522
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
-msgstr "%s: nun pudo ponese la espera máxima pa fallu: %s\n"
+msgstr ""
 
 #: passwd.c:540
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr "%s: tokens d'autentificación vencíes anovaes con éxitu.\n"
+msgstr ""
 
 #: passwd.c:546
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
-msgstr "%s: tolos tokens d'autentificación anováronse bien.\n"
+msgstr ""
 
+#: libuser.c:279
+msgid "Corrupted passwd entry."
+msgstr "De Passwoordindrag is im dutt."
 
+#: passwd.c:160
+msgid "lock the named account (root only)"
+msgstr "wählten Togang avsluten (jüst Root)"
+
+#: passwd.c:185
+msgid "[OPTION...] <accountName>"
+msgstr "[OPTION...] <accountName>"
