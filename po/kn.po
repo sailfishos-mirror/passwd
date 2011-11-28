@@ -1,23 +1,23 @@
-# translation of passwd.tip.kn.po to Kannada
-# Kannada translations for passwd package.
-# Copyright (C) 2006 Red Hat, Inc.
-# This file is distributed under the same license as the passwd package.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 # Automatically generated, 2006.
 # Shankar Prasad <svenkate@redhat.com>, 2007, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: passwd.tip.kn\n"
+"Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2009-04-03 13:15+0530\n"
-"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
-"Language-Team: Kannada <en@li.org>\n"
+"PO-Revision-Date: 2011-11-28 13:45+0000\n"
+"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"Language-Team: Kannada (http://www.transifex.net/projects/p/fedora/team/kn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Language: kn\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #: libuser.c:88
 #, c-format
@@ -123,8 +123,8 @@ msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
 msgstr ""
-"ಗುಪ್ತಪದದ ಕಾಲಾವಧಿ ಮೀರಿದ ನಂತರ ಅದರ ಖಾತೆಯು ಇಷ್ಟು ದಿನಗಳ ನಂತರ ಅಶಕ್ತಗೊಳ್ಳುತ್ತದೆ (ಮೂಲದಲ್ಲಿ "
-"ಮಾತ್ರ)"
+"ಗುಪ್ತಪದದ ಕಾಲಾವಧಿ ಮೀರಿದ ನಂತರ ಅದರ ಖಾತೆಯು ಇಷ್ಟು ದಿನಗಳ ನಂತರ ಅಶಕ್ತಗೊಳ್ಳುತ್ತದೆ "
+"(ಮೂಲದಲ್ಲಿ ಮಾತ್ರ)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
@@ -265,3 +265,5 @@ msgstr "%s: ಕಾಲಾವಧಿ ಮೀರಿದ ದೃಢೀಕರಣ ಸಂ�
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: ಎಲ್ಲಾ ದೃಢೀಕರಣ ಸಂಕೇತಗಳು ಯಶಸ್ವಿಯಾಗಿ ಅಪ್ಡೇಟ್ ಆಗಿದೆ .\n"
+
+

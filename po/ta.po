@@ -1,25 +1,24 @@
-# translation of passwd.tip.ta.po to Tamil
-# Tamil translations for passwd package.
-# Copyright (C) 2006 Red Hat, Inc.
-# This file is distributed under the same license as the passwd package.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 # Automatically generated, 2006.
 # Felix <ifelix@redhat.com>, 2006.
 # I. Felix <ifelix@redhat.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: passwd.tip.ta\n"
+"Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2009-04-01 12:44+0530\n"
-"Last-Translator: I. Felix <ifelix@redhat.com>\n"
-"Language-Team: Tamil <fedora-trans-ta@redhat.com>\n"
+"PO-Revision-Date: 2011-11-28 13:54+0000\n"
+"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"Language-Team: Tamil <tamil-users@lists.fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\\n\n"
-"\n"
+"Language: ta\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: libuser.c:88
 #, c-format
@@ -117,13 +116,16 @@ msgstr "குறைந்தபட்ச கடவுச்சொல் வா�
 msgid ""
 "number of days warning users receives before password expiration (root only)"
 msgstr ""
-"கடவுச்சொல் முடிவுறுவதற்கு முன் பயனர்கள் பெறும் எச்சரிக்கை நாட்களின் எண்ணிக்கை (ரூட் மட்டும்)"
+"கடவுச்சொல் முடிவுறுவதற்கு முன் பயனர்கள் பெறும் எச்சரிக்கை நாட்களின் "
+"எண்ணிக்கை (ரூட் மட்டும்)"
 
 #: passwd.c:173
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr "கடவுச்சொல் முடிந்த பின் கணக்கு செயல்நீக்கப்படும் நாட்களின் எண்ணிக்கை (ரூட் மட்டும்)"
+msgstr ""
+"கடவுச்சொல் முடிந்த பின் கணக்கு செயல்நீக்கப்படும் நாட்களின் எண்ணிக்கை (ரூட் "
+"மட்டும்)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
@@ -151,7 +153,8 @@ msgstr "%s: -l, -u, -d, -S இல் ஏதாவது ஒன்று மட�
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr ""
-"%s: -l, -u, -d, -S இல் ஒன்று மற்றும்  -i, -n, -w, -x இல் ஒன்றை கலக்க முடியாது.\n"
+"%s: -l, -u, -d, -S இல் ஒன்று மற்றும்  -i, -n, -w, -x இல் ஒன்றை கலக்க "
+"முடியாது.\n"
 
 #: passwd.c:279
 #, c-format
@@ -263,3 +266,5 @@ msgstr "%s: முடிவுற்ற அங்கீகார டோக்க
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: அனைத்து அங்கீகார டோக்கன்களும் வெற்றிகரமாக மேம்படுத்தப்பட்டன.\n"
+
+

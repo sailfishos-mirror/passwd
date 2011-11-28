@@ -1,23 +1,25 @@
-# translation of it.po to
-# Italian translations for passwd package.
-# Copyright (C) 2006 Red Hat, Inc.
-# This file is distributed under the same license as the passwd package.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 # Automatically generated, 2006.
 # Francesco Tombolini <tombo@adamantio.net>, 2007.
+# Luca Manlio De Lisi <lukefiltroman@gmail.com>, 2011.
 # mario_santagiuliana <mario at marionline.it>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: it\n"
+"Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2009-05-19 15:49+0200\n"
-"Last-Translator: mario_santagiuliana <mario at marionline.it>\n"
-"Language-Team: Italian <fedora-trans-it at redhat.com>\n"
+"PO-Revision-Date: 2011-11-28 14:44+0000\n"
+"Last-Translator: FiltroMan <lukefiltroman@gmail.com>\n"
+"Language-Team: Italian <trans-it@lists.fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: libuser.c:88
 #, c-format
@@ -42,23 +44,23 @@ msgstr "Password bloccata."
 
 #: libuser.c:303
 msgid "Password set, MD5 crypt."
-msgstr "Password impostata, crittazione MD5."
+msgstr "Password impostata, MD5 criptato."
 
 #: libuser.c:306
 msgid "Password set, blowfish crypt."
-msgstr "Password impostata, crittazione blowfish."
+msgstr "Password impostata, blowfish criptato."
 
 #: libuser.c:309
 msgid "Password set, SHA256 crypt."
-msgstr "Password impostata, crittazione SHA256."
+msgstr "Password impostata, SHA256 criptato."
 
 #: libuser.c:312
 msgid "Password set, SHA512 crypt."
-msgstr "Password impostata, crittazione SHA512."
+msgstr "Password impostata, SHA512 criptato."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
-msgstr "Password impostata, variante di crittazione sconosciuta."
+msgstr "Password impostata, variante di criptazione sconosciuta."
 
 #: libuser.c:317
 msgid "Alternate authentication scheme in use."
@@ -66,7 +68,7 @@ msgstr "Schema di autenticazione alternativo in uso."
 
 #: libuser.c:322
 msgid "Password set, DES crypt."
-msgstr "Password impostata, crittazione DES."
+msgstr "Password impostata, DES criptato."
 
 #: libuser.c:336
 #, c-format
@@ -85,7 +87,7 @@ msgstr "%s: l'account utente non supporta la scadenza password.\n"
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
-msgstr "mantieni gli authentication token non scaduti"
+msgstr "mantieni i gettoni autenticazione non scaduti"
 
 #: passwd.c:158
 msgid "delete the password for the named account (root only)"
@@ -132,7 +134,7 @@ msgstr "mostra lo status della password per l'account named (solo root)"
 
 #: passwd.c:178
 msgid "read new tokens from stdin (root only)"
-msgstr "leggi i nuovi token dallo stdin (solo root)"
+msgstr "leggi i nuovi gettoni dallo stdin (solo root)"
 
 #: passwd.c:185
 msgid "[OPTION...] <accountName>"
@@ -257,10 +259,12 @@ msgstr "%s: impossibile impostare un ritardo per il fallimento: %s\n"
 #: passwd.c:540
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr "%s: authentication token scaduti aggiornati con successo.\n"
+msgstr "%s: gettoni autenticazione scaduti aggiornati con successo.\n"
 
 #: passwd.c:546
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr ""
-"%s: tutti gli authentication token sono stati aggiornati con successo.\n"
+"%s: tutti gli gettoni autenticazione sono stati aggiornati con successo.\n"
+
+

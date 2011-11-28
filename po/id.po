@@ -1,22 +1,23 @@
-# Indonesian translations for passwd package.
-# Copyright (C) 2006 Red Hat, Inc.
-# This file is distributed under the same license as the passwd package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 # Erwien Samantha Y <erwiensy@sederhana.or.id>, 2007.
 # Teguh DC <dheche@songolimo.net>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: passwd 0.73\n"
+"Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2010-02-10 12:30+0700\n"
-"Last-Translator: Teguh DC <dheche@songolimo.net>\n"
-"Language-Team: Fedora Indonesia <trans-id@lists.fedoraproject.org>\n"
+"PO-Revision-Date: 2011-11-28 13:46+0000\n"
+"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"Language-Team: Indonesian <trans-id@lists.fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: id\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Virtaal 0.5.1\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #: libuser.c:88
 #, c-format
@@ -260,3 +261,5 @@ msgstr "%s: waktu kadaluarsa token otentikasi berhasil diperbarui.\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: semua token otentikasi berhasil diperbarui.\n"
+
+

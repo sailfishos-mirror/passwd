@@ -1,8 +1,8 @@
-# translation of passwd.pot to Bulgarian
-# Bulgarian translations for passwd package.
-# Copyright (C) 2006 Red Hat, Inc.
-# This file is distributed under the same license as the passwd package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
 # Automatically generated, 2006.
 # Doncho N. Gunchev <gunchev@gmail.com>, 2007.
 msgid ""
@@ -10,13 +10,14 @@ msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2007-03-10 06:04+0200\n"
-"Last-Translator: Doncho N. Gunchev <gunchev@gmail.com>\n"
-"Language-Team: Bulgarian <Bulgarian Translators' Team <dict@fsa-bg.org>>\n"
+"PO-Revision-Date: 2011-11-28 13:46+0000\n"
+"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"Language-Team: Bulgarian <trans-bg@lists.fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"Language: bg\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: libuser.c:88
 #, c-format
@@ -46,6 +47,14 @@ msgstr "Зададена парола, MD5 криптиране."
 #: libuser.c:306
 msgid "Password set, blowfish crypt."
 msgstr "Зададена парола, blowfish криптиране."
+
+#: libuser.c:309
+msgid "Password set, SHA256 crypt."
+msgstr "Зададена парола, SHA256 криптиране."
+
+#: libuser.c:312
+msgid "Password set, SHA512 crypt."
+msgstr "Зададена парола, SHA512 криптиране."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
@@ -103,12 +112,19 @@ msgid "minimum password lifetime (root only)"
 msgstr "минимален живот на паролата (само root)"
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
-msgstr "брой дни които потребителя получава предупреждение за изтичане на паролата (само root)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
+msgstr ""
+"брой дни които потребителя получава предупреждение за изтичане на паролата "
+"(само root)"
 
 #: passwd.c:173
-msgid "number of days after password expiration when an account becomes disabled (root only)"
-msgstr "брой дни след изтичане на паролата след които акаунта бива забранен (само root)"
+msgid ""
+"number of days after password expiration when an account becomes disabled "
+"(root only)"
+msgstr ""
+"брой дни след изтичане на паролата след които акаунта бива забранен (само "
+"root)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
@@ -248,10 +264,4 @@ msgstr "%s: изтеклите полета за удостоверяване б
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: всички полета за удостоверяване бяха обновени успешно.\n"
 
-#: libuser.c:312
-msgid "Password set, SHA512 crypt."
-msgstr "Зададена парола, SHA512 криптиране."
 
-#: libuser.c:309
-msgid "Password set, SHA256 crypt."
-msgstr "Зададена парола, SHA256 криптиране."

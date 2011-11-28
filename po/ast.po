@@ -1,21 +1,22 @@
-# Asturian translations for passwd package.
-# Copyright (C) 2006 Red Hat, Inc.
-# This file is distributed under the same license as the passwd package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 # Automatically generated, 2006.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: passwd 0.73\n"
+"Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2009-10-30 12:01+0100\n"
-"Last-Translator: astur <malditoastur@gmail.com>\n"
-"Language-Team: Fedora Asturian <alministradores@softastur.org>\n"
+"PO-Revision-Date: 2011-11-28 13:57+0000\n"
+"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-Language: Asturian\n"
+"Language: ast\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: libuser.c:88
 #, c-format
@@ -114,8 +115,8 @@ msgstr "tiempu mínimu de vida de la contraseña (namái root)"
 msgid ""
 "number of days warning users receives before password expiration (root only)"
 msgstr ""
-"númberu de díes enantes del vencimientu de la contraseña en que los usuarios "
-"reciban avisos de vencimientu (namái root)"
+"númberu de díes enantes del vencimientu de la contraseña en que los usuarios"
+" reciban avisos de vencimientu (namái root)"
 
 #: passwd.c:173
 msgid ""
@@ -151,8 +152,8 @@ msgstr "%s: namái ún de -l, -u, -d, -S se puede especificar.\n"
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr ""
-"%s: Nun se pueden mecer una de les opciones -l, -u, -d, -S y una de -i, -n, -"
-"w, -x.\n"
+"%s: Nun se pueden mecer una de les opciones -l, -u, -d, -S y una de -i, -n, "
+"-w, -x.\n"
 
 #: passwd.c:279
 #, c-format
@@ -165,9 +166,9 @@ msgid "%s: Only root can specify a user name.\n"
 msgstr "%s: namái root puede especificar un nome de usuariu.\n"
 
 #: passwd.c:301
-#, fuzzy, c-format
+#, c-format
 msgid "%s: The user name supplied is too long.\n"
-msgstr "%s: el nome d'usuariu apurríu ye enforma llargu.\n"
+msgstr ""
 
 #: passwd.c:311
 #, c-format
@@ -264,3 +265,5 @@ msgstr "%s: tokens d'autentificación vencíes anovaes con éxitu.\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: tolos tokens d'autentificación anováronse bien.\n"
+
+

@@ -1,22 +1,24 @@
-# Danish translation of passwd
-# Copyright (C) 2006 Red Hat, Inc.
-# This file is distributed under the same license as the passwd package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 # Copyright Magnus Larsson, <fedoratrans@gmail.com>, 2007.
 # Keld Simonsen <keld@rap.dk>, 2007.
 # Kris Thomsen <lakristho@gmail.com>, 2009.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2009-03-20 02:49+0100\n"
-"Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
+"PO-Revision-Date: 2011-11-28 14:02+0000\n"
+"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: da\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: libuser.c:88
 #, c-format
@@ -113,14 +115,16 @@ msgstr "minimal levetid for adgangskode (kun root)"
 #: passwd.c:170
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr "antal dage brugere får advarsler inden adgangskoden udløber (kun root)"
+msgstr ""
+"antal dage brugere får advarsler inden adgangskoden udløber (kun root)"
 
 #: passwd.c:173
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
 msgstr ""
-"antal dage efter adgangskoden er udløbet, hvor kontoen deaktiveres (kun root)"
+"antal dage efter adgangskoden er udløbet, hvor kontoen deaktiveres (kun "
+"root)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
@@ -148,8 +152,8 @@ msgstr "%s: Kun en af -l, -u, -d, -S må angives.\n"
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr ""
-"%s: Kan ikke kombinere én af -l, -u, -d, -S sammen med én af -i, -n, -w, -"
-"x.\n"
+"%s: Kan ikke kombinere én af -l, -u, -d, -S sammen med én af -i, -n, -w, "
+"-x.\n"
 
 #: passwd.c:279
 #, c-format
@@ -261,3 +265,5 @@ msgstr "%s: udløbne godkendelsesnøgler opdateret med succes.\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: alle godkendelsesnøgler opdateret med succes.\n"
+
+

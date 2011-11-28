@@ -1,19 +1,22 @@
-# password Bahasa Melayu (Malay) (ms).
-# Copyright (C) 2006 Red Hat, Inc.
-# This file is distributed under the same license as the passwd package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 # Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>, 2006, 2007.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: password\n"
+"Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2007-09-26 01:01+0800\n"
-"Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
-"Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2011-11-28 13:52+0000\n"
+"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ms\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #: libuser.c:88
 #, c-format
@@ -45,14 +48,12 @@ msgid "Password set, blowfish crypt."
 msgstr "Katalaluan ditetapkan, crypt blowfish."
 
 #: libuser.c:309
-#, fuzzy
 msgid "Password set, SHA256 crypt."
-msgstr "Katalaluan ditetapkan, crypt MD5."
+msgstr ""
 
 #: libuser.c:312
-#, fuzzy
 msgid "Password set, SHA512 crypt."
-msgstr "Katalaluan ditetapkan, crypt MD5."
+msgstr ""
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
@@ -150,8 +151,8 @@ msgstr "%s: Hanya satu dari -l, -u, -d, -S boleh dinyatakan.\n"
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr ""
-"%s: Tidak dapat mencampurkan salah satu dari -l, -u, -d, -S dan satu dari -"
-"i, -n, -w, -x.\n"
+"%s: Tidak dapat mencampurkan salah satu dari -l, -u, -d, -S dan satu dari "
+"-i, -n, -w, -x.\n"
 
 #: passwd.c:279
 #, c-format
@@ -263,3 +264,5 @@ msgstr "%s: token pengesahan tamat tempoh telah berjaya dikemaskini.\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: semua token pengesahan telah berjaya dikemaskini.\n"
+
+

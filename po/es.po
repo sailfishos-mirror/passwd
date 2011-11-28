@@ -1,21 +1,22 @@
-# Spanish translations for passwd package.
-# Copyright (C) 2006 Red Hat, Inc.
-# This file is distributed under the same license as the passwd package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 # Automatically generated, 2006.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: passwd 0.73\n"
+"Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2009-09-08 14:52-0300\n"
-"Last-Translator: Dennis Tobar <dennis.tobar@gmail.com>\n"
-"Language-Team: Fedora Spanish <fedora-trans-es@redhat.com>\n"
+"PO-Revision-Date: 2011-11-28 13:47+0000\n"
+"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"Language-Team: Spanish (Castilian) <trans-es@lists.fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-Language: Spanish\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: libuser.c:88
 #, c-format
@@ -151,8 +152,8 @@ msgstr "%s: sólo uno de -l, -u, -d, -S se puede especificar.\n"
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr ""
-"%s: No se pueden mezclar una de las opciones -l, -u, -d, -S y una de -i, -n, "
-"-w, -x.\n"
+"%s: No se pueden mezclar una de las opciones -l, -u, -d, -S y una de -i, -n,"
+" -w, -x.\n"
 
 #: passwd.c:279
 #, c-format
@@ -264,3 +265,5 @@ msgstr "%s: tokens de autenticación vencidas actualizadas con éxito.\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: todos los tokens de autenticación se actualizaron exitosamente.\n"
+
+

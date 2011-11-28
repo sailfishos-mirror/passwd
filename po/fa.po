@@ -1,19 +1,31 @@
-# Persian translations for passwd package.
-# Copyright (C) 2006 Red Hat, Inc.
-# This file is distributed under the same license as the passwd package.
-# Automatically generated, 2006.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
+# Automatically generated, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: passwd 0.73\n"
+"Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2006-12-06 13:25+0100\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2011-11-28 14:00+0000\n"
+"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"Language-Team: Persian (http://www.transifex.net/projects/p/fedora/team/fa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fa\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#: libuser.c:88
+#, c-format
+msgid "%s: libuser initialization error:"
+msgstr "%s: خطای راه‌اندازی اولیه libuser:"
+
+#: libuser.c:165
+msgid "Warning: unlocked password would be empty."
+msgstr "هشدار: گذرواژه قفل نشده خالی خواهد شد."
 
 #: libuser.c:279
 msgid "Corrupted passwd entry."
@@ -22,6 +34,10 @@ msgstr "مدخل گذرواژه خراب شده است."
 #: libuser.c:296
 msgid "Empty password."
 msgstr "گذرواژه خالی است."
+
+#: libuser.c:299
+msgid "Password locked."
+msgstr "گذرواژه قفل شده است"
 
 #: libuser.c:303
 msgid "Password set, MD5 crypt."
@@ -50,6 +66,16 @@ msgstr ""
 #: libuser.c:322
 msgid "Password set, DES crypt."
 msgstr "تنظیم گذرواژه, رمزنگاری DES."
+
+#: libuser.c:336
+#, c-format
+msgid "No password set.\n"
+msgstr "گذرواژه‌ای تنظیم ندشه. \n"
+
+#: libuser.c:340
+#, c-format
+msgid "Unknown user.\n"
+msgstr "کاربر ناشناخته. \n"
 
 #: libuser.c:435
 #, c-format
@@ -85,12 +111,19 @@ msgid "minimum password lifetime (root only)"
 msgstr "حداقل طول عمر گذرواژه (فقط کاربر ریشه)"
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
-msgstr "تعداد روزهایی که کاربران پیش از انقضای گذرواژه هشدار دریاف کنند (فقط کاربر ریشه)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
+msgstr ""
+"تعداد روزهایی که کاربران پیش از انقضای گذرواژه هشدار دریاف کنند (فقط کاربر "
+"ریشه)"
 
 #: passwd.c:173
-msgid "number of days after password expiration when an account becomes disabled (root only)"
-msgstr "تعداد روزهای پس از انقضای گذرواژه هنگامی که یک حساب غیر فعال می‌شود (فقط کاربر ریشه)"
+msgid ""
+"number of days after password expiration when an account becomes disabled "
+"(root only)"
+msgstr ""
+"تعداد روزهای پس از انقضای گذرواژه هنگامی که یک حساب غیر فعال می‌شود (فقط "
+"کاربر ریشه)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
@@ -230,25 +263,4 @@ msgstr ""
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr ""
 
-#: libuser.c:88
-#, c-format
-msgid "%s: libuser initialization error:"
-msgstr "%s: خطای راه‌اندازی اولیه libuser:"
 
-#: libuser.c:165
-msgid "Warning: unlocked password would be empty."
-msgstr "هشدار: گذرواژه قفل نشده خالی خواهد شد."
-
-#: libuser.c:299
-msgid "Password locked."
-msgstr "گذرواژه قفل شده است"
-
-#: libuser.c:336
-#, c-format
-msgid "No password set.\n"
-msgstr "گذرواژه‌ای تنظیم ندشه. \n"
-
-#: libuser.c:340
-#, c-format
-msgid "Unknown user.\n"
-msgstr "کاربر ناشناخته. \n"

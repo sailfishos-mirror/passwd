@@ -1,21 +1,22 @@
-# Serbian translations for passwd package.
-# Copyright (C) 2006 Red Hat, Inc.
-# This file is distributed under the same license as the passwd package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 # Igor Miletic <grejigl-gnomeprevod@yahoo.ca>, 2007.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: passwd 0.76\n"
+"Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2009-03-15 14:10+0100\n"
-"Last-Translator: Miloš Komarčević <kmilos@gmail.com>\n"
-"Language-Team: Serbian (sr) <fedora@prevod.org>\n"
+"PO-Revision-Date: 2011-11-28 14:04+0000\n"
+"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"Language-Team: Serbian <trans-sr@lists.fedoraproject.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 
 #: libuser.c:88
 #, c-format
@@ -113,13 +114,15 @@ msgstr "најкраћи рок трајања лозинке (само root)"
 msgid ""
 "number of days warning users receives before password expiration (root only)"
 msgstr ""
-"број дана током којих корисник прима упозорења пре истека лозинке (само root)"
+"број дана током којих корисник прима упозорења пре истека лозинке (само "
+"root)"
 
 #: passwd.c:173
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr "број дана после истека лозинке када налог постаје искључен (само root)"
+msgstr ""
+"број дана после истека лозинке када налог постаје искључен (само root)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
@@ -147,8 +150,8 @@ msgstr "%s: Само једна од -l, -u, -d, -S опција сме бити
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr ""
-"%s: Не могу се мешати једна од -l, -u, -d, -S опција са једном од -i, -n, -"
-"w, -x.\n"
+"%s: Не могу се мешати једна од -l, -u, -d, -S опција са једном од -i, -n, "
+"-w, -x.\n"
 
 #: passwd.c:279
 #, c-format
@@ -260,3 +263,5 @@ msgstr "%s: изрази за аутентификацију који су ис�
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: сви изрази за аутентификацију су успешно ажурирани.\n"
+
+

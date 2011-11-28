@@ -1,25 +1,24 @@
-# translation of passwd.tip.po to Hindi
-# Hindi translations for passwd package.
-# Copyright (C) 2006 Red Hat, Inc.
-# This file is distributed under the same license as the passwd package.
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 # Automatically generated, 2006.
 # hi <rranjan@redhat.com>, 2007.
 # Rajesh Ranjan <rajesh672@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: passwd.tip\n"
+"Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2009-06-08 12:23+0530\n"
-"Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
-"Language-Team: Hindi <hindi.sf.net>\n"
+"PO-Revision-Date: 2011-11-28 14:01+0000\n"
+"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"\n"
+"Language: hi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: libuser.c:88
 #, c-format
@@ -83,7 +82,8 @@ msgstr "अज्ञात उपयोक्ता.\n"
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr "%s: उपयोक्ता खाता के खाते में शब्दकूट एजिंग के लिये कोई समर्थन नहीं है.\n"
+msgstr ""
+"%s: उपयोक्ता खाता के खाते में शब्दकूट एजिंग के लिये कोई समर्थन नहीं है.\n"
 
 #: passwd.c:156
 msgid "keep non-expired authentication tokens"
@@ -117,14 +117,16 @@ msgstr "न्यूनतम शब्दकूट जीवनपर्यं�
 msgid ""
 "number of days warning users receives before password expiration (root only)"
 msgstr ""
-"शब्दकूट के समय समाप्त होने के लिये पहले उपयोक्ता प्राप्त करता है दिनों की संख्या (रूट सिर्फ)"
+"शब्दकूट के समय समाप्त होने के लिये पहले उपयोक्ता प्राप्त करता है दिनों की "
+"संख्या (रूट सिर्फ)"
 
 #: passwd.c:173
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
 msgstr ""
-"शब्दकूट समय समाप्ति के बाद दिनों की संख्या जब एक खाता निष्क्रिय हो जाता है (सिर्फ रूट)"
+"शब्दकूट समय समाप्ति के बाद दिनों की संख्या जब एक खाता निष्क्रिय हो जाता है "
+"(सिर्फ रूट)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
@@ -263,3 +265,5 @@ msgstr "%s: समय समाप्त सत्यापन टोकेन �
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: सभी सत्यापन टोकन सफलतापूर्वक अद्यतन.\n"
+
+
