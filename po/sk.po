@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Automatically generated, 2006.
+# Dušan Kazik <prescott66@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2011-11-28 14:06+0000\n"
-"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"PO-Revision-Date: 2011-12-19 08:21+0000\n"
+"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak (http://www.transifex.net/projects/p/fedora/team/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,11 +50,11 @@ msgstr "Heslo nastavené, šifra blowfish."
 
 #: libuser.c:309
 msgid "Password set, SHA256 crypt."
-msgstr ""
+msgstr "Heslo nastavené, SHA256 šifrovanie."
 
 #: libuser.c:312
 msgid "Password set, SHA512 crypt."
-msgstr ""
+msgstr "Heslo nastavené, SHA512 šifrovanie."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."

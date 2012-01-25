@@ -1,21 +1,23 @@
-# Turkish translations for passwd package.
-# Copyright (C) 2006 Red Hat, Inc.
-# This file is distributed under the same license as the passwd package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 # Automatically generated, 2006.
 # Hasan Alp iNAN <hasanalpinan@gmail.com>, 2010.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2009-02-11 15:00+0100\n"
-"PO-Revision-Date: 2010-10-20 12:51+0200\n"
-"Last-Translator: Hasan Alp iNAN <hasanalpinan@gmail.com>\n"
-"Language-Team: Turkish <none>\n"
+"PO-Revision-Date: 2011-11-28 16:30+0000\n"
+"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
+"Language-Team: Turkish (http://www.transifex.net/projects/p/fedora/team/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 
 #: libuser.c:88
 #, c-format
@@ -110,12 +112,19 @@ msgid "minimum password lifetime (root only)"
 msgstr "gün olarak en düşük parola ömrü (sadece root)"
 
 #: passwd.c:170
-msgid "number of days warning users receives before password expiration (root only)"
-msgstr "parola zaman aşımı öncesi kullanıcıların uyarı alacağı gün sayısı (sadece root)"
+msgid ""
+"number of days warning users receives before password expiration (root only)"
+msgstr ""
+"parola zaman aşımı öncesi kullanıcıların uyarı alacağı gün sayısı (sadece "
+"root)"
 
 #: passwd.c:173
-msgid "number of days after password expiration when an account becomes disabled (root only)"
-msgstr "bir kullanıcı hesabı devre dışı kaldığında parola zaman aşımı sonrası gün sayısı (sadece root)"
+msgid ""
+"number of days after password expiration when an account becomes disabled "
+"(root only)"
+msgstr ""
+"bir kullanıcı hesabı devre dışı kaldığında parola zaman aşımı sonrası gün "
+"sayısı (sadece root)"
 
 #: passwd.c:176
 msgid "report password status on the named account (root only)"
@@ -142,7 +151,9 @@ msgstr "%s: -l, -u, -d, -S seçeneklerinden sadece biri belirtilebilir.\n"
 #: passwd.c:255
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: -l, -u, -d, -S seçeneklerinden birisi ile -i, -n, -w, -x seçeneklerinden birisi beraber kullanılamaz.\n"
+msgstr ""
+"%s: -l, -u, -d, -S seçeneklerinden birisi ile -i, -n, -w, -x seçeneklerinden"
+" birisi beraber kullanılamaz.\n"
 
 #: passwd.c:279
 #, c-format
@@ -174,8 +185,7 @@ msgstr "%s: Bu seçenek bir kullanıcı adı gerektirir.\n"
 msgid "%s: Can not identify you!\n"
 msgstr "%s: Kimliğiniz teşhis edilemedi!\n"
 
-#: passwd.c:341
-#: passwd.c:376
+#: passwd.c:341 passwd.c:376
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: Bilinmeyen kullanıcı adı '%s'.\n"
@@ -183,22 +193,19 @@ msgstr "%s: Bilinmeyen kullanıcı adı '%s'.\n"
 #: passwd.c:393
 #, c-format
 msgid "%s: %s is not authorized to change the password of %s\n"
-msgstr "%s: %s kullanıcısı %s kullanıcısının parolasını değiştirmeye yetkili değil\n"
+msgstr ""
+"%s: %s kullanıcısı %s kullanıcısının parolasını değiştirmeye yetkili değil\n"
 
 #: passwd.c:406
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr "%s kullanıcısı için parola kilitleniyor.\n"
 
-#: passwd.c:410
-#: passwd.c:422
-#: passwd.c:436
-#: passwd.c:456
+#: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
 msgid "Success"
 msgstr "Başarılı"
 
-#: passwd.c:410
-#: passwd.c:425
+#: passwd.c:410 passwd.c:425
 msgid "Error (password not set?)"
 msgstr "Hata (parola ayarlanmadı mı?)"
 
@@ -216,8 +223,7 @@ msgstr "Kararsız çalışma (zorlamak için -f kullanın)"
 msgid "Removing password for user %s.\n"
 msgstr "%s kullanıcısının parolası kaldırılıyor.\n"
 
-#: passwd.c:436
-#: passwd.c:456
+#: passwd.c:436 passwd.c:456
 msgid "Error"
 msgstr "Hata"
 
@@ -260,4 +266,5 @@ msgstr "%s: süresi dolmuş kimlik belirteçleri başarıyla güncellendi.\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: tüm kimlik doğrulama belirteçleri başarıyla güncellendi.\n"
+
 
