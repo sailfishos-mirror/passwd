@@ -1,4 +1,5 @@
 #ifndef __RH_SELINUX_UTILS_H
 #define __RH_SELINUX_UTILS_H
-int check_selinux_access(const char *change_user, int change_uid, unsigned int access);
+extern void selinux_init(int auditfd);
+extern int selinux_check_root(void);
 #endif

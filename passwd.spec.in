@@ -15,7 +15,8 @@ Source: https://fedorahosted.org/releases/p/a/%{name}/%{name}-%{version}.tar.bz2
 Buildroot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: pam >= 1.0.90, /etc/pam.d/system-auth
 %if %{WITH_SELINUX}
-BuildRequires: libselinux-devel
+Requires: libselinux >= 2.1.6-3
+BuildRequires: libselinux-devel >= 2.1.6-3
 %endif
 BuildRequires: glib2-devel, libuser-devel, pam-devel, libuser >= 0.53-1
 BuildRequires: gettext, popt-devel
@@ -71,6 +72,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/passwd.1*
 
 %changelog
+* Thu Jan 26 2012 Tomas Mraz <tmraz@redhat.com> 0.79-1
+- use better (auditable) calls libselinux for checking
+  the access to passwd (#518268)
+
 * Fri Jul 16 2010 Tomas Mraz <tmraz@redhat.com> 0.78-1
 - added japanese translation of the man page (#611692)
 - updated translations

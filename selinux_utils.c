@@ -35,48 +35,62 @@
 
 /* Written by Daniel Walsh <dwalsh@redhat.com> */
 
-#include "config.h"
-#include <sys/types.h>
+#include "selinux_utils.h"
+#include <selinux/selinux.h>
 #include <stdio.h>
 #include <string.h>
-#include <selinux/selinux.h>
-#include <selinux/flask.h>
-#include <selinux/av_permissions.h>
-#include <selinux/context.h>
-#include "selinux_utils.h"
+#include <selinux/avc.h>
+#include <libaudit.h>
+#include <unistd.h>
+#include <limits.h>
 
-int
-check_selinux_access(const char *change_user, int change_uid, unsigned int access)
+/* FD to send audit messages to */
+static int audit_fd = -1;
+
+/* log_callback stolen from dbus */
+static int
+log_callback (int type, const char *fmt, ...) 
 {
+  va_list ap;
+
+  va_start(ap, fmt);
+
+  if (audit_fd >= 0)
+  {
+	  char buf[PATH_MAX*2];
+    
+	  vsnprintf(buf, sizeof(buf), fmt, ap);
+	  audit_log_user_avc_message(audit_fd, AUDIT_USER_AVC, buf, NULL, NULL,
+				     NULL, 0);
+	  return 0;
+  }
+  
+  vsyslog (LOG_USER | LOG_INFO, fmt, ap);
+  va_end(ap);
+  return 0;
+}
+int selinux_check_root(void) {
 	int status = -1;
 	security_context_t user_context;
-	const char *user;
 
-	if (security_getenforce() == 0) {
-		status = 0;
-	} else {
-		if (getprevcon(&user_context) == 0) {
-			context_t c;
-			c = context_new(user_context);
-			user = context_user_get(c);
-			if (change_uid != 0 && strcmp(change_user, user) == 0) {
-				status = 0;
-			} else {
-				struct av_decision avd;
-				int retval;
-				retval = security_compute_av(user_context,
-							     user_context,
-							     SECCLASS_PASSWD,
-							     access,
-							     &avd);
-				if ((retval == 0) && 
-				    ((access & avd.allowed) == access)) {
-					status = 0;
-				}
-			}
-			context_free(c);
-			freecon(user_context);
-		}
-	}
+	if (getuid() != 0) return 0;
+	if (is_selinux_enabled() == 0) return 0;
+	if ((status = getprevcon(&user_context)) < 0) return status;
+
+	status = selinux_check_access(user_context, user_context, "passwd", "passwd", NULL);
+
+	freecon(user_context);
+
 	return status;
+}
+
+void selinux_init(int fd) {
+	if (is_selinux_enabled() > 0) {
+		/* initialize audit log */
+
+		audit_fd = fd;
+
+		/* setup callbacks */
+		selinux_set_callback(SELINUX_CB_LOG, (union selinux_callback) &log_callback);
+	}
 }

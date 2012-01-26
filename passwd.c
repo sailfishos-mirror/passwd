@@ -54,10 +54,10 @@
 #include "pwdb.h"
 
 #ifdef WITH_SELINUX
-#include <selinux/selinux.h>
-#include <selinux/context.h>
-#include <selinux/av_permissions.h>
 #include "selinux_utils.h"
+#else
+#define selinux_init(x) 0
+#define selinux_check_root() 0
 #endif
 
 #ifdef WITH_AUDIT
@@ -261,12 +261,7 @@ parse_args(int argc, const char **argv,
 
 	/* The only flag which unprivileged users get to use is -k. */
 	if ((passwd_flags & ~PASSWD_KEEP) && 
-#ifdef WITH_SELINUX
-	    ((getuid() != 0) || (is_selinux_enabled() > 0 &&
-		    checkPasswdAccess(PASSWD__PASSWD)))) {
-#else
 	    (getuid() != 0)) {
-#endif
 		if (passwd_flags & PASSWD_STATUS) {
 			audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
 				NULL, "password status display",
@@ -378,28 +373,17 @@ main(int argc, const char **argv)
 		exit(-4);
 	}
 
-#ifdef WITH_SELINUX
-	if ((is_selinux_enabled() > 0) &&
-	    (getuid() == 0) &&
-	    (check_selinux_access(username, pwd->pw_uid, PASSWD__PASSWD) != 0)) {
-		security_context_t user_context;
-		if (getprevcon(&user_context) < 0) {
-			user_context = strdup("Unknown user context");
-		}
-		syslog(LOG_ALERT,
-		       "%s is not authorized to change the password of %s",
-		       user_context, username);
-		fprintf(stderr,
-			_("%s: %s is not authorized to change the "
-			  "password of %s\n"),
-			progname, user_context, username);
-		freecon(user_context);
+	if (audit_fd >= 0)
+		selinux_init(audit_fd);
+
+	if (selinux_check_root() != 0) {
+		fprintf(stderr, _("%s: SELinux denying access due to security policy.\n"), progname);
+		
 		audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
 			NULL, "change password", NULL, pwd->pw_uid,
 			NULL, NULL, NULL, 0);
 		exit(1);
 	}
-#endif
 
 	/* Handle account locking request. */
 	if (passwd_flags & PASSWD_LOCK) {
