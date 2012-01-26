@@ -1,4 +1,4 @@
-.\" Copyright Red Hat, Inc., 1998, 1999, 2002, 2009.
+.\" Copyright Red Hat, Inc., 1998, 1999, 2002, 2009, 2012.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
 .\" modification, are permitted provided that the following conditions
@@ -32,15 +32,15 @@
 .\" OF THE POSSIBILITY OF SUCH DAMAGE.
 .\"
 .\" Copyright (c) Cristian Gafton, 1998, <gafton@redhat.com>
-.\" Copyright (c) Tomas Mraz, 2009, <tmraz@redhat.com>
+.\" Copyright (c) Tomas Mraz, 2009, 2012, <tmraz@redhat.com>
 .\"
-.TH PASSWD 1 "Sep 24 2009" "GNU/Linux" "User utilities"
+.TH PASSWD 1 "Jan 26 2012" "GNU/Linux" "User utilities"
 .SH NAME
 
 passwd \- update user's authentication tokens
 
 .SH SYNOPSIS
-.B passwd [-k] [-l] [-u [-f]] [-d] [-n mindays] [-x maxdays] [-w warndays] [-i inactivedays] [-S] [--stdin] [username]
+.B passwd [-k] [-l] [-u [-f]] [-d] [-e] [-n mindays] [-x maxdays] [-w warndays] [-i inactivedays] [-S] [--stdin] [username]
 .sp 2
 .SH DESCRIPTION
 The passwd utility is used to update user's authentication token(s).
@@ -109,6 +109,11 @@ force option \fB-f\fR will override this protection.
 .IP \fB-d\fR
 This is a quick way to delete a password for an account. It will set
 the named account passwordless. Available to root only.
+
+.IP \fB-e\fR
+This is a quick way to expire a password for an account. The user will be
+forced to change the password during the next login attempt.
+Available to root only.
 
 .IP \fB-n\fR
 This will set the minimum password lifetime, in days, if the user's

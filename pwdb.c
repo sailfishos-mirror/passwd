@@ -377,7 +377,7 @@ pwdb_update_shell(const char *username, const char *shell)
 
 int
 pwdb_update_aging(const char *username,
-		  long min, long max, long warn, long inact)
+		  long min, long max, long warn, long inact, long lastchg)
 {
 	const struct pwdb *_pwdb = NULL;
 	const struct pwdb_entry *_entry = NULL;

@@ -91,7 +91,8 @@ int passwd_flags = 0;		/* flags specified by root */
 #define PASSWD_STATUS	0x0010	/* report the password status */
 #define PASSWD_FORCE	0x0020	/* force change of expired token */
 #define PASSWD_STDIN	0x0040	/* read the password from stdin (root only) */
-#define PASSWD_ROOT	0x001E	/* options which are mutually exclusive */
+#define PASSWD_EXPIRE	0x0080	/* expire the password */
+#define PASSWD_ROOT	0x009E	/* options which are mutually exclusive */
 
 #define PASSWD_MIN	0x0100	/* set the minimum password lifetime */
 #define PASSWD_MAX	0x0200	/* set the maximum password lifetime */
@@ -148,6 +149,7 @@ parse_args(int argc, const char **argv,
 {
 	poptContext optCon;
 	int delete = 0, force = 0, keep = 0, lock = 0, status = 0, unlock = 0;
+	int expire = 0;
 	int use_stdin = 0;
 	int rc;
 	const char **extraArgs;
@@ -157,9 +159,11 @@ parse_args(int argc, const char **argv,
 		{"delete", 'd', POPT_ARG_NONE, &delete, 0,
 		 _("delete the password for the named account (root only)")},
 		{"lock", 'l', POPT_ARG_NONE, &lock, 0,
-		 _("lock the named account (root only)")},
+		 _("lock the password for the named account (root only)")},
 		{"unlock", 'u', POPT_ARG_NONE, &unlock, 0,
-		 _("unlock the named account (root only)")},
+		 _("unlock the password for the named account (root only)")},
+		{"expire", 'e', POPT_ARG_NONE, &expire, 0,
+		 _("expire the password for the named account (root only)")},
 		{"force", 'f', POPT_ARG_NONE, &force, 0,
 		 _("force operation")},
 		{"maximum", 'x', POPT_ARG_LONG, max, 0,
@@ -201,6 +205,9 @@ parse_args(int argc, const char **argv,
 	}
 	if (unlock) {
 		passwd_flags |= PASSWD_UNLOCK;
+	}
+	if (expire) {
+		passwd_flags |= PASSWD_EXPIRE;
 	}
 	if (status) {
 		passwd_flags |= PASSWD_STATUS;
@@ -412,6 +419,18 @@ main(int argc, const char **argv)
 			NULL, NULL, NULL, retval == 0);
 		return retval;
 	}
+	/* Handle password expiration request. */
+	if (passwd_flags & PASSWD_EXPIRE) {
+		printf(_("Expiring password for user %s.\n"), username);
+		retval = pwdb_update_aging(username, -2, -2, -2, -2, 0);
+		printf("%s: %s\n", progname,
+		       retval ==
+		       0 ? _("Success") : _("Error"));
+		audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
+			NULL, "expire password", NULL, pwd->pw_uid,
+			NULL, NULL, NULL, retval == 0);
+		return retval;
+	}
 	/* Handle password clearing request. */
 	if (passwd_flags & PASSWD_DELETE) {
 		printf(_("Removing password for user %s.\n"), username);
@@ -435,7 +454,7 @@ main(int argc, const char **argv)
 	if (passwd_flags & PASSWD_AGING) {
 		char aubuf[PATH_MAX];
 		printf(_("Adjusting aging data for user %s.\n"), username);
-		retval = pwdb_update_aging(username, min, max, warn, inact);
+		retval = pwdb_update_aging(username, min, max, warn, inact, -2);
 		printf("%s: %s\n", progname,
 		       (retval == 0) ? _("Success") : _("Error"));
 		snprintf(aubuf, sizeof(aubuf), "password aging data updated "

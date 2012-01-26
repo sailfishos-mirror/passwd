@@ -61,6 +61,6 @@ int pwdb_display_status(const char *username);
 int pwdb_update_gecos(const char *username, const char *gecos);
 int pwdb_update_shell(const char *username, const char *shell);
 int pwdb_update_aging(const char *username,
-		      long min, long max, long warning, long inactive);
+		      long min, long max, long warning, long inactive, long lastchg);
 
 #endif				/* _RH_PWDB_H_ */

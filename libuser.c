@@ -414,7 +414,7 @@ pwdb_update_shell(const char *username, const char *shell)
 
 int
 pwdb_update_aging(const char *username,
-		  long min, long max, long warn, long inact)
+		  long min, long max, long warn, long inact, long lastchg)
 {
 	int retval = 1;
 	struct lu_ent *ent;
@@ -457,6 +457,11 @@ pwdb_update_aging(const char *username,
 			g_value_set_long(&value, inact);
 			lu_ent_clear(ent, LU_SHADOWINACTIVE);
 			lu_ent_add(ent, LU_SHADOWINACTIVE, &value);
+		}
+		if (lastchg != -2) {
+			g_value_set_long(&value, lastchg);
+			lu_ent_clear(ent, LU_SHADOWLASTCHANGE);
+			lu_ent_add(ent, LU_SHADOWLASTCHANGE, &value);
 		}
 		g_value_unset(&value);
 
