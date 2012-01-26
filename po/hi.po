@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Automatically generated, 2006.
 # hi <rranjan@redhat.com>, 2007.
@@ -10,14 +10,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2009-02-11 15:00+0100\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
 "PO-Revision-Date: 2011-11-28 14:01+0000\n"
 "Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
 "Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: libuser.c:88
@@ -82,188 +82,208 @@ msgstr "अज्ञात उपयोक्ता.\n"
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr ""
-"%s: उपयोक्ता खाता के खाते में शब्दकूट एजिंग के लिये कोई समर्थन नहीं है.\n"
+msgstr "%s: उपयोक्ता खाता के खाते में शब्दकूट एजिंग के लिये कोई समर्थन नहीं है.\n"
 
-#: passwd.c:156
+#: passwd.c:158
 msgid "keep non-expired authentication tokens"
 msgstr "गैर समय समाप्त सत्यापन टोकेन रखें"
 
-#: passwd.c:158
+#: passwd.c:160
 msgid "delete the password for the named account (root only)"
 msgstr "नामित खाता के लिये शब्दकूट मिटायें (सिर्फ रूट)"
 
-#: passwd.c:160
-msgid "lock the named account (root only)"
-msgstr "नामित खाता तालाकित करें (सिर्फ रूट)"
-
 #: passwd.c:162
-msgid "unlock the named account (root only)"
-msgstr "नामित खाता का ताला खोलें (सिर्फ रूट)"
+#, fuzzy
+msgid "lock the password for the named account (root only)"
+msgstr "नामित खाता के लिये शब्दकूट मिटायें (सिर्फ रूट)"
 
 #: passwd.c:164
+#, fuzzy
+msgid "unlock the password for the named account (root only)"
+msgstr "नामित खाता के लिये शब्दकूट मिटायें (सिर्फ रूट)"
+
+#: passwd.c:166
+#, fuzzy
+msgid "expire the password for the named account (root only)"
+msgstr "नामित खाता के लिये शब्दकूट मिटायें (सिर्फ रूट)"
+
+#: passwd.c:168
 msgid "force operation"
 msgstr "दबाव संक्रिया"
 
-#: passwd.c:166
+#: passwd.c:170
 msgid "maximum password lifetime (root only)"
 msgstr "अधिकतम शब्दकूट जीवनपर्यंत (सिर्फ रूट)"
 
-#: passwd.c:168
+#: passwd.c:172
 msgid "minimum password lifetime (root only)"
 msgstr "न्यूनतम शब्दकूट जीवनपर्यंत (सिर्फ रूट)"
 
-#: passwd.c:170
+#: passwd.c:174
 msgid ""
 "number of days warning users receives before password expiration (root only)"
 msgstr ""
-"शब्दकूट के समय समाप्त होने के लिये पहले उपयोक्ता प्राप्त करता है दिनों की "
-"संख्या (रूट सिर्फ)"
+"शब्दकूट के समय समाप्त होने के लिये पहले उपयोक्ता प्राप्त करता है दिनों की संख्या (रूट सिर्फ)"
 
-#: passwd.c:173
+#: passwd.c:177
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
 msgstr ""
-"शब्दकूट समय समाप्ति के बाद दिनों की संख्या जब एक खाता निष्क्रिय हो जाता है "
-"(सिर्फ रूट)"
+"शब्दकूट समय समाप्ति के बाद दिनों की संख्या जब एक खाता निष्क्रिय हो जाता है (सिर्फ रूट)"
 
-#: passwd.c:176
+#: passwd.c:180
 msgid "report password status on the named account (root only)"
 msgstr "नामित खाता पर शब्दकूट स्थिति रिपोर्ट करें (सिर्फ रूट)"
 
-#: passwd.c:178
+#: passwd.c:182
 msgid "read new tokens from stdin (root only)"
 msgstr "stdin से नया टोकेन पढ़ें (सिर्फ रूट)"
 
-#: passwd.c:185
+#: passwd.c:189
 msgid "[OPTION...] <accountName>"
 msgstr "[OPTION...] <accountName>"
 
-#: passwd.c:188
+#: passwd.c:192
 #, c-format
 msgid "%s: bad argument %s: %s\n"
 msgstr "%s: गलत तर्क %s: %s\n"
 
-#: passwd.c:246
+#: passwd.c:253
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr "%s: सिर्फ -l, -u, -d, -S में एक निर्दिष्ट हो सकता है.\n"
 
-#: passwd.c:255
+#: passwd.c:262
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr "%s: -l, -u, -d, -S और -i, -n, -w, -x में से एक को मत मिलायें.\n"
 
-#: passwd.c:279
+#: passwd.c:281
 #, c-format
 msgid "Only root can do that.\n"
 msgstr "सिर्फ रूट कर सकता है.\n"
 
-#: passwd.c:292
+#: passwd.c:294
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
 msgstr "%s: सिर्फ रूट उपयोक्ता नाम निर्दिष्ट कर सकता है.\n"
 
-#: passwd.c:301
+#: passwd.c:303
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
 msgstr "%s: दिया उपयोक्ता नाम बहुत लंबा है.\n"
 
-#: passwd.c:311
+#: passwd.c:313
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
 msgstr "%s: सिर्फ एक उपयोक्ता नाम निर्दिष्ट हो सकता है.\n"
 
-#: passwd.c:321
+#: passwd.c:323
 #, c-format
 msgid "%s: This option requires a user name.\n"
 msgstr "%s: यह विकल्प के लिये एक उपयोक्ता नाम जरूरी है.\n"
 
-#: passwd.c:332
+#: passwd.c:334
 #, c-format
 msgid "%s: Can not identify you!\n"
 msgstr "%s: आपको पहचान नहीं सकता है!\n"
 
-#: passwd.c:341 passwd.c:376
+#: passwd.c:343 passwd.c:378
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: अज्ञात उपयोक्ता नाम '%s'.\n"
 
-#: passwd.c:393
+#: passwd.c:387
 #, c-format
-msgid "%s: %s is not authorized to change the password of %s\n"
-msgstr "%s: %s अधिकृत नहीं है %s के शब्दकूट को बदलने के लिये\n"
+msgid "%s: SELinux denying access due to security policy.\n"
+msgstr ""
 
-#: passwd.c:406
+#: passwd.c:397
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr "%s उपयोक्ता के लिये शब्दकूट तालाकित कर रहा है.\n"
 
-#: passwd.c:410 passwd.c:422 passwd.c:436 passwd.c:456
+#: passwd.c:401 passwd.c:413 passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Success"
 msgstr "सफल"
 
-#: passwd.c:410 passwd.c:425
+#: passwd.c:401 passwd.c:416
 msgid "Error (password not set?)"
 msgstr "त्रुटि (शब्दकूट सेट नहीं?)"
 
-#: passwd.c:418
+#: passwd.c:409
 #, c-format
 msgid "Unlocking password for user %s.\n"
 msgstr "%s उपयोक्ता के लिये शब्दकूट का ताला खोल रहा है.\n"
 
-#: passwd.c:424
+#: passwd.c:415
 msgid "Unsafe operation (use -f to force)"
 msgstr "असुरक्षित संक्रिया (-f का प्रयोग दबाव के लिये करें)"
 
-#: passwd.c:433
+#: passwd.c:424
+#, fuzzy, c-format
+msgid "Expiring password for user %s.\n"
+msgstr "%s उपयोक्ता के लिये शब्दकूट तालाकित कर रहा है.\n"
+
+#: passwd.c:428 passwd.c:439 passwd.c:459
+msgid "Error"
+msgstr "त्रुटि"
+
+#: passwd.c:436
 #, c-format
 msgid "Removing password for user %s.\n"
 msgstr "%s उपयोक्ता के लिये शब्दकूट हटा रहा है.\n"
 
-#: passwd.c:436 passwd.c:456
-msgid "Error"
-msgstr "त्रुटि"
-
-#: passwd.c:453
+#: passwd.c:456
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
 msgstr "%s उपयोक्ता के लिये एजिंग आंकड़ा समायोजित कर रहा है.\n"
 
-#: passwd.c:469
+#: passwd.c:472
 #, c-format
 msgid "Changing password for user %s.\n"
 msgstr "%s उपयोक्ता के लिये शब्दकूट बदल रहा है.\n"
 
-#: passwd.c:481
+#: passwd.c:484
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s: stdin से त्रुटि पढ़ रहा है: %s\n"
 
-#: passwd.c:498
+#: passwd.c:501
 #, c-format
 msgid "%s: unable to start pam: %s\n"
 msgstr "%s: pam आरंभ करने में त्रुटि: %s\n"
 
-#: passwd.c:511
+#: passwd.c:514
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
 msgstr "%s: tty को pam के लिये सेट करने में असमर्थ: %s\n"
 
-#: passwd.c:522
+#: passwd.c:525
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
 msgstr "%s: विफलता विलंब सेट करने में असमर्थ: %s\n"
 
-#: passwd.c:540
+#: passwd.c:543
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
 msgstr "%s: समय समाप्त सत्यापन टोकेन सफलतापूर्वक अद्यतन.\n"
 
-#: passwd.c:546
+#: passwd.c:549
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: सभी सत्यापन टोकन सफलतापूर्वक अद्यतन.\n"
 
+#~ msgid "lock the named account (root only)"
+#~ msgstr "नामित खाता तालाकित करें (सिर्फ रूट)"
 
+#~ msgid "unlock the named account (root only)"
+#~ msgstr "नामित खाता का ताला खोलें (सिर्फ रूट)"
+
+#, fuzzy
+#~ msgid "expire the named account (root only)"
+#~ msgstr "नामित खाता तालाकित करें (सिर्फ रूट)"
+
+#~ msgid "%s: %s is not authorized to change the password of %s\n"
+#~ msgstr "%s: %s अधिकृत नहीं है %s के शब्दकूट को बदलने के लिये\n"
