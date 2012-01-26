@@ -6,7 +6,8 @@ noinst_LIBRARIES = libstuff.a
 EXTRA_DIST = config.rpath mkinstalldirs m4/ChangeLog passwd.pamd passwd.spec.in passwd.spec
 libstuff_a_SOURCES = pwdb.h
 
-AM_CFLAGS = @LIBUSER_CFLAGS@
+AM_CFLAGS = @LIBUSER_CFLAGS@ -fpie
+AM_LDFLAGS = -pie -Wl,-z,relro,-z,now
 LDADD = libstuff.a @LIBUSER_LIBS@ @LIBS@
 
 if USE_LIBUSER

@@ -76,6 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 - use better (auditable) calls libselinux for checking
   the access to passwd (#518268)
 - add support for the -e option as seen on Debian passwd
+- make the binary PIE and full RELRO (#784483)
 
 * Fri Jul 16 2010 Tomas Mraz <tmraz@redhat.com> 0.78-1
 - added japanese translation of the man page (#611692)
