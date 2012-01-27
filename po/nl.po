@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# Geert Warrink <geert.warrink@onsnet.nu>, 2010.
+# Geert Warrink <geert.warrink@onsnet.nu>, 2010, 2012.
 # Peter van Egdom <p.van.egdom@gmail.com>, 2007.
 # R.E. van der Luit <nippur@fedoraproject.org>, 2009.
 msgid ""
@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2012-01-26 18:12+0100\n"
-"PO-Revision-Date: 2011-11-28 13:48+0000\n"
-"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"PO-Revision-Date: 2012-01-27 08:54+0000\n"
+"Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
 "Language-Team: Dutch (http://www.transifex.net/projects/p/fedora/team/nl/)\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -95,19 +95,16 @@ msgid "delete the password for the named account (root only)"
 msgstr "het wachtwoord voor het opgegeven account wissen (alleen root)"
 
 #: passwd.c:162
-#, fuzzy
 msgid "lock the password for the named account (root only)"
-msgstr "het wachtwoord voor het opgegeven account wissen (alleen root)"
+msgstr "vergrendel het wachtwoord voor het genoemde account (alleen root)"
 
 #: passwd.c:164
-#, fuzzy
 msgid "unlock the password for the named account (root only)"
-msgstr "het wachtwoord voor het opgegeven account wissen (alleen root)"
+msgstr "ontgrendel het wachtwoord voor het genoemde account (alleen root)"
 
 #: passwd.c:166
-#, fuzzy
 msgid "expire the password for the named account (root only)"
-msgstr "het wachtwoord voor het opgegeven account wissen (alleen root)"
+msgstr "laat het wachtwoord voor het genoemde account verlopen (alleen root)"
 
 #: passwd.c:168
 msgid "force operation"
@@ -203,7 +200,7 @@ msgstr "%s: Onbekende gebruikersnaam '%s'.\n"
 #: passwd.c:387
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
-msgstr ""
+msgstr "%s: SELinux staat om veiligheidsredenen geen toegang toe .\n"
 
 #: passwd.c:397
 #, c-format
@@ -228,9 +225,9 @@ msgid "Unsafe operation (use -f to force)"
 msgstr "Onveilige actie (gebruik -f om te forceren)"
 
 #: passwd.c:424
-#, fuzzy, c-format
+#, c-format
 msgid "Expiring password for user %s.\n"
-msgstr "Wachtwoord voor gebruiker %s vergrendelen.\n"
+msgstr "Wachtwoord voor gebruiker %s wordt verlopen verklaard.\n"
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"
@@ -280,16 +277,3 @@ msgstr "%s: verlopen authenticatie tokens zijn succesvol bijgewerkt.\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: alle authenticatie tokens zijn succesvol bijgewerkt.\n"
-
-#~ msgid "lock the named account (root only)"
-#~ msgstr "het opgegeven account vergrendelen (alleen root)"
-
-#~ msgid "unlock the named account (root only)"
-#~ msgstr "het opgegeven account ontgrendelen (alleen root)"
-
-#, fuzzy
-#~ msgid "expire the named account (root only)"
-#~ msgstr "het opgegeven account vergrendelen (alleen root)"
-
-#~ msgid "%s: %s is not authorized to change the password of %s\n"
-#~ msgstr "%s: %s is niet gemachtigd om het wachtwoord van %s te veranderen\n"

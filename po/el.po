@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2012-01-26 18:12+0100\n"
-"PO-Revision-Date: 2011-11-28 13:43+0000\n"
-"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"PO-Revision-Date: 2012-01-26 17:16+0000\n"
+"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
 "Language-Team: Greek <trans-el@lists.fedoraproject.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
@@ -94,22 +94,16 @@ msgstr ""
 "διαγραφή κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
 
 #: passwd.c:162
-#, fuzzy
 msgid "lock the password for the named account (root only)"
 msgstr ""
-"διαγραφή κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
 
 #: passwd.c:164
-#, fuzzy
 msgid "unlock the password for the named account (root only)"
 msgstr ""
-"διαγραφή κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
 
 #: passwd.c:166
-#, fuzzy
 msgid "expire the password for the named account (root only)"
 msgstr ""
-"διαγραφή κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
 
 #: passwd.c:168
 msgid "force operation"
@@ -232,9 +226,9 @@ msgid "Unsafe operation (use -f to force)"
 msgstr "Μη ασφαλής διαδικασία (χρησιμοποιήστε το -f για εξαναγκασμό)"
 
 #: passwd.c:424
-#, fuzzy, c-format
+#, c-format
 msgid "Expiring password for user %s.\n"
-msgstr "Κλείδωμα κωδικού για το χρήστη %s.\n"
+msgstr ""
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"
@@ -284,16 +278,3 @@ msgstr "%s: τα ληγμένα τεκμήρια πιστοποίησης ενη
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: όλα τα τεκμήρια πιστοποίησης ενημερώθηκαν επιτυχώς.\n"
-
-#~ msgid "lock the named account (root only)"
-#~ msgstr "κλείδωμα του λογαριασμού που έχει το όνομα (διαχειριστής μόνο)"
-
-#~ msgid "unlock the named account (root only)"
-#~ msgstr "ξεκλείδωμα του λογαριασμού που έχει το όνομα (διαχειριστής μόνο)"
-
-#, fuzzy
-#~ msgid "expire the named account (root only)"
-#~ msgstr "κλείδωμα του λογαριασμού που έχει το όνομα (διαχειριστής μόνο)"
-
-#~ msgid "%s: %s is not authorized to change the password of %s\n"
-#~ msgstr "%s: %s δεν εξουσιοδοτημένος για την αλλαγή του κωδικού του %s\n"

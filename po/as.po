@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2012-01-26 18:12+0100\n"
-"PO-Revision-Date: 2011-11-28 13:46+0000\n"
-"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"PO-Revision-Date: 2012-01-26 17:16+0000\n"
+"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
 "Language-Team: Assamese (http://www.transifex.net/projects/p/fedora/team/"
 "as/)\n"
 "Language: as\n"
@@ -94,19 +94,16 @@ msgid "delete the password for the named account (root only)"
 msgstr "উল্লেখিত হিচাপৰ গুপ্তশব্দ আঁতৰাওক (অকল root)"
 
 #: passwd.c:162
-#, fuzzy
 msgid "lock the password for the named account (root only)"
-msgstr "উল্লেখিত হিচাপৰ গুপ্তশব্দ আঁতৰাওক (অকল root)"
+msgstr ""
 
 #: passwd.c:164
-#, fuzzy
 msgid "unlock the password for the named account (root only)"
-msgstr "উল্লেখিত হিচাপৰ গুপ্তশব্দ আঁতৰাওক (অকল root)"
+msgstr ""
 
 #: passwd.c:166
-#, fuzzy
 msgid "expire the password for the named account (root only)"
-msgstr "উল্লেখিত হিচাপৰ গুপ্তশব্দ আঁতৰাওক (অকল root)"
+msgstr ""
 
 #: passwd.c:168
 msgid "force operation"
@@ -224,9 +221,9 @@ msgid "Unsafe operation (use -f to force)"
 msgstr "বিপজ্জনক কৰ্ম (বলবৎভাবে প্ৰয়োগ কৰিব'লৈ -f ব্যবহাৰ কৰক)"
 
 #: passwd.c:424
-#, fuzzy, c-format
+#, c-format
 msgid "Expiring password for user %s.\n"
-msgstr "ব্যৱহাৰকৰোঁতা %s ৰ বাবে গুপ্তশব্দ বন্ধ কৰা হৈছে ।\n"
+msgstr ""
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"
@@ -276,16 +273,3 @@ msgstr "%s: আয়ুঃকাল সমাপ্ত অনুমোদনৰ �
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: সমস্ত অনুমোদনৰ চিহ্ন সফলতাৰে উন্নয়ন কৰা হৈছে ।\n"
-
-#~ msgid "lock the named account (root only)"
-#~ msgstr "উল্লেখিত হিচাপ বন্ধ কৰক (অকল root)"
-
-#~ msgid "unlock the named account (root only)"
-#~ msgstr "উল্লেখিত হিচাপ আন-লক কৰক (অকল root)"
-
-#, fuzzy
-#~ msgid "expire the named account (root only)"
-#~ msgstr "উল্লেখিত হিচাপ বন্ধ কৰক (অকল root)"
-
-#~ msgid "%s: %s is not authorized to change the password of %s\n"
-#~ msgstr "%s: %s, %s ৰ গুপ্তশব্দ পৰিবৰ্ত্তনৰ অনুমতি নাই \n"

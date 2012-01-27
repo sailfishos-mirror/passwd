@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2012-01-26 18:12+0100\n"
-"PO-Revision-Date: 2011-11-28 14:02+0000\n"
-"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"PO-Revision-Date: 2012-01-26 17:17+0000\n"
+"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
 "Language-Team: Malayalam <discuss@lists.smc.org.in>\n"
 "Language: ml\n"
 "MIME-Version: 1.0\n"
@@ -92,19 +92,16 @@ msgid "delete the password for the named account (root only)"
 msgstr "പറഞ്ഞിരിക്കുന്ന അക്കൌണ്ടിന് പാസ്‌വേറ്‍ഡ് നീക്കം ചെയ്യുക (root-ന് മാത്റം അധികാരമുള്ളൂ)"
 
 #: passwd.c:162
-#, fuzzy
 msgid "lock the password for the named account (root only)"
-msgstr "പറഞ്ഞിരിക്കുന്ന അക്കൌണ്ടിന് പാസ്‌വേറ്‍ഡ് നീക്കം ചെയ്യുക (root-ന് മാത്റം അധികാരമുള്ളൂ)"
+msgstr ""
 
 #: passwd.c:164
-#, fuzzy
 msgid "unlock the password for the named account (root only)"
-msgstr "പറഞ്ഞിരിക്കുന്ന അക്കൌണ്ടിന് പാസ്‌വേറ്‍ഡ് നീക്കം ചെയ്യുക (root-ന് മാത്റം അധികാരമുള്ളൂ)"
+msgstr ""
 
 #: passwd.c:166
-#, fuzzy
 msgid "expire the password for the named account (root only)"
-msgstr "പറഞ്ഞിരിക്കുന്ന അക്കൌണ്ടിന് പാസ്‌വേറ്‍ഡ് നീക്കം ചെയ്യുക (root-ന് മാത്റം അധികാരമുള്ളൂ)"
+msgstr ""
 
 #: passwd.c:168
 msgid "force operation"
@@ -226,9 +223,9 @@ msgid "Unsafe operation (use -f to force)"
 msgstr "പാടില്ലാത്ത പ്റക്റിയ (നിറ്‍ബന്ധപൂറ്‍വ്വം ചെയ്യുന്നതിന് -f ഉപയോഗിക്കുക)"
 
 #: passwd.c:424
-#, fuzzy, c-format
+#, c-format
 msgid "Expiring password for user %s.\n"
-msgstr "%s എന്ന യൂസറിനുളള പാസ്‌വേറ്‍ഡ് പൂട്ടുന്നു.\n"
+msgstr ""
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"
@@ -278,16 +275,3 @@ msgstr "%s: കാലാവധി കഴിഞ്ഞ ഓഥന്‍റിക്
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: എല്ലാ ഓഥന്‍റിക്കേഷന്‍ ടോക്കനുകളും വിജയകരമായി പുതുക്കിയിരിക്കുന്നു.\n"
-
-#~ msgid "lock the named account (root only)"
-#~ msgstr "പറഞ്ഞിരിക്കുന്ന അക്കൌണ്ടിന് പൂട്ടുക (root-ന് മാത്റം അധികാരമുള്ളൂ)"
-
-#~ msgid "unlock the named account (root only)"
-#~ msgstr "പറഞ്ഞിരിക്കുന്ന അക്കൌണ്ടിന്‍റെ പൂട്ട് നീക്കുക (root-ന് മാത്റം അധികാരമുള്ളൂ)"
-
-#, fuzzy
-#~ msgid "expire the named account (root only)"
-#~ msgstr "പറഞ്ഞിരിക്കുന്ന അക്കൌണ്ടിന് പൂട്ടുക (root-ന് മാത്റം അധികാരമുള്ളൂ)"
-
-#~ msgid "%s: %s is not authorized to change the password of %s\n"
-#~ msgstr "%s: %s-ന് %s-ന്‍റെ പാസ്‌വേറ്‍ഡ് മാറ്റുന്നതിനുളള അധികാരമില്ല\n"

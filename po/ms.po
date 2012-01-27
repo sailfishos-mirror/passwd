@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2012-01-26 18:12+0100\n"
-"PO-Revision-Date: 2011-11-28 13:52+0000\n"
-"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"PO-Revision-Date: 2012-01-26 17:17+0000\n"
+"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
@@ -91,19 +91,16 @@ msgid "delete the password for the named account (root only)"
 msgstr ""
 
 #: passwd.c:162
-#, fuzzy
 msgid "lock the password for the named account (root only)"
-msgstr "lapor status katalaluan pada akaun dinamakan (hanya root)"
+msgstr ""
 
 #: passwd.c:164
-#, fuzzy
 msgid "unlock the password for the named account (root only)"
-msgstr "lapor status katalaluan pada akaun dinamakan (hanya root)"
+msgstr ""
 
 #: passwd.c:166
-#, fuzzy
 msgid "expire the password for the named account (root only)"
-msgstr "lapor status katalaluan pada akaun dinamakan (hanya root)"
+msgstr ""
 
 #: passwd.c:168
 msgid "force operation"
@@ -224,9 +221,9 @@ msgid "Unsafe operation (use -f to force)"
 msgstr "Operasi tidak selamat (guna -f untuk paksa)"
 
 #: passwd.c:424
-#, fuzzy, c-format
+#, c-format
 msgid "Expiring password for user %s.\n"
-msgstr "Mengunci katalaluan untuk pengguna %s.\n"
+msgstr ""
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"
@@ -276,10 +273,3 @@ msgstr "%s: token pengesahan tamat tempoh telah berjaya dikemaskini.\n"
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: semua token pengesahan telah berjaya dikemaskini.\n"
-
-#, fuzzy
-#~ msgid "expire the named account (root only)"
-#~ msgstr "lapor status katalaluan pada akaun dinamakan (hanya root)"
-
-#~ msgid "%s: %s is not authorized to change the password of %s\n"
-#~ msgstr "%s: %s tidak dibenarkan untuk mengubah kata laluan bagi %s\n"

@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2012-01-26 18:12+0100\n"
-"PO-Revision-Date: 2011-11-28 14:02+0000\n"
-"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"PO-Revision-Date: 2012-01-26 17:17+0000\n"
+"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
 "Language-Team: Telugu (http://www.transifex.net/projects/p/fedora/team/te/)\n"
 "Language: te\n"
 "MIME-Version: 1.0\n"
@@ -92,19 +92,16 @@ msgid "delete the password for the named account (root only)"
 msgstr "నామము కలిగిఉన్న వినియోగదారి కొరకు మాత్రమే సంకేతపదాన్ని తొలగించండి(root మాత్రమే)"
 
 #: passwd.c:162
-#, fuzzy
 msgid "lock the password for the named account (root only)"
-msgstr "నామము కలిగిఉన్న వినియోగదారి కొరకు మాత్రమే సంకేతపదాన్ని తొలగించండి(root మాత్రమే)"
+msgstr ""
 
 #: passwd.c:164
-#, fuzzy
 msgid "unlock the password for the named account (root only)"
-msgstr "నామము కలిగిఉన్న వినియోగదారి కొరకు మాత్రమే సంకేతపదాన్ని తొలగించండి(root మాత్రమే)"
+msgstr ""
 
 #: passwd.c:166
-#, fuzzy
 msgid "expire the password for the named account (root only)"
-msgstr "నామము కలిగిఉన్న వినియోగదారి కొరకు మాత్రమే సంకేతపదాన్ని తొలగించండి(root మాత్రమే)"
+msgstr ""
 
 #: passwd.c:168
 msgid "force operation"
@@ -220,9 +217,9 @@ msgid "Unsafe operation (use -f to force)"
 msgstr "భధ్రకాని ఆపరేషన్ (బలవంతమునకు -f ని ఉపయోగించండి)"
 
 #: passwd.c:424
-#, fuzzy, c-format
+#, c-format
 msgid "Expiring password for user %s.\n"
-msgstr "%s వినియోగదారుని కొరకు సంకేతపదాన్ని లాకింగ్ చేస్తోంది\n"
+msgstr ""
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"
@@ -272,16 +269,3 @@ msgstr "%s: కాలముతీరిన దృవీకరణ టొకెన
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: అన్ని దృవీకరణ టోకెన్లు సమర్ధవంతంగా నవీకరించబడినవి.\n"
-
-#~ msgid "lock the named account (root only)"
-#~ msgstr "నామపు ఖాతా ను లాక్‌చేయండి(root మాత్రమే)"
-
-#~ msgid "unlock the named account (root only)"
-#~ msgstr "నామపు ఖాతా ను అన్‌లాక్ చేయండి(root మాత్రమే)"
-
-#, fuzzy
-#~ msgid "expire the named account (root only)"
-#~ msgstr "నామపు ఖాతా ను లాక్‌చేయండి(root మాత్రమే)"
-
-#~ msgid "%s: %s is not authorized to change the password of %s\n"
-#~ msgstr "%s: %s కు %s యొక్క సంకేతపదం మార్చగల అధికారంలేదు\n"

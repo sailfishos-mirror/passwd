@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2012-01-26 18:12+0100\n"
-"PO-Revision-Date: 2011-11-28 16:27+0000\n"
+"PO-Revision-Date: 2012-01-26 17:16+0000\n"
 "Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -92,19 +92,16 @@ msgid "delete the password for the named account (root only)"
 msgstr "видалити пароль для облікового рахунку (дозволено лише root)"
 
 #: passwd.c:162
-#, fuzzy
 msgid "lock the password for the named account (root only)"
-msgstr "видалити пароль для облікового рахунку (дозволено лише root)"
+msgstr ""
 
 #: passwd.c:164
-#, fuzzy
 msgid "unlock the password for the named account (root only)"
-msgstr "видалити пароль для облікового рахунку (дозволено лише root)"
+msgstr ""
 
 #: passwd.c:166
-#, fuzzy
 msgid "expire the password for the named account (root only)"
-msgstr "видалити пароль для облікового рахунку (дозволено лише root)"
+msgstr ""
 
 #: passwd.c:168
 msgid "force operation"
@@ -226,9 +223,9 @@ msgid "Unsafe operation (use -f to force)"
 msgstr "Операція небезпечна (використовуйте -f для примусового виконання)"
 
 #: passwd.c:424
-#, fuzzy, c-format
+#, c-format
 msgid "Expiring password for user %s.\n"
-msgstr "Блокується пароль для користувача %s.\n"
+msgstr ""
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"
@@ -279,16 +276,3 @@ msgstr ""
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: всі ознаки перевірки автентичності (паролі) успішно оновлені.\n"
-
-#~ msgid "lock the named account (root only)"
-#~ msgstr "заблокувати обліковий запис (дозволено лише користувачу root)"
-
-#~ msgid "unlock the named account (root only)"
-#~ msgstr "розблокувати обліковий запис (дозволено лише користувачу root)"
-
-#, fuzzy
-#~ msgid "expire the named account (root only)"
-#~ msgstr "заблокувати обліковий запис (дозволено лише користувачу root)"
-
-#~ msgid "%s: %s is not authorized to change the password of %s\n"
-#~ msgstr "%s: %s не дозволяється міняти пароль для %s\n"

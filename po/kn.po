@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2012-01-26 18:12+0100\n"
-"PO-Revision-Date: 2011-11-28 13:45+0000\n"
-"Last-Translator: tmraz <tmraz@fedoraproject.org>\n"
+"PO-Revision-Date: 2012-01-26 17:16+0000\n"
+"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
 "Language-Team: Kannada (http://www.transifex.net/projects/p/fedora/team/"
 "kn/)\n"
 "Language: kn\n"
@@ -93,19 +93,16 @@ msgid "delete the password for the named account (root only)"
 msgstr "ಹೆಸರಿಸಲಾದ (ಮೂಲಕ್ಕೆ ಮಾತ್ರ) ಖಾತೆಯ ಗುಪ್ತಪದವನ್ನು ಅಳಿಸಿ ಹಾಕಿ"
 
 #: passwd.c:162
-#, fuzzy
 msgid "lock the password for the named account (root only)"
-msgstr "ಹೆಸರಿಸಲಾದ (ಮೂಲಕ್ಕೆ ಮಾತ್ರ) ಖಾತೆಯ ಗುಪ್ತಪದವನ್ನು ಅಳಿಸಿ ಹಾಕಿ"
+msgstr ""
 
 #: passwd.c:164
-#, fuzzy
 msgid "unlock the password for the named account (root only)"
-msgstr "ಹೆಸರಿಸಲಾದ (ಮೂಲಕ್ಕೆ ಮಾತ್ರ) ಖಾತೆಯ ಗುಪ್ತಪದವನ್ನು ಅಳಿಸಿ ಹಾಕಿ"
+msgstr ""
 
 #: passwd.c:166
-#, fuzzy
 msgid "expire the password for the named account (root only)"
-msgstr "ಹೆಸರಿಸಲಾದ (ಮೂಲಕ್ಕೆ ಮಾತ್ರ) ಖಾತೆಯ ಗುಪ್ತಪದವನ್ನು ಅಳಿಸಿ ಹಾಕಿ"
+msgstr ""
 
 #: passwd.c:168
 msgid "force operation"
@@ -226,9 +223,9 @@ msgid "Unsafe operation (use -f to force)"
 msgstr "ಸುರಕ್ಷಿತವಲ್ಲದ ಕಾರ್ಯಾಚಾರಣೆ (ಒತ್ತಾಯಪಡಿಸಲು -f ಅನ್ನು ಬಳಸಿ)"
 
 #: passwd.c:424
-#, fuzzy, c-format
+#, c-format
 msgid "Expiring password for user %s.\n"
-msgstr "ಬಳಕೆದಾರ %s ನ ಗುಪ್ತಪದವನ್ನು ಲಾಕ್ ಮಾಡಲಾಗುತ್ತಿದೆ.\n"
+msgstr ""
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"
@@ -278,16 +275,3 @@ msgstr "%s: ಕಾಲಾವಧಿ ಮೀರಿದ ದೃಢೀಕರಣ ಸಂ�
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: ಎಲ್ಲಾ ದೃಢೀಕರಣ ಸಂಕೇತಗಳು ಯಶಸ್ವಿಯಾಗಿ ಅಪ್ಡೇಟ್ ಆಗಿದೆ .\n"
-
-#~ msgid "lock the named account (root only)"
-#~ msgstr "ಹೆಸರಿಸಲಾದ (ಮೂಲಕ್ಕೆ ಮಾತ್ರ) ಖಾತೆಯನ್ನು ಲಾಕ್ ಮಾಡಿ"
-
-#~ msgid "unlock the named account (root only)"
-#~ msgstr "ಹೆಸರಿಸಲಾದ (ಮೂಲಕ್ಕೆ ಮಾತ್ರ) ಖಾತೆಯನ್ನು ಅನ್-ಲಾಕ್ ಮಾಡಿ"
-
-#, fuzzy
-#~ msgid "expire the named account (root only)"
-#~ msgstr "ಹೆಸರಿಸಲಾದ (ಮೂಲಕ್ಕೆ ಮಾತ್ರ) ಖಾತೆಯನ್ನು ಲಾಕ್ ಮಾಡಿ"
-
-#~ msgid "%s: %s is not authorized to change the password of %s\n"
-#~ msgstr "%s: %s ನು %s ನ ಗುಪ್ತಪದವನ್ನು ಬದಲಾಯಿಸುವ ಹಕ್ಕನ್ನು ಹೊಂದಿಲ್ಲ\n"
