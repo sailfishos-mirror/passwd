@@ -34,7 +34,7 @@
 .\" Copyright (c) Cristian Gafton, 1998, <gafton@redhat.com>
 .\" Copyright (c) Tomas Mraz, 2009, 2012, <tmraz@redhat.com>
 .\"
-.TH PASSWD 1 "Jan 26 2012" "GNU/Linux" "User utilities"
+.TH PASSWD 1 "Jun 20 2012" "GNU/Linux" "User utilities"
 .SH NAME
 
 passwd \- update user's authentication tokens
@@ -89,10 +89,13 @@ authentication tokens (passwords); the user wishes to keep their
 non-expired tokens as before.
 
 .IP \fB-l\fR
-This option is used to lock the specified account and it is available
-to root only. The locking is performed by rendering the encrypted
-password into an invalid string (by prefixing the encrypted string
-with an !).
+This option is used to lock the password of specified account and
+it is available to root only. The locking is performed by rendering
+the encrypted password into an invalid string (by prefixing the
+encrypted string with an !). Note that the account is not fully
+locked - the user can still log in by other means of authentication
+such as the ssh public key authentication. Use \fBchage -E 0 user\fR
+command instead for full account locking.
 
 .IP \fB--stdin\fR
 This option is used to indicate that \fBpasswd\fR should read the new
