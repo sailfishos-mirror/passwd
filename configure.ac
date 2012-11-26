@@ -97,7 +97,7 @@ if test x$GCC = xyes ; then
 	CFLAGS="$CFLAGS $WARNINGS"
 fi
 
-AM_GNU_GETTEXT_VERSION
+AM_GNU_GETTEXT_VERSION([0.18.1])
 AM_GNU_GETTEXT([external])
 AC_CHECK_FUNCS(dngettext)
 

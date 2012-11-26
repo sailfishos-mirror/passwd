@@ -1,3 +1,7 @@
+2012-11-26  Miloslav Trmač  <mitr@redhat.com>
+
+	* configure.ac: Specify gettext version to fix (autoreconf).
+
 2010-01-28 Tomas Mraz <tmraz@redhat.com>
 
 	* passwd.spec.in: Add COPYING and other things as %doc
