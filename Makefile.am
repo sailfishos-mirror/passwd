@@ -3,7 +3,7 @@ ACLOCAL_AMFLAGS = -I m4
 bin_PROGRAMS = passwd
 noinst_PROGRAMS = pwdstat
 noinst_LIBRARIES = libstuff.a
-EXTRA_DIST = config.rpath mkinstalldirs m4/ChangeLog passwd.pamd passwd.spec.in passwd.spec
+EXTRA_DIST = passwd.pamd passwd.spec.in passwd.spec
 libstuff_a_SOURCES = pwdb.h
 
 AM_CFLAGS = @LIBUSER_CFLAGS@ -fpie
