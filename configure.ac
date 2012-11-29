@@ -40,9 +40,8 @@ AS_HELP_STRING([--with-selinux],[use SELinux]),
 use_selinux=$withval,
 use_selinux=auto)
 if test x$use_selinux != xno ; then
-	AC_CHECK_FUNC(security_compute_av,,
-		      [AC_CHECK_LIB(selinux,security_compute_av)])
-	if test x$ac_cv_lib_selinux_security_compute_av != xyes ; then
+	AC_SEARCH_LIBS([security_compute_av], [selinux])
+	if test x$ac_cv_search_security_compute_av = xno ; then
 		if test x$use_selinux != xauto ; then
 			AC_MSG_ERROR([requested SELinux, but libselinux was not found])
 		fi
