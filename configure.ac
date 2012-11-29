@@ -1,13 +1,14 @@
+# Process this file with autoconf to produce a configure script.
 AC_INIT(passwd, 0.78.99)
+AC_CONFIG_HEADER([config.h])
 AC_CONFIG_SRCDIR([configure.ac])
 AM_INIT_AUTOMAKE([dist-bzip2 no-dist-gzip no-define -Wall])
 
+# Checks for programs.
 AC_PROG_CC
 AC_PROG_RANLIB
 
-# Checks for library functions.
-AC_FUNC_ALLOCA
-
+# Checks for libriaries.
 AC_ARG_WITH(pwdb,
 AS_HELP_STRING([--with-pwdb],[usepwdb for modifying user accounts]),
 use_pwdb=$withval,
@@ -34,6 +35,7 @@ else
 		fi
 	fi
 fi
+AM_CONDITIONAL(USE_LIBUSER,test x$use_libuser != xno)
 
 AC_ARG_WITH(selinux,
 AS_HELP_STRING([--with-selinux],[use SELinux]),
@@ -50,6 +52,7 @@ if test x$use_selinux != xno ; then
 		AC_DEFINE(WITH_SELINUX,1,[Define if you want to use SELinux.])
 	fi
 fi
+AM_CONDITIONAL(USE_SELINUX,test x$use_selinux != xno)
 
 AC_ARG_WITH(audit,
 AS_HELP_STRING([--with-audit],[log using Linux Audit in addition to syslog]),
@@ -66,23 +69,31 @@ if test x$use_audit != xno ; then
 	fi
 fi
 
-AC_DEFINE(_GNU_SOURCE,1,[Define if you want to use GNU extensions.])
-
-AM_CONDITIONAL(USE_SELINUX,test x$use_selinux != xno)
-AM_CONDITIONAL(USE_LIBUSER,test x$use_libuser != xno)
-
 AC_SEARCH_LIBS([misc_conv], [pam_misc])
 AC_SEARCH_LIBS([pam_authenticate], [pam])
 AC_SEARCH_LIBS([poptGetContext], [popt])
+
+AM_GNU_GETTEXT_VERSION([0.18.1])
+AM_GNU_GETTEXT([external])
+
+# Checks for header files.
+
+# Checks for types.
+
+# Checks for structures.
+
+# Checks for compiler characteristics.
+
+# Checks for library functions.
+AC_DEFINE(_GNU_SOURCE,1,[Define if you want to use GNU extensions.])
+AC_FUNC_ALLOCA
+
+# Checks for system services.
 
 if test x$GCC = xyes ; then
 	WARNINGS="-Waggregate-return -Wcast-align -Wimplicit -Wmissing-declarations -Wmissing-prototypes -Wpointer-arith -Wstrict-prototypes -Wuninitialized -Wsign-compare -Wunused-value"
 	CFLAGS="$CFLAGS $WARNINGS"
 fi
 
-AM_GNU_GETTEXT_VERSION([0.18.1])
-AM_GNU_GETTEXT([external])
-
-AC_CONFIG_HEADER([config.h])
 AC_CONFIG_FILES([Makefile po/Makefile.in man/Makefile man/ja/Makefile passwd.spec])
 AC_OUTPUT
