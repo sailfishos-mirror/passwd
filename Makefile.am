@@ -4,7 +4,7 @@
 ACLOCAL_AMFLAGS = -I m4
 AM_CFLAGS = @LIBUSER_CFLAGS@ -fpie
 AM_LDFLAGS = -pie -Wl,-z,relro,-z,now
-LDADD = libstuff.a @LIBUSER_LIBS@ @LIBS@
+LDADD = libstuff.a @LIBUSER_LIBS@
 
 ## Targets
 SUBDIRS = po man
