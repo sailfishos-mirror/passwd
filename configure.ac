@@ -5,10 +5,6 @@ AM_INIT_AUTOMAKE([dist-bzip2 no-dist-gzip no-define -Wall])
 AC_PROG_CC
 AC_PROG_RANLIB
 
-# Checks for header files.
-AC_HEADER_STDC
-AC_CHECK_HEADERS([stdlib.h string.h unistd.h])
-
 # Checks for typedefs, structures, and compiler characteristics.
 AC_C_CONST
 
