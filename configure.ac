@@ -1,6 +1,6 @@
 AC_INIT(passwd, 0.78.99)
 AC_CONFIG_SRCDIR([configure.ac])
-AM_INIT_AUTOMAKE([dist-bzip2 no-dist-gzip])
+AM_INIT_AUTOMAKE([dist-bzip2 no-dist-gzip -Wall])
 
 AC_PROG_CC
 AC_PROG_RANLIB
