@@ -56,9 +56,8 @@ AS_HELP_STRING([--with-audit],[log using Linux Audit in addition to syslog]),
 use_audit=$withval,
 use_audit=auto)
 if test x$use_audit != xno ; then
-	AC_CHECK_FUNC(audit_open,,
-		      [AC_CHECK_LIB(audit,audit_open)])
-	if test x$ac_cv_lib_audit_audit_open != xyes ; then
+	AC_SEARCH_LIBS([audit_open], [audit])
+	if test x$ac_cv_search_audit_open = xno ; then
 		if test x$use_audit != xauto ; then
 			AC_MSG_ERROR([requested Linux Audit, but libaudit was not found])
 		fi
