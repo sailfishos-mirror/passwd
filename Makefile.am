@@ -28,9 +28,3 @@ endif
 if USE_SELINUX
 libstuff_a_SOURCES += selinux_utils.c selinux_utils.h
 endif
-
-passwd_SOURCES = \
-	passwd.c
-
-pwdstat_SOURCES = \
-	pwdstat.c
