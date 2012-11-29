@@ -6,9 +6,10 @@ AM_CFLAGS = @LIBUSER_CFLAGS@ -fpie
 AM_LDFLAGS = -pie -Wl,-z,relro,-z,now
 
 ## Targets
-SUBDIRS = po man
+SUBDIRS = man/ja po
 
 bin_PROGRAMS = passwd
+dist_man_MANS = man/passwd.1
 noinst_PROGRAMS = pwdstat
 
 noinst_LIBRARIES = libstuff.a

@@ -121,5 +121,5 @@ if test "$GCC" = yes ; then
      AC_MSG_RESULT([$enable_Werror])
 fi
 
-AC_CONFIG_FILES([Makefile po/Makefile.in man/Makefile man/ja/Makefile passwd.spec])
+AC_CONFIG_FILES([Makefile man/ja/Makefile po/Makefile.in passwd.spec])
 AC_OUTPUT
