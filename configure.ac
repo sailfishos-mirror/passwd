@@ -7,8 +7,6 @@ AC_PROG_RANLIB
 
 # Checks for library functions.
 AC_FUNC_ALLOCA
-AC_FUNC_MALLOC
-AC_CHECK_FUNCS([memset strdup])
 
 AC_ARG_WITH(pwdb,
 AS_HELP_STRING([--with-pwdb],[usepwdb for modifying user accounts]),
