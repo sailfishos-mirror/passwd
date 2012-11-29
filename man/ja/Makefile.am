@@ -1,5 +1,7 @@
+## Process this file with automake to produce Makefile.in
+
+## Settings
 mandir = @mandir@/ja
 
-man_MANS = passwd.1
-
-EXTRA_DIST = $(man_MANS)
+## Targets
+dist_man_MANS = passwd.1
