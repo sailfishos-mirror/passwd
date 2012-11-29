@@ -73,9 +73,9 @@ AC_DEFINE(_GNU_SOURCE,1,[Define if you want to use GNU extensions.])
 AM_CONDITIONAL(USE_SELINUX,test x$use_selinux != xno)
 AM_CONDITIONAL(USE_LIBUSER,test x$use_libuser != xno)
 
-AC_CHECK_FUNC(misc_conv,,[AC_CHECK_LIB(pam_misc,misc_conv)])
-AC_CHECK_FUNC(pam_authenticate,,[AC_CHECK_LIB(pam,pam_authenticate)])
-AC_CHECK_FUNC(poptGetContext,,[AC_CHECK_LIB(popt,poptGetContext)])
+AC_SEARCH_LIBS([misc_conv], [pam_misc])
+AC_SEARCH_LIBS([pam_authenticate], [pam])
+AC_SEARCH_LIBS([poptGetContext], [popt])
 
 if test x$GCC = xyes ; then
 	WARNINGS="-Waggregate-return -Wcast-align -Wimplicit -Wmissing-declarations -Wmissing-prototypes -Wpointer-arith -Wstrict-prototypes -Wuninitialized -Wsign-compare -Wunused-value"
