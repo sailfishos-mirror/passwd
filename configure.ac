@@ -99,7 +99,6 @@ fi
 
 AM_GNU_GETTEXT_VERSION([0.18.1])
 AM_GNU_GETTEXT([external])
-AC_CHECK_FUNCS(dngettext)
 
 AC_CONFIG_HEADER([config.h])
 AC_CONFIG_FILES([Makefile po/Makefile.in man/Makefile man/ja/Makefile passwd.spec])
