@@ -53,6 +53,8 @@ log_callback (int type, const char *fmt, ...)
 {
   va_list ap;
 
+  (void)type;
+
   va_start(ap, fmt);
 
   if (audit_fd >= 0)

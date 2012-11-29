@@ -92,9 +92,33 @@ AC_FUNC_ALLOCA
 
 # Checks for system services.
 
-if test x$GCC = xyes ; then
-	WARNINGS="-Waggregate-return -Wcast-align -Wimplicit -Wmissing-declarations -Wmissing-prototypes -Wpointer-arith -Wstrict-prototypes -Wuninitialized -Wsign-compare -Wunused-value"
-	CFLAGS="$CFLAGS $WARNINGS"
+# Miscellanous hackery.
+
+# Modify CFLAGS after all tests are run (some of them would fail because
+# of the -Werror).
+if test "$GCC" = yes ; then
+    AC_CACHE_CHECK([for available GCC warning flags],
+		   [mitr_cv_prog_gcc_warnings],
+    [mitr_cv_prog_gcc_warnings=""
+    for i in -Wall -W -Waggregate-return -Wcast-align -Wmissing-declarations dnl
+ -Wmissing-noreturn -Wmissing-prototypes -Wpointer-arith -Wshadow dnl
+ -Wstrict-prototypes -Wuninitialized -Wwrite-strings; do
+        oldcflags=$CFLAGS
+        CFLAGS="$CFLAGS $i"
+        AC_COMPILE_IFELSE([AC_LANG_PROGRAM([], [])],
+		[mitr_cv_prog_gcc_warnings="$mitr_cv_prog_gcc_warnings $i"])
+	CFLAGS=$oldcflags
+     done])
+     CFLAGS="$CFLAGS $mitr_cv_prog_gcc_warnings"
+     AC_MSG_CHECKING([whether we should use -Werror])
+     AC_ARG_ENABLE([Werror],
+		   AS_HELP_STRING([--enable-Werror],
+			[use -Werror if compiling with gcc (default is NO)]),
+		   [], enable_Werror=no)
+     if test "x$enable_Werror" != xno; then
+	CFLAGS="$CFLAGS -Werror"
+     fi
+     AC_MSG_RESULT([$enable_Werror])
 fi
 
 AC_CONFIG_FILES([Makefile po/Makefile.in man/Makefile man/ja/Makefile passwd.spec])

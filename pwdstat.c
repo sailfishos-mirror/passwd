@@ -30,6 +30,8 @@ dummy_conv(int num_msg,
 	int i;
 	struct pam_response *response = NULL;
 
+	(void)appdata_ptr;
+
 	response = malloc(sizeof(struct pam_response) * num_msg);
 
 	if (response == (struct pam_response *) 0)
@@ -82,6 +84,8 @@ main(int argc, char *const argv[])
 	 * here you should obtains somehow the username and password and
 	 * set the global variables
 	 */
+	(void)argc;
+	(void)argv;
 	assert(username != NULL);
 	assert(password != NULL);
 
