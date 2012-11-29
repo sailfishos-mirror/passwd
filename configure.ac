@@ -9,6 +9,8 @@ AC_PROG_CC
 AC_PROG_RANLIB
 
 # Checks for libriaries.
+AC_USE_SYSTEM_EXTENSIONS
+
 AC_ARG_WITH(pwdb,
 AS_HELP_STRING([--with-pwdb],[usepwdb for modifying user accounts]),
 use_pwdb=$withval,
@@ -85,7 +87,6 @@ AM_GNU_GETTEXT([external])
 # Checks for compiler characteristics.
 
 # Checks for library functions.
-AC_DEFINE(_GNU_SOURCE,1,[Define if you want to use GNU extensions.])
 AC_FUNC_ALLOCA
 
 # Checks for system services.
