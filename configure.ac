@@ -5,9 +5,6 @@ AM_INIT_AUTOMAKE([dist-bzip2 no-dist-gzip no-define -Wall])
 AC_PROG_CC
 AC_PROG_RANLIB
 
-# Checks for typedefs, structures, and compiler characteristics.
-AC_C_CONST
-
 # Checks for library functions.
 AC_FUNC_ALLOCA
 AC_FUNC_MALLOC
