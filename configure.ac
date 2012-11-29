@@ -80,7 +80,6 @@ fi
 AC_DEFINE(_GNU_SOURCE,1,[Define if you want to use GNU extensions.])
 
 AM_CONDITIONAL(USE_SELINUX,test x$use_selinux != xno)
-AM_CONDITIONAL(USE_AUDIT,test x$use_audit != xno)
 AM_CONDITIONAL(USE_LIBUSER,test x$use_libuser != xno)
 
 AC_CHECK_FUNC(dlopen,,[AC_CHECK_LIB(dl,dlopen)])
