@@ -2,6 +2,7 @@
 AC_INIT(passwd, 0.78.99)
 AC_CONFIG_HEADER([config.h])
 AC_CONFIG_SRCDIR([configure.ac])
+AC_CONFIG_AUX_DIR([admin])
 AM_INIT_AUTOMAKE([dist-bzip2 no-dist-gzip no-define -Wall])
 
 # Checks for programs.
