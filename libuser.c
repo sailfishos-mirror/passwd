@@ -49,8 +49,6 @@
 #include <libintl.h>
 #include "pwdb.h"
 
-#ifdef LIBUSER
-
 extern const char *progname;
 
 #define CHECK_ERROR(x) \
@@ -475,5 +473,3 @@ pwdb_update_aging(const char *username,
 	shutdown_libuser();
 	return retval;
 }
-
-#endif

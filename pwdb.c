@@ -52,8 +52,6 @@
 #include <unistd.h>
 #include <string.h>
 
-#ifdef PWDB
-
 #include <pwdb/pwdb_public.h>
 #include <pwdb/pwdb_shadow.h>
 
@@ -459,5 +457,3 @@ pwdb_update_aging(const char *username,
 
 	return retval;
 }
-
-#endif

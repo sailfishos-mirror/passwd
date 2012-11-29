@@ -33,10 +33,8 @@ fi
 
 if test x$use_libuser != xno ; then
 	PKG_CHECK_MODULES(LIBUSER,libuser)
-	AC_DEFINE(LIBUSER,1,[Define if you wish to use libuser.])
 else
 	if test x$use_pwdb != xno ; then
-		AC_DEFINE(PWDB,1,[Define if you wish to use pwdb.])
 		if "$use_pwdb" != "yes" ; then
 			if "$use_pwdb" != "/usr" ; then
 				CFLAGS="$CFLAGS -I$use_pwdb/include"
