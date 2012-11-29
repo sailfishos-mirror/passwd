@@ -4,7 +4,6 @@
 ACLOCAL_AMFLAGS = -I m4
 AM_CFLAGS = @LIBUSER_CFLAGS@ -fpie
 AM_LDFLAGS = -pie -Wl,-z,relro,-z,now
-LDADD = libstuff.a @LIBUSER_LIBS@
 
 ## Targets
 SUBDIRS = po man
@@ -28,3 +27,5 @@ endif
 if USE_SELINUX
 libstuff_a_SOURCES += selinux_utils.c selinux_utils.h
 endif
+
+passwd_LDADD = libstuff.a $(LIBUSER_LIBS)
