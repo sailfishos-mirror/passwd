@@ -45,6 +45,11 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <time.h>
+
+/* GValueArray is a part of external API of libuser; warnings about it being
+   deprecated do no good. */
+#define GLIB_VERSION_MIN_REQUIRED GLIB_VERSION_2_30
+
 #include <libuser/user.h>
 #include <libintl.h>
 #include "pwdb.h"
@@ -129,8 +134,6 @@ pwdb_unlock_password(const char *username, int force)
 	int retval = 1, i;
 	struct lu_ent *ent;
 	struct lu_error *error = NULL;
-	GValueArray *values;
-	GValue *value;
 	const char *current = NULL;
 	gboolean started = FALSE;
 	if (libuser == NULL) {
@@ -139,18 +142,9 @@ pwdb_unlock_password(const char *username, int force)
 	}
 	ent = lu_ent_new();
 	if (lu_user_lookup_name(libuser, username, ent, &error)) {
-		current = NULL;
-		value = NULL;
-		values = lu_ent_get(ent, LU_SHADOWPASSWORD);
-		if (values == NULL) {
-			values = lu_ent_get(ent, LU_USERPASSWORD);
-		}
-		if (values) {
-			value = g_value_array_get_nth(values, 0);
-		}
-		if (value) {
-			current = lu_value_strdup(value);
-		}
+		current = lu_ent_get_first_value_strdup(ent, LU_SHADOWPASSWORD);
+		if (current == NULL)
+			lu_ent_get_first_value_strdup(ent, LU_USERPASSWORD);
 		if (current && (force == 0)) {
 			/* Search for a non-locking character. */
 			for (i = 0; (current[i] == '!'); i++) {
@@ -208,22 +202,6 @@ pwdb_clear_password(const char *username)
 	return retval;
 }
 
-static char *
-ent_value_strdup(struct lu_ent *ent, const char *attribute)
-{
-	GValueArray *values;
-	GValue *value;
-        value = NULL;
-        values = lu_ent_get(ent, attribute);
-        if (values) {
-		value = g_value_array_get_nth(values, 0);
-	}
-	if (value) {
-	        return lu_value_strdup(value);
-        }
-        return NULL;
-}
-
 static long long
 ent_value_int64(struct lu_ent *ent, const char *attribute)
 {
@@ -271,16 +249,16 @@ pwdb_display_status(const char *username)
 
 	ent = lu_ent_new();
 	if (lu_user_lookup_name(libuser, username, ent, &error)) {
-		realname = ent_value_strdup(ent, LU_USERNAME);
+		realname = lu_ent_get_first_value_strdup(ent, LU_USERNAME);
 		if (realname == NULL) {
 			fprintf(stderr, "%s: %s\n", progname,
 				_("Corrupted passwd entry."));
 			goto bail;
 		}
-		current = ent_value_strdup(ent, LU_SHADOWPASSWORD);
+		current = lu_ent_get_first_value_strdup(ent, LU_SHADOWPASSWORD);
 		if (current == NULL) {
 			shadow = 0;
-			current = ent_value_strdup(ent, LU_USERPASSWORD);
+			current = lu_ent_get_first_value_strdup(ent, LU_USERPASSWORD);
 		} else {
 			sp_lstchg = (time_t) ent_value_int64(ent, LU_SHADOWLASTCHANGE);
 			sp_min = ent_value_int64(ent, LU_SHADOWMIN);
@@ -351,20 +329,12 @@ pwdb_update_gecos(const char *username, const char *gecos)
 	int retval = 1;
 	struct lu_ent *ent;
 	struct lu_error *error = NULL;
-	GValue value;
 
 	startup_libuser(username);
 
 	ent = lu_ent_new();
 	if (lu_user_lookup_name(libuser, username, ent, &error)) {
-		lu_ent_clear(ent, LU_GECOS);
-
-		memset(&value, 0, sizeof(value));
-		g_value_init(&value, G_TYPE_STRING);
-		g_value_set_string(&value, gecos);
-
-		lu_ent_add(ent, LU_GECOS, &value);
-		g_value_unset(&value);
+		lu_ent_set_string(ent, LU_GECOS, gecos);
 
 		if (lu_user_modify(libuser, ent, &error)) {
 			retval = 0;
@@ -383,20 +353,12 @@ pwdb_update_shell(const char *username, const char *shell)
 	int retval = 1;
 	struct lu_ent *ent;
 	struct lu_error *error = NULL;
-	GValue value;
 
 	startup_libuser(username);
 
 	ent = lu_ent_new();
 	if (lu_user_lookup_name(libuser, username, ent, &error)) {
-		lu_ent_clear(ent, LU_LOGINSHELL);
-
-		memset(&value, 0, sizeof(value));
-		g_value_init(&value, G_TYPE_STRING);
-		g_value_set_string(&value, shell);
-
-		lu_ent_add(ent, LU_LOGINSHELL, &value);
-		g_value_unset(&value);
+		lu_ent_set_string(ent, LU_LOGINSHELL, shell);
 
 		if (lu_user_modify(libuser, ent, &error)) {
 			retval = 0;
@@ -417,15 +379,11 @@ pwdb_update_aging(const char *username,
 	int retval = 1;
 	struct lu_ent *ent;
 	struct lu_error *error = NULL;
-	GValue value;
 
 	startup_libuser(username);
 
 	ent = lu_ent_new();
 	if (lu_user_lookup_name(libuser, username, ent, &error)) {
-		memset(&value, 0, sizeof(value));
-		g_value_init(&value, G_TYPE_LONG);
-
 		if (!lu_ent_get(ent, LU_SHADOWMIN) &&
 		    !lu_ent_get(ent, LU_SHADOWMAX) &&
 		    !lu_ent_get(ent, LU_SHADOWWARNING) &&
@@ -436,32 +394,16 @@ pwdb_update_aging(const char *username,
 			return retval;
 		}
 
-		if (min != -2) {
-			g_value_set_long(&value, min);
-			lu_ent_clear(ent, LU_SHADOWMIN);
-			lu_ent_add(ent, LU_SHADOWMIN, &value);
-		}
-		if (max != -2) {
-			g_value_set_long(&value, max);
-			lu_ent_clear(ent, LU_SHADOWMAX);
-			lu_ent_add(ent, LU_SHADOWMAX, &value);
-		}
-		if (warn != -2) {
-			g_value_set_long(&value, warn);
-			lu_ent_clear(ent, LU_SHADOWWARNING);
-			lu_ent_add(ent, LU_SHADOWWARNING, &value);
-		}
-		if (inact != -2) {
-			g_value_set_long(&value, inact);
-			lu_ent_clear(ent, LU_SHADOWINACTIVE);
-			lu_ent_add(ent, LU_SHADOWINACTIVE, &value);
-		}
-		if (lastchg != -2) {
-			g_value_set_long(&value, lastchg);
-			lu_ent_clear(ent, LU_SHADOWLASTCHANGE);
-			lu_ent_add(ent, LU_SHADOWLASTCHANGE, &value);
-		}
-		g_value_unset(&value);
+		if (min != -2)
+			lu_ent_set_long(ent, LU_SHADOWMIN, min);
+		if (max != -2)
+			lu_ent_set_long(ent, LU_SHADOWMAX, max);
+		if (warn != -2)
+			lu_ent_set_long(ent, LU_SHADOWWARNING, warn);
+		if (inact != -2)
+			lu_ent_set_long(ent, LU_SHADOWINACTIVE, inact);
+		if (lastchg != -2)
+			lu_ent_set_long(ent, LU_SHADOWLASTCHANGE, lastchg);
 
 		if (lu_user_modify(libuser, ent, &error)) {
 			retval = 0;
