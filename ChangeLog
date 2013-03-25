@@ -1,5 +1,7 @@
 2013-03-25  Miloslav Trmač  <mitr@redhat.com>
 
+	* libuser.c (pwdb_display_status): Fix a memory leak.
+
 	* libuser.c: Define GLIB_VERSION_MIN_REQUIRED to shut down GLib warnings
 	we can't do anything about.
 	(pwdb_unlock_password): Use lu_ent_get_first_value_strdup().

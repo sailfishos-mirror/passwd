@@ -307,10 +307,10 @@ pwdb_display_status(const char *username)
 				printf("%s %s (%s)\n", realname, status, msg);
 			}
 			g_free(current);
-			g_free(realname);
 		} else {
 			printf(_("No password set.\n"));
 		}
+		g_free(realname);
 		retval = 0;
 	} else {
 		printf(_("Unknown user.\n"));
