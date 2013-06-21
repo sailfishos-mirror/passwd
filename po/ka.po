@@ -1,36 +1,36 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Automatically generated, 2006.
-# George Machitidze <giomac@gmail.com>, 2007.
+# Automatically generated, 2006
+# George Machitidze <giomac@gmail.com>, 2007,2012-2013
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
-"PO-Revision-Date: 2012-01-26 17:17+0000\n"
-"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: ka\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
+"PO-Revision-Date: 2013-05-08 02:37+0000\n"
+"Last-Translator: George Machitidze <giomac@gmail.com>\n"
+"Language-Team: Georgian (http://www.transifex.com/projects/p/fedora/language/ka/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language: ka\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: libuser.c:88
 #, c-format
 msgid "%s: libuser initialization error:"
-msgstr "%s: libuser-ის ინიციალიზირების შეცდომა:"
+msgstr "%s: შეცდომა libuser-ის ინიციალიზაციისას:"
 
 #: libuser.c:165
 msgid "Warning: unlocked password would be empty."
-msgstr ""
+msgstr "ყურადღება: განბლოკილი პაროლი ცარიელი იქნება."
 
 #: libuser.c:279
 msgid "Corrupted passwd entry."
-msgstr ""
+msgstr "დაზიანებული passwd ჩანაწერი."
 
 #: libuser.c:296
 msgid "Empty password."
@@ -42,31 +42,31 @@ msgstr "პაროლი დაბლოკილია."
 
 #: libuser.c:303
 msgid "Password set, MD5 crypt."
-msgstr "პაროლი დაყენებულია, MD5 შიფრაცია."
+msgstr "დაყენებულია MD5-ით დაშიფრული პაროლი."
 
 #: libuser.c:306
 msgid "Password set, blowfish crypt."
-msgstr "პაროლი დაყენებულია, blowfish შიფრაცია."
+msgstr "დაყენებულია blowfish-ით დაშიფრული პაროლი."
 
 #: libuser.c:309
 msgid "Password set, SHA256 crypt."
-msgstr ""
+msgstr "დაყენებულია SHA256-ით დაშიფრული პაროლი."
 
 #: libuser.c:312
 msgid "Password set, SHA512 crypt."
-msgstr ""
+msgstr "დაყენებულია SHA512-ით დაშიფრული პაროლი."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
-msgstr "პაროლი დაყენებულია, შიფრაციის უცნობი ვარიანტი."
+msgstr "დაყენებულია უცნობი ალგორითმით დაშიფრული პაროლი."
 
 #: libuser.c:317
 msgid "Alternate authentication scheme in use."
-msgstr "ავთენტიკაციის ალტერნატიული ქსემა გამოყენებაშია."
+msgstr "გამოიყენება ავთენტიკაციის ალტერნატიული სქემა."
 
 #: libuser.c:322
 msgid "Password set, DES crypt."
-msgstr "პაროლი დაყენებულია, DES შიფრაცია."
+msgstr "დაყენებულია DES-ით დაშიფრული პაროლი."
 
 #: libuser.c:336
 #, c-format
@@ -76,12 +76,12 @@ msgstr "პაროლი არაა დაყენებული.\n"
 #: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
-msgstr "მომხმარებელი უცნობია.\n"
+msgstr "უცნობი მომხმარებელი.\n"
 
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr ""
+msgstr "%s: მომხმარებლის ანგარიშს არ აქვს პაროლის დაძველების მხარდაჭერა.\n"
 
 #: passwd.c:158
 msgid "keep non-expired authentication tokens"
@@ -109,11 +109,11 @@ msgstr "ოპერაციის ძალდატანება"
 
 #: passwd.c:170
 msgid "maximum password lifetime (root only)"
-msgstr ""
+msgstr "პაროლის მაქსიმალური ხანგრძლივობა (მხოლოდ root)"
 
 #: passwd.c:172
 msgid "minimum password lifetime (root only)"
-msgstr ""
+msgstr "პაროლის მინიმალური ხანგრძლივობა (მხოლოდ root)"
 
 #: passwd.c:174
 msgid ""
@@ -136,22 +136,22 @@ msgstr ""
 
 #: passwd.c:189
 msgid "[OPTION...] <accountName>"
-msgstr ""
+msgstr "[პარამეტრი...] <ანგარიშის სახელი>"
 
 #: passwd.c:192
 #, c-format
 msgid "%s: bad argument %s: %s\n"
-msgstr ""
+msgstr "%s: ცუდი არგუმენტი %s: %s\n"
 
 #: passwd.c:253
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
-msgstr ""
+msgstr "%s: პარამეტრებიდან -l, -u, -d, -S შესაძლებელია მხოლოდ ერთის მითითება.\n"
 
 #: passwd.c:262
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
+msgstr "%s: შეუძლებელია ერთი -l, -u, -d, -S და ერთი of -i, -n, -w, -x პარამეტრის შერევა.\n"
 
 #: passwd.c:281
 #, c-format
@@ -191,12 +191,12 @@ msgstr "%s: მომხმარებლის სახელი '%s' უც�
 #: passwd.c:387
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
-msgstr ""
+msgstr "%s: უსაფრთხოების პოლიტიკიდან გამომდინარე SELinux კრძალავს წვდომას.\n"
 
 #: passwd.c:397
 #, c-format
 msgid "Locking password for user %s.\n"
-msgstr ""
+msgstr "პაროლის დაბლოკვა მომხმარებლისთვის %s.\n"
 
 #: passwd.c:401 passwd.c:413 passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Success"
@@ -209,11 +209,11 @@ msgstr "შეცდომა (პაროლი არ არის დან�
 #: passwd.c:409
 #, c-format
 msgid "Unlocking password for user %s.\n"
-msgstr ""
+msgstr "პაროლის განბლოკვა მომხმარებლისთვის %s.\n"
 
 #: passwd.c:415
 msgid "Unsafe operation (use -f to force)"
-msgstr ""
+msgstr "საშიში ოპერაცია (დასაძალებლად გამოიყენეთ -f)"
 
 #: passwd.c:424
 #, c-format
@@ -227,32 +227,32 @@ msgstr "შეცდომა"
 #: passwd.c:436
 #, c-format
 msgid "Removing password for user %s.\n"
-msgstr ""
+msgstr "%s მომხმარებლისთვის პაროლის მოხსნა.\n"
 
 #: passwd.c:456
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
-msgstr ""
+msgstr "%s მომხმარებლის ვადების განსაზღვრა.\n"
 
 #: passwd.c:472
 #, c-format
 msgid "Changing password for user %s.\n"
-msgstr ""
+msgstr "%s მომხმარებლის პაროლის შეცვლა.\n"
 
 #: passwd.c:484
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
-msgstr ""
+msgstr "%s: შეცდომა stdin-დან წაკითხვისას: %s\n"
 
 #: passwd.c:501
 #, c-format
 msgid "%s: unable to start pam: %s\n"
-msgstr ""
+msgstr "%s: pam-ის გაშვება ვერ მოხერხდა: %s\n"
 
 #: passwd.c:514
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
-msgstr ""
+msgstr "%s: pam-თვის tty-ის დანიშვნა ვერ მოხერხდა: %s\n"
 
 #: passwd.c:525
 #, c-format

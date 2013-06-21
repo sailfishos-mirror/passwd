@@ -1,23 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Erwien Samantha Y <erwiensy@sederhana.or.id>, 2007.
-# Teguh DC <dheche@songolimo.net>, 2010.
+# Erwien Samantha Y <erwiensy@sederhana.or.id>, 2007
+# Muhammad Panji <sumodirjo@gmail.com>, 2012
+# Teguh Dwicaksana <dheche@songolimo.net>, 2010
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
-"PO-Revision-Date: 2012-01-26 17:16+0000\n"
-"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
+"PO-Revision-Date: 2012-03-15 07:30+0000\n"
+"Last-Translator: Muhammad Panji <sumodirjo@gmail.com>\n"
 "Language-Team: Indonesian <trans-id@lists.fedoraproject.org>\n"
-"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language: id\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: libuser.c:88
 #, c-format
@@ -93,38 +94,38 @@ msgstr "hapus kata sandi akun tersebut (hanya root)"
 
 #: passwd.c:162
 msgid "lock the password for the named account (root only)"
-msgstr ""
+msgstr "Kunci password untuk akun terpilih (hanya root)"
 
 #: passwd.c:164
 msgid "unlock the password for the named account (root only)"
-msgstr ""
+msgstr "Buka kunci password untuk akun terpilih (hanya root)"
 
 #: passwd.c:166
 msgid "expire the password for the named account (root only)"
-msgstr ""
+msgstr "Kadaluwarsakan password untuk akun terpilih (hanya root)"
 
 #: passwd.c:168
 msgid "force operation"
-msgstr ""
+msgstr "Memaksakan operasi"
 
 #: passwd.c:170
 msgid "maximum password lifetime (root only)"
-msgstr ""
+msgstr "Waktu berlaku maksimum password (hanya root)"
 
 #: passwd.c:172
 msgid "minimum password lifetime (root only)"
-msgstr ""
+msgstr "waktu berlaku minimum password (hanya root)"
 
 #: passwd.c:174
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
+msgstr "Jumlah hari mengingatkan pengguna sebelum password kadaluwarsa (hanya root)"
 
 #: passwd.c:177
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr ""
+msgstr "Jumlah hari setelah password kadaluarsa ketika akun dinonaktifkan (hanya root)"
 
 #: passwd.c:180
 msgid "report password status on the named account (root only)"
@@ -141,7 +142,7 @@ msgstr "[OPSI...] <namaAkun>"
 #: passwd.c:192
 #, c-format
 msgid "%s: bad argument %s: %s\n"
-msgstr ""
+msgstr "%s: argumen salah  %s: %s\n"
 
 #: passwd.c:253
 #, c-format
@@ -151,9 +152,7 @@ msgstr "%s: Hanya salah satu dari -l, -u, -d, -S yang dapat dipakai.\n"
 #: passwd.c:262
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s: Salah satu dari -l, -u, -d, -S tidak dapat dicampur dengan salah satu "
-"dari -i, -n, -w, -x.\n"
+msgstr "%s: Salah satu dari -l, -u, -d, -S tidak dapat dicampur dengan salah satu dari -i, -n, -w, -x.\n"
 
 #: passwd.c:281
 #, c-format
@@ -193,7 +192,7 @@ msgstr "%s: Nama pengguna '%s' tidak dikenal.\n"
 #: passwd.c:387
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
-msgstr ""
+msgstr "%s: SELinux Meniadakan akses karena kebijakan keamanan.\n"
 
 #: passwd.c:397
 #, c-format
@@ -220,7 +219,7 @@ msgstr "Operasi yang tidak aman (gunakan -f untuk memaksa)"
 #: passwd.c:424
 #, c-format
 msgid "Expiring password for user %s.\n"
-msgstr ""
+msgstr "Mengadaluwarsakan password untuk pengguna %s.⏎\n"
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"
@@ -234,7 +233,7 @@ msgstr "Menghapus kata sandi pengguna %s.\n"
 #: passwd.c:456
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
-msgstr ""
+msgstr "Menyesuaikan data lama untuk pengguna %s.\n"
 
 #: passwd.c:472
 #, c-format

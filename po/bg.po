@@ -1,23 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Automatically generated, 2006.
-# Doncho N. Gunchev <gunchev@gmail.com>, 2007.
+# Automatically generated, 2006
+# Boris Yakimov <borisyakimov@ymail.com>, 2012
+# Doncho N. Gunchev <gunchev@gmail.com>, 2007
+# Valentin Laskov <laskov@festa.bg>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
-"PO-Revision-Date: 2012-01-26 17:16+0000\n"
-"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
+"PO-Revision-Date: 2012-02-01 19:55+0000\n"
+"Last-Translator: Valentin Laskov <laskov@festa.bg>\n"
 "Language-Team: Bulgarian <trans-bg@lists.fedoraproject.org>\n"
-"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: bg\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: libuser.c:88
 #, c-format
@@ -66,7 +68,7 @@ msgstr "Ползва се алтернативна схема за удосто�
 
 #: libuser.c:322
 msgid "Password set, DES crypt."
-msgstr "Зададена парола, DES крпитиране."
+msgstr "Зададена парола, DES криптиране."
 
 #: libuser.c:336
 #, c-format
@@ -81,7 +83,7 @@ msgstr "Неизвестен потребител.\n"
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr "%s: потребителския акаунт няма поддръжка за стареене на паролата.\n"
+msgstr "%s: потребителският акаунт няма поддръжка за стареене на паролата.\n"
 
 #: passwd.c:158
 msgid "keep non-expired authentication tokens"
@@ -93,15 +95,15 @@ msgstr "изтриване на паролата за указан акаунт 
 
 #: passwd.c:162
 msgid "lock the password for the named account (root only)"
-msgstr ""
+msgstr "заключване на паролата за акаунт ( само root )"
 
 #: passwd.c:164
 msgid "unlock the password for the named account (root only)"
-msgstr ""
+msgstr "отключване на паролата за акаунт ( само root )"
 
 #: passwd.c:166
 msgid "expire the password for the named account (root only)"
-msgstr ""
+msgstr "изтичане на паролата за акаунт ( само root )"
 
 #: passwd.c:168
 msgid "force operation"
@@ -118,17 +120,13 @@ msgstr "минимален живот на паролата (само root)"
 #: passwd.c:174
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
-"брой дни които потребителя получава предупреждение за изтичане на паролата "
-"(само root)"
+msgstr "брой дни, в които потребителят получава предупреждение за изтичане на паролата (само root)"
 
 #: passwd.c:177
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr ""
-"брой дни след изтичане на паролата след които акаунта бива забранен (само "
-"root)"
+msgstr "брой дни след изтичане на паролата, след които акаунтът бива забранен (само root)"
 
 #: passwd.c:180
 msgid "report password status on the named account (root only)"
@@ -155,17 +153,17 @@ msgstr "%s: Само един от ключовете -l, -u, -d, -S може д
 #: passwd.c:262
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: Не могат да се смесват -l, -u, -d, -S с един от -i, -n, -w, -x.\n"
+msgstr "%s: Не могат да се смесват някой от -l, -u, -d, -S с друг от -i, -n, -w, -x.\n"
 
 #: passwd.c:281
 #, c-format
 msgid "Only root can do that.\n"
-msgstr "Само потребителя root може да прави това.\n"
+msgstr "Само потребителят root може да прави това.\n"
 
 #: passwd.c:294
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
-msgstr "%s: Само потребителя root може да указва потребителско име.\n"
+msgstr "%s: Само потребителят root може да указва потребителско име.\n"
 
 #: passwd.c:303
 #, c-format
@@ -195,7 +193,7 @@ msgstr "%s: Неизвестно потребителско име '%s'.\n"
 #: passwd.c:387
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
-msgstr ""
+msgstr "%s:SELinux не позволява достъп поради политика за сигурността.⏎\n"
 
 #: passwd.c:397
 #, c-format
@@ -222,7 +220,7 @@ msgstr "Рискова операция (ползвайте -f за да я на
 #: passwd.c:424
 #, c-format
 msgid "Expiring password for user %s.\n"
-msgstr ""
+msgstr "Изтичаща парола за потребител %s.⏎\n"
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"
@@ -256,12 +254,12 @@ msgstr "%s: не може да бъде стартиран pam: %s\n"
 #: passwd.c:514
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
-msgstr "%s: не може да бъде настроено tty за параметър: %s\n"
+msgstr "%s: не може да бъде зададен tty за pam: %s\n"
 
 #: passwd.c:525
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
-msgstr "%s: не може да се установи забавянето при неуспех: %s\n"
+msgstr "%s: не може да се зададе забавянето при неуспех: %s\n"
 
 #: passwd.c:543
 #, c-format

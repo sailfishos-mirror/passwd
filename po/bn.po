@@ -1,269 +1,276 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Automatically generated, 2006.
+# Automatically generated, 2006
+# Ayesha Akhtar <ayesha@ankur.org.bd>, 2012
+# Mahay Alam Khan <mak@ankur.org.bd>, 2012
+# Newton Baidya <newton@ankur.org.bd>, 2012
+# Robin Mehdee <robin@ankur.org.bd>, 2012
+# Runa Bhattacharjee <runab@fedoraproject.org>, 2009
+# runab <runab@redhat.com>, 2006
+# runa <runabh@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
-"PO-Revision-Date: 2012-01-26 17:17+0000\n"
-"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
+"PO-Revision-Date: 2012-04-10 10:40+0000\n"
+"Last-Translator: Robin Mehdee <robin@ankur.org.bd>\n"
 "Language-Team: Bengali <info@ankur.org.bd>\n"
-"Language: bn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: bn\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: libuser.c:88
 #, c-format
 msgid "%s: libuser initialization error:"
-msgstr ""
+msgstr "%s: libuser প্রারম্ভকালীন ত্রুটি:"
 
 #: libuser.c:165
 msgid "Warning: unlocked password would be empty."
-msgstr ""
+msgstr "সতর্কবাণী: আন-লক করা পাসওয়ার্ড ফাঁকা অবস্থায় থাকবে।"
 
 #: libuser.c:279
 msgid "Corrupted passwd entry."
-msgstr ""
+msgstr "ত্রুটিপূর্ণ passwd এন্ট্রি।"
 
 #: libuser.c:296
 msgid "Empty password."
-msgstr ""
+msgstr "পাসওয়ার্ড ফাঁকা"
 
 #: libuser.c:299
 msgid "Password locked."
-msgstr ""
+msgstr "পাসওয়ার্ক লক করা হয়েছে।"
 
 #: libuser.c:303
 msgid "Password set, MD5 crypt."
-msgstr ""
+msgstr "পাসওয়ার্ড নির্ধারিত, MD5 ক্রিপ্ট।"
 
 #: libuser.c:306
 msgid "Password set, blowfish crypt."
-msgstr ""
+msgstr "পাসওয়ার্ড নির্ধারিত, blowfish ক্রিপ্ট।"
 
 #: libuser.c:309
 msgid "Password set, SHA256 crypt."
-msgstr ""
+msgstr "পাসওয়ার্ড নির্ধারিত, SHA256 ক্রিপ্ট।"
 
 #: libuser.c:312
 msgid "Password set, SHA512 crypt."
-msgstr ""
+msgstr "পাসওয়ার্ড নির্ধারিত, SHA512 ক্রিপ্ট।"
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
-msgstr ""
+msgstr "পাসওয়ার্ড নির্ধারিত, অজানা প্রকৃতির স্ক্রিপ্ট।"
 
 #: libuser.c:317
 msgid "Alternate authentication scheme in use."
-msgstr ""
+msgstr "অনুমোদনের বিকল্প পদ্ধতি ব্যবহৃত হচ্ছে।"
 
 #: libuser.c:322
 msgid "Password set, DES crypt."
-msgstr ""
+msgstr "পাসওয়ার্ড নির্ধারিত, DES ক্রিপ্ট।"
 
 #: libuser.c:336
 #, c-format
 msgid "No password set.\n"
-msgstr ""
+msgstr "পাসওয়ার্ড নির্ধারিত হয়নি।\n"
 
 #: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
-msgstr ""
+msgstr "অজানা ব্যবহারকারী।\n"
 
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr ""
+msgstr "%s: ব্যবহারকারীর অ্যাকাউন্টে পাসওয়ার্ডের মেয়াদপূর্তী বৈশিষ্ট্য অনুপস্থিত।\n"
 
 #: passwd.c:158
 msgid "keep non-expired authentication tokens"
-msgstr ""
+msgstr "মেয়াদ অসম্পূর্ণ অনুমোদনের টোকেন সংক্ষণ করা হবে"
 
 #: passwd.c:160
 msgid "delete the password for the named account (root only)"
-msgstr ""
+msgstr "উল্লিখিত অ্যাকাউন্টের পাসওয়ার্ড মুছে ফেলুন (শুধুমাত্র root)"
 
 #: passwd.c:162
 msgid "lock the password for the named account (root only)"
-msgstr ""
+msgstr "named অ্যাকাউন্টের জন্য (শুধুমাত্র root) পাসওয়ার্ড লক করা হবে"
 
 #: passwd.c:164
 msgid "unlock the password for the named account (root only)"
-msgstr ""
+msgstr "named অ্যাকাউন্টের জন্য (শুধুমাত্র root) পাসওয়ার্ড আন-লক করা হবে"
 
 #: passwd.c:166
 msgid "expire the password for the named account (root only)"
-msgstr ""
+msgstr "named অ্যাকাউন্টের জন্য (শুধুমাত্র root) পাসওয়ার্ডের মেয়াদ পূর্ণ করা হবে"
 
 #: passwd.c:168
 msgid "force operation"
-msgstr ""
+msgstr "বাধ্যতামূলক কর্ম"
 
 #: passwd.c:170
 msgid "maximum password lifetime (root only)"
-msgstr ""
+msgstr "পাসওয়ার্ডের সর্বাধিক মেয়াদ (শুধুমাত্র root)"
 
 #: passwd.c:172
 msgid "minimum password lifetime (root only)"
-msgstr ""
+msgstr "পাসওয়ার্ডের সর্বনিম্ন মেয়াদ (শুধুমাত্র root)"
 
 #: passwd.c:174
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
+msgstr "পাসওয়ার্ডের মেয়াদপূর্তীর কতদিন পূর্বে ব্যবহারকারীকে সতর্কবার্তা দেওয়া হবে (শুধুমাত্র root)"
 
 #: passwd.c:177
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr ""
+msgstr "পাসওয়ার্ডের মেয়াদপূর্তীর কতদিন পরে অ্যাকাউন্ট নিষ্ক্রিয় করা হবে (শুধুমাত্র root)"
 
 #: passwd.c:180
 msgid "report password status on the named account (root only)"
-msgstr ""
+msgstr "উল্লিখিত অ্যাকাউন্টের পাসওয়ার্ডের অবস্থা চিহ্নিত করা হবে (শুধুমাত্র root)"
 
 #: passwd.c:182
 msgid "read new tokens from stdin (root only)"
-msgstr ""
+msgstr "stdin থেকে নতুন টোকেন পড়া হবে (শুধুমাত্র root)"
 
 #: passwd.c:189
 msgid "[OPTION...] <accountName>"
-msgstr ""
+msgstr "[OPTION...] <accountName>"
 
 #: passwd.c:192
 #, c-format
 msgid "%s: bad argument %s: %s\n"
-msgstr ""
+msgstr "%s: ভুল আর্গুমেন্ট %s: %s\n"
 
 #: passwd.c:253
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
-msgstr ""
+msgstr "%s: -l, -u, -d, -S'র মধ্যে যে কোনো একটি প্রয়োগ করা যাবে।\n"
 
 #: passwd.c:262
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
+msgstr "%s: -l, -u, -d, -S'র মধ্যে কোনো বিকল্পের সাথে -i, -n, -w, -x সংকলনের কোনো বিকল্প যৌথরূপে প্রয়োগ করা যাবে না।\n"
 
 #: passwd.c:281
 #, c-format
 msgid "Only root can do that.\n"
-msgstr ""
+msgstr "শুধুমাত্র root ব্যবহারকারী দ্বারা করা সম্ভব হবে।\n"
 
 #: passwd.c:294
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
-msgstr ""
+msgstr "%s: শুধুমাত্র root দ্বারা ব্যবহারকারীর নাম উল্লেখ করা সম্ভব।\n"
 
 #: passwd.c:303
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
-msgstr ""
+msgstr "%s: উল্লিখিত ব্যবহারকারীর নাম অত্যাধিক লম্বা।\n"
 
 #: passwd.c:313
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
-msgstr ""
+msgstr "%s: শুধুমাত্র একটি ব্যবহারকারীর নাম উল্লেখ করা যাবে।\n"
 
 #: passwd.c:323
 #, c-format
 msgid "%s: This option requires a user name.\n"
-msgstr ""
+msgstr "%s: এই বিকল্পের সাথে ব্যবহারকারীর নাম উল্লেখ করা আবশ্যক।\n"
 
 #: passwd.c:334
 #, c-format
 msgid "%s: Can not identify you!\n"
-msgstr ""
+msgstr "%s: আপনাকে সনাক্ত করা যায়নি!\n"
 
 #: passwd.c:343 passwd.c:378
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
-msgstr ""
+msgstr "%s: অজানা ব্যবহারকারীর নাম '%s'।\n"
 
 #: passwd.c:387
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
-msgstr ""
+msgstr "%s: নিরাপত্তা নিয়মনীতির জন্য SELinux দ্বারা অনুমতি প্রদান করা হচ্ছে না।\n"
 
 #: passwd.c:397
 #, c-format
 msgid "Locking password for user %s.\n"
-msgstr ""
+msgstr "ব্যবহারকারী %s'র জন্য পাসওয়ার্ড লক করা হচ্ছে।\n"
 
 #: passwd.c:401 passwd.c:413 passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Success"
-msgstr ""
+msgstr "সফল"
 
 #: passwd.c:401 passwd.c:416
 msgid "Error (password not set?)"
-msgstr ""
+msgstr "ত্রুটি (পাসওয়ার্ড নির্ধারিত হয়েছে কি?)"
 
 #: passwd.c:409
 #, c-format
 msgid "Unlocking password for user %s.\n"
-msgstr ""
+msgstr "ব্যবহারকারী %s'র পাসওয়ার্ড আন-লক করা হচ্ছে।\n"
 
 #: passwd.c:415
 msgid "Unsafe operation (use -f to force)"
-msgstr ""
+msgstr "বিপজ্জনক কর্ম (বলপূর্বক প্রয়োগ করতে -f ব্যবহার করুন)"
 
 #: passwd.c:424
 #, c-format
 msgid "Expiring password for user %s.\n"
-msgstr ""
+msgstr "%s ব্যবহারকারীর জন্য পাসওয়ার্ডের মেয়াদ পূর্ণ করা হচ্ছে।\n"
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"
-msgstr ""
+msgstr "ত্রুটি"
 
 #: passwd.c:436
 #, c-format
 msgid "Removing password for user %s.\n"
-msgstr ""
+msgstr "%s ব্যবহারকারীর পাসওয়ার্ড মুছে ফেলা হচ্ছে।\n"
 
 #: passwd.c:456
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
-msgstr ""
+msgstr "%s ব্যবহারকারীর জন্য মেয়াদপূর্তী সংক্রান্ত তথ্য পরিবর্তন করা হচ্ছে।\n"
 
 #: passwd.c:472
 #, c-format
 msgid "Changing password for user %s.\n"
-msgstr ""
+msgstr "%s ব্যবহারকারীর পাসওয়ার্ড পরিবর্তন করা হচ্ছে।\n"
 
 #: passwd.c:484
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
-msgstr ""
+msgstr "%s: stdin থেকে পড়তে সমস্যা: %s\n"
 
 #: passwd.c:501
 #, c-format
 msgid "%s: unable to start pam: %s\n"
-msgstr ""
+msgstr "%s: pam আরম্ভ করতে ব্যর্থ: %s\n"
 
 #: passwd.c:514
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
-msgstr ""
+msgstr "%s: pam'র জন্য tty নির্ধারণ করতে ব্যর্থ: %s\n"
 
 #: passwd.c:525
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
-msgstr ""
+msgstr "%s: বিফলতার সময়কাল নির্ধারণ করতে ব্যর্থ: %s\n"
 
 #: passwd.c:543
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr ""
+msgstr "%s: মেয়াদ সমাপ্ত অনুমোদনের টোকেন সাফল্যের সাথে আপডেট করা হয়েছে।\n"
 
 #: passwd.c:549
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
-msgstr ""
+msgstr "%s: সমস্ত অনুমোদনের টোকেন সাফল্যের সাথে আপডেট করা হয়েছে।\n"

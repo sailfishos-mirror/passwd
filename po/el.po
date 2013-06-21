@@ -1,23 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Automatically generated, 2006.
-# Tournaris Pavlos <p.tournaris@gmail.com>, 2009, 2010.
+# Automatically generated, 2006
+# mitzie <soldizach@gmail.com>, 2013
+# jackbauer <p.tournaris@gmail.com>, 2009, 2010
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
-"PO-Revision-Date: 2012-01-26 17:16+0000\n"
-"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
+"PO-Revision-Date: 2013-03-20 20:34+0000\n"
+"Last-Translator: mitzie <soldizach@gmail.com>\n"
 "Language-Team: Greek <trans-el@lists.fedoraproject.org>\n"
-"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: libuser.c:88
 #, c-format
@@ -81,8 +82,7 @@ msgstr "Άγνωστος χρήστης.\n"
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr ""
-"%s: ο λογαριασμός του χρήστη δεν έχει υποστήριξη για γήρανση κωδικού.\n"
+msgstr "%s: ο λογαριασμός του χρήστη δεν έχει υποστήριξη για γήρανση κωδικού.\n"
 
 #: passwd.c:158
 msgid "keep non-expired authentication tokens"
@@ -90,20 +90,19 @@ msgstr "διατήρηση των μη ληγμένων τεκμηρίων πι�
 
 #: passwd.c:160
 msgid "delete the password for the named account (root only)"
-msgstr ""
-"διαγραφή κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
+msgstr "διαγραφή κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
 
 #: passwd.c:162
 msgid "lock the password for the named account (root only)"
-msgstr ""
+msgstr "κλείδωμα κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
 
 #: passwd.c:164
 msgid "unlock the password for the named account (root only)"
-msgstr ""
+msgstr "ξεκλείδωμα κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
 
 #: passwd.c:166
 msgid "expire the password for the named account (root only)"
-msgstr ""
+msgstr "λήξη κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
 
 #: passwd.c:168
 msgid "force operation"
@@ -120,23 +119,17 @@ msgstr "ελάχιστη διάρκεια ζωής (διαχειριστής μ�
 #: passwd.c:174
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
-"πόσες ημέρες πριν από τη λήξη του κωδικού θα ειδοποιείται ο χρήστης (μόνο "
-"root)"
+msgstr "πόσες ημέρες πριν από τη λήξη του κωδικού θα ειδοποιείται ο χρήστης (μόνο root)"
 
 #: passwd.c:177
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr ""
-"αριθμός ημερών μετά τη λήξη του κωδικού όταν ένας λογαριασμός "
-"απενεργοποιείται (διαχειριστής μόνο)"
+msgstr "αριθμός ημερών μετά τη λήξη του κωδικού όταν ένας λογαριασμός απενεργοποιείται (διαχειριστής μόνο)"
 
 #: passwd.c:180
 msgid "report password status on the named account (root only)"
-msgstr ""
-"αναφορά κατάστασης κωδικού στο λογαριασμό που έχει το όνομα (διαχειριστής "
-"μόνο)"
+msgstr "αναφορά κατάστασης κωδικού στο λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
 
 #: passwd.c:182
 msgid "read new tokens from stdin (root only)"
@@ -159,9 +152,7 @@ msgstr "%s: Μόνο ένα από τα -l, -u, -d, -S μπορεί να ορι�
 #: passwd.c:262
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s: Η ανάμιξη ενός από τα -l, -u, -d, -S και ενός από τα -i, -n, -w, -x "
-"είναι αδύνατη.\n"
+msgstr "%s: Η ανάμιξη ενός από τα -l, -u, -d, -S και ενός από τα -i, -n, -w, -x είναι αδύνατη.\n"
 
 #: passwd.c:281
 #, c-format
@@ -201,7 +192,7 @@ msgstr "%s: Άγνωστο όνομα χρήστη '%s'.\n"
 #: passwd.c:387
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
-msgstr ""
+msgstr "%s: Το SELinux απαγορεύει την πρόσβαση λόγο της πολιτικής ασφαλείας\n"
 
 #: passwd.c:397
 #, c-format
@@ -228,7 +219,7 @@ msgstr "Μη ασφαλής διαδικασία (χρησιμοποιήστε �
 #: passwd.c:424
 #, c-format
 msgid "Expiring password for user %s.\n"
-msgstr ""
+msgstr "Λήξη κωδικού για το χρήστη %s.\n"
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"

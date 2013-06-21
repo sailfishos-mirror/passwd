@@ -1,24 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2010.
-# Automatically generated, 2006.
+# abdilra7eem <abdilra7eem@yahoo.com>, 2010
+# Automatically generated, 2006
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
 "PO-Revision-Date: 2012-01-26 17:17+0000\n"
 "Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
 "Language-Team: Arabic <trans-ar@lists.fedoraproject.org>\n"
-"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: libuser.c:88
 #, c-format
@@ -119,8 +118,7 @@ msgstr "الحدّ الأدنى لعمر كلمة المرور (الجذر فق�
 #: passwd.c:174
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
-"عدد أيام استقبال المستخدِم تحذيرات قبل انتهاء صلاحية كلمة المرور (الجذر فقط)"
+msgstr "عدد أيام استقبال المستخدِم تحذيرات قبل انتهاء صلاحية كلمة المرور (الجذر فقط)"
 
 #: passwd.c:177
 msgid ""

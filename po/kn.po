@@ -1,24 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Automatically generated, 2006.
-# Shankar Prasad <svenkate@redhat.com>, 2007, 2009.
+# Automatically generated, 2006
+# shanky <prasad.mvs@gmail.com>, 2012
+# shankar <svenkate@redhat.com>, 2007, 2009
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
-"PO-Revision-Date: 2012-01-26 17:16+0000\n"
-"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
-"Language-Team: Kannada (http://www.transifex.net/projects/p/fedora/team/"
-"kn/)\n"
-"Language: kn\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
+"PO-Revision-Date: 2012-02-28 12:11+0000\n"
+"Last-Translator: shanky <prasad.mvs@gmail.com>\n"
+"Language-Team: Kannada (http://www.transifex.com/projects/p/fedora/language/kn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language: kn\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: libuser.c:88
 #, c-format
@@ -94,15 +94,15 @@ msgstr "ಹೆಸರಿಸಲಾದ (ಮೂಲಕ್ಕೆ ಮಾತ್ರ) ಖ�
 
 #: passwd.c:162
 msgid "lock the password for the named account (root only)"
-msgstr ""
+msgstr "ಹೆಸರಿಸಲಾದ ಖಾತೆಗಾಗಿ ಗುಪ್ತಪದವನ್ನು ಬಂಧಿಸಿ (ನಿರ್ವಾಹಕ ಮಾತ್ರ)"
 
 #: passwd.c:164
 msgid "unlock the password for the named account (root only)"
-msgstr ""
+msgstr "ಹೆಸರಿಸಲಾದ ಖಾತೆಗಾಗಿ ಗುಪ್ತಪದವನ್ನು ಮುಕ್ತಗೊಳಿಸಿ (ನಿರ್ವಾಹಕ ಮಾತ್ರ)"
 
 #: passwd.c:166
 msgid "expire the password for the named account (root only)"
-msgstr ""
+msgstr "ಹೆಸರಿಸಲಾದ ಖಾತೆಗಾಗಿ ಗುಪ್ತಪದದ ವಾಯಿದೆ ತೀರುವಂತೆ ಮಾಡಿ (ನಿರ್ವಾಹಕ ಮಾತ್ರ)"
 
 #: passwd.c:168
 msgid "force operation"
@@ -119,17 +119,13 @@ msgstr "ಗುಪ್ತಪದದ ಕನಿಷ್ಟ ಕಾಲಮಿತಿ (ಮ�
 #: passwd.c:174
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
-"ಗುಪ್ತಪದದ ಕಾಲಾವಧಿ ಮೀರುವ ಮುನ್ನ ಇಷ್ಟು ದಿನಗಳ ಮೊದಲು ಬಳಕೆದಾರರಿಗೆ ಎಚ್ಚರಿಕೆ ನೀಡಬೇಕು "
-"(ಮೂಲಕ್ಕೆ ಮಾತ್ರ)"
+msgstr "ಗುಪ್ತಪದದ ಕಾಲಾವಧಿ ಮೀರುವ ಮುನ್ನ ಇಷ್ಟು ದಿನಗಳ ಮೊದಲು ಬಳಕೆದಾರರಿಗೆ ಎಚ್ಚರಿಕೆ ನೀಡಬೇಕು (ಮೂಲಕ್ಕೆ ಮಾತ್ರ)"
 
 #: passwd.c:177
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr ""
-"ಗುಪ್ತಪದದ ಕಾಲಾವಧಿ ಮೀರಿದ ನಂತರ ಅದರ ಖಾತೆಯು ಇಷ್ಟು ದಿನಗಳ ನಂತರ ಅಶಕ್ತಗೊಳ್ಳುತ್ತದೆ (ಮೂಲದಲ್ಲಿ "
-"ಮಾತ್ರ)"
+msgstr "ಗುಪ್ತಪದದ ಕಾಲಾವಧಿ ಮೀರಿದ ನಂತರ ಅದರ ಖಾತೆಯು ಇಷ್ಟು ದಿನಗಳ ನಂತರ ಅಶಕ್ತಗೊಳ್ಳುತ್ತದೆ (ಮೂಲದಲ್ಲಿ ಮಾತ್ರ)"
 
 #: passwd.c:180
 msgid "report password status on the named account (root only)"
@@ -156,9 +152,7 @@ msgstr "%s: ಕೇವಲ -l, -u, -d, -S ಗಳಲ್ಲಿ ಒಂದನ್ನು
 #: passwd.c:262
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s: -l, -u, -d, -S ಗಳಿಂದ ಒಂದು ಹಾಗು -i, -n, -w, -x ಗಳಿಂದ ಒಂದನ್ನು ಜೊತೆಯಾಗಿ "
-"ಬಳಸಲಾಗುವುದಿಲ್ಲ.\n"
+msgstr "%s: -l, -u, -d, -S ಗಳಿಂದ ಒಂದು ಹಾಗು -i, -n, -w, -x ಗಳಿಂದ ಒಂದನ್ನು ಜೊತೆಯಾಗಿ ಬಳಸಲಾಗುವುದಿಲ್ಲ.\n"
 
 #: passwd.c:281
 #, c-format
@@ -198,7 +192,7 @@ msgstr "%s: ಗೊತ್ತಿರದ ಬಳಕೆದಾರ ಹೆಸರು '%s'.
 #: passwd.c:387
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
-msgstr ""
+msgstr "%s: ಸುರಕ್ಷತೆ ಪಾಲಿಸಿಯ ಕಾರಣದಿಂದಾಗಿ SELinux ಪ್ರವೇಶಾಧಿಕಾರವನ್ನು ನಿರಾಕರಿಸುತ್ತಿದೆ.\n"
 
 #: passwd.c:397
 #, c-format
@@ -225,7 +219,7 @@ msgstr "ಸುರಕ್ಷಿತವಲ್ಲದ ಕಾರ್ಯಾಚಾರಣ�
 #: passwd.c:424
 #, c-format
 msgid "Expiring password for user %s.\n"
-msgstr ""
+msgstr "%s ಎಂಬ ಬಳಕೆದಾರನಿಗಾಗಿ ಗುಪ್ತಪದದ ವಾಯಿದೆ ತೀರುತ್ತ್ತಿದೆ.\n"
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"

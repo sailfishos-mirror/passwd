@@ -1,23 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Automatically generated, 2006.
-# Krishna Babu K <kkrothap@redhat.com>, 2007, 2009.
+# Automatically generated, 2006
+# Krishnababu Krothapalli <kkrothap@redhat.com>, 2007, 2009
+# Krishnababu Krothapalli <krisnababu@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
-"PO-Revision-Date: 2012-01-26 17:17+0000\n"
-"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
-"Language-Team: Telugu (http://www.transifex.net/projects/p/fedora/team/te/)\n"
-"Language: te\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
+"PO-Revision-Date: 2012-03-07 12:52+0000\n"
+"Last-Translator: Krishnababu Krothapalli <krisnababu@gmail.com>\n"
+"Language-Team: Telugu (http://www.transifex.com/projects/p/fedora/language/te/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: te\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: libuser.c:88
 #, c-format
@@ -93,15 +94,15 @@ msgstr "నామము కలిగిఉన్న వినియోగదా�
 
 #: passwd.c:162
 msgid "lock the password for the named account (root only)"
-msgstr ""
+msgstr "పేరువున్న ఖాతాకు సంకేతపదంను లాక్ చేయి (root మాత్రమే)"
 
 #: passwd.c:164
 msgid "unlock the password for the named account (root only)"
-msgstr ""
+msgstr "పేరువున్న ఖాతాకు సంకేతపదంను అన్‌లాక్ చేయి (root మాత్రమే)"
 
 #: passwd.c:166
 msgid "expire the password for the named account (root only)"
-msgstr ""
+msgstr "పేరువున్న ఖాతాకు సంకేతపదం గడువుముగించు (root మాత్రమే)"
 
 #: passwd.c:168
 msgid "force operation"
@@ -151,8 +152,7 @@ msgstr "%s: వీటిలో ఏదో ఒక -l, -u, -d, -S మాత్ర�
 #: passwd.c:262
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s: వీటిలో ఒకటి గాని -l, -u, -d, -S మరియు వీటిలో ఒకటి గాని -i, -n, -w, -x మిళితం చేయలేము.\n"
+msgstr "%s: వీటిలో ఒకటి గాని -l, -u, -d, -S మరియు వీటిలో ఒకటి గాని -i, -n, -w, -x మిళితం చేయలేము.\n"
 
 #: passwd.c:281
 #, c-format
@@ -192,7 +192,7 @@ msgstr "%s: తెలియని వినియోగదారుని నా
 #: passwd.c:387
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
-msgstr ""
+msgstr "%s: రక్షణ విధానం కారణంగా SELinux యాక్సెస్‌ను తిరస్కరిస్తోంది.\n"
 
 #: passwd.c:397
 #, c-format
@@ -219,7 +219,7 @@ msgstr "భధ్రకాని ఆపరేషన్ (బలవంతమున
 #: passwd.c:424
 #, c-format
 msgid "Expiring password for user %s.\n"
-msgstr ""
+msgstr "వాడుకరి %s కొరకు సంకేతపదం గుడువు ముగిస్తోంది.\n"
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"

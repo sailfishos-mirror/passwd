@@ -1,23 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Igor Miletic <grejigl-gnomeprevod@yahoo.ca>, 2007.
+# Igor Miletic <grejigl-gnomeprevod@yahoo.ca>, 2007
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
 "PO-Revision-Date: 2012-01-26 17:17+0000\n"
 "Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
 "Language-Team: Serbian <trans-sr@lists.fedoraproject.org>\n"
-"Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Language: sr\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: libuser.c:88
 #, c-format
@@ -118,8 +117,7 @@ msgstr "најкраћи рок трајања лозинке (само root)"
 #: passwd.c:174
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
-"број дана током којих корисник прима упозорења пре истека лозинке (само root)"
+msgstr "број дана током којих корисник прима упозорења пре истека лозинке (само root)"
 
 #: passwd.c:177
 msgid ""
@@ -152,9 +150,7 @@ msgstr "%s: Само једна од -l, -u, -d, -S опција сме бити
 #: passwd.c:262
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s: Не могу се мешати једна од -l, -u, -d, -S опција са једном од -i, -n, -"
-"w, -x.\n"
+msgstr "%s: Не могу се мешати једна од -l, -u, -d, -S опција са једном од -i, -n, -w, -x.\n"
 
 #: passwd.c:281
 #, c-format

@@ -1,22 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Josep Puigdemont i Casamajó <josep.puigdemont@gmail.com>, 2006, 2007.
+# Bernabé Borrero <bernabeborrero@gmail.com>, 2012
+# Josep Puigdemont <josep.puigdemont@gmail.com>, 2006, 2007
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
-"PO-Revision-Date: 2012-01-26 17:16+0000\n"
-"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
+"PO-Revision-Date: 2012-02-10 10:48+0000\n"
+"Last-Translator: Bernabé Borrero <bernabeborrero@gmail.com>\n"
 "Language-Team: Catalan <fedora@llistes.softcatala.org>\n"
-"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: libuser.c:88
 #, c-format
@@ -92,15 +93,15 @@ msgstr "suprimeix la contrasenya per al compte indicat (només el superusuari)"
 
 #: passwd.c:162
 msgid "lock the password for the named account (root only)"
-msgstr ""
+msgstr "bloqueja la contrasenya pel compte nombrat (només root)"
 
 #: passwd.c:164
 msgid "unlock the password for the named account (root only)"
-msgstr ""
+msgstr "desbloqueja la contrasenya pel compte nombrat (només root)"
 
 #: passwd.c:166
 msgid "expire the password for the named account (root only)"
-msgstr ""
+msgstr "expira la contrasenya pel compte nombrat (només root)"
 
 #: passwd.c:168
 msgid "force operation"
@@ -117,23 +118,17 @@ msgstr "temps de vida mínim de la contrasenya (només el superusuari)"
 #: passwd.c:174
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
-"el nombre de dies abans que venci la contrasenya perquè l'usuari en rebi "
-"l'avís (només el superusuari)"
+msgstr "el nombre de dies abans que venci la contrasenya perquè l'usuari en rebi l'avís (només el superusuari)"
 
 #: passwd.c:177
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr ""
-"el nombre de dies després que venci la contrasenya perquè el compte de "
-"l'usuari venci (només el superusuari)"
+msgstr "el nombre de dies després que venci la contrasenya perquè el compte de l'usuari venci (només el superusuari)"
 
 #: passwd.c:180
 msgid "report password status on the named account (root only)"
-msgstr ""
-"informa de l'estat de la contrasenya del compte indicat (només el "
-"superusuari)"
+msgstr "informa de l'estat de la contrasenya del compte indicat (només el superusuari)"
 
 #: passwd.c:182
 msgid "read new tokens from stdin (root only)"
@@ -151,15 +146,12 @@ msgstr "%s: argument %s equivocat: %s\n"
 #: passwd.c:253
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
-msgstr ""
-"%s: només es pot especificar un d'aquests senyaladors al mateix temps:  -l, -"
-"u, -d, -S.\n"
+msgstr "%s: només es pot especificar un d'aquests senyaladors al mateix temps:  -l, -u, -d, -S.\n"
 
 #: passwd.c:262
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s: no es poden barrejar -l, -u, -d, -S amb cap d'aquest: -i, -n, -w, -x.\n"
+msgstr "%s: no es poden barrejar -l, -u, -d, -S amb cap d'aquest: -i, -n, -w, -x.\n"
 
 #: passwd.c:281
 #, c-format
@@ -199,7 +191,7 @@ msgstr "%s: no es coneix el nom d'usuari «%s».\n"
 #: passwd.c:387
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
-msgstr ""
+msgstr "%s: SELinux està bloquejant l'accés degut a la política de seguretat.\n"
 
 #: passwd.c:397
 #, c-format
@@ -226,7 +218,7 @@ msgstr "L'operació no és segura (empreu -f per a forçar)"
 #: passwd.c:424
 #, c-format
 msgid "Expiring password for user %s.\n"
-msgstr ""
+msgstr "Expirant contrasenya per l'usuari %s.\n"
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"

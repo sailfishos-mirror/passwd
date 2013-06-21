@@ -1,23 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>, 2007.
+# Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>, 2007
+# Ville-Pekka Vainio <vpvainio@iki.fi>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
-"PO-Revision-Date: 2012-01-26 17:17+0000\n"
-"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
-"Language-Team: Finnish (http://www.transifex.net/projects/p/fedora/team/"
-"fi/)\n"
-"Language: fi\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
+"PO-Revision-Date: 2012-03-10 13:21+0000\n"
+"Last-Translator: Ville-Pekka Vainio <vpvainio@iki.fi>\n"
+"Language-Team: Finnish (http://www.transifex.com/projects/p/fedora/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: libuser.c:88
 #, c-format
@@ -93,15 +93,15 @@ msgstr "poista annetun tunnuksen salasana (vain pääkäyttäjä)"
 
 #: passwd.c:162
 msgid "lock the password for the named account (root only)"
-msgstr ""
+msgstr "lukitse annetun tunnuksen salasana (vain pääkäyttäjä)"
 
 #: passwd.c:164
 msgid "unlock the password for the named account (root only)"
-msgstr ""
+msgstr "avaa annetun tunnuksen salasanan lukitus (vain pääkäyttäjä)"
 
 #: passwd.c:166
 msgid "expire the password for the named account (root only)"
-msgstr ""
+msgstr "vanhenna annetun tunnuksen salasana (vain pääkäyttäjä)"
 
 #: passwd.c:168
 msgid "force operation"
@@ -118,17 +118,13 @@ msgstr "salasanan pienin elinaika (vain pääkäyttäjä)"
 #: passwd.c:174
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
-"kuinka monena päivänä ennen salasanan vanhentumista käyttäjää varoitetaan "
-"(vain pääkäyttäjä)"
+msgstr "kuinka monena päivänä ennen salasanan vanhentumista käyttäjää varoitetaan (vain pääkäyttäjä)"
 
 #: passwd.c:177
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr ""
-"kuinka monta päivää salasanan vanhenemisen jälkeen tunnus poistetaan "
-"käytöstä (vain pääkäyttäjä)"
+msgstr "kuinka monta päivää salasanan vanhenemisen jälkeen tunnus poistetaan käytöstä (vain pääkäyttäjä)"
 
 #: passwd.c:180
 msgid "report password status on the named account (root only)"
@@ -155,9 +151,7 @@ msgstr "%s: vain yhden valitsimista -l, -u, -d, -S voi määritellä.\n"
 #: passwd.c:262
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s: Ei voi sekoittaa jotakin valitsimista -l, -u, -d, -S ja jotakin "
-"valitsimista -i, -n, -w, -x.\n"
+msgstr "%s: Ei voi sekoittaa jotakin valitsimista -l, -u, -d, -S ja jotakin valitsimista -i, -n, -w, -x.\n"
 
 #: passwd.c:281
 #, c-format
@@ -197,7 +191,7 @@ msgstr "%s: tuntematon käyttäjätunnus ”%s”.\n"
 #: passwd.c:387
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
-msgstr ""
+msgstr "%s: SELinux estää pyynnön turvallisuuskäytännön perusteella.\n"
 
 #: passwd.c:397
 #, c-format
@@ -224,7 +218,7 @@ msgstr "Turvaton toiminto (käytä valitsinta -f pakottaaksesi)"
 #: passwd.c:424
 #, c-format
 msgid "Expiring password for user %s.\n"
-msgstr ""
+msgstr "Vanhennetaan tunnuksen %s salasana.\n"
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"

@@ -1,23 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Automatically generated, 2006.
-# Eunju Kim <eukim@redhat.com>, 2007, 2009.
+# Automatically generated, 2006
+# eukim <eukim@redhat.com>, 2007, 2009
+# eukim <eukim@redhat.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
-"PO-Revision-Date: 2012-01-26 17:17+0000\n"
-"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
-"Language-Team: Korean (http://www.transifex.net/projects/p/fedora/team/ko/)\n"
-"Language: ko\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
+"PO-Revision-Date: 2012-02-10 01:05+0000\n"
+"Last-Translator: eukim <eukim@redhat.com>\n"
+"Language-Team: Korean (http://www.transifex.com/projects/p/fedora/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: libuser.c:88
 #, c-format
@@ -93,15 +94,15 @@ msgstr "named 계정의 비밀번호 삭제 (root로만 실행 가능)"
 
 #: passwd.c:162
 msgid "lock the password for the named account (root only)"
-msgstr ""
+msgstr "이름이 지정된 계정의 비밀 번호를 잠금 (root로만 실행 가능) "
 
 #: passwd.c:164
 msgid "unlock the password for the named account (root only)"
-msgstr ""
+msgstr "이름이 지정된 계정의 비밀번호를 잠금 해제 (root로만 실행 가능)  "
 
 #: passwd.c:166
 msgid "expire the password for the named account (root only)"
-msgstr ""
+msgstr "이름이 지정된 계정의 비밀 번호 만료 (root로만 실행 가능) "
 
 #: passwd.c:168
 msgid "force operation"
@@ -118,8 +119,7 @@ msgstr "비밀번호 최소 유효기간 (root로만 실행 가능)"
 #: passwd.c:174
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
-"비밀번호가 만료되기 전 사용자에게 주어지는 경고 기간 (root로만 실행 가능)"
+msgstr "비밀번호가 만료되기 전 사용자에게 주어지는 경고 기간 (root로만 실행 가능)"
 
 #: passwd.c:177
 msgid ""
@@ -152,8 +152,7 @@ msgstr "%s:  -l, -u, -d, -S 중 하나만을 지정할 수 있음.\n"
 #: passwd.c:262
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s: -l, -u, -d, -S 중 하나 또는 -i, -n, -w, -x 중 하나를 혼용할 수 없음.\n"
+msgstr "%s: -l, -u, -d, -S 중 하나 또는 -i, -n, -w, -x 중 하나를 혼용할 수 없음.\n"
 
 #: passwd.c:281
 #, c-format
@@ -193,7 +192,7 @@ msgstr "%s: 알 수 없는 사용자 이름 '%s'.\n"
 #: passwd.c:387
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
-msgstr ""
+msgstr "%s: SELinux의 보안 정책에 따라 액세스를 거부합니다.\n"
 
 #: passwd.c:397
 #, c-format
@@ -220,7 +219,7 @@ msgstr "불안전 작동 (-f를 사용하여 강제함)"
 #: passwd.c:424
 #, c-format
 msgid "Expiring password for user %s.\n"
-msgstr ""
+msgstr "사용자 %s의 비밀 번호가 만료됨.\n"
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"

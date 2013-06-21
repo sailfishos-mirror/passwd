@@ -1,25 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Automatically generated, 2006.
-# Hyu_gabaru Ryu_ichi <hyu_gabaru@yahoo.co.jp>, 2009.
-# kiyoto james hashida <khashida@brisbane.redhat.com>, 2007.
-# Kiyoto James Hashida <khashida@redhat.com>, 2007.
+# Automatically generated, 2006
+# hyuugabaru <hyu_gabaru@yahoo.co.jp>, 2009
+# kiyoto james hashida <khashida@brisbane.redhat.com>, 2007
+# Kiyoto Hashida <khashida@redhat.com>, 2007
+# Tomoyuki KATO <tomo@dream.daynight.jp>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
-"PO-Revision-Date: 2012-01-26 17:17+0000\n"
-"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
+"PO-Revision-Date: 2012-01-28 00:06+0000\n"
+"Last-Translator: Tomoyuki KATO <tomo@dream.daynight.jp>\n"
 "Language-Team: Japanese <trans-ja@lists.fedoraproject.org>\n"
-"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: libuser.c:88
 #, c-format
@@ -83,8 +84,7 @@ msgstr "不明なユーザー。\n"
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr ""
-"%s: ユーザーアカウントにはパスワードエージングのサポートがありません。\n"
+msgstr "%s: ユーザーアカウントにはパスワードエージングのサポートがありません。\n"
 
 #: passwd.c:158
 msgid "keep non-expired authentication tokens"
@@ -96,15 +96,15 @@ msgstr "named アカウントのパスワードを削除する (root のみ)"
 
 #: passwd.c:162
 msgid "lock the password for the named account (root only)"
-msgstr ""
+msgstr "指名されたアカウントのパスワードをロック（rootのみ）"
 
 #: passwd.c:164
 msgid "unlock the password for the named account (root only)"
-msgstr ""
+msgstr "指名されたアカウントのパスワードをロック解除（rootのみ）"
 
 #: passwd.c:166
 msgid "expire the password for the named account (root only)"
-msgstr ""
+msgstr "指名されたアカウントのパスワードを失効（rootのみ）"
 
 #: passwd.c:168
 msgid "force operation"
@@ -194,7 +194,7 @@ msgstr "%s: 不明なユーザー名 '%s'。\n"
 #: passwd.c:387
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
-msgstr ""
+msgstr "%s: SELinux がセキュリティポリシーによりアクセスを拒否。\n"
 
 #: passwd.c:397
 #, c-format
@@ -221,7 +221,7 @@ msgstr "危険な操作 (強制には -f を使用)"
 #: passwd.c:424
 #, c-format
 msgid "Expiring password for user %s.\n"
-msgstr ""
+msgstr "ユーザー %s のパスワードを失効。\n"
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"
@@ -270,4 +270,4 @@ msgstr "%s: 失効した認証トークンが正しく更新できました。\n
 #: passwd.c:549
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
-msgstr "%s: 全ての認証トークンが正しく更新できました。\n"
+msgstr "%s: すべての認証トークンが正しく更新できました。\n"

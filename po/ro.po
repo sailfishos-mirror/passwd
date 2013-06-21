@@ -1,25 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Automatically generated, 2006.
-# MIrcea Daniel <visez.trance@gmail.com>, 2007.
+# Aioanei Rares <schaiba@gmail.com>, 2012
+# Automatically generated, 2006
+# MIrcea Daniel <visez.trance@gmail.com>, 2007
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
-"PO-Revision-Date: 2012-01-26 17:17+0000\n"
-"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
-"Language-Team: Romanian (http://www.transifex.net/projects/p/fedora/team/"
-"ro/)\n"
-"Language: ro\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
+"PO-Revision-Date: 2012-03-14 15:52+0000\n"
+"Last-Translator: Aioanei Rares <schaiba@gmail.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?"
-"2:1))\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
 #: libuser.c:88
 #, c-format
@@ -52,11 +51,11 @@ msgstr "Parolă setată, criptare blowfish."
 
 #: libuser.c:309
 msgid "Password set, SHA256 crypt."
-msgstr ""
+msgstr "Parolă setată, criptare SH256."
 
 #: libuser.c:312
 msgid "Password set, SHA512 crypt."
-msgstr ""
+msgstr "Parolă setată, criptare SH512."
 
 #: libuser.c:314
 msgid "Password set, unknown crypt variant."
@@ -95,15 +94,15 @@ msgstr "şterge parola contului (numai root)"
 
 #: passwd.c:162
 msgid "lock the password for the named account (root only)"
-msgstr ""
+msgstr "blocați parola pentru contul specificat (doar root)"
 
 #: passwd.c:164
 msgid "unlock the password for the named account (root only)"
-msgstr ""
+msgstr "deblocați parola pentru contul specificat (doar root)"
 
 #: passwd.c:166
 msgid "expire the password for the named account (root only)"
-msgstr ""
+msgstr "expirați parola pentru contul specificat (doar root)"
 
 #: passwd.c:168
 msgid "force operation"
@@ -120,17 +119,13 @@ msgstr "durata minimă a parolei (numai root)"
 #: passwd.c:174
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
-"numărul de zile până la avertismentul pe care utilizatorii îl primesc "
-"înainte ca parola să expire (numai root)"
+msgstr "numărul de zile până la avertismentul pe care utilizatorii îl primesc înainte ca parola să expire (numai root)"
 
 #: passwd.c:177
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr ""
-"numărul de zile de la expirarea parolei când un cont devine dezactivat "
-"(numai root)"
+msgstr "numărul de zile de la expirarea parolei când un cont devine dezactivat (numai root)"
 
 #: passwd.c:180
 msgid "report password status on the named account (root only)"
@@ -197,7 +192,7 @@ msgstr "%s: Nume de utilizator necunoscut '%s'.\n"
 #: passwd.c:387
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
-msgstr ""
+msgstr "%s: SELinux interzice accesul din cauza politicii de securitate.\n"
 
 #: passwd.c:397
 #, c-format
@@ -224,7 +219,7 @@ msgstr "Operaţiune nesigură (foloiţi -f pentru a forţa)"
 #: passwd.c:424
 #, c-format
 msgid "Expiring password for user %s.\n"
-msgstr ""
+msgstr "Se expiră parola pentru utilizatorul %s.\n"
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"
@@ -273,5 +268,4 @@ msgstr "%s: simbolurile de autentificare expirate actualizate cu succes.\n"
 #: passwd.c:549
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
-msgstr ""
-"%s: toate simbolurile de autentificare au fost actualizate cu succes.\n"
+msgstr "%s: toate simbolurile de autentificare au fost actualizate cu succes.\n"

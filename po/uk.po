@@ -1,23 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Maxim Dziumanenko <dziumanenko@gmail.com>, 2007.
+# Maxim Dziumanenko <dziumanenko@gmail.com>, 2007
+# Yuri Chornoivan <yurchor@ukr.net>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
-"PO-Revision-Date: 2012-01-26 17:16+0000\n"
-"Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
+"PO-Revision-Date: 2012-01-28 07:28+0000\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
-"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: libuser.c:88
 #, c-format
@@ -93,15 +93,15 @@ msgstr "видалити пароль для облікового рахунку
 
 #: passwd.c:162
 msgid "lock the password for the named account (root only)"
-msgstr ""
+msgstr "заблокувати пароль до облікового запису (лише root)"
 
 #: passwd.c:164
 msgid "unlock the password for the named account (root only)"
-msgstr ""
+msgstr "розблокувати пароль до облікового запису (лише root)"
 
 #: passwd.c:166
 msgid "expire the password for the named account (root only)"
-msgstr ""
+msgstr "завершити строк дії пароля до облікового запису (лише root)"
 
 #: passwd.c:168
 msgid "force operation"
@@ -118,28 +118,21 @@ msgstr "мінімальний термін дії паролю (дозволе�
 #: passwd.c:174
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
-"за скільки днів до дати закінчення терміну дії паролю почати попереджувати "
-"користувача (дозволено лише користувачу root)"
+msgstr "за скільки днів до дати закінчення терміну дії паролю почати попереджувати користувача (дозволено лише користувачу root)"
 
 #: passwd.c:177
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr ""
-"через скільки днів після закінчення терміну дії паролю блокувати обліковий "
-"запис (дозволено лише користувачу root)"
+msgstr "через скільки днів після закінчення терміну дії паролю блокувати обліковий запис (дозволено лише користувачу root)"
 
 #: passwd.c:180
 msgid "report password status on the named account (root only)"
-msgstr ""
-"зберегти стан паролю для облікового запису (дозволено лише користувачу root)"
+msgstr "зберегти стан паролю для облікового запису (дозволено лише користувачу root)"
 
 #: passwd.c:182
 msgid "read new tokens from stdin (root only)"
-msgstr ""
-"прочитати нове значення зі стандартного потоку вводу (дозволено лише "
-"користувачу root)"
+msgstr "прочитати нове значення зі стандартного потоку вводу (дозволено лише користувачу root)"
 
 #: passwd.c:189
 msgid "[OPTION...] <accountName>"
@@ -198,7 +191,7 @@ msgstr "%s: Невідоме ім'я '%s'.\n"
 #: passwd.c:387
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
-msgstr ""
+msgstr "%s: доступ заборонено правилами безпеки SELinux.\n"
 
 #: passwd.c:397
 #, c-format
@@ -225,7 +218,7 @@ msgstr "Операція небезпечна (використовуйте -f �
 #: passwd.c:424
 #, c-format
 msgid "Expiring password for user %s.\n"
-msgstr ""
+msgstr "Завершення строку дії пароля для користувача %s.\n"
 
 #: passwd.c:428 passwd.c:439 passwd.c:459
 msgid "Error"
@@ -269,8 +262,7 @@ msgstr "%s: не вдається вказати затримку при пом�
 #: passwd.c:543
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr ""
-"%s: успішно оновлено застарілу ознаку перевірки автентичності (пароль).\n"
+msgstr "%s: успішно оновлено застарілу ознаку перевірки автентичності (пароль).\n"
 
 #: passwd.c:549
 #, c-format

@@ -1,24 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Ankit Patel <ankit@redhat.com>, 2006.
-# Automatically generated, 2006.
-# Sweta Kothari <swkothar@redhat.com>, 2009.
+# Ankit Patel <ankit@redhat.com>, 2006
+# Automatically generated, 2006
+# sweta <swkothar@redhat.com>, 2009
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
 "PO-Revision-Date: 2012-01-26 17:16+0000\n"
 "Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
 "Language-Team: Gujarati <trans-gu@lists.fedoraproject.org>\n"
-"Language: gu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: gu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: libuser.c:88
 #, c-format
@@ -125,8 +125,7 @@ msgstr "પાસવર્ડ સમયસમાપ્તિ પહેલાં 
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr ""
-"પાસવર્ડ સમયસમાપ્ત થાય પછી જ્યારે ખાતું નિષ્ક્રિય બની જાય તે દિવસોની સંખ્યા (માત્ર રુટ)"
+msgstr "પાસવર્ડ સમયસમાપ્ત થાય પછી જ્યારે ખાતું નિષ્ક્રિય બની જાય તે દિવસોની સંખ્યા (માત્ર રુટ)"
 
 #: passwd.c:180
 msgid "report password status on the named account (root only)"

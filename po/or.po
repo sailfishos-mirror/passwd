@@ -1,24 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Automatically generated, 2006.
-# Manoj Kumar Giri <mgiri@redhat.com>, 2009.
-# Subhransu Behera <sbehera@redhat.com>, 2006.
+# Automatically generated, 2006
+# Manoj Kumar Giri <mgiri@redhat.com>, 2009
+# Subhransu Behera <sbehera@redhat.com>, 2006
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
 "PO-Revision-Date: 2012-01-26 17:17+0000\n"
 "Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
-"Language-Team: Oriya (http://www.transifex.net/projects/p/fedora/team/or/)\n"
-"Language: or\n"
+"Language-Team: Oriya (http://www.transifex.com/projects/p/fedora/language/or/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: or\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: libuser.c:88
 #, c-format
@@ -119,8 +119,7 @@ msgstr "ସର୍ବନିମ୍ନ ପ୍ରବେଶ ସଙ୍କେତ ଆୟ
 #: passwd.c:174
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
-"ପ୍ରବେଶ ସଙ୍କେତ ଅକାମି ହେବା ପୂର୍ବରୁ କେତେ ଦିନ ପର୍ଯ୍ଯନ୍ତ ଚାଳକ ଚେତାବନୀ ପ୍ରାପ୍ତ କରିବ (କେବଳ ରୁଟ)"
+msgstr "ପ୍ରବେଶ ସଙ୍କେତ ଅକାମି ହେବା ପୂର୍ବରୁ କେତେ ଦିନ ପର୍ଯ୍ଯନ୍ତ ଚାଳକ ଚେତାବନୀ ପ୍ରାପ୍ତ କରିବ (କେବଳ ରୁଟ)"
 
 #: passwd.c:177
 msgid ""
@@ -153,8 +152,7 @@ msgstr "%s: -l, -u, -d, -S ମଧ୍ଯରୁ କେବଳ ଗୋଟିଏ ବ�
 #: passwd.c:262
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s: -l, -u, -d, -S ମଧ୍ଯରୁ ଗୋଟିଏ ଏବଂ  -i, -n, -w, -x ମଧ୍ଯରୁ ଗୋଟିଏକୁ ମିଶାଇ ହେବ ନାହିଁ।\n"
+msgstr "%s: -l, -u, -d, -S ମଧ୍ଯରୁ ଗୋଟିଏ ଏବଂ  -i, -n, -w, -x ମଧ୍ଯରୁ ଗୋଟିଏକୁ ମିଶାଇ ହେବ ନାହିଁ।\n"
 
 #: passwd.c:281
 #, c-format

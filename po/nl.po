@@ -1,24 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Geert Warrink <geert.warrink@onsnet.nu>, 2010, 2012.
-# Peter van Egdom <p.van.egdom@gmail.com>, 2007.
-# R.E. van der Luit <nippur@fedoraproject.org>, 2009.
+# Geert Warrink <geert.warrink@onsnet.nu>, 2010, 2012
+# Peter van Egdom <p.van.egdom@gmail.com>, 2007
+# Richard E. van der Luit <nippur@fedoraproject.org>, 2009
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
 "PO-Revision-Date: 2012-01-27 08:54+0000\n"
 "Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
-"Language-Team: Dutch (http://www.transifex.net/projects/p/fedora/team/nl/)\n"
-"Language: nl\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/fedora/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: libuser.c:88
 #, c-format
@@ -82,9 +82,7 @@ msgstr "Onbekende gebruiker.\n"
 #: libuser.c:435
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr ""
-"%s: gebruikers account heeft geen ondersteuning voor wachtwoord "
-"veroudering.\n"
+msgstr "%s: gebruikers account heeft geen ondersteuning voor wachtwoord veroudering.\n"
 
 #: passwd.c:158
 msgid "keep non-expired authentication tokens"
@@ -121,17 +119,13 @@ msgstr "minimum wachtwoord levensduur (alleen root)"
 #: passwd.c:174
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
-"aantal dagen waarschuwing die gebruikers ontvangen voordat het wachtwoord "
-"verloopt (alleen root)"
+msgstr "aantal dagen waarschuwing die gebruikers ontvangen voordat het wachtwoord verloopt (alleen root)"
 
 #: passwd.c:177
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr ""
-"aantal dagen na het verlopen van het wachtwoord voordat een account wordt "
-"uitgeschakeld (alleen root)"
+msgstr "aantal dagen na het verlopen van het wachtwoord voordat een account wordt uitgeschakeld (alleen root)"
 
 #: passwd.c:180
 msgid "report password status on the named account (root only)"
@@ -158,9 +152,7 @@ msgstr "%s: Slechts één van de opties -l, -u, -d, -S mag worden opgegeven.\n"
 #: passwd.c:262
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr ""
-"%s: Kan niet een van de -l, -u, -d, -S opties en een van de -i, -n, -w, -x "
-"opties door elkaar heen gebruiken.\n"
+msgstr "%s: Kan niet een van de -l, -u, -d, -S opties en een van de -i, -n, -w, -x opties door elkaar heen gebruiken.\n"
 
 #: passwd.c:281
 #, c-format

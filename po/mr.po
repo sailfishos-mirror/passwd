@@ -1,25 +1,24 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
-# Automatically generated, 2006.
-# sandeep shedmake <sandeep.shedmake@gmail.com>, 2007.
-# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2009.
+# Automatically generated, 2006
+# sandeep shedmake <sandeep.shedmake@gmail.com>, 2007
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2009
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-11-26 16:18+0100\n"
+"POT-Creation-Date: 2012-01-26 18:12+0100\n"
 "PO-Revision-Date: 2012-01-26 17:16+0000\n"
 "Last-Translator: Tomáš Mráz <tmraz@fedoraproject.org>\n"
-"Language-Team: Marathi (http://www.transifex.net/projects/p/fedora/team/"
-"mr/)\n"
-"Language: mr\n"
+"Language-Team: Marathi (http://www.transifex.com/projects/p/fedora/language/mr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: mr\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: libuser.c:88
 #, c-format
@@ -120,8 +119,7 @@ msgstr "कीमान गुप्तशब्द कार्यकाळ (�
 #: passwd.c:174
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
-"गुप्तशब्द मुदत समाप्तीच्या पहिले वापरकर्त्यांना काहिक दिवसांची सावधानता मिळते (फक्त रूट)"
+msgstr "गुप्तशब्द मुदत समाप्तीच्या पहिले वापरकर्त्यांना काहिक दिवसांची सावधानता मिळते (फक्त रूट)"
 
 #: passwd.c:177
 msgid ""
