@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[passwd.passwd]
+file_filter = po/<lang>.po
+source_file = po/passwd.pot
+source_lang = en
+
