@@ -15,7 +15,7 @@ noinst_PROGRAMS = pwdstat
 noinst_LIBRARIES = libstuff.a
 
 ## Rules
-EXTRA_DIST = passwd.pamd passwd.spec.in passwd.spec
+EXTRA_DIST = passwd.pamd
 
 libstuff_a_SOURCES = pwdb.h
 
