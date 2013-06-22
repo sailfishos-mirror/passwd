@@ -1,0 +1,9 @@
+0.79:
+* Dropped the rpm spec file.  Conceptually it belongs in distributions,
+  and two-way synchronization between fedorahosted and Fedora pkgs repository
+  doesn't really make sense.
+* Updated man page, notably adding long option formats.
+* Updated translations.
+* Very minor bug fixes.
+* Build system and warning cleanups.
+* libuser >= 0.58 is now required.

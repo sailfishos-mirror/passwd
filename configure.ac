@@ -1,5 +1,5 @@
 # Process this file with autoconf to produce a configure script.
-AC_INIT(passwd, 0.78.99)
+AC_INIT([passwd], [0.79])
 AC_CONFIG_HEADER([config.h])
 AC_CONFIG_SRCDIR([configure.ac])
 AC_CONFIG_AUX_DIR([admin])
