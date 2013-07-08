@@ -6,12 +6,12 @@ AC_CONFIG_AUX_DIR([admin])
 AM_INIT_AUTOMAKE([dist-bzip2 no-dist-gzip no-define -Wall])
 
 # Checks for programs.
+AC_USE_SYSTEM_EXTENSIONS
 AC_PROG_CC
 AC_PROG_RANLIB
+AM_PROG_AR
 
-# Checks for libriaries.
-AC_USE_SYSTEM_EXTENSIONS
-
+# Checks for libraries.
 AC_ARG_WITH(pwdb,
 AS_HELP_STRING([--with-pwdb],[usepwdb for modifying user accounts]),
 use_pwdb=$withval,
@@ -76,7 +76,7 @@ AC_SEARCH_LIBS([misc_conv], [pam_misc])
 AC_SEARCH_LIBS([pam_authenticate], [pam])
 AC_SEARCH_LIBS([poptGetContext], [popt])
 
-AM_GNU_GETTEXT_VERSION([0.18.1])
+AM_GNU_GETTEXT_VERSION([0.18.2])
 AM_GNU_GETTEXT([external])
 
 # Checks for header files.

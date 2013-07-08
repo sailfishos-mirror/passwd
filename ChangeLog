@@ -1,3 +1,9 @@
+2013-07-08  Miloslav Trmač  <mitr@redhat.com>
+
+	* configure.ac: Update gettext version, which silences autotools warnings.
+
+	* configure.ac: Add AM_PROG_AR to silence an automake warning.
+
 2013-03-25  Miloslav Trmač  <mitr@redhat.com>
 
 	* libuser.c (pwdb_display_status): Fix a memory leak.
