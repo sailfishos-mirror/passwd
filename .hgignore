@@ -4,6 +4,7 @@ syntax: glob
 .depend
 .depend-done
 .libs
+.zanata-cache/etag-cache.xml
 *.o
 *.lo
 *.la

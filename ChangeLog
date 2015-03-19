@@ -1,3 +1,8 @@
+2015-03-19  Miloslav Trmač  <mitr@redhat.com>
+
+	* .tx/config: Remove.
+	* zanata.xml: Add.  To pull updated translations, run (zanata-cli pull).
+
 2013-07-08  Miloslav Trmač  <mitr@redhat.com>
 
 	* configure.ac: Update gettext version, which silences autotools warnings.
