@@ -1,5 +1,5 @@
 /*
- * Copyright Red Hat, Inc., 1998, 1999, 2001, 2002.
+ * Copyright Red Hat, Inc., 1998, 1999, 2001, 2002, 2015.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -157,8 +157,8 @@ parse_args(int argc, const char **argv,
 		{"keep-tokens", 'k', POPT_ARG_NONE, &keep, 0,
 		 _("keep non-expired authentication tokens"), NULL},
 		{"delete", 'd', POPT_ARG_NONE, &delete, 0,
-		 _("delete the password for the named account (root only)"),
-		 NULL},
+		 _("delete the password for the named account (root only); "
+		 "also removes password lock if any"), NULL},
 		{"lock", 'l', POPT_ARG_NONE, &lock, 0,
 		 _("lock the password for the named account (root only)"),
 		 NULL},

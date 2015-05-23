@@ -1,5 +1,5 @@
 /*
- * Copyright Red Hat, Inc., 2002, 2006.
+ * Copyright Red Hat, Inc., 2002, 2006, 2015.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -190,6 +190,18 @@ pwdb_clear_password(const char *username)
 	}
 	ent = lu_ent_new();
 	if (lu_user_lookup_name(libuser, username, ent, &error)) {
+		const char *current;
+
+		current = lu_ent_get_first_value_strdup(ent, LU_SHADOWPASSWORD);
+		if (current == NULL)
+			lu_ent_get_first_value_strdup(ent, LU_USERPASSWORD);
+		if (current != NULL && *current == '!')
+			/* Just note this, do not abort, do not change exit
+			 * code; if someone wants to use -d at all, let's not
+			 * break their scripts. */
+			fprintf(stderr, "%s: %s\n", progname,
+				_("Note: deleting a password also unlocks the "
+				  "password."));
 		if (lu_user_removepass(libuser, ent, &error)) {
 			retval = 0;
 		}

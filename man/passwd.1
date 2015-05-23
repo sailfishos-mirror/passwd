@@ -1,4 +1,4 @@
-.\" Copyright Red Hat, Inc., 1998, 1999, 2002, 2009, 2012.
+.\" Copyright Red Hat, Inc., 1998, 1999, 2002, 2009, 2012, 2015.
 .\"
 .\" Redistribution and use in source and binary forms, with or without
 .\" modification, are permitted provided that the following conditions
@@ -34,7 +34,7 @@
 .\" Copyright (c) Cristian Gafton, 1998, <gafton@redhat.com>
 .\" Copyright (c) Tomas Mraz, 2009, 2012, <tmraz@redhat.com>
 .\"
-.TH PASSWD 1 "Jun 20 2012" "GNU/Linux" "User utilities"
+.TH PASSWD 1 "May 23 2015" "GNU/Linux" "User utilities"
 .SH NAME
 
 passwd \- update user's authentication tokens
@@ -116,6 +116,9 @@ force option \fB-f\fR will override this protection.
 \fB\-d\fR, \fB\-\-delete\fR
 This is a quick way to delete a password for an account. It will set
 the named account passwordless. Available to root only.
+
+Note that if the password was locked,
+this implicitly removes the password lock as well.
 
 .TP
 \fB\-e\fR, \fB\-\-expire\fR
