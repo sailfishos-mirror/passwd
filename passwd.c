@@ -479,16 +479,31 @@ main(int argc, const char **argv)
 	/* If we need to read the new password from stdin, read it and switch
 	 * to the really-quiet stdin conversation function. */
 	if (passwd_flags & PASSWD_STDIN) {
-		char *ptr, newPassword[80];
+		/* PAM's documentation says that PAM_MAX_RESP_SIZE is the
+		 * maximum supported length of the password, but in practice
+		 * the code (including examples in the OSF RFC) often truncates
+		 * data at PAM_MAX_RESP_SIZE - 1. So, refuse to use anything
+		 * longer than PAM_MAX_RESP_SIZE - 1, to prevent users from
+		 * setting a password they won't be able to use to log in. */
+		char *ptr, newPassword[PAM_MAX_RESP_SIZE];
 		int i;
 
 		i = read(STDIN_FILENO, newPassword,
-			 sizeof(newPassword) - 1);
+			 sizeof(newPassword));
 		if (i < 0) {
 			fprintf(stderr,
 				_("%s: error reading from stdin: %s\n"), progname,
 				strerror(errno));
 			exit(1);
+		}
+		if (i == sizeof(newPassword)) {
+			if (newPassword[i - 1] != '\n') {
+				fprintf(stderr,
+					_("%s: password too long, maximum is %zu"),
+					progname, sizeof(newPassword) - 1);
+				exit(1);
+			}
+			i--;
 		}
 
 		newPassword[i] = '\0';
