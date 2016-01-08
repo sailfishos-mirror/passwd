@@ -1,3 +1,8 @@
+2016-01-08  Miloslav Trmač  <mitr@redhat.com>
+
+	* passwd.pamd: Remove configuration for unused "auth" and "account" PAM
+	stacks.  Patch by Guillaume Rousse <guillomovitch@zarb.org>.
+
 2015-11-02  Miloslav Trmač  <mitr@redhat.com>
 
 	* passwd.c (main): Support passwords up to PAM_MAX_RESP_SIZE - 1 with
