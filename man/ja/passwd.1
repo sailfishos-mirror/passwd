@@ -38,7 +38,7 @@
 .SH 名前
 passwd \- ユーザパスワードを変更する
 .SH 書式
-.B passwd [-k] [-l] [-u [-f]] [-d] [-n mindays] [-x maxdays] [-w warndays] [-i inactivedays] [-S] [--stdin] [username]
+.B passwd [-k] [-l] [-u [-f]] [-d] [-e] [-n mindays] [-x maxdays] [-w warndays] [-i inactivedays] [-S] [--stdin] [username]
 .sp 2
 .SH 説明
 Passwd はユーザアカウント・グループアカウントのパスワードを変更する。
@@ -102,6 +102,9 @@ Passwd は　"passwd" サービスとして
 
 .IP \fB-d\fR
 このオプションはアカウントのパスワードを無効にするための手早い方法である。指定のアカウントをパスワードなしに設定する。root のみ使用可能。
+
+.IP \fB-e\fR
+このオプションはアカウントのパスワードの有効期間を無効にするための手早い方法である。該当のユーザーは次回ログイン時にパスワードの変更を求められる。root のみ使用可能。
 
 .IP \fB-f\fR
 このオプションは同時に指定したオプションを強制実行する。
