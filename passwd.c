@@ -274,11 +274,8 @@ parse_args(int argc, const char **argv,
 	/* The only flag which unprivileged users get to use is -k. */
 	if ((passwd_flags & ~PASSWD_KEEP) && 
 	    (getuid() != 0)) {
-		if (passwd_flags & PASSWD_STATUS) {
-			audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
-				NULL, "password status display",
-				NULL, getuid(), NULL, NULL, NULL, 0);
-		} else {
+		/* Auditing is not needed for displaying status */
+		if (passwd_flags != PASSWD_STATUS) {
 			audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
 				NULL, "password attribute change",
 				NULL, getuid(), NULL, NULL, NULL, 0);
@@ -449,10 +446,8 @@ main(int argc, const char **argv)
 	}
 	/* Display account status. */
 	if (passwd_flags & PASSWD_STATUS) {
+		/* Auditing is not needed for displaying status */
 		retval = pwdb_display_status(username);
-		audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
-			NULL, "password status displayed for user",
-			NULL, pwd->pw_uid, NULL, NULL, NULL, retval == 0);
 		return retval;
 	}
 	/* Adjust aging parameters. */
