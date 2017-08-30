@@ -401,7 +401,7 @@ main(int argc, const char **argv)
 		printf("%s: %s\n", progname,
 		       retval ==
 		       0 ? _("Success") : _("Error (password not set?)"));
-		audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
+		audit_log_acct_message(audit_fd, AUDIT_ACCT_LOCK,
 			NULL, "locked-password", NULL, pwd->pw_uid,
 			NULL, NULL, NULL, retval == 0);
 		return retval;
@@ -416,7 +416,7 @@ main(int argc, const char **argv)
 		       retval ==
 		       -2 ? _("Unsafe operation (use -f to force)") :
 		       _("Error (password not set?)"));
-		audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
+		audit_log_acct_message(audit_fd, AUDIT_ACCT_UNLOCK,
 			NULL, "unlocked-password", NULL, pwd->pw_uid,
 			NULL, NULL, NULL, retval == 0);
 		return retval;
@@ -428,7 +428,7 @@ main(int argc, const char **argv)
 		printf("%s: %s\n", progname,
 		       retval ==
 		       0 ? _("Success") : _("Error"));
-		audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
+		audit_log_acct_message(audit_fd, AUDIT_USER_MGMT,
 			NULL, "expired-password", NULL, pwd->pw_uid,
 			NULL, NULL, NULL, retval == 0);
 		return retval;
@@ -461,7 +461,7 @@ main(int argc, const char **argv)
 				"- acct=%s, uid=%u, min=%li, max=%li,"
 				" warn=%li, inact=%li", username, 
 				pwd->pw_uid, min, max, warn, inact);
-		audit_log_user_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
+		audit_log_user_message(audit_fd, AUDIT_USER_MGMT,
 			aubuf, NULL, NULL, NULL, retval == 0);
 		return retval;
 	}
