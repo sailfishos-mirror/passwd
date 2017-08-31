@@ -543,33 +543,22 @@ main(int argc, const char **argv)
 	}
 #endif
 
-	/* Go for it. */
+	/* Go for it. Note: pam will send audit event. */
 	retval = pam_chauthtok(pamh,
 			       (passwd_flags & PASSWD_KEEP) ?
 			       PAM_CHANGE_EXPIRED_AUTHTOK : 0);
 	if (retval == PAM_SUCCESS) {
 		/* We're done.  Tell the invoking user that it worked. */
 		retval = pam_end(pamh, PAM_SUCCESS);
-		if (passwd_flags & PASSWD_KEEP) {
-			audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
-				NULL, "changed-expired-password", NULL,
-				pwd->pw_uid, NULL, NULL, NULL,
-				retval == PAM_SUCCESS);
+		if (passwd_flags & PASSWD_KEEP)
 			printf(_("%s: expired authentication tokens updated successfully.\n"),
 				progname);
-		} else {
-			audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
-				NULL, "changed-password", NULL, pwd->pw_uid,
-				NULL, NULL, NULL, retval == PAM_SUCCESS);
+		else
 			printf(_("%s: all authentication tokens updated successfully.\n"),
 				progname);
-		}
 		retval = 0;
 	} else {
 		/* Horrors!  It failed.  Relay the bad news. */
-		audit_log_acct_message(audit_fd,  AUDIT_USER_CHAUTHTOK,
-				NULL, "changed-password", NULL, pwd->pw_uid,
-				NULL, NULL, NULL, retval == PAM_SUCCESS);
 		fprintf(stderr, "%s: %s\n", progname,
 			pam_strerror(pamh, retval));
 		pam_end(pamh, retval);
