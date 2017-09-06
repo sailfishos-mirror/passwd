@@ -63,7 +63,6 @@
 #ifdef WITH_AUDIT
 #include <libaudit.h>
 #else
-#define audit_log_user_message(d,ty,m,h,a,t,r) do { ; } while(0) 
 #define audit_log_acct_message(d,ty,p,o,n,i,h,a,t,r) do { ; } while(0) 
 static int audit_open(void) { errno = EPROTONOSUPPORT; return -1; } 
 #endif
@@ -457,12 +456,12 @@ main(int argc, const char **argv)
 		retval = pwdb_update_aging(username, min, max, warn, inact, -2);
 		printf("%s: %s\n", progname,
 		       (retval == 0) ? _("Success") : _("Error"));
-		snprintf(aubuf, sizeof(aubuf), "password aging data updated "
-				"- acct=%s, uid=%u, min=%li, max=%li,"
-				" warn=%li, inact=%li", username, 
-				pwd->pw_uid, min, max, warn, inact);
-		audit_log_user_message(audit_fd, AUDIT_USER_MGMT,
-			aubuf, NULL, NULL, NULL, retval == 0);
+		snprintf(aubuf, sizeof(aubuf), "changed-password-aging"
+				" min=%li max=%li warn=%li inact=%li",
+				min, max, warn, inact);
+		audit_log_acct_message(audit_fd,  AUDIT_USER_MGMT,
+			NULL, aubuf, NULL, pwd->pw_uid,
+			NULL, NULL, NULL, retval == 0);
 		return retval;
 	}
 
