@@ -8,264 +8,282 @@
 # jackbauer <p.tournaris@gmail.com>, 2009, 2010
 msgid ""
 msgstr ""
-"Project-Id-Version: passwd\n"
+"Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-01-26 18:12+0100\n"
-"PO-Revision-Date: 2013-03-20 20:34+0000\n"
-"Last-Translator: mitzie <soldizach@gmail.com>\n"
-"Language-Team: Greek <trans-el@lists.fedoraproject.org>\n"
+"POT-Creation-Date: 2015-05-23 07:02+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-03-13 11:33-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Greek <trans-el@lists.fedoraproject.org>\n"
 "Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.9.6\n"
 
-#: libuser.c:88
+#: libuser.c:91
 #, c-format
 msgid "%s: libuser initialization error:"
 msgstr "%s: libuser σφάλμα αρχικοποίησης:"
 
-#: libuser.c:165
+#: libuser.c:157
 msgid "Warning: unlocked password would be empty."
 msgstr "Προειδοποίηση: ο ανοιχτός κωδικός θα μείνει άδειος."
 
-#: libuser.c:279
+#: libuser.c:203
+msgid "Note: deleting a password also unlocks the password."
+msgstr ""
+
+#: libuser.c:267
 msgid "Corrupted passwd entry."
 msgstr "Εσφαλμένη είσοδος passwd."
 
-#: libuser.c:296
+#: libuser.c:284
 msgid "Empty password."
 msgstr "Άδειος κωδικός."
 
-#: libuser.c:299
+#: libuser.c:287
 msgid "Password locked."
 msgstr "Κλειδωμένος κωδικός."
 
-#: libuser.c:303
+#: libuser.c:291
 msgid "Password set, MD5 crypt."
 msgstr "Ρύθμιση κωδικού, MD5 crypt."
 
-#: libuser.c:306
+#: libuser.c:294
 msgid "Password set, blowfish crypt."
 msgstr "Ρύθμιση κωδικού, blowfish crypt."
 
-#: libuser.c:309
+#: libuser.c:297
 msgid "Password set, SHA256 crypt."
 msgstr "Ρύθμιση κωδικού, SHA256 crypt."
 
-#: libuser.c:312
+#: libuser.c:300
 msgid "Password set, SHA512 crypt."
 msgstr "Ρύθμιση κωδικού, SHA512 crypt."
 
-#: libuser.c:314
+#: libuser.c:302
 msgid "Password set, unknown crypt variant."
 msgstr "Ρύθμιση κωδικού, άγνωστη μεταβλητή κρυπτογράφησης."
 
-#: libuser.c:317
+#: libuser.c:305
 msgid "Alternate authentication scheme in use."
 msgstr "Εναλλακτικό σχήμα πιστοποίησης σε χρήση."
 
-#: libuser.c:322
+#: libuser.c:310
 msgid "Password set, DES crypt."
 msgstr "Ρύθμιση κωδικού, DES crypt."
 
-#: libuser.c:336
+#: libuser.c:323
 #, c-format
 msgid "No password set.\n"
 msgstr "Δεν έχει ρυθμιστεί κωδικός.\n"
 
-#: libuser.c:340
+#: libuser.c:328
 #, c-format
 msgid "Unknown user.\n"
 msgstr "Άγνωστος χρήστης.\n"
 
-#: libuser.c:435
+#: libuser.c:403
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr "%s: ο λογαριασμός του χρήστη δεν έχει υποστήριξη για γήρανση κωδικού.\n"
+msgstr ""
+"%s: ο λογαριασμός του χρήστη δεν έχει υποστήριξη για γήρανση κωδικού.\n"
 
 #: passwd.c:158
 msgid "keep non-expired authentication tokens"
 msgstr "διατήρηση των μη ληγμένων τεκμηρίων πιστοποίησης"
 
 #: passwd.c:160
-msgid "delete the password for the named account (root only)"
-msgstr "διαγραφή κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
+msgid ""
+"delete the password for the named account (root only); also removes password "
+"lock if any"
+msgstr ""
 
-#: passwd.c:162
+#: passwd.c:163
 msgid "lock the password for the named account (root only)"
-msgstr "κλείδωμα κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
-
-#: passwd.c:164
-msgid "unlock the password for the named account (root only)"
-msgstr "ξεκλείδωμα κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
+msgstr ""
+"κλείδωμα κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
 
 #: passwd.c:166
+msgid "unlock the password for the named account (root only)"
+msgstr ""
+"ξεκλείδωμα κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
+
+#: passwd.c:169
 msgid "expire the password for the named account (root only)"
 msgstr "λήξη κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
 
-#: passwd.c:168
+#: passwd.c:172
 msgid "force operation"
 msgstr "εξαναγκασμός διαδικασίας"
 
-#: passwd.c:170
+#: passwd.c:174
 msgid "maximum password lifetime (root only)"
 msgstr "μέγιστη διάρκεια ζωής (διαχειριστής μόνο)"
 
-#: passwd.c:172
+#: passwd.c:176
 msgid "minimum password lifetime (root only)"
 msgstr "ελάχιστη διάρκεια ζωής (διαχειριστής μόνο)"
 
-#: passwd.c:174
+#: passwd.c:178
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr "πόσες ημέρες πριν από τη λήξη του κωδικού θα ειδοποιείται ο χρήστης (μόνο root)"
+msgstr ""
+"πόσες ημέρες πριν από τη λήξη του κωδικού θα ειδοποιείται ο χρήστης (μόνο "
+"root)"
 
-#: passwd.c:177
+#: passwd.c:181
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr "αριθμός ημερών μετά τη λήξη του κωδικού όταν ένας λογαριασμός απενεργοποιείται (διαχειριστής μόνο)"
+msgstr ""
+"αριθμός ημερών μετά τη λήξη του κωδικού όταν ένας λογαριασμός "
+"απενεργοποιείται (διαχειριστής μόνο)"
 
-#: passwd.c:180
+#: passwd.c:184
 msgid "report password status on the named account (root only)"
-msgstr "αναφορά κατάστασης κωδικού στο λογαριασμό που έχει το όνομα (διαχειριστής μόνο)"
+msgstr ""
+"αναφορά κατάστασης κωδικού στο λογαριασμό που έχει το όνομα (διαχειριστής "
+"μόνο)"
 
-#: passwd.c:182
+#: passwd.c:187
 msgid "read new tokens from stdin (root only)"
 msgstr "ανάγνωση νέων τεκμηρίων από το stdin (διαχειριστής μόνο)"
 
-#: passwd.c:189
+#: passwd.c:194
 msgid "[OPTION...] <accountName>"
 msgstr "[Επιλογή...] <accountName>"
 
-#: passwd.c:192
+#: passwd.c:197
 #, c-format
 msgid "%s: bad argument %s: %s\n"
 msgstr "%s: λανθασμένο όρισμα %s: %s\n"
 
-#: passwd.c:253
+#: passwd.c:258
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr "%s: Μόνο ένα από τα -l, -u, -d, -S μπορεί να οριστεί.\n"
 
-#: passwd.c:262
+#: passwd.c:267
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: Η ανάμιξη ενός από τα -l, -u, -d, -S και ενός από τα -i, -n, -w, -x είναι αδύνατη.\n"
+msgstr ""
+"%s: Η ανάμιξη ενός από τα -l, -u, -d, -S και ενός από τα -i, -n, -w, -x "
+"είναι αδύνατη.\n"
 
-#: passwd.c:281
+#: passwd.c:286
 #, c-format
 msgid "Only root can do that.\n"
 msgstr "Μόνο ο διαχειριστής μπορεί να το κάνει αυτό.\n"
 
-#: passwd.c:294
+#: passwd.c:299
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
 msgstr "%s: Μόνο ο διαχειριστής μπορεί να ορίσει ένα όνομα χρήστη.\n"
 
-#: passwd.c:303
+#: passwd.c:308
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
 msgstr "%s: Το όνομα χρήστη που δώθηκε είναι πολύ μεγάλο.\n"
 
-#: passwd.c:313
+#: passwd.c:318
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
 msgstr "%s: Μόνο ένα όνομα χρήστη μπορεί να οριστεί.\n"
 
-#: passwd.c:323
+#: passwd.c:328
 #, c-format
 msgid "%s: This option requires a user name.\n"
 msgstr "%s: Αυτή η επιλογή χρεάζεται ένα όνομα χρήστη.\n"
 
-#: passwd.c:334
+#: passwd.c:339
 #, c-format
 msgid "%s: Can not identify you!\n"
 msgstr "%s: Αδύνατη η ταυτοποίησή σας!\n"
 
-#: passwd.c:343 passwd.c:378
+#: passwd.c:348 passwd.c:383
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: Άγνωστο όνομα χρήστη '%s'.\n"
 
-#: passwd.c:387
+#: passwd.c:392
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
 msgstr "%s: Το SELinux απαγορεύει την πρόσβαση λόγο της πολιτικής ασφαλείας\n"
 
-#: passwd.c:397
+#: passwd.c:402
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr "Κλείδωμα κωδικού για το χρήστη %s.\n"
 
-#: passwd.c:401 passwd.c:413 passwd.c:428 passwd.c:439 passwd.c:459
+#: passwd.c:406 passwd.c:418 passwd.c:433 passwd.c:444 passwd.c:464
 msgid "Success"
 msgstr "Επιτυχία"
 
-#: passwd.c:401 passwd.c:416
+#: passwd.c:406 passwd.c:421
 msgid "Error (password not set?)"
 msgstr "Σφάλμα (δεν ρυθμίστηκε κωδικός;)"
 
-#: passwd.c:409
+#: passwd.c:414
 #, c-format
 msgid "Unlocking password for user %s.\n"
 msgstr "Ξεκλείδωμα κωδικού για το χρήστη %s.\n"
 
-#: passwd.c:415
+#: passwd.c:420
 msgid "Unsafe operation (use -f to force)"
 msgstr "Μη ασφαλής διαδικασία (χρησιμοποιήστε το -f για εξαναγκασμό)"
 
-#: passwd.c:424
+#: passwd.c:429
 #, c-format
 msgid "Expiring password for user %s.\n"
 msgstr "Λήξη κωδικού για το χρήστη %s.\n"
 
-#: passwd.c:428 passwd.c:439 passwd.c:459
+#: passwd.c:433 passwd.c:444 passwd.c:464
 msgid "Error"
 msgstr "Σφάλμα"
 
-#: passwd.c:436
+#: passwd.c:441
 #, c-format
 msgid "Removing password for user %s.\n"
 msgstr "Αφαίρεση κωδικού για το χρήστη %s.\n"
 
-#: passwd.c:456
+#: passwd.c:461
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
 msgstr "Ρύθμιση πληροφοριών γήρανσης κωδικού για το χρήστη %s.\n"
 
-#: passwd.c:472
+#: passwd.c:477
 #, c-format
 msgid "Changing password for user %s.\n"
 msgstr "Αλλαγή κωδικού για το χρήστη %s.\n"
 
-#: passwd.c:484
+#: passwd.c:489
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s: σφάλμα ανάγνωσης από το stdin: %s\n"
 
-#: passwd.c:501
+#: passwd.c:506
 #, c-format
 msgid "%s: unable to start pam: %s\n"
 msgstr "%s: αδυναμία εκκίνησης pam: %s\n"
 
-#: passwd.c:514
+#: passwd.c:519
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
 msgstr "%s: αδυναμία ορισμού tty για pam: %s\n"
 
-#: passwd.c:525
+#: passwd.c:530
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
 msgstr "%s:αδυναμία ορισμού καθυστέρησης αποτυχίας: %s\n"
 
-#: passwd.c:543
+#: passwd.c:548
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
 msgstr "%s: τα ληγμένα τεκμήρια πιστοποίησης ενημερώθηκαν επιτυχώς.\n"
 
-#: passwd.c:549
+#: passwd.c:554
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: όλα τα τεκμήρια πιστοποίησης ενημερώθηκαν επιτυχώς.\n"

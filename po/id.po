@@ -6,80 +6,86 @@
 # Erwien Samantha Y <erwiensy@sederhana.or.id>, 2007
 # Muhammad Panji <sumodirjo@gmail.com>, 2012
 # Teguh Dwicaksana <dheche@songolimo.net>, 2010
+# Ferdi Saptanera <ferdisn@fedoraproject.org>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: passwd\n"
+"Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-01-26 18:12+0100\n"
-"PO-Revision-Date: 2012-03-15 07:30+0000\n"
-"Last-Translator: Muhammad Panji <sumodirjo@gmail.com>\n"
-"Language-Team: Indonesian <trans-id@lists.fedoraproject.org>\n"
+"POT-Creation-Date: 2015-05-23 07:02+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-03-15 03:55-0400\n"
+"Last-Translator: Ferdi Saptanera <ferdisn@fedoraproject.org>\n"
+"Language-Team: Indonesian <trans-id@lists.fedoraproject.org>\n"
 "Language: id\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Zanata 3.9.6\n"
 
-#: libuser.c:88
+#: libuser.c:91
 #, c-format
 msgid "%s: libuser initialization error:"
 msgstr "%s: kesalahan pada inisialisasi libuser:"
 
-#: libuser.c:165
+#: libuser.c:157
 msgid "Warning: unlocked password would be empty."
 msgstr "Peringatan: kata sandi untuk unlocked akan di kosongin."
 
-#: libuser.c:279
+#: libuser.c:203
+msgid "Note: deleting a password also unlocks the password."
+msgstr "Catatan: penghapusan kata sandi juga membuka kunci atas kata sandi."
+
+#: libuser.c:267
 msgid "Corrupted passwd entry."
 msgstr "Masukan kata sandi terkorupsi."
 
-#: libuser.c:296
+#: libuser.c:284
 msgid "Empty password."
 msgstr "Kata sandi kosong."
 
-#: libuser.c:299
+#: libuser.c:287
 msgid "Password locked."
 msgstr "Kata sandi terkunci"
 
-#: libuser.c:303
+#: libuser.c:291
 msgid "Password set, MD5 crypt."
 msgstr "Kata sandi diset, enkripsi MD5."
 
-#: libuser.c:306
+#: libuser.c:294
 msgid "Password set, blowfish crypt."
 msgstr "Kata sandi diset, enkripsi blowfish."
 
-#: libuser.c:309
+#: libuser.c:297
 msgid "Password set, SHA256 crypt."
 msgstr "Kata sandi diset, enkripsi SHA256."
 
-#: libuser.c:312
+#: libuser.c:300
 msgid "Password set, SHA512 crypt."
 msgstr "Kata sandi diset, enkripsi SHA512."
 
-#: libuser.c:314
+#: libuser.c:302
 msgid "Password set, unknown crypt variant."
 msgstr "Kata sandi diset, varian enkripsi tidak dikenal."
 
-#: libuser.c:317
+#: libuser.c:305
 msgid "Alternate authentication scheme in use."
 msgstr "Mempergunakan skema otentikasi alternatif."
 
-#: libuser.c:322
+#: libuser.c:310
 msgid "Password set, DES crypt."
 msgstr "Kata sandi diset, enkripsi DES."
 
-#: libuser.c:336
+#: libuser.c:323
 #, c-format
 msgid "No password set.\n"
 msgstr "Tidak ada kata sandi yang diset.\n"
 
-#: libuser.c:340
+#: libuser.c:328
 #, c-format
 msgid "Unknown user.\n"
 msgstr "Pengguna tidak dikenal.\n"
 
-#: libuser.c:435
+#: libuser.c:403
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: akun pengguna tidak memiliki dukungan untuk penuaan kata sandi.\n"
@@ -89,183 +95,192 @@ msgid "keep non-expired authentication tokens"
 msgstr "simpan token otentikasi yang tidak kadaluarsa"
 
 #: passwd.c:160
-msgid "delete the password for the named account (root only)"
-msgstr "hapus kata sandi akun tersebut (hanya root)"
+msgid ""
+"delete the password for the named account (root only); also removes password "
+"lock if any"
+msgstr ""
+"menghapus kata sandi untuk akun tersebut (hanya untuk root); juga mencabut "
+"kunci kata sandi jika ada"
 
-#: passwd.c:162
+#: passwd.c:163
 msgid "lock the password for the named account (root only)"
 msgstr "Kunci password untuk akun terpilih (hanya root)"
 
-#: passwd.c:164
+#: passwd.c:166
 msgid "unlock the password for the named account (root only)"
 msgstr "Buka kunci password untuk akun terpilih (hanya root)"
 
-#: passwd.c:166
+#: passwd.c:169
 msgid "expire the password for the named account (root only)"
 msgstr "Kadaluwarsakan password untuk akun terpilih (hanya root)"
 
-#: passwd.c:168
+#: passwd.c:172
 msgid "force operation"
 msgstr "Memaksakan operasi"
 
-#: passwd.c:170
+#: passwd.c:174
 msgid "maximum password lifetime (root only)"
 msgstr "Waktu berlaku maksimum password (hanya root)"
 
-#: passwd.c:172
+#: passwd.c:176
 msgid "minimum password lifetime (root only)"
 msgstr "waktu berlaku minimum password (hanya root)"
 
-#: passwd.c:174
+#: passwd.c:178
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr "Jumlah hari mengingatkan pengguna sebelum password kadaluwarsa (hanya root)"
+msgstr ""
+"Jumlah hari mengingatkan pengguna sebelum password kadaluwarsa (hanya root)"
 
-#: passwd.c:177
+#: passwd.c:181
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr "Jumlah hari setelah password kadaluarsa ketika akun dinonaktifkan (hanya root)"
+msgstr ""
+"Jumlah hari setelah password kadaluarsa ketika akun dinonaktifkan (hanya "
+"root)"
 
-#: passwd.c:180
+#: passwd.c:184
 msgid "report password status on the named account (root only)"
 msgstr "laporkan status kata sandi akun tersebut (hanya root)"
 
-#: passwd.c:182
+#: passwd.c:187
 msgid "read new tokens from stdin (root only)"
 msgstr "membaca token baru dari stdin (hanya root)"
 
-#: passwd.c:189
+#: passwd.c:194
 msgid "[OPTION...] <accountName>"
 msgstr "[OPSI...] <namaAkun>"
 
-#: passwd.c:192
+#: passwd.c:197
 #, c-format
 msgid "%s: bad argument %s: %s\n"
 msgstr "%s: argumen salah  %s: %s\n"
 
-#: passwd.c:253
+#: passwd.c:258
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr "%s: Hanya salah satu dari -l, -u, -d, -S yang dapat dipakai.\n"
 
-#: passwd.c:262
+#: passwd.c:267
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: Salah satu dari -l, -u, -d, -S tidak dapat dicampur dengan salah satu dari -i, -n, -w, -x.\n"
+msgstr ""
+"%s: Salah satu dari -l, -u, -d, -S tidak dapat dicampur dengan salah satu "
+"dari -i, -n, -w, -x.\n"
 
-#: passwd.c:281
+#: passwd.c:286
 #, c-format
 msgid "Only root can do that.\n"
 msgstr "Hanya root yang dapat melakukannya.\n"
 
-#: passwd.c:294
+#: passwd.c:299
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
 msgstr "%s: Hanya root dapat menentukan nama pengguna.\n"
 
-#: passwd.c:303
+#: passwd.c:308
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
 msgstr "%s: Nama pengguna yang diberikan terlalu panjang.\n"
 
-#: passwd.c:313
+#: passwd.c:318
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
 msgstr "%s: Hanya satu nama pengguna dapat ditentukan.\n"
 
-#: passwd.c:323
+#: passwd.c:328
 #, c-format
 msgid "%s: This option requires a user name.\n"
 msgstr "%s: Opsi ini memerlukan nama pengguna.\n"
 
-#: passwd.c:334
+#: passwd.c:339
 #, c-format
 msgid "%s: Can not identify you!\n"
 msgstr "%s: Tidak dapat mengidentifikasi diri anda!\n"
 
-#: passwd.c:343 passwd.c:378
+#: passwd.c:348 passwd.c:383
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: Nama pengguna '%s' tidak dikenal.\n"
 
-#: passwd.c:387
+#: passwd.c:392
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
 msgstr "%s: SELinux Meniadakan akses karena kebijakan keamanan.\n"
 
-#: passwd.c:397
+#: passwd.c:402
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr "Mengunci kata sandi pengguna %s.\n"
 
-#: passwd.c:401 passwd.c:413 passwd.c:428 passwd.c:439 passwd.c:459
+#: passwd.c:406 passwd.c:418 passwd.c:433 passwd.c:444 passwd.c:464
 msgid "Success"
 msgstr "Sukses"
 
-#: passwd.c:401 passwd.c:416
+#: passwd.c:406 passwd.c:421
 msgid "Error (password not set?)"
 msgstr "Terjadi kesalahan (kata sandi belum diset?)"
 
-#: passwd.c:409
+#: passwd.c:414
 #, c-format
 msgid "Unlocking password for user %s.\n"
 msgstr "Membuka kunci kata sandi pengguna %s.\n"
 
-#: passwd.c:415
+#: passwd.c:420
 msgid "Unsafe operation (use -f to force)"
 msgstr "Operasi yang tidak aman (gunakan -f untuk memaksa)"
 
-#: passwd.c:424
+#: passwd.c:429
 #, c-format
 msgid "Expiring password for user %s.\n"
 msgstr "Mengadaluwarsakan password untuk pengguna %s.⏎\n"
 
-#: passwd.c:428 passwd.c:439 passwd.c:459
+#: passwd.c:433 passwd.c:444 passwd.c:464
 msgid "Error"
 msgstr "Ada kesalahan"
 
-#: passwd.c:436
+#: passwd.c:441
 #, c-format
 msgid "Removing password for user %s.\n"
 msgstr "Menghapus kata sandi pengguna %s.\n"
 
-#: passwd.c:456
+#: passwd.c:461
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
 msgstr "Menyesuaikan data lama untuk pengguna %s.\n"
 
-#: passwd.c:472
+#: passwd.c:477
 #, c-format
 msgid "Changing password for user %s.\n"
 msgstr "Mengubah kata sandi pengguna %s.\n"
 
-#: passwd.c:484
+#: passwd.c:489
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s: kesalahan saat membaca dari stdin: %s\n"
 
-#: passwd.c:501
+#: passwd.c:506
 #, c-format
 msgid "%s: unable to start pam: %s\n"
 msgstr "%s: tidak dapat menjalankan pam: %s\n"
 
-#: passwd.c:514
+#: passwd.c:519
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
 msgstr "%s: tidak dapat menetapkan tty untuk pam: %s\n"
 
-#: passwd.c:525
+#: passwd.c:530
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
 msgstr "%s: tidak dapat menetapkan penundaan kegagalan: %s\n"
 
-#: passwd.c:543
+#: passwd.c:548
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
 msgstr "%s: waktu kadaluarsa token otentikasi berhasil diperbarui.\n"
 
-#: passwd.c:549
+#: passwd.c:554
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: semua token otentikasi berhasil diperbarui.\n"

@@ -6,266 +6,287 @@
 # Geert Warrink <geert.warrink@onsnet.nu>, 2010, 2012
 # Peter van Egdom <p.van.egdom@gmail.com>, 2007
 # Richard E. van der Luit <nippur@fedoraproject.org>, 2009
+# Geert Warrink <geert.warrink@onsnet.nu>, 2015. #zanata
+# Richard E. van der Luit <nippur@fedoraproject.org>, 2016. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: passwd\n"
+"Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2012-01-26 18:12+0100\n"
-"PO-Revision-Date: 2012-01-27 08:54+0000\n"
-"Last-Translator: Geert Warrink <geert.warrink@onsnet.nu>\n"
-"Language-Team: Dutch (http://www.transifex.com/projects/p/fedora/language/nl/)\n"
+"POT-Creation-Date: 2015-05-23 07:02+0200\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-04-06 02:39-0400\n"
+"Last-Translator: Richard E. van der Luit <nippur@fedoraproject.org>\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/fedora/language/nl/"
+")\n"
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Zanata 3.9.6\n"
 
-#: libuser.c:88
+#: libuser.c:91
 #, c-format
 msgid "%s: libuser initialization error:"
-msgstr "%s: libuser initialisatie fout:"
+msgstr "%s: libuser-initialisatiefout:"
 
-#: libuser.c:165
+#: libuser.c:157
 msgid "Warning: unlocked password would be empty."
 msgstr "Waarschuwing: ontgrendeld wachtwoord zou leeg zijn."
 
-#: libuser.c:279
+#: libuser.c:203
+msgid "Note: deleting a password also unlocks the password."
+msgstr ""
+"Let op: het verwijderen van een wachtwoord haalt het vragen naar een "
+"wachtwoord ook weg."
+
+#: libuser.c:267
 msgid "Corrupted passwd entry."
-msgstr "Wachtwoord ingang met fouten."
+msgstr "Wachtwoordinvoer met fouten."
 
-#: libuser.c:296
+#: libuser.c:284
 msgid "Empty password."
-msgstr "Leeg wachtwoord."
+msgstr "Niet opgegeven wachtwoord."
 
-#: libuser.c:299
+#: libuser.c:287
 msgid "Password locked."
 msgstr "Wachtwoord vergrendeld."
 
-#: libuser.c:303
+#: libuser.c:291
 msgid "Password set, MD5 crypt."
-msgstr "Wachtwoord ingesteld, MD5 versleuteling."
+msgstr "Wachtwoord ingesteld, MD5-versleuteling."
 
-#: libuser.c:306
+#: libuser.c:294
 msgid "Password set, blowfish crypt."
-msgstr "Wachtwoord ingesteld, blowfish versleuteling."
+msgstr "Wachtwoord ingesteld, blowfishversleuteling."
 
-#: libuser.c:309
+#: libuser.c:297
 msgid "Password set, SHA256 crypt."
 msgstr "Wachtwoord ingesteld, SHA256 versleuteling."
 
-#: libuser.c:312
+#: libuser.c:300
 msgid "Password set, SHA512 crypt."
-msgstr "Wachtwoord ingesteld, SHA512 versleuteling."
+msgstr "Wachtwoord ingesteld, SHA512-versleuteling."
 
-#: libuser.c:314
+#: libuser.c:302
 msgid "Password set, unknown crypt variant."
 msgstr "Wachtwoord ingesteld, onbekende versleuteling."
 
-#: libuser.c:317
+#: libuser.c:305
 msgid "Alternate authentication scheme in use."
-msgstr "Alternatief authenticatie schema in gebruik."
+msgstr "Alternatief authenticatieschema in gebruik."
 
-#: libuser.c:322
+#: libuser.c:310
 msgid "Password set, DES crypt."
-msgstr "Wachtwoord ingesteld, DES versleuteling."
+msgstr "Wachtwoord ingesteld, DES-versleuteling."
 
-#: libuser.c:336
+#: libuser.c:323
 #, c-format
 msgid "No password set.\n"
 msgstr "Geen wachtwoord ingesteld.\n"
 
-#: libuser.c:340
+#: libuser.c:328
 #, c-format
 msgid "Unknown user.\n"
 msgstr "Onbekende gebruiker.\n"
 
-#: libuser.c:435
+#: libuser.c:403
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr "%s: gebruikers account heeft geen ondersteuning voor wachtwoord veroudering.\n"
+msgstr ""
+"%s: gebruikersaccount heeft geen ondersteuning voor wachtwoordveroudering.\n"
 
 #: passwd.c:158
 msgid "keep non-expired authentication tokens"
-msgstr "niet-verlopen authenticatie token behouden"
+msgstr "niet-verlopen authenticatietokens behouden"
 
 #: passwd.c:160
-msgid "delete the password for the named account (root only)"
-msgstr "het wachtwoord voor het opgegeven account wissen (alleen root)"
+msgid ""
+"delete the password for the named account (root only); also removes password "
+"lock if any"
+msgstr ""
+"verwijder het wachtwoord voor het genoemde account (alleen root); verwijdert "
+"ook het wachtwoordslot indien aanwezig"
 
-#: passwd.c:162
+#: passwd.c:163
 msgid "lock the password for the named account (root only)"
 msgstr "vergrendel het wachtwoord voor het genoemde account (alleen root)"
 
-#: passwd.c:164
+#: passwd.c:166
 msgid "unlock the password for the named account (root only)"
 msgstr "ontgrendel het wachtwoord voor het genoemde account (alleen root)"
 
-#: passwd.c:166
+#: passwd.c:169
 msgid "expire the password for the named account (root only)"
 msgstr "laat het wachtwoord voor het genoemde account verlopen (alleen root)"
 
-#: passwd.c:168
+#: passwd.c:172
 msgid "force operation"
 msgstr "actie forceren"
 
-#: passwd.c:170
-msgid "maximum password lifetime (root only)"
-msgstr "maximum wachtwoord levensduur (alleen root)"
-
-#: passwd.c:172
-msgid "minimum password lifetime (root only)"
-msgstr "minimum wachtwoord levensduur (alleen root)"
-
 #: passwd.c:174
+msgid "maximum password lifetime (root only)"
+msgstr "maximum levensduur wachtwoord (alleen root)"
+
+#: passwd.c:176
+msgid "minimum password lifetime (root only)"
+msgstr "minimum levensduur wachtwoord (alleen root)"
+
+#: passwd.c:178
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr "aantal dagen waarschuwing die gebruikers ontvangen voordat het wachtwoord verloopt (alleen root)"
+msgstr ""
+"aantal dagen met waarschuwing die gebruikers ontvangen voordat het "
+"wachtwoord verloopt (alleen root)"
 
-#: passwd.c:177
+#: passwd.c:181
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr "aantal dagen na het verlopen van het wachtwoord voordat een account wordt uitgeschakeld (alleen root)"
+msgstr ""
+"aantal dagen na het verlopen van het wachtwoord waarna een account wordt "
+"uitgeschakeld (alleen root)"
 
-#: passwd.c:180
+#: passwd.c:184
 msgid "report password status on the named account (root only)"
-msgstr "wachtwoord status van het opgegeven account rapporteren (alleen root)"
+msgstr "wachtwoordstatus van het opgegeven account rapporteren (alleen root)"
 
-#: passwd.c:182
+#: passwd.c:187
 msgid "read new tokens from stdin (root only)"
 msgstr "nieuwe tokens van stdin lezen (alleen root)"
 
-#: passwd.c:189
+#: passwd.c:194
 msgid "[OPTION...] <accountName>"
-msgstr "[OPTIE...] <account naam>"
+msgstr "[OPTIE...] <accountName>"
 
-#: passwd.c:192
+#: passwd.c:197
 #, c-format
 msgid "%s: bad argument %s: %s\n"
 msgstr "%s: verkeerd argument %s: %s\n"
 
-#: passwd.c:253
+#: passwd.c:258
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr "%s: Slechts één van de opties -l, -u, -d, -S mag worden opgegeven.\n"
 
-#: passwd.c:262
+#: passwd.c:267
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: Kan niet een van de -l, -u, -d, -S opties en een van de -i, -n, -w, -x opties door elkaar heen gebruiken.\n"
+msgstr ""
+"%s: Kan niet een van de -l, -u, -d, -S opties en een van de -i, -n, -w, -x "
+"opties door elkaar heen gebruiken.\n"
 
-#: passwd.c:281
+#: passwd.c:286
 #, c-format
 msgid "Only root can do that.\n"
 msgstr "Alleen root kan dat doen.\n"
 
-#: passwd.c:294
+#: passwd.c:299
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
 msgstr "%s: Alleen root kan een gebruikersnaam opgeven.\n"
 
-#: passwd.c:303
+#: passwd.c:308
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
 msgstr "%s: De opgegeven gebruikersnaam is te lang.\n"
 
-#: passwd.c:313
+#: passwd.c:318
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
-msgstr "%s: Slechts één gebruikersnaam mag worden opgegeven.\n"
+msgstr "%s: Er mag slechts één gebruikersnaam worden opgegeven.\n"
 
-#: passwd.c:323
+#: passwd.c:328
 #, c-format
 msgid "%s: This option requires a user name.\n"
 msgstr "%s: Deze optie vereist een gebruikersnaam.\n"
 
-#: passwd.c:334
+#: passwd.c:339
 #, c-format
 msgid "%s: Can not identify you!\n"
 msgstr "%s: Kan jou niet identificeren!\n"
 
-#: passwd.c:343 passwd.c:378
+#: passwd.c:348 passwd.c:383
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: Onbekende gebruikersnaam '%s'.\n"
 
-#: passwd.c:387
+#: passwd.c:392
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
 msgstr "%s: SELinux staat om veiligheidsredenen geen toegang toe .\n"
 
-#: passwd.c:397
+#: passwd.c:402
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr "Wachtwoord voor gebruiker %s vergrendelen.\n"
 
-#: passwd.c:401 passwd.c:413 passwd.c:428 passwd.c:439 passwd.c:459
+#: passwd.c:406 passwd.c:418 passwd.c:433 passwd.c:444 passwd.c:464
 msgid "Success"
 msgstr "Succes"
 
-#: passwd.c:401 passwd.c:416
+#: passwd.c:406 passwd.c:421
 msgid "Error (password not set?)"
 msgstr "Fout (wachtwoord niet ingesteld?)"
 
-#: passwd.c:409
+#: passwd.c:414
 #, c-format
 msgid "Unlocking password for user %s.\n"
 msgstr "Wachtwoord voor gebruiker %s ontgrendelen.\n"
 
-#: passwd.c:415
+#: passwd.c:420
 msgid "Unsafe operation (use -f to force)"
 msgstr "Onveilige actie (gebruik -f om te forceren)"
 
-#: passwd.c:424
+#: passwd.c:429
 #, c-format
 msgid "Expiring password for user %s.\n"
 msgstr "Wachtwoord voor gebruiker %s wordt verlopen verklaard.\n"
 
-#: passwd.c:428 passwd.c:439 passwd.c:459
+#: passwd.c:433 passwd.c:444 passwd.c:464
 msgid "Error"
 msgstr "Fout"
 
-#: passwd.c:436
+#: passwd.c:441
 #, c-format
 msgid "Removing password for user %s.\n"
 msgstr "Wachtwoord voor gebruiker %s verwijderen.\n"
 
-#: passwd.c:456
+#: passwd.c:461
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
-msgstr "Veroudering gegevens voor gebruiker %s aanpassen.\n"
+msgstr "Verouderingsgegevens voor gebruiker %s aanpassen.\n"
 
-#: passwd.c:472
+#: passwd.c:477
 #, c-format
 msgid "Changing password for user %s.\n"
 msgstr "Wachtwoord voor gebruiker %s veranderen.\n"
 
-#: passwd.c:484
+#: passwd.c:489
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s: fout bij het lezen van stdin: %s\n"
 
-#: passwd.c:501
+#: passwd.c:506
 #, c-format
 msgid "%s: unable to start pam: %s\n"
 msgstr "%s: niet in staat om pam te starten: %s\n"
 
-#: passwd.c:514
+#: passwd.c:519
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
 msgstr "%s: niet in staat om tty voor pam in te stellen: %s\n"
 
-#: passwd.c:525
+#: passwd.c:530
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
-msgstr "%s: niet in staat om faal vertraging in te stellen: %s\n"
+msgstr "%s: niet in staat om faalvertraging in te stellen: %s\n"
 
-#: passwd.c:543
+#: passwd.c:548
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr "%s: verlopen authenticatie tokens zijn succesvol bijgewerkt.\n"
+msgstr "%s: verlopen authenticatietokens zijn succesvol bijgewerkt.\n"
 
-#: passwd.c:549
+#: passwd.c:554
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
-msgstr "%s: alle authenticatie tokens zijn succesvol bijgewerkt.\n"
+msgstr "%s: alle authenticatietokens zijn succesvol bijgewerkt.\n"
