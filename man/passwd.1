@@ -156,7 +156,23 @@ root only.
 .TP
 \fB\-S\fR, \fB\-\-status\fR
 This will output a short information about the status of the password
-for a given account. Available to root user only.
+for a given account. The status information consists of 7 fields. The
+first field is the user's login name. The second field indicates if the
+user account has a locked password (L), has no password (NP), or has a
+usable password (P). The third field gives the date of the last password
+change. The next four fields are the minimum age, maximum age, warning
+period, and inactivity period for the password. These ages are expressed
+in days.
+.sp
+\fBNotes:\fR
+The date of the last password change is stored as a number of days
+since epoch. Depending on the current time zone, the
+\fBpasswd \-S\fR
+\fIusername\fR
+may show the date of the last password change that is different
+from the real date of the last password change by ±1 day.
+.sp
+This option is available to root only.
 
 .SH "Remember the following two principles"
 
@@ -198,10 +214,46 @@ Vigilance on your part will make the system much more secure.
 
 .SH "EXIT CODE"
 
-On successful completion of its task,
+The
 .B passwd
-will complete with exit code 0.  An exit code of 1 indicates an error
-occurred.  Textual errors are written to the standard error stream.
+command exits with the following codes:
+.PP
+\fI0\fR
+.RS 4
+success
+.RE
+.PP
+\fI1\fR
+.RS 4
+passwd/libuser operation failed
+.RE
+.PP
+\fI2\fR
+.RS 4
+unknown user
+.RE
+.PP
+\fI252\fR
+.RS 4
+unknown user name
+.RE
+.PP
+\fI253\fR
+.RS 4
+bad arguments or passwordless account
+.RE
+.PP
+\fI254\fR
+.RS 4
+invalid application of arguments
+.RE
+.PP
+\fI255\fR
+.RS 4
+libuser operation failed
+.RE
+.PP
+Error messages are written to the standard error stream.
 
 .SH "CONFORMING TO"
 .br
