@@ -1,3 +1,32 @@
+2018-03-28  Jiří Kučera  <jkucera@redhat.com>
+
+	* man/passwd.1: Updated manual page.
+
+2018-03-27  Jiří Kučera  <jkucera@redhat.com>
+
+	* po/*.po: Updated translations.
+	* zanata.xml: <locales> became obsolete.
+
+2017-09-06  Steve Grubb  <sgrubb@redhat.com>
+
+	* passwd.c (main): Fixed password aging logging.
+
+2017-08-31  Steve Grubb  <sgrubb@redhat.com>
+
+	* passwd.c (main): Fixed double auditing.
+
+2017-08-30  Steve Grubb  <sgrubb@redhat.com>
+
+	* passwd.c: Used appropriate audit system event types, updated op field
+	in audit events, removed audit status checks.
+
+2017-08-22  Miloslav Trmač  <mitr@redhat.com>
+
+	* man/ja/passwd.1: Improved Japanese man page. Patch by Masanari Iida
+	<standby24x7@gmail.com>.
+	* po/ja.po: Improved Japanese translation. Patch by Masanari Iida
+	<standby24x7@gmail.com>.
+
 2016-01-08  Miloslav Trmač  <mitr@redhat.com>
 
 	* passwd.pamd: Remove configuration for unused "auth" and "account" PAM
