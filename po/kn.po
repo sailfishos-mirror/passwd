@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Automatically generated, 2006
 # shanky <prasad.mvs@gmail.com>, 2012
@@ -10,15 +10,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2015-05-23 07:02+0200\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2018-04-01 02:30+0200\n"
 "PO-Revision-Date: 2015-03-13 11:34-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Kannada (http://www.transifex.com/projects/p/fedora/language/"
 "kn/)\n"
 "Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Zanata 3.9.6\n"
 
@@ -90,168 +90,167 @@ msgstr "ಗೊತ್ತಿರದ ಬಳಕೆದಾರ.\n"
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: ಗುಪ್ತಪದವು ಮುಪ್ಪಾಗದಂತೆ ತಡೆಯಲು ಬಳಕೆದಾರನ ಖಾತೆಗೆ ಯಾವ ಬೆಂಬಲವೂ ಇಲ್ಲ.\n"
 
-#: passwd.c:158
+#: passwd.c:157
 msgid "keep non-expired authentication tokens"
 msgstr "ಅವಧಿ ಅಂತ್ಯವಾಗದ ದೃಢೀಕರಣ ಸಂಕೇತಗಳನ್ನು ಇರಿಸಿಕೊಳ್ಳಿ"
 
-#: passwd.c:160
+#: passwd.c:159
 msgid ""
 "delete the password for the named account (root only); also removes password "
 "lock if any"
 msgstr ""
 
-#: passwd.c:163
+#: passwd.c:162
 msgid "lock the password for the named account (root only)"
 msgstr "ಹೆಸರಿಸಲಾದ ಖಾತೆಗಾಗಿ ಗುಪ್ತಪದವನ್ನು ಬಂಧಿಸಿ (ನಿರ್ವಾಹಕ ಮಾತ್ರ)"
 
-#: passwd.c:166
+#: passwd.c:165
 msgid "unlock the password for the named account (root only)"
 msgstr "ಹೆಸರಿಸಲಾದ ಖಾತೆಗಾಗಿ ಗುಪ್ತಪದವನ್ನು ಮುಕ್ತಗೊಳಿಸಿ (ನಿರ್ವಾಹಕ ಮಾತ್ರ)"
 
-#: passwd.c:169
+#: passwd.c:168
 msgid "expire the password for the named account (root only)"
 msgstr "ಹೆಸರಿಸಲಾದ ಖಾತೆಗಾಗಿ ಗುಪ್ತಪದದ ವಾಯಿದೆ ತೀರುವಂತೆ ಮಾಡಿ (ನಿರ್ವಾಹಕ ಮಾತ್ರ)"
 
-#: passwd.c:172
+#: passwd.c:171
 msgid "force operation"
 msgstr "ಒತ್ತಾಯ ಪೂರ್ವಕ ಕಾರ್ಯಾಚರಣೆ"
 
-#: passwd.c:174
+#: passwd.c:173
 msgid "maximum password lifetime (root only)"
 msgstr "ಗುಪ್ತಪದದ ಗರಿಷ್ಟ ಕಾಲಮಿತಿ (ಮೂಲಕ್ಕೆ ಮಾತ್ರ)"
 
-#: passwd.c:176
+#: passwd.c:175
 msgid "minimum password lifetime (root only)"
 msgstr "ಗುಪ್ತಪದದ ಕನಿಷ್ಟ ಕಾಲಮಿತಿ (ಮೂಲಕ್ಕೆ ಮಾತ್ರ)"
 
-#: passwd.c:178
+#: passwd.c:177
 msgid ""
 "number of days warning users receives before password expiration (root only)"
 msgstr ""
 "ಗುಪ್ತಪದದ ಕಾಲಾವಧಿ ಮೀರುವ ಮುನ್ನ ಇಷ್ಟು ದಿನಗಳ ಮೊದಲು ಬಳಕೆದಾರರಿಗೆ ಎಚ್ಚರಿಕೆ ನೀಡಬೇಕು "
 "(ಮೂಲಕ್ಕೆ ಮಾತ್ರ)"
 
-#: passwd.c:181
+#: passwd.c:180
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
 msgstr ""
-"ಗುಪ್ತಪದದ ಕಾಲಾವಧಿ ಮೀರಿದ ನಂತರ ಅದರ ಖಾತೆಯು ಇಷ್ಟು ದಿನಗಳ ನಂತರ ಅಶಕ್ತಗೊಳ್ಳುತ್ತದೆ "
-"(ಮೂಲದಲ್ಲಿ ಮಾತ್ರ)"
+"ಗುಪ್ತಪದದ ಕಾಲಾವಧಿ ಮೀರಿದ ನಂತರ ಅದರ ಖಾತೆಯು ಇಷ್ಟು ದಿನಗಳ ನಂತರ ಅಶಕ್ತಗೊಳ್ಳುತ್ತದೆ (ಮೂಲದಲ್ಲಿ "
+"ಮಾತ್ರ)"
 
-#: passwd.c:184
+#: passwd.c:183
 msgid "report password status on the named account (root only)"
 msgstr "ಹೆಸರಿಸಲಾದ ಖಾತೆಯ ಗುಪ್ತಪದದ ಸ್ಥಿತಿಯನ್ನು ತಿಳಿಸು (ಮೂಲಕ್ಕೆ ಮಾತ್ರ)"
 
-#: passwd.c:187
+#: passwd.c:186
 msgid "read new tokens from stdin (root only)"
 msgstr "stdin ನಿಂದ ಹೊಸ ಸಂಕೇತಗಳನ್ನು ಓದು (ಮೂಲಕ್ಕೆ ಮಾತ್ರ)"
 
-#: passwd.c:194
+#: passwd.c:193
 msgid "[OPTION...] <accountName>"
 msgstr "[OPTION...] <accountName>"
 
-#: passwd.c:197
+#: passwd.c:196
 #, c-format
 msgid "%s: bad argument %s: %s\n"
 msgstr "%s: ಕೆಟ್ಟ ಆರ್ಗ್ಯುಮೆಂಟ್ %s: %s\n"
 
-#: passwd.c:258
+#: passwd.c:257
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr "%s: ಕೇವಲ -l, -u, -d, -S ಗಳಲ್ಲಿ ಒಂದನ್ನು ಮಾತ್ರ ಸೂಚಿಸಬಹುದಾಗಿದೆ.\n"
 
-#: passwd.c:267
+#: passwd.c:266
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr ""
 "%s: -l, -u, -d, -S ಗಳಿಂದ ಒಂದು ಹಾಗು -i, -n, -w, -x ಗಳಿಂದ ಒಂದನ್ನು ಜೊತೆಯಾಗಿ "
 "ಬಳಸಲಾಗುವುದಿಲ್ಲ.\n"
 
-#: passwd.c:286
+#: passwd.c:282
 #, c-format
 msgid "Only root can do that.\n"
 msgstr "ಕೇವಲ ಮೂಲದಲ್ಲಿದ್ದರೆ ಮಾತ್ರ ಹೀಗೆ ಮಾಡಬಹುದಾಗಿದೆ.\n"
 
-#: passwd.c:299
+#: passwd.c:295
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
 msgstr "%s: ಕೇವಲ ಮೂಲವು ಮಾತ್ರ ಒಂದು ಬಳಕೆದಾರನನ್ನು ಸೂಚಿಸಬಹುದಾಗಿದೆ.\n"
 
-#: passwd.c:308
+#: passwd.c:304
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
 msgstr "%s: ಒದಗಿಸಲಾದ ಬಳಕೆದಾರ ಹೆಸರು ಅತೀ ಉದ್ದವಾಗಿದೆ.\n"
 
-#: passwd.c:318
+#: passwd.c:314
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
 msgstr "%s: ಕೇವಲ ಒಬ್ಬ ಬಳಕೆದಾರನ ಹೆಸರನ್ನು ಮಾತ್ರ ಸೂಚಿಸಬಹುದಾಗಿದೆ.\n"
 
-#: passwd.c:328
+#: passwd.c:324
 #, c-format
 msgid "%s: This option requires a user name.\n"
 msgstr "%s: ಈ ಆಯ್ಕೆಗೆ ಒಂದು ಬಳಕೆದಾರ ಹೆಸರಿನ ಅಗತ್ಯವಿದೆ.\n"
 
-#: passwd.c:339
+#: passwd.c:335
 #, c-format
 msgid "%s: Can not identify you!\n"
 msgstr "%s: ನಿಮ್ಮನ್ನು ಗುರುತು ಸಿಕ್ಕುತ್ತಿಲ್ಲ!\n"
 
-#: passwd.c:348 passwd.c:383
+#: passwd.c:344 passwd.c:379
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: ಗೊತ್ತಿರದ ಬಳಕೆದಾರ ಹೆಸರು '%s'.\n"
 
-#: passwd.c:392
+#: passwd.c:388
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
 msgstr ""
-"%s: ಸುರಕ್ಷತೆ ಪಾಲಿಸಿಯ ಕಾರಣದಿಂದಾಗಿ SELinux ಪ್ರವೇಶಾಧಿಕಾರವನ್ನು ನಿರಾಕರಿಸುತ್ತಿದೆ."
-"\n"
+"%s: ಸುರಕ್ಷತೆ ಪಾಲಿಸಿಯ ಕಾರಣದಿಂದಾಗಿ SELinux ಪ್ರವೇಶಾಧಿಕಾರವನ್ನು ನಿರಾಕರಿಸುತ್ತಿದೆ.\n"
 
-#: passwd.c:402
+#: passwd.c:398
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr "ಬಳಕೆದಾರ %s ನ ಗುಪ್ತಪದವನ್ನು ಲಾಕ್ ಮಾಡಲಾಗುತ್ತಿದೆ.\n"
 
-#: passwd.c:406 passwd.c:418 passwd.c:433 passwd.c:444 passwd.c:464
+#: passwd.c:402 passwd.c:414 passwd.c:429 passwd.c:440 passwd.c:458
 msgid "Success"
 msgstr "ಯಶಸ್ಸು"
 
-#: passwd.c:406 passwd.c:421
+#: passwd.c:402 passwd.c:417
 msgid "Error (password not set?)"
 msgstr "ದೋಷ (ಗುಪ್ತಪದವು ಸಂಯೋಜಿತಗೊಂಡಿಲ್ಲ?)"
 
-#: passwd.c:414
+#: passwd.c:410
 #, c-format
 msgid "Unlocking password for user %s.\n"
 msgstr "ಬಳಕೆದಾರ %s ಗಾಗಿ ಗುಪ್ತಪದವನ್ನು ಅನ್-ಲಾಕ್ ಮಾಡುತ್ತಿರುವುದು.\n"
 
-#: passwd.c:420
+#: passwd.c:416
 msgid "Unsafe operation (use -f to force)"
 msgstr "ಸುರಕ್ಷಿತವಲ್ಲದ ಕಾರ್ಯಾಚಾರಣೆ (ಒತ್ತಾಯಪಡಿಸಲು -f ಅನ್ನು ಬಳಸಿ)"
 
-#: passwd.c:429
+#: passwd.c:425
 #, c-format
 msgid "Expiring password for user %s.\n"
 msgstr "%s ಎಂಬ ಬಳಕೆದಾರನಿಗಾಗಿ ಗುಪ್ತಪದದ ವಾಯಿದೆ ತೀರುತ್ತ್ತಿದೆ.\n"
 
-#: passwd.c:433 passwd.c:444 passwd.c:464
+#: passwd.c:429 passwd.c:440 passwd.c:458
 msgid "Error"
 msgstr "ದೋಷ"
 
-#: passwd.c:441
+#: passwd.c:437
 #, c-format
 msgid "Removing password for user %s.\n"
 msgstr "ಬಳಕೆದಾರ %s ಗಾಗಿ ಗುಪ್ತಪದವನ್ನು ತೆಗೆದು ಹಾಕುತ್ತಿರುವುದು.\n"
 
-#: passwd.c:461
+#: passwd.c:455
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
 msgstr "ಬಳಕೆದಾರ %s ಗಾಗಿ ಮುಪ್ಪಾಗುತ್ತಿರುವ ದತ್ತಾಂಶವನ್ನು ಹೊಂದಿಸುತ್ತಿರುವುದು.\n"
 
-#: passwd.c:477
+#: passwd.c:471
 #, c-format
 msgid "Changing password for user %s.\n"
 msgstr "ಬಳಕೆದಾರ %s ಗಾಗಿ ಗುಪ್ತಪದವನ್ನು ಬದಲಾಯಿಸುತ್ತಿರುವುದು.\n"
@@ -261,27 +260,32 @@ msgstr "ಬಳಕೆದಾರ %s ಗಾಗಿ ಗುಪ್ತಪದವನ್ನ�
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s: stdin ನಿಂದ ಓದುವಲ್ಲಿ ದೋಷ: %s\n"
 
-#: passwd.c:506
+#: passwd.c:496
+#, c-format
+msgid "%s: password too long, maximum is %zu"
+msgstr ""
+
+#: passwd.c:515
 #, c-format
 msgid "%s: unable to start pam: %s\n"
 msgstr "%s: pam ಅನ್ನು ಆರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ: %s\n"
 
-#: passwd.c:519
+#: passwd.c:528
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
 msgstr "%s: pam ಗಾಗಿ tty ಅನ್ನು ಸಂಯೋಜಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ: %s\n"
 
-#: passwd.c:530
+#: passwd.c:539
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
 msgstr "%s: ವಿಫಲತಾ ವಿಳಂಬವನ್ನು ಸಂಯೋಜಿಸಲಾಗಿಲ್ಲ: %s\n"
 
-#: passwd.c:548
+#: passwd.c:553
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
 msgstr "%s: ಕಾಲಾವಧಿ ಮೀರಿದ ದೃಢೀಕರಣ ಸಂಕೇತಗಳು ಯಶಸ್ವಿಯಾಗಿ ಅಪ್ಡೇಟ್ ಆಗಿದೆ.\n"
 
-#: passwd.c:554
+#: passwd.c:556
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: ಎಲ್ಲಾ ದೃಢೀಕರಣ ಸಂಕೇತಗಳು ಯಶಸ್ವಿಯಾಗಿ ಅಪ್ಡೇಟ್ ಆಗಿದೆ .\n"
