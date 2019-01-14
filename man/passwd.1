@@ -40,7 +40,7 @@
 passwd \- update user's authentication tokens
 
 .SH SYNOPSIS
-.B passwd [-k] [-l] [-u [-f]] [-d] [-e] [-n mindays] [-x maxdays] [-w warndays] [-i inactivedays] [-S] [--stdin] [username]
+.B passwd [-k] [-l] [-u [-f]] [-d] [-e] [-n mindays] [-x maxdays] [-w warndays] [-i inactivedays] [-S] [--stdin] [-?] [--usage] [username]
 .sp 2
 .SH DESCRIPTION
 The passwd utility is used to update user's authentication token(s).
@@ -173,6 +173,14 @@ may show the date of the last password change that is different
 from the real date of the last password change by ±1 day.
 .sp
 This option is available to root only.
+
+.TP
+\fB\-?\fR, \fB\-\-help\fR
+Print a help message and exit.
+
+.TP
+\fB\-\-usage\fR
+Print a short usage message and exit.
 
 .SH "Remember the following two principles"
 
