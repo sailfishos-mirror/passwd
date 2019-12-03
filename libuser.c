@@ -245,6 +245,7 @@ pwdb_display_status(const char *username)
 	struct lu_ent *ent;
 	struct lu_error *error = NULL;
 	char *current;
+	char *current_user;
 	char *realname;
 	const char *msg;
 	int shadow = 1;
@@ -268,9 +269,10 @@ pwdb_display_status(const char *username)
 			goto bail;
 		}
 		current = lu_ent_get_first_value_strdup(ent, LU_SHADOWPASSWORD);
+		current_user = lu_ent_get_first_value_strdup(ent, LU_USERPASSWORD);
 		if (current == NULL) {
 			shadow = 0;
-			current = lu_ent_get_first_value_strdup(ent, LU_USERPASSWORD);
+			current = current_user;
 		} else {
 			sp_lstchg = (time_t) ent_value_int64(ent, LU_SHADOWLASTCHANGE);
 			sp_min = ent_value_int64(ent, LU_SHADOWMIN);
@@ -310,6 +312,13 @@ pwdb_display_status(const char *username)
 				msg = _("Password set, DES crypt.");
 			}
 			if (shadow) {
+				if (status[0] != 'N' && current_user && strlen(current_user) == 0) {
+					fprintf(stderr, "%s: %s\n", progname,
+						_("There is a password information set in /etc/shadow,"
+						  " but the password field in /etc/passwd is empty."));
+					msg = _("Empty password.");
+					status = "NP";
+				}
 				sp_lstchg = sp_lstchg * 24L * 3600L;
 				localtime_r(&sp_lstchg, &tm);
 				strftime(date, sizeof(date), "%Y-%m-%d", &tm);
@@ -319,6 +328,9 @@ pwdb_display_status(const char *username)
 				printf("%s %s (%s)\n", realname, status, msg);
 			}
 			g_free(current);
+			if (shadow && current_user) {
+				g_free(current_user);
+			}
 		} else {
 			printf(_("No password set.\n"));
 		}
