@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Arpad Biro <biro_arpad@yahoo.com>, 2007
 # Automatically generated, 2006
@@ -12,16 +12,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2018-04-01 02:30+0200\n"
+"POT-Creation-Date: 2015-05-23 07:02+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-04-01 03:29-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hungarian <trans-hu@lists.fedoraproject.org>\n"
 "Language: hu\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: libuser.c:91
 #, c-format
@@ -91,11 +91,11 @@ msgstr "Ismeretlen felhasználó.\n"
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: a felhasználó fiókja nem támogatja a határidős jelszavakat.\n"
 
-#: passwd.c:157
+#: passwd.c:158
 msgid "keep non-expired authentication tokens"
 msgstr "nem lejárt hitelesítési jegyek megtartása"
 
-#: passwd.c:159
+#: passwd.c:160
 msgid ""
 "delete the password for the named account (root only); also removes password "
 "lock if any"
@@ -103,39 +103,39 @@ msgstr ""
 "a nevezett felhasználó jelszavának törlése (csak rendszergazda), valamint az "
 "esetleges jelszózár eltávolítása"
 
-#: passwd.c:162
+#: passwd.c:163
 msgid "lock the password for the named account (root only)"
 msgstr "a jelszó zárolása a nevezett felhasználónál (csak rendszergazda)"
 
-#: passwd.c:165
+#: passwd.c:166
 msgid "unlock the password for the named account (root only)"
 msgstr "a jelszó feloldása a nevezett felhasználónál (csak rendszergazda)"
 
-#: passwd.c:168
+#: passwd.c:169
 msgid "expire the password for the named account (root only)"
 msgstr ""
 "a jelszó lejártnak jelölése a nevezett felhasználónál (csak rendszergazda)"
 
-#: passwd.c:171
+#: passwd.c:172
 msgid "force operation"
 msgstr "művelet kikényszerítése"
 
-#: passwd.c:173
+#: passwd.c:174
 msgid "maximum password lifetime (root only)"
 msgstr "jelszó maximális érvényessége (csak rendszergazda)"
 
-#: passwd.c:175
+#: passwd.c:176
 msgid "minimum password lifetime (root only)"
 msgstr "jelszó minimális érvényessége (csak rendszergazda)"
 
-#: passwd.c:177
+#: passwd.c:178
 msgid ""
 "number of days warning users receives before password expiration (root only)"
 msgstr ""
 "jelszó lejárta előtti napok száma, amikortól figyelmeztetést kap a "
 "felhasználó (csak rendszergazda)"
 
-#: passwd.c:180
+#: passwd.c:181
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
@@ -143,119 +143,119 @@ msgstr ""
 "jelszó lejárta utáni napok száma, amikortól a fiók letiltásra kerül (csak "
 "rendszergazda)"
 
-#: passwd.c:183
+#: passwd.c:184
 msgid "report password status on the named account (root only)"
 msgstr ""
 "jelentés a nevezett felhasználó jelszavának állapotáról (csak rendszergazda)"
 
-#: passwd.c:186
+#: passwd.c:187
 msgid "read new tokens from stdin (root only)"
 msgstr "új jegyek beolvasása a szabványos bemenetről (csak rendszergazda)"
 
-#: passwd.c:193
+#: passwd.c:194
 msgid "[OPTION...] <accountName>"
 msgstr "[KAPCSOLÓ…] <fiókNév>"
 
-#: passwd.c:196
+#: passwd.c:197
 #, c-format
 msgid "%s: bad argument %s: %s\n"
 msgstr "%s: hibás argumentum: %s: %s\n"
 
-#: passwd.c:257
+#: passwd.c:258
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr "%s: Az -l, -u, -d, -S kapcsolókból csak az egyiket szabad megadni.\n"
 
-#: passwd.c:266
+#: passwd.c:267
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr ""
 "%s: Az -l, -u, -d, -S kapcsolók egyikét sem lehet keverni ezekkel: -i, -n, -"
 "w, -x.\n"
 
-#: passwd.c:282
+#: passwd.c:286
 #, c-format
 msgid "Only root can do that.\n"
 msgstr "Ezt csak a rendszergazda teheti meg.\n"
 
-#: passwd.c:295
+#: passwd.c:299
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
 msgstr "%s: Csak a rendszergazda adhat meg felhasználónevet.\n"
 
-#: passwd.c:304
+#: passwd.c:308
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
 msgstr "%s: A megadott felhasználónév túl hosszú.\n"
 
-#: passwd.c:314
+#: passwd.c:318
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
 msgstr "%s: Csak egy felhasználónevet szabad megadni.\n"
 
-#: passwd.c:324
+#: passwd.c:328
 #, c-format
 msgid "%s: This option requires a user name.\n"
 msgstr "%s: Ez a kapcsoló egy felhasználónevet igényel.\n"
 
-#: passwd.c:335
+#: passwd.c:339
 #, c-format
 msgid "%s: Can not identify you!\n"
 msgstr "%s: Ön nem azonosítható!\n"
 
-#: passwd.c:344 passwd.c:379
+#: passwd.c:348 passwd.c:383
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: ismeretlen felhasználónév: „%s”.\n"
 
-#: passwd.c:388
+#: passwd.c:392
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
 msgstr ""
 "%s: az SELinux megtagadja a hozzáférést a biztonsági szabályok miatt.\n"
 
-#: passwd.c:398
+#: passwd.c:402
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr "%s felhasználó jelszavának zárolása.\n"
 
-#: passwd.c:402 passwd.c:414 passwd.c:429 passwd.c:440 passwd.c:458
+#: passwd.c:406 passwd.c:418 passwd.c:433 passwd.c:444 passwd.c:464
 msgid "Success"
 msgstr "Sikerült"
 
-#: passwd.c:402 passwd.c:417
+#: passwd.c:406 passwd.c:421
 msgid "Error (password not set?)"
 msgstr "Hiba (nincs jelszó beállítva?)"
 
-#: passwd.c:410
+#: passwd.c:414
 #, c-format
 msgid "Unlocking password for user %s.\n"
 msgstr "%s felhasználó jelszavának feloldása.\n"
 
-#: passwd.c:416
+#: passwd.c:420
 msgid "Unsafe operation (use -f to force)"
 msgstr "Nem biztonságos művelet (-f a kikényszerítéshez)"
 
-#: passwd.c:425
+#: passwd.c:429
 #, c-format
 msgid "Expiring password for user %s.\n"
 msgstr "%s felhasználó jelszavának lejártnak jelölése.\n"
 
-#: passwd.c:429 passwd.c:440 passwd.c:458
+#: passwd.c:433 passwd.c:444 passwd.c:464
 msgid "Error"
 msgstr "Hiba"
 
-#: passwd.c:437
+#: passwd.c:441
 #, c-format
 msgid "Removing password for user %s.\n"
 msgstr "%s felhasználó jelszavának eltávolítása.\n"
 
-#: passwd.c:455
+#: passwd.c:461
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
 msgstr "%s felhasználó lejárati adatainak beállítása.\n"
 
-#: passwd.c:471
+#: passwd.c:477
 #, c-format
 msgid "Changing password for user %s.\n"
 msgstr "%s felhasználó jelszavának megváltoztatása.\n"
@@ -265,32 +265,27 @@ msgstr "%s felhasználó jelszavának megváltoztatása.\n"
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s: hiba a szabványos bemenet olvasásakor: %s\n"
 
-#: passwd.c:496
-#, c-format
-msgid "%s: password too long, maximum is %zu"
-msgstr ""
-
-#: passwd.c:515
+#: passwd.c:506
 #, c-format
 msgid "%s: unable to start pam: %s\n"
 msgstr "%s: a PAM nem indítható: %s\n"
 
-#: passwd.c:528
+#: passwd.c:519
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
 msgstr "%s: nem lehet tty-t beállítani a PAM-hoz: %s\n"
 
-#: passwd.c:539
+#: passwd.c:530
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
 msgstr "%s: nem lehet hibakésleltetést beállítani: %s\n"
 
-#: passwd.c:553
+#: passwd.c:548
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
 msgstr "%s: a lejárt hitelesítési jegyek frissítése sikerült.\n"
 
-#: passwd.c:556
+#: passwd.c:554
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: minden hitelesítési jegy frissítése sikerült.\n"

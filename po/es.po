@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Automatically generated, 2006
 # Claudio Rodrigo Pereyra Diaz <elsupergomez@gmail.com>, 2012
@@ -11,16 +11,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2018-04-01 02:30+0200\n"
+"POT-Creation-Date: 2015-05-23 07:02+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2016-08-13 11:40-0400\n"
 "Last-Translator: Alberto Castillo <acg@albertocg.com>\n"
 "Language-Team: Spanish <trans-es@lists.fedoraproject.org>\n"
 "Language: es\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: libuser.c:91
 #, c-format
@@ -89,14 +89,14 @@ msgstr "Usuario desconocido.\n"
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr ""
-"%s: la cuenta del usuario no tiene soporte para envejecimiento de "
-"contraseña.\n"
+"%s: la cuenta del usuario no tiene soporte para envejecimiento de contraseña."
+"\n"
 
-#: passwd.c:157
+#: passwd.c:158
 msgid "keep non-expired authentication tokens"
 msgstr "mantener los tokens de autenticación que no hayan caducado"
 
-#: passwd.c:159
+#: passwd.c:160
 msgid ""
 "delete the password for the named account (root only); also removes password "
 "lock if any"
@@ -104,38 +104,38 @@ msgstr ""
 "borrar la contraseña para la cuenta indicada (sólo root); también quita el "
 "bloqueo si lo hay"
 
-#: passwd.c:162
+#: passwd.c:163
 msgid "lock the password for the named account (root only)"
 msgstr "bloquear la contraseña para la cuenta indicada (sólo root)"
 
-#: passwd.c:165
+#: passwd.c:166
 msgid "unlock the password for the named account (root only)"
 msgstr "desbloquear la contraseña para la cuenta indicada (sólo root)"
 
-#: passwd.c:168
+#: passwd.c:169
 msgid "expire the password for the named account (root only)"
 msgstr "hacer expirar la contraseña para la cuenta indicada (sólo root)"
 
-#: passwd.c:171
+#: passwd.c:172
 msgid "force operation"
 msgstr "forzar la operación"
 
-#: passwd.c:173
+#: passwd.c:174
 msgid "maximum password lifetime (root only)"
 msgstr "tiempo de vida máximo de la contraseña (sólo root)"
 
-#: passwd.c:175
+#: passwd.c:176
 msgid "minimum password lifetime (root only)"
 msgstr "tiempo mínimo de vida de la contraseña (sólo root)"
 
-#: passwd.c:177
+#: passwd.c:178
 msgid ""
 "number of days warning users receives before password expiration (root only)"
 msgstr ""
 "número de días antes del vencimiento de la contraseña en que los usuarios "
 "reciben las advertencias de vencimiento (sólo root)"
 
-#: passwd.c:180
+#: passwd.c:181
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
@@ -143,116 +143,117 @@ msgstr ""
 "número de días tras los cuales se deshabilitará la cuenta una vez haya "
 "vencido la contraseña (sólo root)"
 
-#: passwd.c:183
+#: passwd.c:184
 msgid "report password status on the named account (root only)"
-msgstr "informar del estado de la contraseña de la cuenta indicada (sólo root)"
+msgstr ""
+"informar del estado de la contraseña de la cuenta indicada (sólo root)"
 
-#: passwd.c:186
+#: passwd.c:187
 msgid "read new tokens from stdin (root only)"
 msgstr "leer tokens nuevos desde stdin (sólo root)"
 
-#: passwd.c:193
+#: passwd.c:194
 msgid "[OPTION...] <accountName>"
 msgstr "[OPCIÓN...] <accountName>"
 
-#: passwd.c:196
+#: passwd.c:197
 #, c-format
 msgid "%s: bad argument %s: %s\n"
 msgstr "%s: argumento incorrecto %s: %s\n"
 
-#: passwd.c:257
+#: passwd.c:258
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr "%s: Sólo se puede especificar uno de -l, -u, -d, -S.\n"
 
-#: passwd.c:266
+#: passwd.c:267
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr ""
 "%s: No se pueden mezclar las opciones -l, -u, -d, -S con -i, -n, -w, -x.\n"
 
-#: passwd.c:282
+#: passwd.c:286
 #, c-format
 msgid "Only root can do that.\n"
 msgstr "Sólo root puede hacer eso.\n"
 
-#: passwd.c:295
+#: passwd.c:299
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
 msgstr "%s: Sólo root puede especificar un nombre de usuario.\n"
 
-#: passwd.c:304
+#: passwd.c:308
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
 msgstr "%s: El nombre de usuario es demasiado largo.\n"
 
-#: passwd.c:314
+#: passwd.c:318
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
 msgstr "%s: Sólo se puede especificar un nombre de usuario.\n"
 
-#: passwd.c:324
+#: passwd.c:328
 #, c-format
 msgid "%s: This option requires a user name.\n"
 msgstr "%s: Esta opción requiere un nombre de usuario.\n"
 
-#: passwd.c:335
+#: passwd.c:339
 #, c-format
 msgid "%s: Can not identify you!\n"
 msgstr "%s: ¡No sé quién es usted!\n"
 
-#: passwd.c:344 passwd.c:379
+#: passwd.c:348 passwd.c:383
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: Nombre de usuario desconocido '%s'.\n"
 
-#: passwd.c:388
+#: passwd.c:392
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
 msgstr "%s: SELinux deniega el acceso por política de seguridad.\n"
 
-#: passwd.c:398
+#: passwd.c:402
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr "Bloqueando la contraseña para el usuario %s.\n"
 
-#: passwd.c:402 passwd.c:414 passwd.c:429 passwd.c:440 passwd.c:458
+#: passwd.c:406 passwd.c:418 passwd.c:433 passwd.c:444 passwd.c:464
 msgid "Success"
 msgstr "Éxito"
 
-#: passwd.c:402 passwd.c:417
+#: passwd.c:406 passwd.c:421
 msgid "Error (password not set?)"
 msgstr "Error (¿no hay contraseña?)"
 
-#: passwd.c:410
+#: passwd.c:414
 #, c-format
 msgid "Unlocking password for user %s.\n"
 msgstr "Desbloqueando la contraseña para el usuario %s.\n"
 
-#: passwd.c:416
+#: passwd.c:420
 msgid "Unsafe operation (use -f to force)"
 msgstr "Operación insegura (use -f para forzarla)"
 
-#: passwd.c:425
+#: passwd.c:429
 #, c-format
 msgid "Expiring password for user %s.\n"
 msgstr "Expirando contraseña para el usuario %s.\n"
 
-#: passwd.c:429 passwd.c:440 passwd.c:458
+#: passwd.c:433 passwd.c:444 passwd.c:464
 msgid "Error"
 msgstr "Error"
 
-#: passwd.c:437
+#: passwd.c:441
 #, c-format
 msgid "Removing password for user %s.\n"
 msgstr "Eliminando la contraseña del usuario %s.\n"
 
-#: passwd.c:455
+#: passwd.c:461
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
 msgstr "Ajustando los datos de envejecimiento para el usuario %s.\n"
 
-#: passwd.c:471
+#: passwd.c:477
 #, c-format
 msgid "Changing password for user %s.\n"
 msgstr "Cambiando la contraseña del usuario %s.\n"
@@ -262,32 +263,27 @@ msgstr "Cambiando la contraseña del usuario %s.\n"
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s: error al leer de stdin: %s\n"
 
-#: passwd.c:496
-#, c-format
-msgid "%s: password too long, maximum is %zu"
-msgstr ""
-
-#: passwd.c:515
+#: passwd.c:506
 #, c-format
 msgid "%s: unable to start pam: %s\n"
 msgstr "%s: no se pudo iniciar pam: %s\n"
 
-#: passwd.c:528
+#: passwd.c:519
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
 msgstr "%s: no se pudo poner el tty para pam: %s\n"
 
-#: passwd.c:539
+#: passwd.c:530
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
 msgstr "%s: no se pudo poner la espera máxima para fallo: %s\n"
 
-#: passwd.c:553
+#: passwd.c:548
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
 msgstr "%s: tokens de autenticación expirados actualizados con éxito.\n"
 
-#: passwd.c:556
+#: passwd.c:554
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: todos los tokens de autenticación se actualizaron exitosamente.\n"

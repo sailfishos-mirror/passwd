@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Automatically generated, 2006
 # Krishnababu Krothapalli <kkrothap@redhat.com>, 2007, 2009
@@ -10,17 +10,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2018-04-01 02:30+0200\n"
+"POT-Creation-Date: 2015-05-23 07:02+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2015-03-13 11:36-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Telugu (http://www.transifex.com/projects/p/fedora/language/"
 "te/)\n"
 "Language: te\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.6.2\n"
 
 #: libuser.c:91
 #, c-format
@@ -90,161 +90,166 @@ msgstr "తెలియని వినియోగదారి.\n"
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: వినియోగదారుని ఖాతా సంకేతపదం ఏజింగ్ కు ఏ మద్దతు కలిగిలేదు.\n"
 
-#: passwd.c:157
+#: passwd.c:158
 msgid "keep non-expired authentication tokens"
 msgstr "కాలము-తీరని దృవీకరణ టోకెన్ లను ఉంచండి"
 
-#: passwd.c:159
+#: passwd.c:160
 msgid ""
 "delete the password for the named account (root only); also removes password "
 "lock if any"
 msgstr ""
 
-#: passwd.c:162
+#: passwd.c:163
 msgid "lock the password for the named account (root only)"
 msgstr "పేరువున్న ఖాతాకు సంకేతపదంను లాక్ చేయి (root మాత్రమే)"
 
-#: passwd.c:165
+#: passwd.c:166
 msgid "unlock the password for the named account (root only)"
 msgstr "పేరువున్న ఖాతాకు సంకేతపదంను అన్‌లాక్ చేయి (root మాత్రమే)"
 
-#: passwd.c:168
+#: passwd.c:169
 msgid "expire the password for the named account (root only)"
 msgstr "పేరువున్న ఖాతాకు సంకేతపదం గడువుముగించు (root మాత్రమే)"
 
-#: passwd.c:171
+#: passwd.c:172
 msgid "force operation"
 msgstr "బలవంతపు ఆపరేషన్"
 
-#: passwd.c:173
+#: passwd.c:174
 msgid "maximum password lifetime (root only)"
 msgstr "గరిష్ఠ సంకేతపదం జీవితకాలం(root మాత్రమే)"
 
-#: passwd.c:175
+#: passwd.c:176
 msgid "minimum password lifetime (root only)"
 msgstr "గరిష్ఠ సంకేతపదం జీవితకాలం(root మాత్రమే)"
 
-#: passwd.c:177
+#: passwd.c:178
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr "సంకేతపదం కాలము తీరుటకు ముందు వినియోగదారులు పొందు రోజులసంఖ్య హెచ్చరిక(root మాత్రమే)"
+msgstr ""
+"సంకేతపదం కాలము తీరుటకు ముందు వినియోగదారులు పొందు రోజులసంఖ్య హెచ్చరిక(root "
+"మాత్రమే)"
 
-#: passwd.c:180
+#: passwd.c:181
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
-msgstr "సంకేతపదం కాలము తీరిన తర్వాత ఖాతా అచేతనం చేయబోవుటకు మునుపు రోజులసంఖ్య(root మాత్రమే)"
+msgstr ""
+"సంకేతపదం కాలము తీరిన తర్వాత ఖాతా అచేతనం చేయబోవుటకు మునుపు రోజులసంఖ్య(root "
+"మాత్రమే)"
 
-#: passwd.c:183
+#: passwd.c:184
 msgid "report password status on the named account (root only)"
 msgstr "నామపు ఖాతా పై సంకేతపదం స్థితిని నివేదించు(root మాత్రమే)"
 
-#: passwd.c:186
+#: passwd.c:187
 msgid "read new tokens from stdin (root only)"
 msgstr "stdin నుండి కొత్త టోకెన్ల ను చదువుము(root మాత్రమే)"
 
-#: passwd.c:193
+#: passwd.c:194
 msgid "[OPTION...] <accountName>"
 msgstr "[OPTION...] <accountName>"
 
-#: passwd.c:196
+#: passwd.c:197
 #, c-format
 msgid "%s: bad argument %s: %s\n"
 msgstr "%s: చెడ్డ ఆర్గుమెట్ %s: %s\n"
 
-#: passwd.c:257
+#: passwd.c:258
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr "%s: వీటిలో ఏదో ఒక -l, -u, -d, -S మాత్రమే తెలుపవచ్చు.\n"
 
-#: passwd.c:266
+#: passwd.c:267
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr ""
-"%s: వీటిలో ఒకటి గాని -l, -u, -d, -S మరియు వీటిలో ఒకటి గాని -i, -n, -w, -x మిళితం చేయలేము.\n"
+"%s: వీటిలో ఒకటి గాని -l, -u, -d, -S మరియు వీటిలో ఒకటి గాని -i, -n, -w, -x "
+"మిళితం చేయలేము.\n"
 
-#: passwd.c:282
+#: passwd.c:286
 #, c-format
 msgid "Only root can do that.\n"
 msgstr "root మాత్రమే అది చేయగలడు.\n"
 
-#: passwd.c:295
+#: passwd.c:299
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
 msgstr "%s:root మాత్రమే వినియోగదారుని నామము ను తెలుపగలడు.\n"
 
-#: passwd.c:304
+#: passwd.c:308
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
 msgstr "%s: ఇవ్వబడినటువంటి వినియోగదారుని నామము బాగా పొడవైనది.\n"
 
-#: passwd.c:314
+#: passwd.c:318
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
 msgstr "%s: ఒక వినియోగదారుని నామము ను మాత్రమే తెలుపగలము.\n"
 
-#: passwd.c:324
+#: passwd.c:328
 #, c-format
 msgid "%s: This option requires a user name.\n"
 msgstr "%s: ఈ ఐచ్చికం కు వినియోగదారుని నామము కావలెను.\n"
 
-#: passwd.c:335
+#: passwd.c:339
 #, c-format
 msgid "%s: Can not identify you!\n"
 msgstr "%s: నిన్ను గుర్తించలేదు!\n"
 
-#: passwd.c:344 passwd.c:379
+#: passwd.c:348 passwd.c:383
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: తెలియని వినియోగదారుని నామము '%s'.\n"
 
-#: passwd.c:388
+#: passwd.c:392
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
 msgstr "%s: రక్షణ విధానం కారణంగా SELinux యాక్సెస్‌ను తిరస్కరిస్తోంది.\n"
 
-#: passwd.c:398
+#: passwd.c:402
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr "%s వినియోగదారుని కొరకు సంకేతపదాన్ని లాకింగ్ చేస్తోంది\n"
 
-#: passwd.c:402 passwd.c:414 passwd.c:429 passwd.c:440 passwd.c:458
+#: passwd.c:406 passwd.c:418 passwd.c:433 passwd.c:444 passwd.c:464
 msgid "Success"
 msgstr "సఫలం"
 
-#: passwd.c:402 passwd.c:417
+#: passwd.c:406 passwd.c:421
 msgid "Error (password not set?)"
 msgstr "దోషం(సంకేతపదం అమర్చలేదు?)"
 
-#: passwd.c:410
+#: passwd.c:414
 #, c-format
 msgid "Unlocking password for user %s.\n"
 msgstr "%s వినియోగదారుని కొరకు సంకేతపదాన్ని అన్‌లాకింగ్ చేస్తోంది.\n"
 
-#: passwd.c:416
+#: passwd.c:420
 msgid "Unsafe operation (use -f to force)"
 msgstr "భధ్రకాని ఆపరేషన్ (బలవంతమునకు -f ని ఉపయోగించండి)"
 
-#: passwd.c:425
+#: passwd.c:429
 #, c-format
 msgid "Expiring password for user %s.\n"
 msgstr "వాడుకరి %s కొరకు సంకేతపదం గుడువు ముగిస్తోంది.\n"
 
-#: passwd.c:429 passwd.c:440 passwd.c:458
+#: passwd.c:433 passwd.c:444 passwd.c:464
 msgid "Error"
 msgstr "దోషం"
 
-#: passwd.c:437
+#: passwd.c:441
 #, c-format
 msgid "Removing password for user %s.\n"
 msgstr "%s వినియోగదారుని కొరకు సంకేతపదాన్ని తీసివేయుచున్నది.\n"
 
-#: passwd.c:455
+#: passwd.c:461
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
 msgstr "%s వినియోగాదారుని కొరకు ఏజింగ్ డాటా ను సర్దుబాటు చేస్తోంది.\n"
 
-#: passwd.c:471
+#: passwd.c:477
 #, c-format
 msgid "Changing password for user %s.\n"
 msgstr "%s వినియోగదారుని కొరకు సంకేతపదాన్ని మార్చుతున్నది.\n"
@@ -254,32 +259,27 @@ msgstr "%s వినియోగదారుని కొరకు సంకే�
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s:దోషం stdin నుండి చదువుటలో: %s\n"
 
-#: passwd.c:496
-#, c-format
-msgid "%s: password too long, maximum is %zu"
-msgstr ""
-
-#: passwd.c:515
+#: passwd.c:506
 #, c-format
 msgid "%s: unable to start pam: %s\n"
 msgstr "%s: పామ్ ను ప్రారంభించ లేక పోతోంది: %s\n"
 
-#: passwd.c:528
+#: passwd.c:519
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
 msgstr "%s: పామ్ కొరకు tty అమర్చ లేక పోతోంది: %s\n"
 
-#: passwd.c:539
+#: passwd.c:530
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
 msgstr "%s: వైఫల్యం ఆలస్యాన్ని అమర్చలేక పోతోంది: %s\n"
 
-#: passwd.c:553
+#: passwd.c:548
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
 msgstr "%s: కాలముతీరిన దృవీకరణ టొకెన్లు సమర్ధవంతంగా నవీకరించబడినవి.\n"
 
-#: passwd.c:556
+#: passwd.c:554
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: అన్ని దృవీకరణ టోకెన్లు సమర్ధవంతంగా నవీకరించబడినవి.\n"
