@@ -1,44 +1,45 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Aioanei Rares <schaiba@gmail.com>, 2012
 # Automatically generated, 2006
 # MIrcea Daniel <visez.trance@gmail.com>, 2007
+# Vlad <milovlad@outlook.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2015-05-23 07:02+0200\n"
+"PO-Revision-Date: 2020-12-26 07:36+0000\n"
+"Last-Translator: Vlad <milovlad@outlook.com>\n"
+"Language-Team: Romanian <https://translate.fedoraproject.org/projects/passwd/"
+"master/ro/>\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-03-13 11:35-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Romanian (http://www.transifex.com/projects/p/fedora/language/"
-"ro/)\n"
-"Language: ro\n"
-"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!="
-"0)))?2:1));\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #: libuser.c:91
 #, c-format
 msgid "%s: libuser initialization error:"
-msgstr "%s: eroare iniţializare libuser"
+msgstr "%s: eroare iniţializare libuser:"
 
 #: libuser.c:157
 msgid "Warning: unlocked password would be empty."
-msgstr "Avertisment: parolele deblocate ar fi goale"
+msgstr "Avertisment: parola deblocată va fi goală."
 
 #: libuser.c:203
 msgid "Note: deleting a password also unlocks the password."
-msgstr ""
+msgstr "Notă: ștergerea unei parolei o deblochează."
 
 #: libuser.c:267
 msgid "Corrupted passwd entry."
-msgstr "Pasaj parolă corupt."
+msgstr "Câmpul conține parolă coruptă."
 
 #: libuser.c:284
 msgid "Empty password."
@@ -58,11 +59,11 @@ msgstr "Parolă setată, criptare blowfish."
 
 #: libuser.c:297
 msgid "Password set, SHA256 crypt."
-msgstr "Parolă setată, criptare SH256."
+msgstr "Parolă setată, criptare SHA256."
 
 #: libuser.c:300
 msgid "Password set, SHA512 crypt."
-msgstr "Parolă setată, criptare SH512."
+msgstr "Parolă setată, criptare SHA512."
 
 #: libuser.c:302
 msgid "Password set, unknown crypt variant."
@@ -70,7 +71,7 @@ msgstr "Parolă setată, tip de criptare necunoscut."
 
 #: libuser.c:305
 msgid "Alternate authentication scheme in use."
-msgstr "Plan de autentificare alternativ în folosinţă."
+msgstr "Schemă alternativă de autentificare în folosinţă."
 
 #: libuser.c:310
 msgid "Password set, DES crypt."
@@ -79,7 +80,7 @@ msgstr "Parolă setată, criptare DES."
 #: libuser.c:323
 #, c-format
 msgid "No password set.\n"
-msgstr "Nu este setată nici o parolă.\n"
+msgstr "Nicio parolă setată.\n"
 
 #: libuser.c:328
 #, c-format
@@ -93,25 +94,27 @@ msgstr "%s: contul utilizatorului nu are suport pentru expirarea parolei.\n"
 
 #: passwd.c:158
 msgid "keep non-expired authentication tokens"
-msgstr "păstrează simbolurile de autentificare neexpirate"
+msgstr "păstrează caracteristicile de autentificare neexpirate"
 
 #: passwd.c:160
 msgid ""
 "delete the password for the named account (root only); also removes password "
 "lock if any"
 msgstr ""
+"ștergeți parola pentru contul ales (doar de către administrator); de "
+"asemenea se elimină blocarea parolei"
 
 #: passwd.c:163
 msgid "lock the password for the named account (root only)"
-msgstr "blocați parola pentru contul specificat (doar root)"
+msgstr "blocați parola pentru contul specificat (doar de către administrator)"
 
 #: passwd.c:166
 msgid "unlock the password for the named account (root only)"
-msgstr "deblocați parola pentru contul specificat (doar root)"
+msgstr "deblocați parola pentru contul specificat (doar de către administrator)"
 
 #: passwd.c:169
 msgid "expire the password for the named account (root only)"
-msgstr "expirați parola pentru contul specificat (doar root)"
+msgstr "expirați parola pentru contul specificat (doar de către administrator)"
 
 #: passwd.c:172
 msgid "force operation"
@@ -119,34 +122,34 @@ msgstr "forţează operaţie"
 
 #: passwd.c:174
 msgid "maximum password lifetime (root only)"
-msgstr "durata maximă a parolei (numai root)"
+msgstr "durata maximă a parolei (doar de către administrator)"
 
 #: passwd.c:176
 msgid "minimum password lifetime (root only)"
-msgstr "durata minimă a parolei (numai root)"
+msgstr "durata minimă a parolei (doar de către administrator)"
 
 #: passwd.c:178
 msgid ""
 "number of days warning users receives before password expiration (root only)"
 msgstr ""
-"numărul de zile până la avertismentul pe care utilizatorii îl primesc "
-"înainte ca parola să expire (numai root)"
+"numărul de zile până când utilizatorii sunt avertizați că parola expiră ("
+"doar de către administrator)"
 
 #: passwd.c:181
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
 msgstr ""
-"numărul de zile de la expirarea parolei când un cont devine dezactivat "
-"(numai root)"
+"numărul de zile de la expirarea parolei când un cont devine dezactivat (doar "
+"de către administrator)"
 
 #: passwd.c:184
 msgid "report password status on the named account (root only)"
-msgstr "raportează statut parolă pentru cont (numai root)"
+msgstr "raportează starea parolei pentru un cont (doar de către administrator)"
 
 #: passwd.c:187
 msgid "read new tokens from stdin (root only)"
-msgstr "citeşte simboluri noi din stdin (numai root)"
+msgstr "citeşte simboluri noi din stdin (doar de către administrator)"
 
 #: passwd.c:194
 msgid "[OPTION...] <accountName>"
@@ -155,7 +158,7 @@ msgstr "[opţiune...] <numeCont>"
 #: passwd.c:197
 #, c-format
 msgid "%s: bad argument %s: %s\n"
-msgstr "%s: parametri necorespunzători %s: %s\n"
+msgstr "%s: argumente incorecte %s: %s\n"
 
 #: passwd.c:258
 #, c-format
@@ -165,17 +168,17 @@ msgstr "%s: Numai unul din -l, -u, -d, -S poate fi specificat.\n"
 #: passwd.c:267
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: Nu pot amesteca -l, -u, -d, -S şi un of -i, -n, -w, -x.\n"
+msgstr "%s: Nu se pot amesteca -l, -u, -d, -S cu unul din -i, -n, -w, -x.\n"
 
 #: passwd.c:286
 #, c-format
 msgid "Only root can do that.\n"
-msgstr "Numai root poate face asta.\n"
+msgstr "Numai administratorul poate face asta.\n"
 
 #: passwd.c:299
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
-msgstr "%s: Numai root poate specifica un nume de utilizator.\n"
+msgstr "%s: Numai administratorul poate specifica un nume de utilizator.\n"
 
 #: passwd.c:308
 #, c-format
@@ -223,16 +226,16 @@ msgstr "Eroare (parola nu este setată?)"
 #: passwd.c:414
 #, c-format
 msgid "Unlocking password for user %s.\n"
-msgstr "Deblochez parola pentru utilizator %s.\n"
+msgstr "Deblochez parola pentru utilizatorul %s.\n"
 
 #: passwd.c:420
 msgid "Unsafe operation (use -f to force)"
-msgstr "Operaţiune nesigură (foloiţi -f pentru a forţa)"
+msgstr "Operaţiune nesigură (folosiţi -f pentru a forţa)"
 
 #: passwd.c:429
 #, c-format
 msgid "Expiring password for user %s.\n"
-msgstr "Se expiră parola pentru utilizatorul %s.\n"
+msgstr "Expiră parola pentru utilizatorul %s.\n"
 
 #: passwd.c:433 passwd.c:444 passwd.c:464
 msgid "Error"
@@ -246,7 +249,7 @@ msgstr "Elimin parola pentru utilizatorul %s.\n"
 #: passwd.c:461
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
-msgstr "Ajustez date de expirare pentru utiliazorul %s.\n"
+msgstr "Ajustez data de expirare pentru utilizatorul %s.\n"
 
 #: passwd.c:477
 #, c-format
@@ -261,25 +264,26 @@ msgstr "%s: eroare la citirea din stdin: %s\n"
 #: passwd.c:506
 #, c-format
 msgid "%s: unable to start pam: %s\n"
-msgstr "%s: nu am putut porni pam: %s\n"
+msgstr "%s: nu pot porni pam: %s\n"
 
 #: passwd.c:519
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
-msgstr "%s: nu am putut seta tty pentru pam: %s\n"
+msgstr "%s: nu pot seta tty pentru pam: %s\n"
 
 #: passwd.c:530
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
-msgstr "%s: nu am putut seta întârziere în caz de eşec: %s\n"
+msgstr "%s: nu pot seta durata de întârziere a erorii: %s\n"
 
 #: passwd.c:548
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr "%s: simbolurile de autentificare expirate actualizate cu succes.\n"
+msgstr ""
+"%s: caracteristicile de autentificare expirate sunt actualizate cu succes.\n"
 
 #: passwd.c:554
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr ""
-"%s: toate simbolurile de autentificare au fost actualizate cu succes.\n"
+"%s: toate caracteristicile de autentificare au fost actualizate cu succes.\n"
