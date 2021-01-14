@@ -1,26 +1,28 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Automatically generated, 2006
 # Boris Yakimov <borisyakimov@ymail.com>, 2012
 # Doncho N. Gunchev <gunchev@gmail.com>, 2007
 # Valentin Laskov <laskov@festa.bg>, 2012
+# Nickys Music Group <nickys.music.group@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2015-05-23 07:02+0200\n"
+"PO-Revision-Date: 2021-01-04 15:36+0000\n"
+"Last-Translator: Nickys Music Group <nickys.music.group@gmail.com>\n"
+"Language-Team: Bulgarian <https://translate.fedoraproject.org/projects/"
+"passwd/master/bg/>\n"
+"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-03-13 11:32-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Bulgarian <trans-bg@lists.fedoraproject.org>\n"
-"Language: bg\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.4\n"
 
 #: libuser.c:91
 #, c-format
@@ -33,7 +35,7 @@ msgstr "Внимание: отключената парола ще бъде пр
 
 #: libuser.c:203
 msgid "Note: deleting a password also unlocks the password."
-msgstr ""
+msgstr "Бележка: изтриването на парола също отключва паролата."
 
 #: libuser.c:267
 msgid "Corrupted passwd entry."
@@ -99,6 +101,8 @@ msgid ""
 "delete the password for the named account (root only); also removes password "
 "lock if any"
 msgstr ""
+"изтрий паролата за посоченият акаунт (само root); също така премахва "
+"заключването с парола, ако има такова"
 
 #: passwd.c:163
 msgid "lock the password for the named account (root only)"
