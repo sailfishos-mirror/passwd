@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Bernabé Borrero <bernabeborrero@gmail.com>, 2012
 # Josep Puigdemont <josep.puigdemont@gmail.com>, 2006, 2007
@@ -10,14 +10,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2015-05-23 07:02+0200\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-03-29 22:08+0200\n"
 "PO-Revision-Date: 2015-09-24 07:55-0400\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan <fedora@llistes.softcatala.org>\n"
 "Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Zanata 4.6.2\n"
 
@@ -32,70 +32,74 @@ msgstr "Avís: la contrasenya desblocada seria buida."
 
 #: libuser.c:203
 msgid "Note: deleting a password also unlocks the password."
-msgstr ""
-"Nota: l'eliminació d'una contrasenya també desbloqueja la contrasenya."
+msgstr "Nota: l'eliminació d'una contrasenya també desbloqueja la contrasenya."
 
-#: libuser.c:267
+#: libuser.c:268
 msgid "Corrupted passwd entry."
 msgstr "L'entrada de la contrasenya està malmesa."
 
-#: libuser.c:284
+#: libuser.c:286 libuser.c:319
 msgid "Empty password."
 msgstr "La contrasenya és buida."
 
-#: libuser.c:287
+#: libuser.c:289
 msgid "Password locked."
 msgstr "La contrasenya està blocada."
 
-#: libuser.c:291
+#: libuser.c:293
 msgid "Password set, MD5 crypt."
 msgstr "La contrasenya està establerta, i xifrada amb MD5."
 
-#: libuser.c:294
+#: libuser.c:296
 msgid "Password set, blowfish crypt."
 msgstr "La contrasenya està establerta, i xifrada amb blowfish."
 
-#: libuser.c:297
+#: libuser.c:299
 msgid "Password set, SHA256 crypt."
 msgstr "La contrasenya està establerta, i xifrada amb SHA256."
 
-#: libuser.c:300
+#: libuser.c:302
 msgid "Password set, SHA512 crypt."
 msgstr "La contrasenya està establerta, i xifrada amb SHA512."
 
-#: libuser.c:302
+#: libuser.c:304
 msgid "Password set, unknown crypt variant."
-msgstr ""
-"La contrasenya està establerta, i xifrada amb una variant desconeguda."
+msgstr "La contrasenya està establerta, i xifrada amb una variant desconeguda."
 
-#: libuser.c:305
+#: libuser.c:307
 msgid "Alternate authentication scheme in use."
 msgstr "S'està emprant un esquema d'autenticació alternatiu."
 
-#: libuser.c:310
+#: libuser.c:312
 msgid "Password set, DES crypt."
 msgstr "La contrasenya està establerta, i xifrada amb DES."
 
-#: libuser.c:323
+#: libuser.c:317
+msgid ""
+"There is a password information set in /etc/shadow, but the password field "
+"in /etc/passwd is empty."
+msgstr ""
+
+#: libuser.c:335
 #, c-format
 msgid "No password set.\n"
 msgstr "No hi ha cap contrasenya establerta.\n"
 
-#: libuser.c:328
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "No es coneix l'usuari.\n"
 
-#: libuser.c:403
+#: libuser.c:415
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: el compte d'usuari no permet que la contrasenya envelleixi.\n"
 
-#: passwd.c:158
+#: passwd.c:157
 msgid "keep non-expired authentication tokens"
 msgstr "mantén testimonis d'autenticació que no hagin vençut"
 
-#: passwd.c:160
+#: passwd.c:159
 msgid ""
 "delete the password for the named account (root only); also removes password "
 "lock if any"
@@ -103,38 +107,38 @@ msgstr ""
 "suprimeix la contrasenya per al compte nomenat (només root); també treu el "
 "bloqueig de la contrasenya si fos el cas"
 
-#: passwd.c:163
+#: passwd.c:162
 msgid "lock the password for the named account (root only)"
 msgstr "bloqueja la contrasenya pel compte nomenat (només root)"
 
-#: passwd.c:166
+#: passwd.c:165
 msgid "unlock the password for the named account (root only)"
 msgstr "desbloqueja la contrasenya pel compte nomenat (només root)"
 
-#: passwd.c:169
+#: passwd.c:168
 msgid "expire the password for the named account (root only)"
 msgstr "expira la contrasenya pel compte nomenat (només root)"
 
-#: passwd.c:172
+#: passwd.c:171
 msgid "force operation"
 msgstr "força l'operació"
 
-#: passwd.c:174
+#: passwd.c:173
 msgid "maximum password lifetime (root only)"
 msgstr "temps de vida màxim de la contrasenya (només root)"
 
-#: passwd.c:176
+#: passwd.c:175
 msgid "minimum password lifetime (root only)"
 msgstr "temps de vida mínim de la contrasenya (només root)"
 
-#: passwd.c:178
+#: passwd.c:177
 msgid ""
 "number of days warning users receives before password expiration (root only)"
 msgstr ""
 "el nombre de dies abans que venci la contrasenya perquè l'usuari en rebi "
 "l'avís (només root)"
 
-#: passwd.c:181
+#: passwd.c:180
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
@@ -142,120 +146,119 @@ msgstr ""
 "el nombre de dies després que venci la contrasenya perquè el compte de "
 "l'usuari venci (només root)"
 
-#: passwd.c:184
+#: passwd.c:183
 msgid "report password status on the named account (root only)"
 msgstr "informa de l'estat de la contrasenya del compte nomenat (només root)"
 
-#: passwd.c:187
+#: passwd.c:186
 msgid "read new tokens from stdin (root only)"
 msgstr "llegeix nous testimonis de l'entrada estàndard (només root)"
 
-#: passwd.c:194
+#: passwd.c:193
 msgid "[OPTION...] <accountName>"
 msgstr "[OPCIÓ...] <NomDelCompte>"
 
-#: passwd.c:197
+#: passwd.c:196
 #, c-format
 msgid "%s: bad argument %s: %s\n"
 msgstr "%s: argument %s equivocat: %s\n"
 
-#: passwd.c:258
+#: passwd.c:257
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr ""
 "%s: tan sols es pot especificar un d'aquests indicadors al mateix temps: -l, "
 "-u, -d o -S.\n"
 
-#: passwd.c:267
+#: passwd.c:266
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr ""
-"%s: no es poden barrejar -l, -u, -d o -S amb cap d'aquests -i, -n, -w o -x."
-"\n"
+"%s: no es poden barrejar -l, -u, -d o -S amb cap d'aquests -i, -n, -w o -x.\n"
 
-#: passwd.c:286
+#: passwd.c:282
 #, c-format
 msgid "Only root can do that.\n"
 msgstr "Només root pot fer-ho.\n"
 
-#: passwd.c:299
+#: passwd.c:295
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
 msgstr "%s: només root pot especificar un nom d'usuari.\n"
 
-#: passwd.c:308
+#: passwd.c:304
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
 msgstr "%s: el nom d'usuari indicat és massa llarg.\n"
 
-#: passwd.c:318
+#: passwd.c:314
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
 msgstr "%s: només es pot indicar un sol nom d'usuari.\n"
 
-#: passwd.c:328
+#: passwd.c:324
 #, c-format
 msgid "%s: This option requires a user name.\n"
 msgstr "%s: aquesta operació requereix un nom d'usuari.\n"
 
-#: passwd.c:339
+#: passwd.c:335
 #, c-format
 msgid "%s: Can not identify you!\n"
 msgstr "%s: no se us pot identificar.\n"
 
-#: passwd.c:348 passwd.c:383
+#: passwd.c:344 passwd.c:379
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: no es coneix el nom d'usuari «%s».\n"
 
-#: passwd.c:392
+#: passwd.c:388
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
 msgstr ""
 "%s: SELinux està bloquejant l'accés a causa de la política de seguretat.\n"
 
-#: passwd.c:402
+#: passwd.c:398
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr "S'està blocant la contrasenya de l'usuari %s.\n"
 
-#: passwd.c:406 passwd.c:418 passwd.c:433 passwd.c:444 passwd.c:464
+#: passwd.c:402 passwd.c:414 passwd.c:429 passwd.c:440 passwd.c:458
 msgid "Success"
 msgstr "Correcte"
 
-#: passwd.c:406 passwd.c:421
+#: passwd.c:402 passwd.c:417
 msgid "Error (password not set?)"
 msgstr "Error (no s'ha establert la contrasenya, potser?)"
 
-#: passwd.c:414
+#: passwd.c:410
 #, c-format
 msgid "Unlocking password for user %s.\n"
 msgstr "S'està desblocant la contrasenya de l'usuari %s.\n"
 
-#: passwd.c:420
+#: passwd.c:416
 msgid "Unsafe operation (use -f to force)"
 msgstr "L'operació no és segura (empreu -f per a forçar)"
 
-#: passwd.c:429
+#: passwd.c:425
 #, c-format
 msgid "Expiring password for user %s.\n"
 msgstr "Expirant contrasenya per l'usuari %s.\n"
 
-#: passwd.c:433 passwd.c:444 passwd.c:464
+#: passwd.c:429 passwd.c:440 passwd.c:458
 msgid "Error"
 msgstr "Error"
 
-#: passwd.c:441
+#: passwd.c:437
 #, c-format
 msgid "Removing password for user %s.\n"
 msgstr "S'està suprimint la contrasenya de l'usuari %s.\n"
 
-#: passwd.c:461
+#: passwd.c:455
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
 msgstr "S'està ajustant la data d'envelliment de l'usuari %s.\n"
 
-#: passwd.c:477
+#: passwd.c:471
 #, c-format
 msgid "Changing password for user %s.\n"
 msgstr "S'està canviant la contrasenya de l'usuari %s.\n"
@@ -265,27 +268,32 @@ msgstr "S'està canviant la contrasenya de l'usuari %s.\n"
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s: s'ha produït un error en llegir de l'entrada estàndard: %s\n"
 
-#: passwd.c:506
+#: passwd.c:496
+#, c-format
+msgid "%s: password too long, maximum is %zu"
+msgstr ""
+
+#: passwd.c:515
 #, c-format
 msgid "%s: unable to start pam: %s\n"
 msgstr "%s: no s'ha pogut iniciar el pam: %s\n"
 
-#: passwd.c:519
+#: passwd.c:528
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
 msgstr "%s: no s'ha pogut establir la tty per al pam: %s\n"
 
-#: passwd.c:530
+#: passwd.c:539
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
 msgstr "%s: no s'ha pogut establir l'endarreriment per a l'error: %s\n"
 
-#: passwd.c:548
+#: passwd.c:553
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
 msgstr "%s: els testimonis d'autenticació s'han actualitzat amb èxit.\n"
 
-#: passwd.c:554
+#: passwd.c:556
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: tots els testimonis d'autenticació s'han actualitzat amb èxit.\n"

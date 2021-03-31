@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Ankit Patel <ankit@redhat.com>, 2006
 # Automatically generated, 2006
@@ -10,14 +10,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2015-05-23 07:02+0200\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-03-29 22:08+0200\n"
 "PO-Revision-Date: 2015-03-13 11:33-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Gujarati <trans-gu@lists.fedoraproject.org>\n"
 "Language: gu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Zanata 4.6.2\n"
 
@@ -34,219 +34,222 @@ msgstr "ચેતવણી: નહિં તાળું મરાયેલ પ�
 msgid "Note: deleting a password also unlocks the password."
 msgstr ""
 
-#: libuser.c:267
+#: libuser.c:268
 msgid "Corrupted passwd entry."
 msgstr "બગડેલ પાસવર્ડ પ્રવેશ."
 
-#: libuser.c:284
+#: libuser.c:286 libuser.c:319
 msgid "Empty password."
 msgstr "ખાલી પાસવર્ડ."
 
-#: libuser.c:287
+#: libuser.c:289
 msgid "Password locked."
 msgstr "પાસવર્ડ તાળું મરાયેલ."
 
-#: libuser.c:291
+#: libuser.c:293
 msgid "Password set, MD5 crypt."
 msgstr "પાસવર્ડ સુયોજિત, MD5 ક્રિપ્ટ."
 
-#: libuser.c:294
+#: libuser.c:296
 msgid "Password set, blowfish crypt."
 msgstr "પાસવર્ડ સુયોજિત, blowfish ક્રિપ્ટ."
 
-#: libuser.c:297
+#: libuser.c:299
 msgid "Password set, SHA256 crypt."
 msgstr "પાસવર્ડ સુયોજિત, SHA256 ક્રિપ્ટ."
 
-#: libuser.c:300
+#: libuser.c:302
 msgid "Password set, SHA512 crypt."
 msgstr "પાસવર્ડ સુયોજિત, SHA512 ક્રિપ્ટ."
 
-#: libuser.c:302
+#: libuser.c:304
 msgid "Password set, unknown crypt variant."
 msgstr "પાસવર્ડ સુયોજિત, અજ્ઞાત ક્રિપ્ટ ચલ."
 
-#: libuser.c:305
+#: libuser.c:307
 msgid "Alternate authentication scheme in use."
 msgstr "વૈકલ્પિક સત્તાધિકરણ પદ્ધતિ વપરાશમાં."
 
-#: libuser.c:310
+#: libuser.c:312
 msgid "Password set, DES crypt."
 msgstr "પાસવર્ડ સુયોજિત, DES ક્રિપ્ટ."
 
-#: libuser.c:323
+#: libuser.c:317
+msgid ""
+"There is a password information set in /etc/shadow, but the password field "
+"in /etc/passwd is empty."
+msgstr ""
+
+#: libuser.c:335
 #, c-format
 msgid "No password set.\n"
 msgstr "કોઈ પાસવર્ડ સુયોજિત નથી.\n"
 
-#: libuser.c:328
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "અજ્ઞાત વપરાશકર્તા.\n"
 
-#: libuser.c:403
+#: libuser.c:415
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: પાસવર્ડ એજીંગ માટે વપરાશકર્તા ખાતાને કોઈ આધાર નથી.\n"
 
-#: passwd.c:158
+#: passwd.c:157
 msgid "keep non-expired authentication tokens"
 msgstr "નહિં-સમયસમાપ્ત થયેલ સત્તાધિકરણ ટોકનો સાચવો"
 
-#: passwd.c:160
+#: passwd.c:159
 msgid ""
 "delete the password for the named account (root only); also removes password "
 "lock if any"
 msgstr ""
 
-#: passwd.c:163
+#: passwd.c:162
 msgid "lock the password for the named account (root only)"
 msgstr ""
 
-#: passwd.c:166
+#: passwd.c:165
 msgid "unlock the password for the named account (root only)"
 msgstr ""
 
-#: passwd.c:169
+#: passwd.c:168
 msgid "expire the password for the named account (root only)"
 msgstr ""
 
-#: passwd.c:172
+#: passwd.c:171
 msgid "force operation"
 msgstr "દબાણ પ્રક્રિયા"
 
-#: passwd.c:174
+#: passwd.c:173
 msgid "maximum password lifetime (root only)"
 msgstr "મહત્તમ પાસવર્ડ જીવનસમય (માત્ર રુટ)"
 
-#: passwd.c:176
+#: passwd.c:175
 msgid "minimum password lifetime (root only)"
 msgstr "ન્યૂનતમ પાસવર્ડ જીવનસમય (માત્ર રુટ)"
 
-#: passwd.c:178
+#: passwd.c:177
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr ""
-"પાસવર્ડ સમયસમાપ્તિ પહેલાં વપરાશકર્તાઓ ચેતવણી મેળવે તે દિવસોની સંખ્યા (માત્ર "
-"રુટ)"
+msgstr "પાસવર્ડ સમયસમાપ્તિ પહેલાં વપરાશકર્તાઓ ચેતવણી મેળવે તે દિવસોની સંખ્યા (માત્ર રુટ)"
 
-#: passwd.c:181
+#: passwd.c:180
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
 msgstr ""
-"પાસવર્ડ સમયસમાપ્ત થાય પછી જ્યારે ખાતું નિષ્ક્રિય બની જાય તે દિવસોની સંખ્યા "
-"(માત્ર રુટ)"
+"પાસવર્ડ સમયસમાપ્ત થાય પછી જ્યારે ખાતું નિષ્ક્રિય બની જાય તે દિવસોની સંખ્યા (માત્ર રુટ)"
 
-#: passwd.c:184
+#: passwd.c:183
 msgid "report password status on the named account (root only)"
 msgstr "નામવાળા ખાતા પર પાસવર્ડ પરિસ્થિતિનો અહેવાલ આપો (માત્ર રુટ)"
 
-#: passwd.c:187
+#: passwd.c:186
 msgid "read new tokens from stdin (root only)"
 msgstr "stdin માંથી નવા ટોકનો વાંચો (માત્ર રુટ)"
 
-#: passwd.c:194
+#: passwd.c:193
 msgid "[OPTION...] <accountName>"
 msgstr "[OPTION...] <accountName>"
 
-#: passwd.c:197
+#: passwd.c:196
 #, c-format
 msgid "%s: bad argument %s: %s\n"
 msgstr "%s: ખરાબ દલીલ %s: %s\n"
 
-#: passwd.c:258
+#: passwd.c:257
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr "%s: માત્ર -l, -u, -d, -S માંનુ એક સ્પષ્ટ થયેલ હોઈ શકે.\n"
 
-#: passwd.c:267
+#: passwd.c:266
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr "%s: -l, -u, -d, -S અને -i, -n, -w, -x માંનુ એક મિશ્ર કરી શકતા નથી.\n"
 
-#: passwd.c:286
+#: passwd.c:282
 #, c-format
 msgid "Only root can do that.\n"
 msgstr "માત્ર રુટ આવું કરી શકે છે.\n"
 
-#: passwd.c:299
+#: passwd.c:295
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
 msgstr "%s: માત્ર રુટ જ વપરાશકર્તા નામ સ્પષ્ટ કરી શકે છે.\n"
 
-#: passwd.c:308
+#: passwd.c:304
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
 msgstr "%s: પૂરું પાડેલ વપરાશકર્તા નામ ખૂબ લાંબુ છે.\n"
 
-#: passwd.c:318
+#: passwd.c:314
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
 msgstr "%s: માત્ર એક વપરાશકર્તા નામ સ્પષ્ટ થયેલ હશે.\n"
 
-#: passwd.c:328
+#: passwd.c:324
 #, c-format
 msgid "%s: This option requires a user name.\n"
 msgstr "%s: આ વિકલ્પ માટે વપરાશકર્તા નામ જરૂરી છે.\n"
 
-#: passwd.c:339
+#: passwd.c:335
 #, c-format
 msgid "%s: Can not identify you!\n"
 msgstr "%s: તમને ઓળખાવી શકતા નથી!\n"
 
-#: passwd.c:348 passwd.c:383
+#: passwd.c:344 passwd.c:379
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: અજ્ઞાત વપરાશકર્તા નામ '%s'.\n"
 
-#: passwd.c:392
+#: passwd.c:388
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
 msgstr ""
 
-#: passwd.c:402
+#: passwd.c:398
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr "વપરાશકર્તા %s માટે પાસવર્ડને તાળું મારી રહ્યા છીએ.\n"
 
-#: passwd.c:406 passwd.c:418 passwd.c:433 passwd.c:444 passwd.c:464
+#: passwd.c:402 passwd.c:414 passwd.c:429 passwd.c:440 passwd.c:458
 msgid "Success"
 msgstr "સફળ"
 
-#: passwd.c:406 passwd.c:421
+#: passwd.c:402 passwd.c:417
 msgid "Error (password not set?)"
 msgstr "ભૂલ (પાસવર્ડ સુયોજિત નથી?)"
 
-#: passwd.c:414
+#: passwd.c:410
 #, c-format
 msgid "Unlocking password for user %s.\n"
 msgstr "વપરાશકર્તા %s માટે પાસવર્ડને તાળું મારી રહ્યા છીએ.\n"
 
-#: passwd.c:420
+#: passwd.c:416
 msgid "Unsafe operation (use -f to force)"
 msgstr "અસુરક્ષિત પ્રક્રિયા (દબાણ કરવા માટે -f વાપરો)"
 
-#: passwd.c:429
+#: passwd.c:425
 #, c-format
 msgid "Expiring password for user %s.\n"
 msgstr ""
 
-#: passwd.c:433 passwd.c:444 passwd.c:464
+#: passwd.c:429 passwd.c:440 passwd.c:458
 msgid "Error"
 msgstr "ભૂલ"
 
-#: passwd.c:441
+#: passwd.c:437
 #, c-format
 msgid "Removing password for user %s.\n"
 msgstr "વપરાશકર્તા %s માટે પાસવર્ડ દૂર કરી રહ્યા છીએ.\n"
 
-#: passwd.c:461
+#: passwd.c:455
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
 msgstr "વપરાશકર્તા %s માટે એજીંગ માહિતી સંતુલિત કરી રહ્યા છીએ.\n"
 
-#: passwd.c:477
+#: passwd.c:471
 #, c-format
 msgid "Changing password for user %s.\n"
 msgstr "વપરાશકર્તા %s માટે પાસવર્ડ બદલી રહ્યા છીએ.\n"
@@ -256,27 +259,32 @@ msgstr "વપરાશકર્તા %s માટે પાસવર્ડ બ
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s: stdin માંથી વાંચવામાં ભૂલ: %s\n"
 
-#: passwd.c:506
+#: passwd.c:496
+#, c-format
+msgid "%s: password too long, maximum is %zu"
+msgstr ""
+
+#: passwd.c:515
 #, c-format
 msgid "%s: unable to start pam: %s\n"
 msgstr "%s: pam શરૂ કરવામાં અસમર્થ: %s\n"
 
-#: passwd.c:519
+#: passwd.c:528
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
 msgstr "%s: ppm માટે tty સુયોજિત કરવામાં અસમર્થ: %s\n"
 
-#: passwd.c:530
+#: passwd.c:539
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
 msgstr "%s: નિષ્ફળતા વિલંબ સુયોજિત કરવામાં અસમર્થ: %s\n"
 
-#: passwd.c:548
+#: passwd.c:553
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
 msgstr "%s: સમયસમાપ્ત થયેલ સત્તાધિકરણ ટોકનો સફળતાપૂર્વક સુધારાઈ ગયા.\n"
 
-#: passwd.c:554
+#: passwd.c:556
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: બધા સત્તાધિકરણ ટોકનો સફળતાપૂર્વક સુધારાઈ ગયા.\n"

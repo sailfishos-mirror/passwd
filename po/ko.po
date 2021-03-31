@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Red Hat, Inc.
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Automatically generated, 2006
 # eukim <eukim@redhat.com>, 2007, 2009
@@ -11,15 +11,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2015-05-23 07:02+0200\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-03-29 22:08+0200\n"
 "PO-Revision-Date: 2015-11-19 10:03-0500\n"
 "Last-Translator: MinWoo Joh <igtzhsou@naver.com>\n"
 "Language-Team: Korean (http://www.transifex.com/projects/p/fedora/language/"
 "ko/)\n"
 "Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Zanata 4.6.2\n"
 
@@ -36,215 +36,225 @@ msgstr "경고: 잠금 해제된 비밀번호는 공백이 됩니다."
 msgid "Note: deleting a password also unlocks the password."
 msgstr "주의: 비밀번호를 삭제하면 잠금이 해제됩니다."
 
-#: libuser.c:267
+#: libuser.c:268
 msgid "Corrupted passwd entry."
 msgstr "손상된 passwd 항목."
 
-#: libuser.c:284
+#: libuser.c:286 libuser.c:319
 msgid "Empty password."
 msgstr "비밀번호를 입력해 주세요."
 
-#: libuser.c:287
+#: libuser.c:289
 msgid "Password locked."
 msgstr "비밀 번호가 잠겨있습니다."
 
-#: libuser.c:291
+#: libuser.c:293
 msgid "Password set, MD5 crypt."
 msgstr "비밀번호가 설정되어있습니다 , MD5 암호화."
 
-#: libuser.c:294
+#: libuser.c:296
 msgid "Password set, blowfish crypt."
 msgstr "비밀번호가 설정되어있습니다, blowfish 암호화"
 
-#: libuser.c:297
+#: libuser.c:299
 msgid "Password set, SHA256 crypt."
 msgstr "비밀번호가 설정되어있습니다, SHA256 암호화. "
 
-#: libuser.c:300
+#: libuser.c:302
 msgid "Password set, SHA512 crypt."
 msgstr "비밀번호가 설정되어있습니다, SHA512 암호화.  "
 
-#: libuser.c:302
+#: libuser.c:304
 msgid "Password set, unknown crypt variant."
 msgstr "비밀번호가 설정되어있습니다, 알 수 없는 암호화 유형."
 
-#: libuser.c:305
+#: libuser.c:307
 msgid "Alternate authentication scheme in use."
 msgstr "다른 인증 스키마가 사용 중입니다."
 
-#: libuser.c:310
+#: libuser.c:312
 msgid "Password set, DES crypt."
 msgstr "비밀번호가 설정되어있습니다, DES 암호화"
 
-#: libuser.c:323
+#: libuser.c:317
+msgid ""
+"There is a password information set in /etc/shadow, but the password field "
+"in /etc/passwd is empty."
+msgstr ""
+
+#: libuser.c:335
 #, c-format
 msgid "No password set.\n"
 msgstr "비밀번호가 설정되어 있지 않습니다.\n"
 
-#: libuser.c:328
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "알 수 없는 사용자.\n"
 
-#: libuser.c:403
+#: libuser.c:415
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: 사용자 계정이 비밀번호 사용 기한을 지원하지 않습니다.\n"
 
-#: passwd.c:158
+#: passwd.c:157
 msgid "keep non-expired authentication tokens"
 msgstr "만기되지 않는 인증 토큰 사용"
 
-#: passwd.c:160
+#: passwd.c:159
 msgid ""
 "delete the password for the named account (root only); also removes password "
 "lock if any"
-msgstr "이름이 지정된 계정의 비밀 번호를 삭제하기 (root로만 실행 가능); 존재하는 비밀번호 잠금도 해제됩니다 "
+msgstr ""
+"이름이 지정된 계정의 비밀 번호를 삭제하기 (root로만 실행 가능); 존재하는 비밀"
+"번호 잠금도 해제됩니다 "
 
-#: passwd.c:163
+#: passwd.c:162
 msgid "lock the password for the named account (root only)"
 msgstr "이름이 지정된 계정의 비밀 번호를 잠그기 (root로만 실행 가능) "
 
-#: passwd.c:166
+#: passwd.c:165
 msgid "unlock the password for the named account (root only)"
 msgstr "이름이 지정된 계정의 비밀번호를 잠금 해제하기 (root로만 실행 가능)  "
 
-#: passwd.c:169
+#: passwd.c:168
 msgid "expire the password for the named account (root only)"
 msgstr "이름이 지정된 계정의 비밀 번호 만료시키기 (root로만 실행 가능) "
 
-#: passwd.c:172
+#: passwd.c:171
 msgid "force operation"
 msgstr "강제로 실행하기"
 
-#: passwd.c:174
+#: passwd.c:173
 msgid "maximum password lifetime (root only)"
 msgstr "비밀번호 최대 유효기간 (root로만 실행 가능)"
 
-#: passwd.c:176
+#: passwd.c:175
 msgid "minimum password lifetime (root only)"
 msgstr "비밀번호 최소 유효기간 (root로만 실행 가능)"
 
-#: passwd.c:178
+#: passwd.c:177
 msgid ""
 "number of days warning users receives before password expiration (root only)"
-msgstr "비밀번호가 만료되기 전 사용자에게 주어지는 경고 기간 (root로만 실행 가능)"
+msgstr ""
+"비밀번호가 만료되기 전 사용자에게 주어지는 경고 기간 (root로만 실행 가능)"
 
-#: passwd.c:181
+#: passwd.c:180
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
 msgstr "비밀번호 만료 후 계정이 비활성화되는 기간 (root로만 실행 가능)"
 
-#: passwd.c:184
+#: passwd.c:183
 msgid "report password status on the named account (root only)"
 msgstr "named 계정에 비밀 번호 상태 보고하기 (root로만 실행 가능)"
 
-#: passwd.c:187
+#: passwd.c:186
 msgid "read new tokens from stdin (root only)"
 msgstr "stdin에서 새 토큰을 읽기 (root로만 실행 가능)"
 
-#: passwd.c:194
+#: passwd.c:193
 msgid "[OPTION...] <accountName>"
 msgstr "[옵션...] <accountName>"
 
-#: passwd.c:197
+#: passwd.c:196
 #, c-format
 msgid "%s: bad argument %s: %s\n"
 msgstr "%s: 잘못된 인수 %s: %s\n"
 
-#: passwd.c:258
+#: passwd.c:257
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr "%s:  -l, -u, -d, -S 중 하나만을 지정할 수 있습니다.\n"
 
-#: passwd.c:267
+#: passwd.c:266
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: -l, -u, -d, -S 중 하나 또는 -i, -n, -w, -x 중 하나를 혼용할 수 없음.\n"
+msgstr ""
+"%s: -l, -u, -d, -S 중 하나 또는 -i, -n, -w, -x 중 하나를 혼용할 수 없음.\n"
 
-#: passwd.c:286
+#: passwd.c:282
 #, c-format
 msgid "Only root can do that.\n"
 msgstr "root로만 실행할 수 있습니다.\n"
 
-#: passwd.c:299
+#: passwd.c:295
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
 msgstr "%s: root로만 사용자 이름을 지정할 수 있습니다.\n"
 
-#: passwd.c:308
+#: passwd.c:304
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
 msgstr "%s: 사용자 이름이 너무 깁니다.\n"
 
-#: passwd.c:318
+#: passwd.c:314
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
 msgstr "%s: 한 개의 사용자 이름만을 지정할 수 있습니다.\n"
 
-#: passwd.c:328
+#: passwd.c:324
 #, c-format
 msgid "%s: This option requires a user name.\n"
 msgstr "%s: 이 옵션에 사용자 이름이 필요합니다.\n"
 
-#: passwd.c:339
+#: passwd.c:335
 #, c-format
 msgid "%s: Can not identify you!\n"
 msgstr "%s: 사용자를 확인할 수 없습니다!\n"
 
-#: passwd.c:348 passwd.c:383
+#: passwd.c:344 passwd.c:379
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: 알 수 없는 사용자 이름 '%s'.\n"
 
-#: passwd.c:392
+#: passwd.c:388
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
 msgstr "%s: SELinux의 보안 정책에 따라 액세스를 거부합니다.\n"
 
-#: passwd.c:402
+#: passwd.c:398
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr "%s 사용자의 비밀 번호를 잠급니다\n"
 
-#: passwd.c:406 passwd.c:418 passwd.c:433 passwd.c:444 passwd.c:464
+#: passwd.c:402 passwd.c:414 passwd.c:429 passwd.c:440 passwd.c:458
 msgid "Success"
 msgstr "성공"
 
-#: passwd.c:406 passwd.c:421
+#: passwd.c:402 passwd.c:417
 msgid "Error (password not set?)"
 msgstr "오류 (비밀 번호가 설정되어 있나요?)"
 
-#: passwd.c:414
+#: passwd.c:410
 #, c-format
 msgid "Unlocking password for user %s.\n"
 msgstr "%s 사용자의 비밀 번호 잠금 해제 중\n"
 
-#: passwd.c:420
+#: passwd.c:416
 msgid "Unsafe operation (use -f to force)"
 msgstr "안전하지 않은 명령 (-f를 사용하여 강제함)"
 
-#: passwd.c:429
+#: passwd.c:425
 #, c-format
 msgid "Expiring password for user %s.\n"
 msgstr "사용자 %s의 비밀 번호를 만료 중.\n"
 
-#: passwd.c:433 passwd.c:444 passwd.c:464
+#: passwd.c:429 passwd.c:440 passwd.c:458
 msgid "Error"
 msgstr "오류"
 
-#: passwd.c:441
+#: passwd.c:437
 #, c-format
 msgid "Removing password for user %s.\n"
 msgstr "%s 사용자의 비밀 번호 삭제 중\n"
 
-#: passwd.c:461
+#: passwd.c:455
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
 msgstr "%s 사용자의 사용 기한 데이터 조정 중\n"
 
-#: passwd.c:477
+#: passwd.c:471
 #, c-format
 msgid "Changing password for user %s.\n"
 msgstr "%s 사용자의 비밀 번호 변경 중\n"
@@ -254,27 +264,32 @@ msgstr "%s 사용자의 비밀 번호 변경 중\n"
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s: stdin에서 읽기 오류: %s\n"
 
-#: passwd.c:506
+#: passwd.c:496
+#, c-format
+msgid "%s: password too long, maximum is %zu"
+msgstr ""
+
+#: passwd.c:515
 #, c-format
 msgid "%s: unable to start pam: %s\n"
 msgstr "%s: pam 시작 불가능: %s\n"
 
-#: passwd.c:519
+#: passwd.c:528
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
 msgstr "%s: pam의 tty 설정 불가능: %s\n"
 
-#: passwd.c:530
+#: passwd.c:539
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
 msgstr "%s: 실패 지연 설정 불가능: %s\n"
 
-#: passwd.c:548
+#: passwd.c:553
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
 msgstr "%s: 만기된 인증 토큰이 성공적으로 업데이트 되었습니다.\n"
 
-#: passwd.c:554
+#: passwd.c:556
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.\n"

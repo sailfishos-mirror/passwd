@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: passwd\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2018-04-01 02:30+0200\n"
+"POT-Creation-Date: 2021-03-29 22:08+0200\n"
 "PO-Revision-Date: 2011-11-28 13:42+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,57 +31,63 @@ msgstr ""
 msgid "Note: deleting a password also unlocks the password."
 msgstr ""
 
-#: libuser.c:267
+#: libuser.c:268
 msgid "Corrupted passwd entry."
 msgstr ""
 
-#: libuser.c:284
+#: libuser.c:286 libuser.c:319
 msgid "Empty password."
 msgstr ""
 
-#: libuser.c:287
+#: libuser.c:289
 msgid "Password locked."
 msgstr ""
 
-#: libuser.c:291
+#: libuser.c:293
 msgid "Password set, MD5 crypt."
 msgstr ""
 
-#: libuser.c:294
+#: libuser.c:296
 msgid "Password set, blowfish crypt."
 msgstr ""
 
-#: libuser.c:297
+#: libuser.c:299
 msgid "Password set, SHA256 crypt."
 msgstr ""
 
-#: libuser.c:300
+#: libuser.c:302
 msgid "Password set, SHA512 crypt."
 msgstr ""
 
-#: libuser.c:302
+#: libuser.c:304
 msgid "Password set, unknown crypt variant."
 msgstr ""
 
-#: libuser.c:305
+#: libuser.c:307
 msgid "Alternate authentication scheme in use."
 msgstr ""
 
-#: libuser.c:310
+#: libuser.c:312
 msgid "Password set, DES crypt."
 msgstr ""
 
-#: libuser.c:323
+#: libuser.c:317
+msgid ""
+"There is a password information set in /etc/shadow, but the password field "
+"in /etc/passwd is empty."
+msgstr ""
+
+#: libuser.c:335
 #, c-format
 msgid "No password set.\n"
 msgstr ""
 
-#: libuser.c:328
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr ""
 
-#: libuser.c:403
+#: libuser.c:415
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr ""
