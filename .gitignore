@@ -1,4 +1,5 @@
 *~
+/.deps
 /.zanata-cache/etag-cache.xml
 /admin/ar-lib
 /admin/compile
@@ -10,10 +11,14 @@
 /admin/missing
 /autom4te.cache
 /man/ja/Makefile.in
+/man/ja/Makefile
 /m4
 /po/*.gmo
 /po/Makefile.in.in
+/po/Makefile.in
+/po/Makefile
 /po/Makevars.template
+/po/POTFILES
 /po/Rules-quot
 /po/boldquot.sed
 /po/en@boldquot.header
@@ -21,11 +26,17 @@
 /po/insert-header.sin
 /po/quot.sed
 /po/remove-potcdate.sin
+/po/remove-potcdate.sed
 /ABOUT-NLS
 /Makefile.in
 /aclocal.m4
 /config.h.in
+/config.h
+/config.log
+/config.status
 /configure
 /INSTALL
+/Makefile
+/stamp-h1
 
 /build
