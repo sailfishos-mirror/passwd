@@ -1,7 +1,19 @@
 2021-03-31  Jiri Kucera <jkucera@redhat.com>
 
 	* LINGUAS: Added Nepali to the list of languages.
+	* LINGUAS: Remove unused (empty) translations.
 	* ne.po: New file.
+	* cy.po: File removed.
+	* et.po: File removed.
+	* gl.po: File removed.
+	* he.po: File removed.
+	* hy.po: File removed.
+	* ku.po: File removed.
+	* lo.po: File removed.
+	* my.po: File removed.
+	* ur.po: File removed.
+	* vi.po: File removed.
+	* wa.po: File removed.
 
 2006-12-13  Runa Bhattacharjee <runab@redhat.com>
 
