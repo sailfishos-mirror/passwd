@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2015-05-23 07:02+0200\n"
-"PO-Revision-Date: 2021-03-06 23:01+0000\n"
+"PO-Revision-Date: 2021-04-04 05:01+0000\n"
 "Last-Translator: simmon <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/passwd/"
 "master/ko/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.5.3\n"
 
 #: libuser.c:91
 #, c-format
@@ -81,7 +81,7 @@ msgstr "비밀번호가 설정되어 있습니다, DES 암호화."
 msgid ""
 "There is a password information set in /etc/shadow, but the password field "
 "in /etc/passwd is empty."
-msgstr ""
+msgstr "/etc/shadow에 비밀번호 정보 설정이 있으며, /etc/passwd에 있는 비밀번호 부분은 비워져 있습니다."
 
 #: libuser.c:335
 #, c-format
@@ -266,7 +266,7 @@ msgstr "%s: stdin에서 읽기 오류: %s\n"
 #: passwd.c:496
 #, c-format
 msgid "%s: password too long, maximum is %zu"
-msgstr ""
+msgstr "%s: 비밀번호가 너무 길고, 최대 값은 %zu입니다"
 
 #: passwd.c:515
 #, c-format
