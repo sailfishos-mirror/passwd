@@ -7,13 +7,14 @@
 # Ville-Pekka Vainio <vpvainio@iki.fi>, 2012
 # Juhani Numminen <juhaninumminen0@gmail.com>, 2016. #zanata
 # Ricky Tigg <ricky.tigg@gmail.com>, 2020, 2021.
+# Jan Kuparinen <copper_fin@hotmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2015-05-23 07:02+0200\n"
-"PO-Revision-Date: 2021-02-13 11:40+0000\n"
-"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
+"PO-Revision-Date: 2021-04-20 10:42+0000\n"
+"Last-Translator: Jan Kuparinen <copper_fin@hotmail.com>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/passwd/"
 "master/fi/>\n"
 "Language: fi\n"
@@ -21,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.6\n"
 
 #: libuser.c:91
 #, c-format
@@ -81,6 +82,8 @@ msgid ""
 "There is a password information set in /etc/shadow, but the password field "
 "in /etc/passwd is empty."
 msgstr ""
+"Salasanatiedot on asetettu tiedostoon /etc/shadow, mutta salasanakenttä /etc/"
+"passwd-tiedostossa on tyhjä."
 
 #: libuser.c:335
 #, c-format
@@ -271,7 +274,7 @@ msgstr "%s: virhe luettaessa oletussyötteestä %s\n"
 #: passwd.c:496
 #, c-format
 msgid "%s: password too long, maximum is %zu"
-msgstr ""
+msgstr "%s: salasana on liian pitkä, enimmäispituus on %zu"
 
 #: passwd.c:515
 #, c-format
