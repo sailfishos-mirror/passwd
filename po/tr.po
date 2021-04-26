@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
-"POT-Creation-Date: 2015-05-23 07:02+0200\n"
+"POT-Creation-Date: 2021-03-29 22:08+0200\n"
 "PO-Revision-Date: 2020-12-09 20:36+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://translate.fedoraproject.org/projects/passwd/"
@@ -38,66 +38,72 @@ msgstr "Uyarı: kilidi açılan parola boş olacak."
 msgid "Note: deleting a password also unlocks the password."
 msgstr "Not: parolanın silinmesi, parolanın kilidini de açacaktır."
 
-#: libuser.c:267
+#: libuser.c:268
 msgid "Corrupted passwd entry."
 msgstr "Bozuk passwd girdisi."
 
-#: libuser.c:284
+#: libuser.c:286 libuser.c:319
 msgid "Empty password."
 msgstr "Boş parola."
 
-#: libuser.c:287
+#: libuser.c:289
 msgid "Password locked."
 msgstr "Parola kilitli."
 
-#: libuser.c:291
+#: libuser.c:293
 msgid "Password set, MD5 crypt."
 msgstr "Parola ayarlandı, MD5 şifrelemeli."
 
-#: libuser.c:294
+#: libuser.c:296
 msgid "Password set, blowfish crypt."
 msgstr "Parola ayarlandı, Blowfish şifrelemeli."
 
-#: libuser.c:297
+#: libuser.c:299
 msgid "Password set, SHA256 crypt."
 msgstr "Parola ayarlandı, SHA256 şifrelemeli."
 
-#: libuser.c:300
+#: libuser.c:302
 msgid "Password set, SHA512 crypt."
 msgstr "Parola ayarlandı, SHA512 şifrelemeli."
 
-#: libuser.c:302
+#: libuser.c:304
 msgid "Password set, unknown crypt variant."
 msgstr "Parola ayarlandı, bilinmeyen şifreleme türü."
 
-#: libuser.c:305
+#: libuser.c:307
 msgid "Alternate authentication scheme in use."
 msgstr "Alternatif kimlik doğrulama şeması kullanımda."
 
-#: libuser.c:310
+#: libuser.c:312
 msgid "Password set, DES crypt."
 msgstr "Parola ayarlandı, DES şifrelemeli."
 
-#: libuser.c:323
+#: libuser.c:317
+msgid ""
+"There is a password information set in /etc/shadow, but the password field "
+"in /etc/passwd is empty."
+msgstr ""
+
+#: libuser.c:335
 #, c-format
 msgid "No password set.\n"
 msgstr "Parola ayarlanmadı.\n"
 
-#: libuser.c:328
+#: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
 msgstr "Bilinmeyen kullanıcı.\n"
 
-#: libuser.c:403
+#: libuser.c:415
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
 msgstr "%s: kullanıcı hesabında parola yaşlandırma desteği yok.\n"
 
-#: passwd.c:158
+#: passwd.c:157
 msgid "keep non-expired authentication tokens"
 msgstr "süresi sona ermemiş kimlik belirteçlerini tut"
 
-#: passwd.c:160
+#: passwd.c:159
 msgid ""
 "delete the password for the named account (root only); also removes password "
 "lock if any"
@@ -105,156 +111,156 @@ msgstr ""
 "verilen hesabın parolasını sil (yalnızca root); eğer varsa parola kilidini "
 "de kaldırır"
 
-#: passwd.c:163
+#: passwd.c:162
 msgid "lock the password for the named account (root only)"
 msgstr "verilen hesabın parolasını kilitle (yalnızca root)"
 
-#: passwd.c:166
+#: passwd.c:165
 msgid "unlock the password for the named account (root only)"
 msgstr "verilen hesabın parolasının kilidini aç (yalnızca root)"
 
-#: passwd.c:169
+#: passwd.c:168
 msgid "expire the password for the named account (root only)"
 msgstr "verilen hesabın parolasının süresini sona erdir (yalnızca root)"
 
-#: passwd.c:172
+#: passwd.c:171
 msgid "force operation"
 msgstr "işlemi zorla"
 
-#: passwd.c:174
+#: passwd.c:173
 msgid "maximum password lifetime (root only)"
 msgstr "gün olarak en uzun parola ömrü (yalnızca root)"
 
-#: passwd.c:176
+#: passwd.c:175
 msgid "minimum password lifetime (root only)"
 msgstr "gün olarak en kısa parola ömrü (yalnızca root)"
 
-#: passwd.c:178
+#: passwd.c:177
 msgid ""
 "number of days warning users receives before password expiration (root only)"
 msgstr ""
 "parola zaman aşımı öncesi kullanıcıların uyarı alacağı gün sayısı (yalnızca "
 "root)"
 
-#: passwd.c:181
+#: passwd.c:180
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
 msgstr ""
-"bir hesabın devre dışı olacağı parola zaman aşımı sonrası gün sayısı ("
-"yalnızca root)"
+"bir hesabın devre dışı olacağı parola zaman aşımı sonrası gün sayısı "
+"(yalnızca root)"
 
-#: passwd.c:184
+#: passwd.c:183
 msgid "report password status on the named account (root only)"
 msgstr "verilen hesabın parola durumunu bildir (yalnızca root)"
 
-#: passwd.c:187
+#: passwd.c:186
 msgid "read new tokens from stdin (root only)"
 msgstr "stdin'den yeni belirteçleri oku (yalnızca root)"
 
-#: passwd.c:194
+#: passwd.c:193
 msgid "[OPTION...] <accountName>"
 msgstr "[SEÇENEK...] <hesap_adı>"
 
-#: passwd.c:197
+#: passwd.c:196
 #, c-format
 msgid "%s: bad argument %s: %s\n"
 msgstr "%s: hatalı argüman %s: %s\n"
 
-#: passwd.c:258
+#: passwd.c:257
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
 msgstr "%s: -l, -u, -d, -S seçeneklerinden yalnızca biri belirtilebilir.\n"
 
-#: passwd.c:267
+#: passwd.c:266
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr ""
 "%s: -l, -u, -d, -S seçeneklerinden birisi ile -i, -n, -w, -x seçeneklerinden "
 "birisi beraber kullanılamaz.\n"
 
-#: passwd.c:286
+#: passwd.c:282
 #, c-format
 msgid "Only root can do that.\n"
 msgstr "Bunu yalnızca root yapabilir.\n"
 
-#: passwd.c:299
+#: passwd.c:295
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
 msgstr "%s: Yalnızca root bir kullanıcı adı belirtebilir.\n"
 
-#: passwd.c:308
+#: passwd.c:304
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
 msgstr "%s: Verilen kullanıcı adı çok uzun.\n"
 
-#: passwd.c:318
+#: passwd.c:314
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
 msgstr "%s: Yalnızca bir kullanıcı adı belirtilebilir.\n"
 
-#: passwd.c:328
+#: passwd.c:324
 #, c-format
 msgid "%s: This option requires a user name.\n"
 msgstr "%s: Bu seçenek bir kullanıcı adı gerektirir.\n"
 
-#: passwd.c:339
+#: passwd.c:335
 #, c-format
 msgid "%s: Can not identify you!\n"
 msgstr "%s: Kimliğiniz teşhis edilemedi!\n"
 
-#: passwd.c:348 passwd.c:383
+#: passwd.c:344 passwd.c:379
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
 msgstr "%s: Bilinmeyen kullanıcı adı '%s'.\n"
 
-#: passwd.c:392
+#: passwd.c:388
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
 msgstr "%s: SELinux, güvenlik politikası nedeniyle erişimi engelliyor.\n"
 
-#: passwd.c:402
+#: passwd.c:398
 #, c-format
 msgid "Locking password for user %s.\n"
 msgstr "%s kullanıcısı için parola kilitleniyor.\n"
 
-#: passwd.c:406 passwd.c:418 passwd.c:433 passwd.c:444 passwd.c:464
+#: passwd.c:402 passwd.c:414 passwd.c:429 passwd.c:440 passwd.c:458
 msgid "Success"
 msgstr "Başarılı"
 
-#: passwd.c:406 passwd.c:421
+#: passwd.c:402 passwd.c:417
 msgid "Error (password not set?)"
 msgstr "Hata (parola ayarlanmadı mı?)"
 
-#: passwd.c:414
+#: passwd.c:410
 #, c-format
 msgid "Unlocking password for user %s.\n"
 msgstr "%s kullanıcısı için parolanın kilidi açılıyor.\n"
 
-#: passwd.c:420
+#: passwd.c:416
 msgid "Unsafe operation (use -f to force)"
 msgstr "Güvenli olmayan işlem (zorlamak için -f kullanın)"
 
-#: passwd.c:429
+#: passwd.c:425
 #, c-format
 msgid "Expiring password for user %s.\n"
 msgstr "%s kullanıcısı için parolanın süresi sona erdiriliyor.\n"
 
-#: passwd.c:433 passwd.c:444 passwd.c:464
+#: passwd.c:429 passwd.c:440 passwd.c:458
 msgid "Error"
 msgstr "Hata"
 
-#: passwd.c:441
+#: passwd.c:437
 #, c-format
 msgid "Removing password for user %s.\n"
 msgstr "%s kullanıcısı için parola kaldırılıyor.\n"
 
-#: passwd.c:461
+#: passwd.c:455
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
 msgstr "%s kullanıcısı için yaşlanma verisi ayarlanıyor.\n"
 
-#: passwd.c:477
+#: passwd.c:471
 #, c-format
 msgid "Changing password for user %s.\n"
 msgstr "%s kullanıcısı için parola değiştiriliyor.\n"
@@ -264,27 +270,32 @@ msgstr "%s kullanıcısı için parola değiştiriliyor.\n"
 msgid "%s: error reading from stdin: %s\n"
 msgstr "%s: stdin'den okuma hatası: %s\n"
 
-#: passwd.c:506
+#: passwd.c:496
+#, c-format
+msgid "%s: password too long, maximum is %zu"
+msgstr ""
+
+#: passwd.c:515
 #, c-format
 msgid "%s: unable to start pam: %s\n"
 msgstr "%s: pam başlatılamıyor: %s\n"
 
-#: passwd.c:519
+#: passwd.c:528
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
 msgstr "%s: pam için tty ayarlanamıyor: %s\n"
 
-#: passwd.c:530
+#: passwd.c:539
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
 msgstr "%s: başarısızlık gecikmesi ayarlanamıyor: %s\n"
 
-#: passwd.c:548
+#: passwd.c:553
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
 msgstr "%s: süresi dolmuş kimlik belirteçleri başarıyla güncellendi.\n"
 
-#: passwd.c:554
+#: passwd.c:556
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr "%s: tüm kimlik doğrulama belirteçleri başarıyla güncellendi.\n"
