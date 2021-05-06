@@ -11,13 +11,14 @@
 # Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2015. #zanata
 # Maxim Therrien <acerspyro@gmail.com>, 2015. #zanata
 # Arnaud T. <listes.00@gmail.com>, 2020.
+# Julien Humbert <julroy67@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2021-03-29 22:08+0200\n"
-"PO-Revision-Date: 2020-12-15 23:06+0000\n"
-"Last-Translator: Arnaud T. <listes.00@gmail.com>\n"
+"PO-Revision-Date: 2021-05-05 13:02+0000\n"
+"Last-Translator: Julien Humbert <julroy67@gmail.com>\n"
 "Language-Team: French <https://translate.fedoraproject.org/projects/passwd/"
 "master/fr/>\n"
 "Language: fr\n"
@@ -25,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.6.1\n"
 
 #: libuser.c:91
 #, c-format
@@ -86,6 +87,8 @@ msgid ""
 "There is a password information set in /etc/shadow, but the password field "
 "in /etc/passwd is empty."
 msgstr ""
+"Il y a un mot de passe défini dans /etc/shadow, mais le champ du mot de "
+"passe dans /etc/passwd est vide."
 
 #: libuser.c:335
 #, c-format
@@ -281,7 +284,7 @@ msgstr "%s : erreur lors de la lecture depuis stdin : %s\n"
 #: passwd.c:496
 #, c-format
 msgid "%s: password too long, maximum is %zu"
-msgstr ""
+msgstr "%s : mot de passe trop long, le maximum est de %zu"
 
 #: passwd.c:515
 #, c-format
