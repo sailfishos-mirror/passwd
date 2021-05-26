@@ -7,20 +7,22 @@
 # Muhammad Panji <sumodirjo@gmail.com>, 2012
 # Teguh Dwicaksana <dheche@songolimo.net>, 2010
 # Ferdi Saptanera <ferdisn@fedoraproject.org>, 2016. #zanata
+# Andika Triwidada <andika@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2021-03-29 22:08+0200\n"
-"PO-Revision-Date: 2016-03-15 03:55-0400\n"
-"Last-Translator: Ferdi Saptanera <ferdisn@fedoraproject.org>\n"
-"Language-Team: Indonesian <trans-id@lists.fedoraproject.org>\n"
+"PO-Revision-Date: 2021-05-26 14:02+0000\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"Language-Team: Indonesian <https://translate.fedoraproject.org/projects/"
+"passwd/master/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Zanata 4.6.2\n"
+"X-Generator: Weblate 4.6.2\n"
 
 #: libuser.c:91
 #, c-format
@@ -37,7 +39,7 @@ msgstr "Catatan: penghapusan kata sandi juga membuka kunci atas kata sandi."
 
 #: libuser.c:268
 msgid "Corrupted passwd entry."
-msgstr "Masukan kata sandi terkorupsi."
+msgstr "Entri kata sandi rusak."
 
 #: libuser.c:286 libuser.c:319
 msgid "Empty password."
@@ -45,7 +47,7 @@ msgstr "Kata sandi kosong."
 
 #: libuser.c:289
 msgid "Password locked."
-msgstr "Kata sandi terkunci"
+msgstr "Kata sandi terkunci."
 
 #: libuser.c:293
 msgid "Password set, MD5 crypt."
@@ -80,6 +82,8 @@ msgid ""
 "There is a password information set in /etc/shadow, but the password field "
 "in /etc/passwd is empty."
 msgstr ""
+"Ada informasi kata sandi yang diatur di /etc/shadow, tapi ruas kata sandi "
+"dalam /etc/passwd kosong."
 
 #: libuser.c:335
 #, c-format
@@ -161,7 +165,7 @@ msgstr "[OPSI...] <namaAkun>"
 #: passwd.c:196
 #, c-format
 msgid "%s: bad argument %s: %s\n"
-msgstr "%s: argumen salah  %s: %s\n"
+msgstr "%s: argumen salah %s: %s\n"
 
 #: passwd.c:257
 #, c-format
@@ -269,7 +273,7 @@ msgstr "%s: kesalahan saat membaca dari stdin: %s\n"
 #: passwd.c:496
 #, c-format
 msgid "%s: password too long, maximum is %zu"
-msgstr ""
+msgstr "%s: kata sandi terlalu panjang, maksimumnya %zu"
 
 #: passwd.c:515
 #, c-format
