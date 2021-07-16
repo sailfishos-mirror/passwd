@@ -1,19 +1,21 @@
 # Viktar Siarheichyk <veq@fedoraproject.org>, 2019. #zanata
+# Yauhen Bugamol <3abac@3a.by>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2021-03-29 22:08+0200\n"
-"PO-Revision-Date: 2019-01-28 04:56-0500\n"
-"Last-Translator: Viktar Siarheichyk <veq@fedoraproject.org>\n"
-"Language-Team: Belarusian\n"
+"PO-Revision-Date: 2021-07-09 00:04+0000\n"
+"Last-Translator: Yauhen Bugamol <3abac@3a.by>\n"
+"Language-Team: Belarusian <https://translate.fedoraproject.org/projects/"
+"passwd/master/be/>\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 4.6.2\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.7.1\n"
 
 #: libuser.c:91
 #, c-format
@@ -62,11 +64,11 @@ msgstr "Пароль зададзены, невядомы варыянт шыф�
 
 #: libuser.c:307
 msgid "Alternate authentication scheme in use."
-msgstr ""
+msgstr "Выкарыстоўваецца альтэрнатыўная схема аўтэнтыфікацыі."
 
 #: libuser.c:312
 msgid "Password set, DES crypt."
-msgstr ""
+msgstr "Пароль зададзены, шыфр DES."
 
 #: libuser.c:317
 msgid ""
@@ -77,12 +79,12 @@ msgstr ""
 #: libuser.c:335
 #, c-format
 msgid "No password set.\n"
-msgstr ""
+msgstr "Пароль не зададзены.\n"
 
 #: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
-msgstr ""
+msgstr "Невядомы карыстальнік.\n"
 
 #: libuser.c:415
 #, c-format
