@@ -4,21 +4,22 @@
 #
 # Translators:
 # Automatically generated, 2006
+# Danial Behzadi <dani.behzi@ubuntu.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2021-03-29 22:08+0200\n"
-"PO-Revision-Date: 2015-03-13 11:33-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Persian (http://www.transifex.com/projects/p/fedora/language/"
-"fa/)\n"
+"PO-Revision-Date: 2021-07-16 17:04+0000\n"
+"Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
+"Language-Team: Persian <https://translate.fedoraproject.org/projects/passwd/"
+"master/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Zanata 4.6.2\n"
+"X-Generator: Weblate 4.7.1\n"
 
 #: libuser.c:91
 #, c-format
@@ -82,12 +83,12 @@ msgstr ""
 #: libuser.c:335
 #, c-format
 msgid "No password set.\n"
-msgstr "گذرواژه‌ای تنظیم ندشه. \n"
+msgstr "گذرواژه‌ای تنظیم نشد.\n"
 
 #: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
-msgstr "کاربر ناشناخته. \n"
+msgstr "کاربر ناشناخته.\n"
 
 #: libuser.c:415
 #, c-format
