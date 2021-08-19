@@ -8,13 +8,13 @@
 # Hasan Alp İNAN <hasanalpinan@gmail.com>, 2012
 # Irmak Bıçakçıgil <red.nihi@gmail.com>, 2013
 # Altan Unsal <altanunsal@gmail.com>, 2016. #zanata
-# Oğuz Ersen <oguzersen@protonmail.com>, 2020.
+# Oğuz Ersen <oguzersen@protonmail.com>, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2021-03-29 22:08+0200\n"
-"PO-Revision-Date: 2020-12-09 20:36+0000\n"
+"PO-Revision-Date: 2021-08-17 15:04+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://translate.fedoraproject.org/projects/passwd/"
 "master/tr/>\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>1);\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.7.2\n"
 
 #: libuser.c:91
 #, c-format
@@ -83,6 +83,8 @@ msgid ""
 "There is a password information set in /etc/shadow, but the password field "
 "in /etc/passwd is empty."
 msgstr ""
+"/etc/shadow dosyasında bir parola bilgisi ayarlandı, ancak /etc/passwd "
+"dosyasında parola alanı boş."
 
 #: libuser.c:335
 #, c-format
@@ -273,7 +275,7 @@ msgstr "%s: stdin'den okuma hatası: %s\n"
 #: passwd.c:496
 #, c-format
 msgid "%s: password too long, maximum is %zu"
-msgstr ""
+msgstr "%s: parola çok uzun, en fazla %zu olabilir"
 
 #: passwd.c:515
 #, c-format
