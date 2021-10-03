@@ -8,14 +8,14 @@
 # Igor Pires Soares <igor@projetofedora.org>, 2006, 2007, 2009
 # Daniel Lara <danniel@fedoraproject.org>, 2016. #zanata
 # Henrique Roberto Gattermann Mittelstaedt <henrique.roberto97@gmail.com>, 2020.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2021-03-29 22:08+0200\n"
-"PO-Revision-Date: 2020-12-09 20:36+0000\n"
-"Last-Translator: Henrique Roberto Gattermann Mittelstaedt <henrique."
-"roberto97@gmail.com>\n"
+"PO-Revision-Date: 2021-10-03 13:00+0000\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.fedoraproject.org/"
 "projects/passwd/master/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.8\n"
 
 #: libuser.c:91
 #, c-format
@@ -83,6 +83,8 @@ msgid ""
 "There is a password information set in /etc/shadow, but the password field "
 "in /etc/passwd is empty."
 msgstr ""
+"Há uma informações da senha definida no /etc/shadow, mas o campo de senha em "
+"/etc/shadow está vazio."
 
 #: libuser.c:335
 #, c-format
@@ -271,7 +273,7 @@ msgstr "%s: erro ao ler do stdin: %s\n"
 #: passwd.c:496
 #, c-format
 msgid "%s: password too long, maximum is %zu"
-msgstr ""
+msgstr "%s: senha longa demais, máximo é %zu"
 
 #: passwd.c:515
 #, c-format
