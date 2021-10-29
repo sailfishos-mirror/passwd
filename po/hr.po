@@ -5,13 +5,14 @@
 # Translators:
 # Automatically generated, 2006
 # Milo Ivir <mail@milotype.de>, 2020.
+# Gogo Gogsi <linux.hr@protonmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2021-03-29 22:08+0200\n"
-"PO-Revision-Date: 2020-12-23 23:35+0000\n"
-"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"PO-Revision-Date: 2021-10-20 18:05+0000\n"
+"Last-Translator: Gogo Gogsi <linux.hr@protonmail.com>\n"
 "Language-Team: Croatian <https://translate.fedoraproject.org/projects/passwd/"
 "master/hr/>\n"
 "Language: hr\n"
@@ -20,12 +21,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.8\n"
 
 #: libuser.c:91
 #, c-format
 msgid "%s: libuser initialization error:"
-msgstr "%s: Libuser pogreška inicijalizacije:"
+msgstr "%s: libuser greška pokretanja:"
 
 #: libuser.c:157
 msgid "Warning: unlocked password would be empty."
@@ -69,7 +70,7 @@ msgstr "Lozinka je postavljena, vrsta šifriranje nije poznata."
 
 #: libuser.c:307
 msgid "Alternate authentication scheme in use."
-msgstr "U upotrebi je alternativna shema provjere autentičnosti."
+msgstr "U upotrebi je zamjenska shema ovjere."
 
 #: libuser.c:312
 msgid "Password set, DES crypt."
@@ -80,11 +81,13 @@ msgid ""
 "There is a password information set in /etc/shadow, but the password field "
 "in /etc/passwd is empty."
 msgstr ""
+"Postoji postavljena informacija lozinke u /etc/shadow, ali polje lozinke u /"
+"etc/je przano."
 
 #: libuser.c:335
 #, c-format
 msgid "No password set.\n"
-msgstr "Lozinka nije zadana.\n"
+msgstr "Lozinka nije postavljena.\n"
 
 #: libuser.c:340
 #, c-format
@@ -94,18 +97,18 @@ msgstr "Nepoznat korisnik.\n"
 #: libuser.c:415
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr "%s: Korisnički nalog nema podršku zastare važenja lozinke.\n"
+msgstr "%s: korisnički račun nema podršku zastare lozinke.\n"
 
 #: passwd.c:157
 msgid "keep non-expired authentication tokens"
-msgstr "Zadržavanje tokena provjere autentičnosti koji nisu istekli"
+msgstr "zadržavanje tokena ovjere koji nisu istekli"
 
 #: passwd.c:159
 msgid ""
 "delete the password for the named account (root only); also removes password "
 "lock if any"
 msgstr ""
-"izbriši lozinku za imenovani račun (samo administrator); također uklanja "
+"obriš lozinku za imenovani račun (samo administrator); također uklanja "
 "zaključavanje lozinke ako postoji"
 
 #: passwd.c:162
@@ -118,11 +121,11 @@ msgstr "otključaj lozinku za imenovani račun (samo administrator)"
 
 #: passwd.c:168
 msgid "expire the password for the named account (root only)"
-msgstr "poništi valjanost lozinke za imenovani račun (samo administrator)"
+msgstr "istek lozinke za imenovani račun (samo administrator)"
 
 #: passwd.c:171
 msgid "force operation"
-msgstr "Prisiljavanje operacije"
+msgstr "prisiljavanje radnje"
 
 #: passwd.c:173
 msgid "maximum password lifetime (root only)"
@@ -144,7 +147,7 @@ msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
 msgstr ""
-"broj dana nakon zastare lozinke kad se račun deaktivira (samo administrator)"
+"broj dana nakon zastare lozinke kad se račun onemogući (samo administrator)"
 
 #: passwd.c:183
 msgid "report password status on the named account (root only)"
@@ -152,28 +155,28 @@ msgstr "prijavi stanje lozinke imenovanog računa (samo administrator)"
 
 #: passwd.c:186
 msgid "read new tokens from stdin (root only)"
-msgstr "čitaj nove tokene iz standardnog unosa (samo administrator)"
+msgstr "čitaj nove tokene iz stdina (samo administrator)"
 
 #: passwd.c:193
 msgid "[OPTION...] <accountName>"
-msgstr "[OPCIJA...] <NazivNaloga>"
+msgstr "[MOGUĆNOST...] <Naziv računa>"
 
 #: passwd.c:196
 #, c-format
 msgid "%s: bad argument %s: %s\n"
-msgstr "%s: Loš argument %s: %s\n"
+msgstr "%s: loš argument %s: %s\n"
 
 #: passwd.c:257
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
-msgstr "%s: Moguće je odrediti samo jedan od argumenata -l, -u, -d, -S.\n"
+msgstr "%s: Samo jedan od -l, -u, -d, -S je moguće odrediti.\n"
 
 #: passwd.c:266
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr ""
-"%s: Nije moguće kombinirati jedan od argumenata -l, -u, -d, -S, s nekim od "
-"argumenata -i, -n, -w, -x.\n"
+"%s: Nemoguće je kombinirati jedan od -l, -u, -d, -S, s jednim od -i, -n, -w, "
+"-x.\n"
 
 #: passwd.c:282
 #, c-format
@@ -188,17 +191,17 @@ msgstr "%s: Samo administrator može odrediti korisničko ime.\n"
 #: passwd.c:304
 #, c-format
 msgid "%s: The user name supplied is too long.\n"
-msgstr "%s: Uneseno korisničko ime suviše je dugo.\n"
+msgstr "%s: Navedeno korisničko ime predugo.\n"
 
 #: passwd.c:314
 #, c-format
 msgid "%s: Only one user name may be specified.\n"
-msgstr "%s: Može se odrediti samo jedno korisničko ime.\n"
+msgstr "%s: Samo jedno korisničko ime se može odrediti.\n"
 
 #: passwd.c:324
 #, c-format
 msgid "%s: This option requires a user name.\n"
-msgstr "%s: Ova opcija zahtijeva korisničko ime.\n"
+msgstr "%s: Ova mogućnost zahtijeva korisničko ime.\n"
 
 #: passwd.c:335
 #, c-format
@@ -213,7 +216,7 @@ msgstr "%s: Nepoznato korisničko ime '%s'.\n"
 #: passwd.c:388
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
-msgstr "%s: SELinux odbija pristup zbog sigurnose politike.\n"
+msgstr "%s: SELinux odbija pristup zbog sigurnosnih pravila.\n"
 
 #: passwd.c:398
 #, c-format
@@ -226,7 +229,7 @@ msgstr "Uspjeh"
 
 #: passwd.c:402 passwd.c:417
 msgid "Error (password not set?)"
-msgstr "Pogreška (Lozinka nije zadana?)"
+msgstr "Greška (Lozinka nije zadana?)"
 
 #: passwd.c:410
 #, c-format
@@ -235,7 +238,7 @@ msgstr "Otključavanje lozinke korisnika %s.\n"
 
 #: passwd.c:416
 msgid "Unsafe operation (use -f to force)"
-msgstr "Nesigurna operacija (za prisiljavanje upotrijebite argument -f)"
+msgstr "Nesigurna radnja (za prisiljavanje koristite -f)"
 
 #: passwd.c:425
 #, c-format
@@ -244,7 +247,7 @@ msgstr "Istek lozinke za korisnika %s.\n"
 
 #: passwd.c:429 passwd.c:440 passwd.c:458
 msgid "Error"
-msgstr "Pogreška"
+msgstr "Greška"
 
 #: passwd.c:437
 #, c-format
@@ -254,45 +257,44 @@ msgstr "Uklanjanje lozinke korisnika %s.\n"
 #: passwd.c:455
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
-msgstr "Prilagođavanje podataka o zastari korisnika %s.\n"
+msgstr "Prilagođavanje podataka zastare za korisnika %s.\n"
 
 #: passwd.c:471
 #, c-format
 msgid "Changing password for user %s.\n"
-msgstr "Izmjena lozinke korisnika %s.\n"
+msgstr "Promjena lozinke korisnika %s.\n"
 
 #: passwd.c:489
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
-msgstr "%s: Pogreška pri čitanju iz stdin: %s\n"
+msgstr "%s: greška pri čitanju iz stdina: %s\n"
 
 #: passwd.c:496
 #, c-format
 msgid "%s: password too long, maximum is %zu"
-msgstr ""
+msgstr "%s: lozinka je predugačka, maksimum je %zu"
 
 #: passwd.c:515
 #, c-format
 msgid "%s: unable to start pam: %s\n"
-msgstr "%s: Nije moguće pokrenuti uslugu pam: %s\n"
+msgstr "%s: Nemoguće pokretanje usluge pam: %s\n"
 
 #: passwd.c:528
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
-msgstr "%s: Nije moguće zadati tty za uslugu pam: %s\n"
+msgstr "%s: Nemoguće postavljanje tty za uslugu pam: %s\n"
 
 #: passwd.c:539
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
-msgstr "%s: Zadavanje zadrške otkazivanje nije moguće: %s\n"
+msgstr "%s: nemoguće postavljanje odgode neuspjeha: %s\n"
 
 #: passwd.c:553
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr ""
-"%s: Zastarjeli tokeni za provjeravanje autentičnosti uspješno su ažurirani.\n"
+msgstr "%s: zastarjeli tokeni ovjere su uspješno nadopunjeni.\n"
 
 #: passwd.c:556
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
-msgstr "%s: Svi tokeni za provjeravanje autentičnosti uspješno su ažurirani.\n"
+msgstr "%s: svi tokeni ovjere uspješno su nadopunjeni.\n"
