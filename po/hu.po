@@ -8,20 +8,22 @@
 # Péter Sulyok <peti@sulyok.hu>, 2007
 # Zoltan Hoppár <hopparz@gmail.com>, 2012
 # Meskó Balázs <meskobalazs@gmail.com>, 2017. #zanata
+# Balázs Meskó <meskobalazs@mailbox.org>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2021-03-29 22:08+0200\n"
-"PO-Revision-Date: 2017-04-01 03:29-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hungarian <trans-hu@lists.fedoraproject.org>\n"
+"PO-Revision-Date: 2021-11-04 22:05+0000\n"
+"Last-Translator: Balázs Meskó <meskobalazs@mailbox.org>\n"
+"Language-Team: Hungarian <https://translate.fedoraproject.org/projects/"
+"passwd/master/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.8\n"
 
 #: libuser.c:91
 #, c-format
@@ -81,6 +83,8 @@ msgid ""
 "There is a password information set in /etc/shadow, but the password field "
 "in /etc/passwd is empty."
 msgstr ""
+"Jelszó-információk vannak beállítva az /etc/shadow fájlban, de a jelszómezű "
+"üres az /etc/passwd fájlban."
 
 #: libuser.c:335
 #, c-format
@@ -274,7 +278,7 @@ msgstr "%s: hiba a szabványos bemenet olvasásakor: %s\n"
 #: passwd.c:496
 #, c-format
 msgid "%s: password too long, maximum is %zu"
-msgstr ""
+msgstr "%s: a jelszó túl hosszú, a maximum %zu"
 
 #: passwd.c:515
 #, c-format
