@@ -7,13 +7,13 @@
 # A S Alam <apbrar@gmail.com>, 2006
 # Automatically generated, 2006
 # A S Alam <aalam@fedoraproject.org>, 2019. #zanata
-# A S Alam <amanpreet.alam@gmail.com>, 2020.
+# A S Alam <amanpreet.alam@gmail.com>, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2021-03-29 22:08+0200\n"
-"PO-Revision-Date: 2020-12-21 07:35+0000\n"
+"PO-Revision-Date: 2022-04-18 16:17+0000\n"
 "Last-Translator: A S Alam <amanpreet.alam@gmail.com>\n"
 "Language-Team: Punjabi <https://translate.fedoraproject.org/projects/passwd/"
 "master/pa/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.11.2\n"
 
 #: libuser.c:91
 #, c-format
@@ -43,7 +43,7 @@ msgstr "ਨਿਕਾਰਾ ਪਾਸਵਰਡ ਐਂਟਰੀ ਹੈ।"
 
 #: libuser.c:286 libuser.c:319
 msgid "Empty password."
-msgstr "ਖਾਲੀ ਪਾਸਵਰਡ"
+msgstr "ਪਾਸਵਰਡ ਖਾਲੀ ਹੈ।"
 
 #: libuser.c:289
 msgid "Password locked."
@@ -51,11 +51,11 @@ msgstr "ਪਾਸਵਰਡ ਲਾਕ ਹੈ।"
 
 #: libuser.c:293
 msgid "Password set, MD5 crypt."
-msgstr "ਪਾਸਵਰਡ ਦਿੱਤਾ, MD੫ ਇੰਕ੍ਰਿਪਟ"
+msgstr "ਪਾਸਵਰਡ ਦਿੱਤਾ, MD5 ਇੰਕ੍ਰਿਪਟ।"
 
 #: libuser.c:296
 msgid "Password set, blowfish crypt."
-msgstr "ਪਾਸਵਰਡ ਦਿੱਤਾ, blowfish ਇੰਕ੍ਰਿਪਟ"
+msgstr "ਪਾਸਵਰਡ ਦਿੱਤਾ, blowfish ਇੰਕ੍ਰਿਪਟ।"
 
 #: libuser.c:299
 msgid "Password set, SHA256 crypt."
@@ -75,13 +75,15 @@ msgstr "ਬਦਲਵਾਂ ਪਰਮਾਣਕਿਤਾ ਸਕੀਮ ਵਰਤੀ
 
 #: libuser.c:312
 msgid "Password set, DES crypt."
-msgstr "ਪਾਸਵਰਡ ਦਿੱਤਾ DES ਦਿੱਤਾ"
+msgstr "ਪਾਸਵਰਡ ਦਿੱਤਾ DES ਕ੍ਰਿਪਟ।"
 
 #: libuser.c:317
 msgid ""
 "There is a password information set in /etc/shadow, but the password field "
 "in /etc/passwd is empty."
 msgstr ""
+"/etc/shadow ਵਿੱਚ ਪਾਸਵਰਡ ਜਾਣਕਾਰੀ ਦਿੱਤੀ ਹੈ, ਪਰ /etc/passwd ਵਿੱਚ ਪਾਸਵਰਡ ਖੇਤਰ "
+"ਖਾਲੀ ਹੈ।"
 
 #: libuser.c:335
 #, c-format
@@ -91,7 +93,7 @@ msgstr "ਕੋਈ ਪਾਸਵਰਡ ਨਹੀਂ ਦਿੱਤਾ।\n"
 #: libuser.c:340
 #, c-format
 msgid "Unknown user.\n"
-msgstr "ਅਣਪਛਾਤਾ ਵਰਤੋਂਕਾਰ।"
+msgstr "ਅਣਪਛਾਤਾ ਵਰਤੋਂਕਾਰ।\n"
 
 #: libuser.c:415
 #, c-format
@@ -130,7 +132,7 @@ msgstr "ਵੱਧ ਤੋਂ ਵੱਧ ਪਾਸਵਰਡ ਉਮਰ (root ਹੀ)
 
 #: passwd.c:175
 msgid "minimum password lifetime (root only)"
-msgstr "ਘੱਟੋ-ਘੱਟ ਪਾਸਵਰਡ ਉਮਰ  (root ਹੀ)"
+msgstr "ਘੱਟੋ-ਘੱਟ ਪਾਸਵਰਡ ਉਮਰ (ਸਿਰਫ਼ root ਹੀ)"
 
 #: passwd.c:177
 msgid ""
@@ -169,8 +171,8 @@ msgstr "%s: -l, -u, -d, -S ਵਿੱਚੋਂ ਕੇਵਲ ਇੱਕ ਹੀ ਦ�
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
 msgstr ""
-"%s:  -l, -u, -d, -S ਵਿੱਚੋਂ ਕੋਈ ਇੱਕ ਤੇ -i, -n, -w, -x ਵਿੱਚੋਂ ਕਿਸੇ ਇੱਕ ਨੂੰ ਮਿਲਾਇਆ ਨਹੀਂ ਜਾ "
-"ਸਕਦਾ\n"
+"%s: -l, -u, -d, -S ਵਿੱਚੋਂ ਕੋਈ ਇੱਕ ਤੇ -i, -n, -w, -x ਵਿੱਚੋਂ ਕਿਸੇ ਇੱਕ ਨੂੰ ਮਿਲਾ"
+"ਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ\n"
 
 #: passwd.c:282
 #, c-format
@@ -237,7 +239,7 @@ msgstr "ਅਸੁਰੱਖਿਅਤ ਕਾਰਵਾਈ (ਧੱਕੇ ਲਈ -f �
 #: passwd.c:425
 #, c-format
 msgid "Expiring password for user %s.\n"
-msgstr "ਵਰਤੋਂਕਾਰ %s ਲਈ ਪਾਸਵਰਡ ਦੀ ਮਿਆਦ ਪੁੱਗ ਰਹੀ ਹੈ।"
+msgstr "ਵਰਤੋਂਕਾਰ %s ਲਈ ਪਾਸਵਰਡ ਦੀ ਮਿਆਦ ਪੁੱਗ ਰਹੀ ਹੈ।\n"
 
 #: passwd.c:429 passwd.c:440 passwd.c:458
 msgid "Error"
@@ -266,7 +268,7 @@ msgstr "%s: stdin ਤੋਂ ਪੜ੍ਹਨ ਲਈ ਅਸਫ਼ਲ: %s\n"
 #: passwd.c:496
 #, c-format
 msgid "%s: password too long, maximum is %zu"
-msgstr ""
+msgstr "%s: ਪਾਸਵਰਡ ਬਹੁਤ ਵੱਡਾ ਹੈ, ਵੱਧ ਤੋਂ ਵੱਧ %zu ਹੈ"
 
 #: passwd.c:515
 #, c-format
