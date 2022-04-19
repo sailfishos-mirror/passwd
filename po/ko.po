@@ -8,13 +8,13 @@
 # eukim <eukim@redhat.com>, 2012
 # MinWoo Joh <igtzhsou@naver.com>, 2015. #zanata
 # simmon <simmon@nplob.com>, 2021.
-# Seong-ho Cho <darkcircle.0426@gmail.com>, 2021.
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2021-03-29 22:08+0200\n"
-"PO-Revision-Date: 2021-07-22 08:04+0000\n"
+"PO-Revision-Date: 2022-04-12 13:17+0000\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/passwd/"
 "master/ko/>\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.7.2\n"
+"X-Generator: Weblate 4.11.2\n"
 
 #: libuser.c:91
 #, c-format
@@ -131,7 +131,7 @@ msgstr "암호 최대 유효기간 (root만 실행 가능)"
 
 #: passwd.c:175
 msgid "minimum password lifetime (root only)"
-msgstr "암호 최소 유효기간(root만 실행 가능)"
+msgstr "암호 최소 유효기간 (root만 실행 가능)"
 
 #: passwd.c:177
 msgid ""
@@ -175,12 +175,12 @@ msgstr ""
 #: passwd.c:282
 #, c-format
 msgid "Only root can do that.\n"
-msgstr "root로만 실행할 수 있습니다.\n"
+msgstr "root 계정에서만 실행할 수 있습니다.\n"
 
 #: passwd.c:295
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
-msgstr "%s: root로만 사용자 이름을 지정할 수 있습니다.\n"
+msgstr "%s: root 계정에서만 사용자 이름을 지정할 수 있습니다.\n"
 
 #: passwd.c:304
 #, c-format
@@ -291,4 +291,4 @@ msgstr "%s: 기한이 끝난 인증 토큰의 업데이트에 성공했습니다
 #: passwd.c:556
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
-msgstr "%s: 모든 인증 토큰이 성공적으로 업데이트 되었습니다.\n"
+msgstr "%s: 모든 인증 토큰을 성공적으로 업데이트했습니다.\n"
