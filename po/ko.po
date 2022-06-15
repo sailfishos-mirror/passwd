@@ -9,13 +9,14 @@
 # MinWoo Joh <igtzhsou@naver.com>, 2015. #zanata
 # simmon <simmon@nplob.com>, 2021.
 # Seong-ho Cho <darkcircle.0426@gmail.com>, 2021, 2022.
+# 김인수 <simmon@nplob.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2021-03-29 22:08+0200\n"
-"PO-Revision-Date: 2022-04-12 13:17+0000\n"
-"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
+"PO-Revision-Date: 2022-06-13 02:21+0000\n"
+"Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/passwd/"
 "master/ko/>\n"
 "Language: ko\n"
@@ -23,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 4.12.2\n"
 
 #: libuser.c:91
 #, c-format
@@ -82,7 +83,8 @@ msgstr "암호 설정함, DES 암호화."
 msgid ""
 "There is a password information set in /etc/shadow, but the password field "
 "in /etc/passwd is empty."
-msgstr "/etc/shadow에 암호 정보가 있으나, /etc/passwd의 암호 부분은 비어있습니다."
+msgstr "/etc/shadow에 비밀번호 정보가 있으나, /etc/passwd의 비밀번호 부분은 "
+"비어있습니다."
 
 #: libuser.c:335
 #, c-format
