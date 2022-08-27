@@ -11,13 +11,14 @@
 # yuliya <ypoyarko@redhat.com>, 2015. #zanata
 # yuliya <ypoyarko@redhat.com>, 2016. #zanata
 # Sergey A. <sw@atrus.ru>, 2022.
+# V I <xasertop@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2021-03-29 22:08+0200\n"
-"PO-Revision-Date: 2022-06-15 14:24+0000\n"
-"Last-Translator: Sergey A. <sw@atrus.ru>\n"
+"PO-Revision-Date: 2022-08-27 19:39+0000\n"
+"Last-Translator: V I <xasertop@gmail.com>\n"
 "Language-Team: Russian <https://translate.fedoraproject.org/projects/passwd/"
 "master/ru/>\n"
 "Language: ru\n"
@@ -26,7 +27,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.12.2\n"
+"X-Generator: Weblate 4.14\n"
 
 #: libuser.c:91
 #, c-format
@@ -92,7 +93,7 @@ msgstr ""
 #: libuser.c:335
 #, c-format
 msgid "No password set.\n"
-msgstr "Пароль не задан\n"
+msgstr "Пароль не задан.\n"
 
 #: libuser.c:340
 #, c-format
@@ -165,7 +166,7 @@ msgstr "получить новое значение из stdin (только ro
 
 #: passwd.c:193
 msgid "[OPTION...] <accountName>"
-msgstr "[ПАРАМЕТРЫ...] <пользователь>"
+msgstr "[ПАРАМЕТР...] <пользователь>"
 
 #: passwd.c:196
 #, c-format
@@ -284,7 +285,7 @@ msgstr "%s: пароль слишком длинный, максимально �
 #: passwd.c:515
 #, c-format
 msgid "%s: unable to start pam: %s\n"
-msgstr "%s: небезопасно запускать pam: %s\n"
+msgstr "%s: невозможно запустить pam: %s\n"
 
 #: passwd.c:528
 #, c-format
