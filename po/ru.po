@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2021-03-29 22:08+0200\n"
-"PO-Revision-Date: 2022-08-27 19:39+0000\n"
+"PO-Revision-Date: 2022-09-14 16:19+0000\n"
 "Last-Translator: V I <xasertop@gmail.com>\n"
 "Language-Team: Russian <https://translate.fedoraproject.org/projects/passwd/"
 "master/ru/>\n"
@@ -36,11 +36,11 @@ msgstr "%s: ошибка инициализации libuser:"
 
 #: libuser.c:157
 msgid "Warning: unlocked password would be empty."
-msgstr "Предупреждение. После разблокирования пароль будет пустым."
+msgstr "Предупреждение: после разблокирования пароль будет пустым."
 
 #: libuser.c:203
 msgid "Note: deleting a password also unlocks the password."
-msgstr "Примечание. Удаление пароля вызовет его разблокирование."
+msgstr "Примечание: удаление пароля разблокирует его."
 
 #: libuser.c:268
 msgid "Corrupted passwd entry."
@@ -103,19 +103,19 @@ msgstr "Неизвестный пользователь.\n"
 #: libuser.c:415
 #, c-format
 msgid "%s: user account has no support for password aging.\n"
-msgstr "%s: учетная запись не поддерживает устаревание пароля.\n"
+msgstr "%s: учётная запись не поддерживает устаревание пароля.\n"
 
 #: passwd.c:157
 msgid "keep non-expired authentication tokens"
-msgstr "хранить действующие данные авторизации (пароли)"
+msgstr "хранить действующие токены аутентификации"
 
 #: passwd.c:159
 msgid ""
 "delete the password for the named account (root only); also removes password "
 "lock if any"
 msgstr ""
-"удалить пароль, сняв блокировку (только root); также можно снять блокировку "
-"паролем, если таковая имеется"
+"удалить пароль для указанного пользователя (только root); также снимет "
+"блокировку пароля, если таковая имеется"
 
 #: passwd.c:162
 msgid "lock the password for the named account (root only)"
@@ -193,7 +193,7 @@ msgstr "Для выполнения этой операции необходим
 #: passwd.c:295
 #, c-format
 msgid "%s: Only root can specify a user name.\n"
-msgstr "%s: только root может выбрать имя учетной записи.\n"
+msgstr "%s: только root может определить имя учётной записи.\n"
 
 #: passwd.c:304
 #, c-format
@@ -259,13 +259,13 @@ msgstr "Ошибка"
 #: passwd.c:437
 #, c-format
 msgid "Removing password for user %s.\n"
-msgstr "Удаляется пароль для пользователя %s.\n"
+msgstr "Удаляется пароль пользователя %s.\n"
 
 #: passwd.c:455
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
 msgstr ""
-"Устанавливаются параметры истечения срока действия для пользователя %s.\n"
+"Устанавливаются параметры истечения срока действия данных пользователя %s.\n"
 
 #: passwd.c:471
 #, c-format
@@ -300,9 +300,9 @@ msgstr "%s: невозможно задать задержку при сбое: 
 #: passwd.c:553
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
-msgstr "%s: устаревшие данные аутентификации были обновлены.\n"
+msgstr "%s: устаревшие токены аутентификации были обновлены.\n"
 
 #: passwd.c:556
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
-msgstr "%s: данные аутентификации успешно обновлены.\n"
+msgstr "%s: все токены аутентификации успешно обновлены.\n"
