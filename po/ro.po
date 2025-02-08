@@ -7,13 +7,14 @@
 # Automatically generated, 2006
 # MIrcea Daniel <visez.trance@gmail.com>, 2007
 # Vlad <milovlad@outlook.com>, 2020.
+# Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2021-03-29 22:08+0200\n"
-"PO-Revision-Date: 2020-12-26 07:36+0000\n"
-"Last-Translator: Vlad <milovlad@outlook.com>\n"
+"PO-Revision-Date: 2024-10-03 01:27+0000\n"
+"Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>\n"
 "Language-Team: Romanian <https://translate.fedoraproject.org/projects/passwd/"
 "master/ro/>\n"
 "Language: ro\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 5.7.2\n"
 
 #: libuser.c:91
 #, c-format
@@ -35,11 +36,11 @@ msgstr "Avertisment: parola deblocată va fi goală."
 
 #: libuser.c:203
 msgid "Note: deleting a password also unlocks the password."
-msgstr "Notă: ștergerea unei parolei o deblochează."
+msgstr "Notă: ștergerea unei parole duce de asemeni la deblocarea parolei."
 
 #: libuser.c:268
 msgid "Corrupted passwd entry."
-msgstr "Câmpul conține parolă coruptă."
+msgstr "Intrare în fișierul passwd coruptă."
 
 #: libuser.c:286 libuser.c:319
 msgid "Empty password."
@@ -51,42 +52,44 @@ msgstr "Parolă blocată."
 
 #: libuser.c:293
 msgid "Password set, MD5 crypt."
-msgstr "Parolă setată, criptare MD5."
+msgstr "Parolă definită, criptare MD5."
 
 #: libuser.c:296
 msgid "Password set, blowfish crypt."
-msgstr "Parolă setată, criptare blowfish."
+msgstr "Parolă definită, criptare blowfish."
 
 #: libuser.c:299
 msgid "Password set, SHA256 crypt."
-msgstr "Parolă setată, criptare SHA256."
+msgstr "Parolă definită, criptare SHA256."
 
 #: libuser.c:302
 msgid "Password set, SHA512 crypt."
-msgstr "Parolă setată, criptare SHA512."
+msgstr "Parolă definită, criptare SHA512."
 
 #: libuser.c:304
 msgid "Password set, unknown crypt variant."
-msgstr "Parolă setată, tip de criptare necunoscut."
+msgstr "Parolă definită, tip de criptare necunoscut."
 
 #: libuser.c:307
 msgid "Alternate authentication scheme in use."
-msgstr "Schemă alternativă de autentificare în folosinţă."
+msgstr "Schema alternativă de autentificare în uz."
 
 #: libuser.c:312
 msgid "Password set, DES crypt."
-msgstr "Parolă setată, criptare DES."
+msgstr "Parolă definită, criptare DES."
 
 #: libuser.c:317
 msgid ""
 "There is a password information set in /etc/shadow, but the password field "
 "in /etc/passwd is empty."
 msgstr ""
+"Există un set de informații privind parola în „/etc/shadow”, dar câmpul "
+"parolei din „/etc/passwd” este gol."
 
 #: libuser.c:335
 #, c-format
 msgid "No password set.\n"
-msgstr "Nicio parolă setată.\n"
+msgstr "Nicio parolă definită.\n"
 
 #: libuser.c:340
 #, c-format
@@ -100,67 +103,70 @@ msgstr "%s: contul utilizatorului nu are suport pentru expirarea parolei.\n"
 
 #: passwd.c:157
 msgid "keep non-expired authentication tokens"
-msgstr "păstrează caracteristicile de autentificare neexpirate"
+msgstr ""
+"păstrează jetoanele (parole, fraze de acces, certificate, etc) de "
+"autentificare neexpirate"
 
 #: passwd.c:159
 msgid ""
 "delete the password for the named account (root only); also removes password "
 "lock if any"
 msgstr ""
-"ștergeți parola pentru contul ales (doar de către administrator); de "
-"asemenea se elimină blocarea parolei"
+"șterge parola pentru contul ales (doar administratorul); de asemenea se "
+"elimină blocarea parolei"
 
 #: passwd.c:162
 msgid "lock the password for the named account (root only)"
-msgstr "blocați parola pentru contul specificat (doar de către administrator)"
+msgstr "blochează parola pentru contul specificat (doar administratorul)"
 
 #: passwd.c:165
 msgid "unlock the password for the named account (root only)"
-msgstr ""
-"deblocați parola pentru contul specificat (doar de către administrator)"
+msgstr "deblochează parola pentru contul specificat (doar administratorul)"
 
 #: passwd.c:168
 msgid "expire the password for the named account (root only)"
-msgstr "expirați parola pentru contul specificat (doar de către administrator)"
+msgstr "expiră parola pentru contul specificat (doar administratorul)"
 
 #: passwd.c:171
 msgid "force operation"
-msgstr "forţează operaţie"
+msgstr "forţează operaţia"
 
 #: passwd.c:173
 msgid "maximum password lifetime (root only)"
-msgstr "durata maximă a parolei (doar de către administrator)"
+msgstr "stabilește durata maximă a parolei (doar administratorul)"
 
 #: passwd.c:175
 msgid "minimum password lifetime (root only)"
-msgstr "durata minimă a parolei (doar de către administrator)"
+msgstr "stabilește durata minimă a parolei (doar administratorul)"
 
 #: passwd.c:177
 msgid ""
 "number of days warning users receives before password expiration (root only)"
 msgstr ""
-"numărul de zile până când utilizatorii sunt avertizați că parola expiră "
-"(doar de către administrator)"
+"stabilește numărul de zile în care utilizatorul va primi un avertisment "
+"înainte ca parola să expire (doar administratorul)"
 
 #: passwd.c:180
 msgid ""
 "number of days after password expiration when an account becomes disabled "
 "(root only)"
 msgstr ""
-"numărul de zile de la expirarea parolei când un cont devine dezactivat (doar "
-"de către administrator)"
+"stabilește numărul de zile de la expirarea parolei când un cont devine "
+"dezactivat (doar administratorul)"
 
 #: passwd.c:183
 msgid "report password status on the named account (root only)"
-msgstr "raportează starea parolei pentru un cont (doar de către administrator)"
+msgstr "raportează starea parolei pentru un cont (doar administratorul)"
 
 #: passwd.c:186
 msgid "read new tokens from stdin (root only)"
-msgstr "citeşte simboluri noi din stdin (doar de către administrator)"
+msgstr ""
+"citește jetoane (parole, fraze de acces, certificate, etc) noi de la "
+"intrarea standard (doar ca administrator)"
 
 #: passwd.c:193
 msgid "[OPTION...] <accountName>"
-msgstr "[opţiune...] <numeCont>"
+msgstr "[opțiune...] <numeCont>"
 
 #: passwd.c:196
 #, c-format
@@ -170,12 +176,15 @@ msgstr "%s: argumente incorecte %s: %s\n"
 #: passwd.c:257
 #, c-format
 msgid "%s: Only one of -l, -u, -d, -S may be specified.\n"
-msgstr "%s: Numai unul din -l, -u, -d, -S poate fi specificat.\n"
+msgstr ""
+"%s: Numai una dintre opțiunile „-l”, „-u”, „-d”, „-S” poate fi specificată.\n"
 
 #: passwd.c:266
 #, c-format
 msgid "%s: Cannot mix one of -l, -u, -d, -S and one of -i, -n, -w, -x.\n"
-msgstr "%s: Nu se pot amesteca -l, -u, -d, -S cu unul din -i, -n, -w, -x.\n"
+msgstr ""
+"%s: Nu se poate amesteca una dintre opțiunile „-l”, „-u”, „-d”, „-S” cu una "
+"dintre opțiunile „-i”, „-n”, „-w”, „-x”.\n"
 
 #: passwd.c:282
 #, c-format
@@ -200,17 +209,17 @@ msgstr "%s: Poate fi specificat numai un nume de utilizator.\n"
 #: passwd.c:324
 #, c-format
 msgid "%s: This option requires a user name.\n"
-msgstr "%s: Această opţiune necesită un nume de utilizator.\n"
+msgstr "%s: Această opțiune necesită un nume de utilizator.\n"
 
 #: passwd.c:335
 #, c-format
 msgid "%s: Can not identify you!\n"
-msgstr "%s: Nu te pot identifica!\n"
+msgstr "%s: Nu vă pot identifica!\n"
 
 #: passwd.c:344 passwd.c:379
 #, c-format
 msgid "%s: Unknown user name '%s'.\n"
-msgstr "%s: Nume de utilizator necunoscut '%s'.\n"
+msgstr "%s: Nume de utilizator necunoscut „%s”.\n"
 
 #: passwd.c:388
 #, c-format
@@ -220,7 +229,7 @@ msgstr "%s: SELinux interzice accesul din cauza politicii de securitate.\n"
 #: passwd.c:398
 #, c-format
 msgid "Locking password for user %s.\n"
-msgstr "Blochez parola pentru utilizatorul %s.\n"
+msgstr "Se blochează parola pentru utilizatorul %s.\n"
 
 #: passwd.c:402 passwd.c:414 passwd.c:429 passwd.c:440 passwd.c:458
 msgid "Success"
@@ -228,16 +237,16 @@ msgstr "Succes"
 
 #: passwd.c:402 passwd.c:417
 msgid "Error (password not set?)"
-msgstr "Eroare (parola nu este setată?)"
+msgstr "Eroare (parola nu este definită?)"
 
 #: passwd.c:410
 #, c-format
 msgid "Unlocking password for user %s.\n"
-msgstr "Deblochez parola pentru utilizatorul %s.\n"
+msgstr "Se deblochează parola pentru utilizatorul %s.\n"
 
 #: passwd.c:416
 msgid "Unsafe operation (use -f to force)"
-msgstr "Operaţiune nesigură (folosiţi -f pentru a forţa)"
+msgstr "Operație nesigură (utilizați opțiunea „-f” pentru a forța executarea)"
 
 #: passwd.c:425
 #, c-format
@@ -251,51 +260,53 @@ msgstr "Eroare"
 #: passwd.c:437
 #, c-format
 msgid "Removing password for user %s.\n"
-msgstr "Elimin parola pentru utilizatorul %s.\n"
+msgstr "Se elimină parola pentru utilizatorul %s.\n"
 
 #: passwd.c:455
 #, c-format
 msgid "Adjusting aging data for user %s.\n"
-msgstr "Ajustez data de expirare pentru utilizatorul %s.\n"
+msgstr "Se ajustează data de expirare pentru utilizatorul %s.\n"
 
 #: passwd.c:471
 #, c-format
 msgid "Changing password for user %s.\n"
-msgstr "Schimb parola pentru utilizatorul %s.\n"
+msgstr "Se schimbă parola pentru utilizatorul %s.\n"
 
 #: passwd.c:489
 #, c-format
 msgid "%s: error reading from stdin: %s\n"
-msgstr "%s: eroare la citirea din stdin: %s\n"
+msgstr "%s: eroare la citirea de la intrarea standard: %s\n"
 
 #: passwd.c:496
 #, c-format
 msgid "%s: password too long, maximum is %zu"
-msgstr ""
+msgstr "%s: parola este prea lungă; numărul maxim permis de caractere este %zu"
 
 #: passwd.c:515
 #, c-format
 msgid "%s: unable to start pam: %s\n"
-msgstr "%s: nu pot porni pam: %s\n"
+msgstr "%s: nu se poate iniția pam: %s\n"
 
 #: passwd.c:528
 #, c-format
 msgid "%s: unable to set tty for pam: %s\n"
-msgstr "%s: nu pot seta tty pentru pam: %s\n"
+msgstr "%s: nu se poate configura tty pentru pam: %s\n"
 
 #: passwd.c:539
 #, c-format
 msgid "%s: unable to set failure delay: %s\n"
-msgstr "%s: nu pot seta durata de întârziere a erorii: %s\n"
+msgstr "%s: nu se poate defini întârzierea la eșec: %s\n"
 
 #: passwd.c:553
 #, c-format
 msgid "%s: expired authentication tokens updated successfully.\n"
 msgstr ""
-"%s: caracteristicile de autentificare expirate sunt actualizate cu succes.\n"
+"%s: jetoanele (parole, fraze de acces, certificate, etc) de autentificare "
+"expirate sunt actualizate cu succes.\n"
 
 #: passwd.c:556
 #, c-format
 msgid "%s: all authentication tokens updated successfully.\n"
 msgstr ""
-"%s: toate caracteristicile de autentificare au fost actualizate cu succes.\n"
+"%s: toate jetoanele (parole, fraze de acces, certificate, etc) de "
+"autentificare au fost actualizate cu succes.\n"
