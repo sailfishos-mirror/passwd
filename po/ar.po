@@ -5,21 +5,23 @@
 # Translators:
 # abdilra7eem <abdilra7eem@yahoo.com>, 2010
 # Automatically generated, 2006
+# joo es <johndevand@tutanota.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2021-03-29 22:08+0200\n"
-"PO-Revision-Date: 2015-03-13 11:32-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Arabic <trans-ar@lists.fedoraproject.org>\n"
+"PO-Revision-Date: 2025-02-08 19:09+0000\n"
+"Last-Translator: joo es <johndevand@tutanota.com>\n"
+"Language-Team: Arabic <https://translate.fedoraproject.org/projects/passwd/"
+"master/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Zanata 4.6.2\n"
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 5.9.2\n"
 
 #: libuser.c:91
 #, c-format
@@ -32,7 +34,7 @@ msgstr "تحذير: كلمة المرور غير المقفلة قد تكون ف
 
 #: libuser.c:203
 msgid "Note: deleting a password also unlocks the password."
-msgstr ""
+msgstr "ملاحظة: يؤدي حذف كلمة المرور أيضًا إلى إلغاء تأمين كلمة المرور."
 
 #: libuser.c:268
 msgid "Corrupted passwd entry."
@@ -79,6 +81,8 @@ msgid ""
 "There is a password information set in /etc/shadow, but the password field "
 "in /etc/passwd is empty."
 msgstr ""
+"هناك معلومات كلمة مرور عُينت في /etc/shadow، ولكن حقل كلمة المرور في /etc/"
+"passwd فارغ."
 
 #: libuser.c:335
 #, c-format
@@ -104,18 +108,19 @@ msgid ""
 "delete the password for the named account (root only); also removes password "
 "lock if any"
 msgstr ""
+"احذف كلمة المرور للحساب المسماة (الجذر فقط) ؛ كما يزيل قفل كلمة المرور إن وجد"
 
 #: passwd.c:162
 msgid "lock the password for the named account (root only)"
-msgstr ""
+msgstr "اقفل كلمة المرور للحساب المسماة (الجذر فقط)"
 
 #: passwd.c:165
 msgid "unlock the password for the named account (root only)"
-msgstr ""
+msgstr "افتح كلمة المرور للحساب المسماة (الجذر فقط)"
 
 #: passwd.c:168
 msgid "expire the password for the named account (root only)"
-msgstr ""
+msgstr "انهِ صلاحيّه كلمة المرور للحساب المسماة (الجذر فقط)"
 
 #: passwd.c:171
 msgid "force operation"
@@ -206,7 +211,7 @@ msgstr "%s: اسم مستخدم مجهول '%s'.\n"
 #: passwd.c:388
 #, c-format
 msgid "%s: SELinux denying access due to security policy.\n"
-msgstr ""
+msgstr "%s: SELINUX ينكر الوصول بسبب سياسة الأمن.\n"
 
 #: passwd.c:398
 #, c-format
@@ -233,7 +238,7 @@ msgstr "عملية خطرة (استخدم -f للإجبار)"
 #: passwd.c:425
 #, c-format
 msgid "Expiring password for user %s.\n"
-msgstr ""
+msgstr "جاري انتهاء صلاحية كلمة مرور المستخدم %s.\n"
 
 #: passwd.c:429 passwd.c:440 passwd.c:458
 msgid "Error"
@@ -262,7 +267,7 @@ msgstr "%s: خطأ في القراءة من stdin: %s\n"
 #: passwd.c:496
 #, c-format
 msgid "%s: password too long, maximum is %zu"
-msgstr ""
+msgstr "%s: كلمة المرور طويلة جدًا، الحد الأقصى هو %zu"
 
 #: passwd.c:515
 #, c-format

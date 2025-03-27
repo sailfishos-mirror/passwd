@@ -6,20 +6,22 @@
 # Automatically generated, 2006
 # mitzie <soldizach@gmail.com>, 2013
 # jackbauer <p.tournaris@gmail.com>, 2009, 2010
+# Giannis Antypas <gianni.antypas@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: passwd 0.79\n"
 "Report-Msgid-Bugs-To: http://bugzilla.redhat.com/\n"
 "POT-Creation-Date: 2021-03-29 22:08+0200\n"
-"PO-Revision-Date: 2015-03-13 11:33-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Greek <trans-el@lists.fedoraproject.org>\n"
+"PO-Revision-Date: 2024-09-08 10:38+0000\n"
+"Last-Translator: Giannis Antypas <gianni.antypas@gmail.com>\n"
+"Language-Team: Greek <https://translate.fedoraproject.org/projects/passwd/"
+"master/el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Zanata 4.6.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.7.2\n"
 
 #: libuser.c:91
 #, c-format
@@ -32,7 +34,7 @@ msgstr "Προειδοποίηση: ο ανοιχτός κωδικός θα με
 
 #: libuser.c:203
 msgid "Note: deleting a password also unlocks the password."
-msgstr ""
+msgstr "Σημείωση: η διαγραφή ενός κωδικού επίσης ξεκλειδώνει και τον κωδικό."
 
 #: libuser.c:268
 msgid "Corrupted passwd entry."
@@ -79,6 +81,8 @@ msgid ""
 "There is a password information set in /etc/shadow, but the password field "
 "in /etc/passwd is empty."
 msgstr ""
+"Υπάρχει μια διαρρύθμιση πληροφοριών κωδικών στο /etc/shadow, αλλά το πεδίο "
+"κωδικών στο /etc/passwd είναι κενό."
 
 #: libuser.c:335
 #, c-format
@@ -105,6 +109,8 @@ msgid ""
 "delete the password for the named account (root only); also removes password "
 "lock if any"
 msgstr ""
+"διαγραφή κωδικού για το λογαριασμό που έχει το όνομα (διαχειριστής μόνο)· "
+"αφαιρεί επίσης το κλείδωμα κωδικού αν υπάρχει"
 
 #: passwd.c:162
 msgid "lock the password for the named account (root only)"
@@ -136,8 +142,8 @@ msgstr "ελάχιστη διάρκεια ζωής (διαχειριστής μ�
 msgid ""
 "number of days warning users receives before password expiration (root only)"
 msgstr ""
-"πόσες ημέρες πριν από τη λήξη του κωδικού θα ειδοποιείται ο χρήστης (μόνο "
-"root)"
+"πόσες ημέρες πριν από τη λήξη του κωδικού θα ειδοποιείται ο χρήστης ("
+"διαχειριστής μόνο)"
 
 #: passwd.c:180
 msgid ""
@@ -272,7 +278,7 @@ msgstr "%s: σφάλμα ανάγνωσης από το stdin: %s\n"
 #: passwd.c:496
 #, c-format
 msgid "%s: password too long, maximum is %zu"
-msgstr ""
+msgstr "%s: πολύ μεγάλος κωδικός, το μέγιστο είναι %zu"
 
 #: passwd.c:515
 #, c-format
